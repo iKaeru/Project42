@@ -1,0 +1,65 @@
+﻿{
+  "version": "1.0.0",
+  "restore": {
+    "projectUniqueName": "/Users/kaeru/Desktop/важно/Работа/Kontur/Экзамен 3 (проект трёх команд)/Project42/MemoryCardsAPI/MemoryCardsAPI.csproj",
+    "projectName": "MemoryCardsAPI",
+    "projectPath": "/Users/kaeru/Desktop/важно/Работа/Kontur/Экзамен 3 (проект трёх команд)/Project42/MemoryCardsAPI/MemoryCardsAPI.csproj",
+    "outputPath": "/Users/kaeru/Desktop/важно/Работа/Kontur/Экзамен 3 (проект трёх команд)/Project42/MemoryCardsAPI/obj/",
+    "projectStyle": "PackageReference",
+    "fallbackFolders": [
+      "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+    ],
+    "originalTargetFrameworks": [
+      "netcoreapp2.1"
+    ],
+    "frameworks": {
+      "netcoreapp2.1": {
+        "projectReferences": {
+          "/Users/kaeru/Desktop/важно/Работа/Kontur/Экзамен 3 (проект трёх команд)/Project42/Client.Models/Client.Models.csproj": {
+            "projectPath": "/Users/kaeru/Desktop/важно/Работа/Kontur/Экзамен 3 (проект трёх команд)/Project42/Client.Models/Client.Models.csproj"
+          },
+          "/Users/kaeru/Desktop/важно/Работа/Kontur/Экзамен 3 (проект трёх команд)/Project42/Converters/Converters.csproj": {
+            "projectPath": "/Users/kaeru/Desktop/важно/Работа/Kontur/Экзамен 3 (проект трёх команд)/Project42/Converters/Converters.csproj"
+          },
+          "/Users/kaeru/Desktop/важно/Работа/Kontur/Экзамен 3 (проект трёх команд)/Project42/Models/Models.csproj": {
+            "projectPath": "/Users/kaeru/Desktop/важно/Работа/Kontur/Экзамен 3 (проект трёх команд)/Project42/Models/Models.csproj"
+          }
+        }
+      }
+    },
+    "warningProperties": {
+      "warnAsError": [
+        "NU1605"
+      ]
+    }
+  },
+  "frameworks": {
+    "netcoreapp2.1": {
+      "dependencies": {
+        "Microsoft.AspNetCore": {
+          "target": "Package",
+          "version": "[2.2.0, )"
+        },
+        "Microsoft.AspNetCore.Mvc": {
+          "target": "Package",
+          "version": "[2.2.0, )"
+        },
+        "Microsoft.EntityFrameworkCore.Tools": {
+          "target": "Package",
+          "version": "[3.0.0-preview3.19153.1, )"
+        },
+        "Microsoft.NETCore.App": {
+          "suppressParent": "All",
+          "target": "Package",
+          "version": "[2.1.0, )",
+          "autoReferenced": true
+        }
+      },
+      "imports": [
+        "net461"
+      ],
+      "assetTargetFallback": true,
+      "warn": true
+    }
+  }
+}
