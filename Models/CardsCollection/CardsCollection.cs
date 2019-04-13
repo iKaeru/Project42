@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace Models.CardsCollection
 {
@@ -16,6 +17,7 @@ namespace Models.CardsCollection
         /// <summary>
         /// Название коллекции
         /// </summary>
+        [StringLength(20)]
         public string Name { get; set; }
         
         /// <summary>

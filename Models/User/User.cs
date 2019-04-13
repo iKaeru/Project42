@@ -28,6 +28,7 @@ namespace Models.User
         /// <summary>
         /// Логин пользователя
         /// </summary>
+        [StringLength(20)]
         public string Login { get; set; }
 
         /// <summary>
@@ -38,7 +39,7 @@ namespace Models.User
         /// <summary>
         /// Почтовый адрес пользователя
         /// </summary>
-        [DataType(DataType.EmailAddress)]
+        [EmailAddress]
         public string EMailAdress { get; set; }
 
         /// <summary>

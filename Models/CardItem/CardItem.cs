@@ -1,17 +1,10 @@
-﻿using System;
-
-namespace Models.CardItem
+﻿namespace Models.CardItem
 {
     /// <summary>
     /// Карта
     /// </summary>
-    public class CardItem
-    {
-        /// <summary>
-        /// Уникальный идентификатор карты
-        /// </summary>
-        public Guid Id { get; set; }
-        
+    public class CardItem : CardItemInfo
+    {        
         /// <summary>
         /// Вопрос/задача карты
         /// </summary>
@@ -21,15 +14,5 @@ namespace Models.CardItem
         /// Ответ на вопрос карты
         /// </summary>
         public string Answer { get; set; }
-        
-        /// <summary>
-        /// Дата создания карты
-        /// </summary>
-        public DateTime CreatedAt { get; set; }
-        
-        /// <summary>
-        /// Дата последнего решения задачи карты
-        /// </summary>
-        public DateTime LastCompletedAt { get; set; }
     }
 }

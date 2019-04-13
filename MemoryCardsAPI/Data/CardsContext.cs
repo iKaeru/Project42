@@ -4,9 +4,9 @@ using Models.CardsCollection;
 
 namespace MemoryCardsAPI.Data
 {
-    public class CardItemsContext: DbContext
+    public class CardsContext: DbContext
     {
-        public CardItemsContext(DbContextOptions<CardItemsContext> options)
+        public CardsContext(DbContextOptions<CardsContext> options)
             : base(options)
         {
         }

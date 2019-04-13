@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Client.Models.CardItem
+﻿namespace Client.Models.CardItem
 {
     /// <summary>
     /// Карта
