@@ -1,18 +1,15 @@
 using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Models.User
 {
     /// <summary>
     /// Пользователь
     /// </summary>
-    public class User
+    [Table("Users")]
+    public class User : UserInfo
     {
-        /// <summary>
-        /// Уникальный идентификатор пользователя
-        /// </summary>
-        public Guid Id { get; set; }
-
         /// <summary>
         /// Имя пользователя
         /// </summary>
@@ -28,25 +25,14 @@ namespace Models.User
         /// <summary>
         /// Логин пользователя
         /// </summary>
-        [StringLength(20)]
+        [MinLength(5), MaxLength(20)]
+        [Required]
         public string Login { get; set; }
-
-        /// <summary>
-        /// Пароль пользователя
-        /// </summary>
-        public string PasswordHash { get; set; }
 
         /// <summary>
         /// Почтовый адрес пользователя
         /// </summary>
         [EmailAddress]
         public string EMailAdress { get; set; }
-
-        /// <summary>
-        /// Дата регистрации пользователя
-        /// </summary>
-        [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:dd.MM.yyyy}", ApplyFormatInEditMode = true)]
-        public DateTime RegistrationDate { get; set; }
     }
 }

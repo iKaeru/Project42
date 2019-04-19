@@ -1,3 +1,4 @@
+using MemoryCardsAPI.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -7,11 +8,10 @@ namespace MemoryCardsAPI
     {
         public void ConfigureServices(IServiceCollection services)
         {
-//            services.AddDbContext<TodoContext>(options =>
-//                options.UseSqlServer(Configuration.GetConnectionString("MvcMovieContext")));
+            services.AddEntityFrameworkNpgsql()
+                .AddDbContext<PostgreContext>()
+                .BuildServiceProvider();
 
-//            services.AddDbContext<TodoContext>(opt =>
-//                opt.UseInMemoryDatabase("TodoList"));
             services.AddMvc();
         }
 
