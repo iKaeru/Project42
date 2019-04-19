@@ -1,4 +1,5 @@
 using System;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Models.Training
@@ -9,6 +10,15 @@ namespace Models.Training
     [Table("Training")]
     public class Training
     {
+        public virtual CardItem.CardItemInfo Card { get; set; }
+        public virtual User.UserInfo User { get; set; }
+
+        /// <summary>
+        /// Уникальный идентификатор пользователя
+        /// </summary>
+        [Key]
+        public Guid Id { get; set; }
+        
         /// <summary>
         /// К какому пользователю относится
         /// </summary>
