@@ -1,17 +1,32 @@
-﻿using Microsoft.AspNetCore;
+﻿using System.IO;
+using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
 
 namespace MemoryCardsAPI
 {
     class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            WebHost
-                .CreateDefaultBuilder(args)
+            var config = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("hosting.json", optional: true)
+                .AddEnvironmentVariables(prefix: "ASPNETCORE_")
+                .AddCommandLine(args)
+                .Build();
+
+            var host = new WebHostBuilder()
+                .UseUrls("http://*:1000", "https://*:1234", "http://0.0.0.0:5000")
+                .UseEnvironment("Development")
+                .UseConfiguration(config)
+                .UseKestrel()
+                .UseContentRoot(Directory.GetCurrentDirectory())
+                .UseIISIntegration()
                 .UseStartup<Startup>()
-                .Build()
-                .Run();
+                .Build();
+
+            host.Run();
         }
     }
 }
