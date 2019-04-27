@@ -10,6 +10,8 @@
         /// </summary>
         public string Question { get; set; }
 
+        
+        
         /// <summary>
         /// Ответ на вопрос карты
         /// </summary>
