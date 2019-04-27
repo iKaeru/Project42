@@ -32,6 +32,9 @@ namespace Models.User
         /// <summary>
         /// Почтовый адрес пользователя
         /// </summary>
+        [RegularExpression( "^([A-Za-z0-9_\\-\\.])+\\@([A-Za-z0-9_\\-\\.])+\\.([A-Za-z]{2,4})$", 
+            ErrorMessage = "Invalid email format." )] 
+        [Required(ErrorMessage = "Please enter your e-mail address."), StringLength(50)] 
         [EmailAddress]
         public string EMailAdress { get; set; }
     }
