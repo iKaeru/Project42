@@ -9,19 +9,19 @@ namespace MemoryCardsAPI
         static void Main(string[] args)
         {
             var config = new ConfigurationBuilder()
-                .SetBasePath(Directory.GetCurrentDirectory())
+             //   .SetBasePath(Directory.GetCurrentDirectory())
                 .AddJsonFile("appsettings.json", optional: true)
-                .AddEnvironmentVariables(prefix: "ASPNETCORE_")
-                .AddCommandLine(args)
+            //    .AddEnvironmentVariables(prefix: "ASPNETCORE_")
+            //    .AddCommandLine(args)
                 .Build();
 
             var host = new WebHostBuilder()
                 .UseUrls("http://*:5000")
-                .UseEnvironment("Development")
+            //    .UseEnvironment("Development")
                 .UseConfiguration(config)
                 .UseKestrel()
-                .UseContentRoot(Directory.GetCurrentDirectory())
-                .UseIISIntegration()
+          //      .UseContentRoot(Directory.GetCurrentDirectory())
+           //     .UseIISIntegration()
                 .UseStartup<Startup>()
                 .Build();
 
