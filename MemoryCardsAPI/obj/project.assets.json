@@ -10489,11 +10489,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Fedya\\Downloads\\Project42-NewBranch\\Project42-NewBranch\\MemoryCardsAPI\\MemoryCardsAPI.csproj",
+      "projectUniqueName": "T:\\KonturProj\\Project42\\MemoryCardsAPI\\MemoryCardsAPI.csproj",
       "projectName": "MemoryCardsAPI",
-      "projectPath": "C:\\Users\\Fedya\\Downloads\\Project42-NewBranch\\Project42-NewBranch\\MemoryCardsAPI\\MemoryCardsAPI.csproj",
+      "projectPath": "T:\\KonturProj\\Project42\\MemoryCardsAPI\\MemoryCardsAPI.csproj",
       "packagesPath": "C:\\Users\\Fedya\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Fedya\\Downloads\\Project42-NewBranch\\Project42-NewBranch\\MemoryCardsAPI\\obj\\",
+      "outputPath": "T:\\KonturProj\\Project42\\MemoryCardsAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -10512,14 +10512,14 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Users\\Fedya\\Downloads\\Project42-NewBranch\\Project42-NewBranch\\Client.Models\\Client.Models.csproj": {
-              "projectPath": "C:\\Users\\Fedya\\Downloads\\Project42-NewBranch\\Project42-NewBranch\\Client.Models\\Client.Models.csproj"
+            "T:\\KonturProj\\Project42\\Client.Models\\Client.Models.csproj": {
+              "projectPath": "T:\\KonturProj\\Project42\\Client.Models\\Client.Models.csproj"
             },
-            "C:\\Users\\Fedya\\Downloads\\Project42-NewBranch\\Project42-NewBranch\\Converters\\Converters.csproj": {
-              "projectPath": "C:\\Users\\Fedya\\Downloads\\Project42-NewBranch\\Project42-NewBranch\\Converters\\Converters.csproj"
+            "T:\\KonturProj\\Project42\\Converters\\Converters.csproj": {
+              "projectPath": "T:\\KonturProj\\Project42\\Converters\\Converters.csproj"
             },
-            "C:\\Users\\Fedya\\Downloads\\Project42-NewBranch\\Project42-NewBranch\\Models\\Models.csproj": {
-              "projectPath": "C:\\Users\\Fedya\\Downloads\\Project42-NewBranch\\Project42-NewBranch\\Models\\Models.csproj"
+            "T:\\KonturProj\\Project42\\Models\\Models.csproj": {
+              "projectPath": "T:\\KonturProj\\Project42\\Models\\Models.csproj"
             }
           }
         }
