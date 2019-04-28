@@ -89,6 +89,10 @@
         "System.IdentityModel.Tokens.Jwt": {
           "target": "Package",
           "version": "[5.4.0, )"
+        },
+        "Swashbuckle.AspNetCore": {
+          "target": "Package",
+          "version": "[4.0.1, )"
         }
       },
       "imports": [

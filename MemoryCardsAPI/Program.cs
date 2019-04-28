@@ -7,7 +7,7 @@ namespace MemoryCardsAPI
 {
     class Program
     {
-        public static void Main(string[] args)
+        static void Main(string[] args)
         {
             var config = new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory())
@@ -27,6 +27,12 @@ namespace MemoryCardsAPI
                 .Build();
 
             host.Run();
+            
+//            WebHost
+//                .CreateDefaultBuilder(args)
+//                .UseStartup<Startup>()
+//                .Build()
+//                .Run();
         }
     }
 }

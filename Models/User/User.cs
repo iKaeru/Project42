@@ -25,15 +25,17 @@ namespace Models.User
         /// <summary>
         /// Логин пользователя
         /// </summary>
-        [MinLength(6), MaxLength(120)]
+        [MinLength(5), MaxLength(20)]
         [Required]
         public string Login { get; set; }
 
         /// <summary>
         /// Почтовый адрес пользователя
         /// </summary>
+        [RegularExpression( "^([A-Za-z0-9_\\-\\.])+\\@([A-Za-z0-9_\\-\\.])+\\.([A-Za-z]{2,4})$", 
+            ErrorMessage = "Invalid email format." )] 
+        [Required(ErrorMessage = "Please enter your e-mail address."), StringLength(50)] 
         [EmailAddress]
         public string EmailAdress { get; set; }
     }
 }
-
