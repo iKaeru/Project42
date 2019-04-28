@@ -11,13 +11,13 @@ namespace MemoryCardsAPI
         {
             var config = new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("hosting.json", optional: true)
+                .AddJsonFile("appsettings.json", optional: true)
                 .AddEnvironmentVariables(prefix: "ASPNETCORE_")
                 .AddCommandLine(args)
                 .Build();
 
             var host = new WebHostBuilder()
-                .UseUrls("http://*:1000", "https://*:1234", "http://0.0.0.0:5000")
+                .UseUrls("http://*:5000")
                 .UseEnvironment("Development")
                 .UseConfiguration(config)
                 .UseKestrel()

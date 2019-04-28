@@ -16,3 +16,12 @@ C:\Users\Fedya\Downloads\Project42-JWTAuth\Project42-JWTAuth\Client.Models\obj\D
 C:\Users\Fedya\Downloads\Project42-JWTAuth\Project42-JWTAuth\Client.Models\obj\Debug\netcoreapp2.1\Client.Models.AssemblyInfo.cs
 C:\Users\Fedya\Downloads\Project42-JWTAuth\Project42-JWTAuth\Client.Models\obj\Debug\netcoreapp2.1\Client.Models.dll
 C:\Users\Fedya\Downloads\Project42-JWTAuth\Project42-JWTAuth\Client.Models\obj\Debug\netcoreapp2.1\Client.Models.pdb
+C:\Users\Fedya\Downloads\Project42-NewBranch\Project42-NewBranch\Client.Models\obj\Debug\netcoreapp2.1\Client.Models.csprojAssemblyReference.cache
+C:\Users\Fedya\Downloads\Project42-NewBranch\Project42-NewBranch\Client.Models\obj\Debug\netcoreapp2.1\Client.Models.csproj.CoreCompileInputs.cache
+C:\Users\Fedya\Downloads\Project42-NewBranch\Project42-NewBranch\Client.Models\obj\Debug\netcoreapp2.1\Client.Models.AssemblyInfoInputs.cache
+C:\Users\Fedya\Downloads\Project42-NewBranch\Project42-NewBranch\Client.Models\obj\Debug\netcoreapp2.1\Client.Models.AssemblyInfo.cs
+C:\Users\Fedya\Downloads\Project42-NewBranch\Project42-NewBranch\Client.Models\obj\Debug\netcoreapp2.1\Client.Models.dll
+C:\Users\Fedya\Downloads\Project42-NewBranch\Project42-NewBranch\Client.Models\obj\Debug\netcoreapp2.1\Client.Models.pdb
+C:\Users\Fedya\Downloads\Project42-NewBranch\Project42-NewBranch\Client.Models\bin\Debug\netcoreapp2.1\Client.Models.deps.json
+C:\Users\Fedya\Downloads\Project42-NewBranch\Project42-NewBranch\Client.Models\bin\Debug\netcoreapp2.1\Client.Models.dll
+C:\Users\Fedya\Downloads\Project42-NewBranch\Project42-NewBranch\Client.Models\bin\Debug\netcoreapp2.1\Client.Models.pdb

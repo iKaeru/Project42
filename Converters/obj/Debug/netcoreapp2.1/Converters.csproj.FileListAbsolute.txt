@@ -26,3 +26,17 @@ C:\Users\Fedya\Downloads\Project42-JWTAuth\Project42-JWTAuth\Converters\obj\Debu
 C:\Users\Fedya\Downloads\Project42-JWTAuth\Project42-JWTAuth\Converters\obj\Debug\netcoreapp2.1\Converters.csproj.CopyComplete
 C:\Users\Fedya\Downloads\Project42-JWTAuth\Project42-JWTAuth\Converters\obj\Debug\netcoreapp2.1\Converters.dll
 C:\Users\Fedya\Downloads\Project42-JWTAuth\Project42-JWTAuth\Converters\obj\Debug\netcoreapp2.1\Converters.pdb
+C:\Users\Fedya\Downloads\Project42-NewBranch\Project42-NewBranch\Converters\bin\Debug\netcoreapp2.1\Converters.deps.json
+C:\Users\Fedya\Downloads\Project42-NewBranch\Project42-NewBranch\Converters\bin\Debug\netcoreapp2.1\Converters.dll
+C:\Users\Fedya\Downloads\Project42-NewBranch\Project42-NewBranch\Converters\bin\Debug\netcoreapp2.1\Converters.pdb
+C:\Users\Fedya\Downloads\Project42-NewBranch\Project42-NewBranch\Converters\bin\Debug\netcoreapp2.1\Client.Models.dll
+C:\Users\Fedya\Downloads\Project42-NewBranch\Project42-NewBranch\Converters\bin\Debug\netcoreapp2.1\Models.dll
+C:\Users\Fedya\Downloads\Project42-NewBranch\Project42-NewBranch\Converters\bin\Debug\netcoreapp2.1\Client.Models.pdb
+C:\Users\Fedya\Downloads\Project42-NewBranch\Project42-NewBranch\Converters\bin\Debug\netcoreapp2.1\Models.pdb
+C:\Users\Fedya\Downloads\Project42-NewBranch\Project42-NewBranch\Converters\obj\Debug\netcoreapp2.1\Converters.csprojAssemblyReference.cache
+C:\Users\Fedya\Downloads\Project42-NewBranch\Project42-NewBranch\Converters\obj\Debug\netcoreapp2.1\Converters.csproj.CoreCompileInputs.cache
+C:\Users\Fedya\Downloads\Project42-NewBranch\Project42-NewBranch\Converters\obj\Debug\netcoreapp2.1\Converters.AssemblyInfoInputs.cache
+C:\Users\Fedya\Downloads\Project42-NewBranch\Project42-NewBranch\Converters\obj\Debug\netcoreapp2.1\Converters.AssemblyInfo.cs
+C:\Users\Fedya\Downloads\Project42-NewBranch\Project42-NewBranch\Converters\obj\Debug\netcoreapp2.1\Converters.csproj.CopyComplete
+C:\Users\Fedya\Downloads\Project42-NewBranch\Project42-NewBranch\Converters\obj\Debug\netcoreapp2.1\Converters.dll
+C:\Users\Fedya\Downloads\Project42-NewBranch\Project42-NewBranch\Converters\obj\Debug\netcoreapp2.1\Converters.pdb
