@@ -694,11 +694,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Fedya\\Downloads\\Project42-NewBranch\\Project42-NewBranch\\Client.Models\\Client.Models.csproj",
+      "projectUniqueName": "T:\\KonturProj\\Project42\\Client.Models\\Client.Models.csproj",
       "projectName": "Client.Models",
-      "projectPath": "C:\\Users\\Fedya\\Downloads\\Project42-NewBranch\\Project42-NewBranch\\Client.Models\\Client.Models.csproj",
+      "projectPath": "T:\\KonturProj\\Project42\\Client.Models\\Client.Models.csproj",
       "packagesPath": "C:\\Users\\Fedya\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Fedya\\Downloads\\Project42-NewBranch\\Project42-NewBranch\\Client.Models\\obj\\",
+      "outputPath": "T:\\KonturProj\\Project42\\Client.Models\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
