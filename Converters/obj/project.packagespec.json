@@ -1,13 +1,13 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "/Users/kaeru/Desktop/важно/Работа/Kontur/Экзамен 3 (проект трёх команд)/Project42/Converters/Converters.csproj",
+    "projectUniqueName": "/home/fedor/ImportantStuff/Project42/Converters/Converters.csproj",
     "projectName": "Converters",
-    "projectPath": "/Users/kaeru/Desktop/важно/Работа/Kontur/Экзамен 3 (проект трёх команд)/Project42/Converters/Converters.csproj",
-    "outputPath": "/Users/kaeru/Desktop/важно/Работа/Kontur/Экзамен 3 (проект трёх команд)/Project42/Converters/obj/",
+    "projectPath": "/home/fedor/ImportantStuff/Project42/Converters/Converters.csproj",
+    "outputPath": "/home/fedor/ImportantStuff/Project42/Converters/obj/",
     "projectStyle": "PackageReference",
     "fallbackFolders": [
-      "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+      "/usr/share/dotnet/sdk/NuGetFallbackFolder"
     ],
     "originalTargetFrameworks": [
       "netcoreapp2.1"
@@ -15,11 +15,11 @@
     "frameworks": {
       "netcoreapp2.1": {
         "projectReferences": {
-          "/Users/kaeru/Desktop/важно/Работа/Kontur/Экзамен 3 (проект трёх команд)/Project42/Client.Models/Client.Models.csproj": {
-            "projectPath": "/Users/kaeru/Desktop/важно/Работа/Kontur/Экзамен 3 (проект трёх команд)/Project42/Client.Models/Client.Models.csproj"
+          "/home/fedor/ImportantStuff/Project42/Client.Models/Client.Models.csproj": {
+            "projectPath": "/home/fedor/ImportantStuff/Project42/Client.Models/Client.Models.csproj"
           },
-          "/Users/kaeru/Desktop/важно/Работа/Kontur/Экзамен 3 (проект трёх команд)/Project42/Models/Models.csproj": {
-            "projectPath": "/Users/kaeru/Desktop/важно/Работа/Kontur/Экзамен 3 (проект трёх команд)/Project42/Models/Models.csproj"
+          "/home/fedor/ImportantStuff/Project42/Models/Models.csproj": {
+            "projectPath": "/home/fedor/ImportantStuff/Project42/Models/Models.csproj"
           }
         }
       }

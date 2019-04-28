@@ -1,13 +1,13 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "/Users/kaeru/Desktop/важно/Работа/Kontur/Экзамен 3 (проект трёх команд)/Project42/Client.Models/Client.Models.csproj",
+    "projectUniqueName": "/home/fedor/ImportantStuff/Project42/Client.Models/Client.Models.csproj",
     "projectName": "Client.Models",
-    "projectPath": "/Users/kaeru/Desktop/важно/Работа/Kontur/Экзамен 3 (проект трёх команд)/Project42/Client.Models/Client.Models.csproj",
-    "outputPath": "/Users/kaeru/Desktop/важно/Работа/Kontur/Экзамен 3 (проект трёх команд)/Project42/Client.Models/obj/",
+    "projectPath": "/home/fedor/ImportantStuff/Project42/Client.Models/Client.Models.csproj",
+    "outputPath": "/home/fedor/ImportantStuff/Project42/Client.Models/obj/",
     "projectStyle": "PackageReference",
     "fallbackFolders": [
-      "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+      "/usr/share/dotnet/sdk/NuGetFallbackFolder"
     ],
     "originalTargetFrameworks": [
       "netcoreapp2.1"
