@@ -19,7 +19,12 @@ namespace Models.User
         /// <summary>
         /// Хэш пароля пользователя
         /// </summary>
-        public string PasswordHash { get; set; }
+        public byte[] PasswordHash { get; set; }
+        
+        /// <summary>
+        /// Соль пароля пользователя
+        /// </summary>
+        public byte[] PasswordSalt { get; set; }
         
         /// <summary>
         /// Дата регистрации пользователя

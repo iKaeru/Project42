@@ -36,6 +36,6 @@ namespace Models.User
             ErrorMessage = "Invalid email format." )] 
         [Required(ErrorMessage = "Please enter your e-mail address."), StringLength(50)] 
         [EmailAddress]
-        public string EMailAdress { get; set; }
+        public string EmailAdress { get; set; }
     }
 }

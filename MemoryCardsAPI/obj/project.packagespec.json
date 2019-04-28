@@ -1,13 +1,13 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "/Users/kaeru/Desktop/важно/Работа/Kontur/Экзамен 3 (проект трёх команд)/Project42/MemoryCardsAPI/MemoryCardsAPI.csproj",
+    "projectUniqueName": "/home/fedor/ImportantStuff/Project42/MemoryCardsAPI/MemoryCardsAPI.csproj",
     "projectName": "MemoryCardsAPI",
-    "projectPath": "/Users/kaeru/Desktop/важно/Работа/Kontur/Экзамен 3 (проект трёх команд)/Project42/MemoryCardsAPI/MemoryCardsAPI.csproj",
-    "outputPath": "/Users/kaeru/Desktop/важно/Работа/Kontur/Экзамен 3 (проект трёх команд)/Project42/MemoryCardsAPI/obj/",
+    "projectPath": "/home/fedor/ImportantStuff/Project42/MemoryCardsAPI/MemoryCardsAPI.csproj",
+    "outputPath": "/home/fedor/ImportantStuff/Project42/MemoryCardsAPI/obj/",
     "projectStyle": "PackageReference",
     "fallbackFolders": [
-      "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+      "/usr/share/dotnet/sdk/NuGetFallbackFolder"
     ],
     "originalTargetFrameworks": [
       "netcoreapp2.1"
@@ -15,14 +15,14 @@
     "frameworks": {
       "netcoreapp2.1": {
         "projectReferences": {
-          "/Users/kaeru/Desktop/важно/Работа/Kontur/Экзамен 3 (проект трёх команд)/Project42/Client.Models/Client.Models.csproj": {
-            "projectPath": "/Users/kaeru/Desktop/важно/Работа/Kontur/Экзамен 3 (проект трёх команд)/Project42/Client.Models/Client.Models.csproj"
+          "/home/fedor/ImportantStuff/Project42/Client.Models/Client.Models.csproj": {
+            "projectPath": "/home/fedor/ImportantStuff/Project42/Client.Models/Client.Models.csproj"
           },
-          "/Users/kaeru/Desktop/важно/Работа/Kontur/Экзамен 3 (проект трёх команд)/Project42/Converters/Converters.csproj": {
-            "projectPath": "/Users/kaeru/Desktop/важно/Работа/Kontur/Экзамен 3 (проект трёх команд)/Project42/Converters/Converters.csproj"
+          "/home/fedor/ImportantStuff/Project42/Converters/Converters.csproj": {
+            "projectPath": "/home/fedor/ImportantStuff/Project42/Converters/Converters.csproj"
           },
-          "/Users/kaeru/Desktop/важно/Работа/Kontur/Экзамен 3 (проект трёх команд)/Project42/Models/Models.csproj": {
-            "projectPath": "/Users/kaeru/Desktop/важно/Работа/Kontur/Экзамен 3 (проект трёх команд)/Project42/Models/Models.csproj"
+          "/home/fedor/ImportantStuff/Project42/Models/Models.csproj": {
+            "projectPath": "/home/fedor/ImportantStuff/Project42/Models/Models.csproj"
           }
         }
       }
@@ -36,7 +36,15 @@
   "frameworks": {
     "netcoreapp2.1": {
       "dependencies": {
+        "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+          "target": "Package",
+          "version": "[6.0.0, )"
+        },
         "Microsoft.AspNetCore": {
+          "target": "Package",
+          "version": "[2.2.0, )"
+        },
+        "Microsoft.AspNetCore.Authentication.JwtBearer": {
           "target": "Package",
           "version": "[2.2.0, )"
         },
@@ -49,6 +57,10 @@
           "version": "[2.1.1, )"
         },
         "Microsoft.EntityFrameworkCore.Design": {
+          "target": "Package",
+          "version": "[2.1.1, )"
+        },
+        "Microsoft.EntityFrameworkCore.InMemory": {
           "target": "Package",
           "version": "[2.1.1, )"
         },
@@ -73,6 +85,10 @@
         "Npgsql.EntityFrameworkCore.PostgreSQL.Design": {
           "target": "Package",
           "version": "[2.0.0-preview1, )"
+        },
+        "System.IdentityModel.Tokens.Jwt": {
+          "target": "Package",
+          "version": "[5.4.0, )"
         },
         "Swashbuckle.AspNetCore": {
           "target": "Package",
