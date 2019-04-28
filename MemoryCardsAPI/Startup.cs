@@ -38,6 +38,12 @@ namespace MemoryCardsAPI
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.AddAutoMapper();
 
+            // Inject an implementation of ISwaggerProvider 
+            services.AddSwaggerGen(swagger =>
+                {
+                    swagger.SwaggerDoc("v1",
+                        new Swashbuckle.AspNetCore.Swagger.Info {Title = "MemoryCardsAPI", Version = "v1"});
+                });
             // configure strongly typed settings objects
             var appSettingsSection = Configuration.GetSection("AppSettings");
             services.Configure<AppSettings>(appSettingsSection);
@@ -82,6 +88,16 @@ namespace MemoryCardsAPI
 
         public void Configure(IApplicationBuilder app)
         {
+            // Enable middleware to serve generated Swagger as a JSON endpoint.
+            app.UseSwagger();
+
+            // Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.), 
+            // specifying the Swagger JSON endpoint.
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("./v1/swagger.json", "MemoryCardsAPI");
+            });
+
             // global cors policy
             app.UseCors(x => x
                 .AllowAnyOrigin()

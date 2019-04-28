@@ -15,7 +15,7 @@ namespace MemoryCardsAPI.Data
                 "Port=5432;" +
                 "Database=cards;" +
                 "Username=postgres;" +
-                "Password=1q2w3e");
+                "Password=12345");
         }
 
         public DbSet<CardItem> CardItems { get; set; }

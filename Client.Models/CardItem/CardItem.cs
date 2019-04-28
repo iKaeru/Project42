@@ -10,6 +10,11 @@
         /// </summary>
         public string Question { get; set; }
 
+<<<<<<< HEAD
+=======
+        
+        
+>>>>>>> master
         /// <summary>
         /// Ответ на вопрос карты
         /// </summary>
