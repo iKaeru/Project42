@@ -30,6 +30,7 @@ namespace MemoryCardsAPI
             //    .AddDbContext<PostgreContext>()
             //    .BuildServiceProvider();
             services.AddSingleton<IUserService, UserService>();
+            services.AddSingleton<ICardService, CardService>();
             services.AddCors();
             services.AddDbContext<DataContext>(x => x.UseInMemoryDatabase("TestDb"));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
