@@ -1,13 +1,13 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "/home/fedor/ImportantStuff/Project42/Client.Models/Client.Models.csproj",
+    "projectUniqueName": "/Users/kaeru/Downloads/temp/Project42/Client.Models/Client.Models.csproj",
     "projectName": "Client.Models",
-    "projectPath": "/home/fedor/ImportantStuff/Project42/Client.Models/Client.Models.csproj",
-    "outputPath": "/home/fedor/ImportantStuff/Project42/Client.Models/obj/",
+    "projectPath": "/Users/kaeru/Downloads/temp/Project42/Client.Models/Client.Models.csproj",
+    "outputPath": "/Users/kaeru/Downloads/temp/Project42/Client.Models/obj/",
     "projectStyle": "PackageReference",
     "fallbackFolders": [
-      "/usr/share/dotnet/sdk/NuGetFallbackFolder"
+      "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
     ],
     "originalTargetFrameworks": [
       "netcoreapp2.1"
