@@ -44,23 +44,7 @@ namespace MemoryCardsAPI
                 swagger.SwaggerDoc("v1",
                     new Swashbuckle.AspNetCore.Swagger.Info {Title = "MemoryCardsAPI", Version = "v1"});
 
-                // Swagger 2.+ support
-                var security = new Dictionary<string, IEnumerable<string>>
-                {
-                    {"Bearer", new string[] { }},
-                };
-
-                swagger.AddSecurityDefinition("JWT", new ApiKeyScheme
-                {
-                    Description =
-                        "JWT Authorization header using the Bearer scheme. Example: \"Authorization: Bearer {token}\"",
-                    Name = "Authorization",
-                    In = "header",
-                    Type = "apiKey"
-                });
-                swagger.AddSecurityRequirement(security);
-
-//                swagger.OperationFilter<AuthorizationHeaderParameterOperationFilter>();
+                swagger.OperationFilter<AuthorizationHeaderParameterOperationFilter>();
             });
 
             // configure strongly typed settings objects
