@@ -59,6 +59,8 @@ namespace MemoryCardsAPI
                     Type = "apiKey"
                 });
                 swagger.AddSecurityRequirement(security);
+
+//                swagger.OperationFilter<AuthorizationHeaderParameterOperationFilter>();
             });
 
             // configure strongly typed settings objects
