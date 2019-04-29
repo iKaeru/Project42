@@ -1,7 +1,6 @@
 using MemoryCardsAPI.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
-
 using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
 using Microsoft.EntityFrameworkCore;
@@ -13,6 +12,8 @@ using System.Text;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using System.Collections.Generic;
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace MemoryCardsAPI
 {
@@ -24,6 +25,7 @@ namespace MemoryCardsAPI
         }
 
         public IConfiguration Configuration { get; }
+
         public void ConfigureServices(IServiceCollection services)
         {
             //services.AddEntityFrameworkNpgsql()
@@ -38,10 +40,27 @@ namespace MemoryCardsAPI
 
             // Inject an implementation of ISwaggerProvider 
             services.AddSwaggerGen(swagger =>
+            {
+                swagger.SwaggerDoc("v1",
+                    new Swashbuckle.AspNetCore.Swagger.Info {Title = "MemoryCardsAPI", Version = "v1"});
+
+                // Swagger 2.+ support
+                var security = new Dictionary<string, IEnumerable<string>>
                 {
-                    swagger.SwaggerDoc("v1",
-                        new Swashbuckle.AspNetCore.Swagger.Info {Title = "MemoryCardsAPI", Version = "v1"});
+                    {"Bearer", new string[] { }},
+                };
+
+                swagger.AddSecurityDefinition("JWT", new ApiKeyScheme
+                {
+                    Description =
+                        "JWT Authorization header using the Bearer scheme. Example: \"Authorization: Bearer {token}\"",
+                    Name = "Authorization",
+                    In = "header",
+                    Type = "apiKey"
                 });
+                swagger.AddSecurityRequirement(security);
+            });
+
             // configure strongly typed settings objects
             var appSettingsSection = Configuration.GetSection("AppSettings");
             services.Configure<AppSettings>(appSettingsSection);
@@ -69,6 +88,7 @@ namespace MemoryCardsAPI
                                 // return unauthorized if user no longer exists
                                 context.Fail("Unauthorized");
                             }
+
                             return Task.CompletedTask;
                         }
                     };
@@ -91,10 +111,7 @@ namespace MemoryCardsAPI
 
             // Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.), 
             // specifying the Swagger JSON endpoint.
-            app.UseSwaggerUI(c =>
-            {
-                c.SwaggerEndpoint("./v1/swagger.json", "MemoryCardsAPI");
-            });
+            app.UseSwaggerUI(c => { c.SwaggerEndpoint("./v1/swagger.json", "MemoryCardsAPI"); });
 
             // global cors policy
             app.UseCors(x => x
