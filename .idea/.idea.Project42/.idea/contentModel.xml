@@ -1,21 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="$USER_HOME$/.Rider2018.3/system/extResources" t="IncludeRecursive" />
-    <e p="$USER_HOME$/.Rider2018.3/system/resharper-host/local/Transient/ReSharperHost/v183/SolutionCaches/_Project42.-1342095004.00" t="ExcludeRecursive" />
     <e p="$PROJECT_DIR$" t="IncludeFlat">
       <e p="Client.Models" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
         <e p="CardItem" t="Include">
           <e p="CardItem.cs" t="Include" />
           <e p="CardItemInfo.cs" t="Include" />
         </e>
         <e p="Client.Models.csproj" t="IncludeRecursive" />
-        <e p="User" t="Include">
-          <e p="User.cs" t="Include" />
-          <e p="UserLoginInfo.cs" t="Include" />
-          <e p="UserRegistrationInfo.cs" t="Include" />
-        </e>
-        <e p="bin" t="ExcludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp2.1" t="Include">
@@ -23,12 +16,16 @@
             </e>
           </e>
         </e>
+        <e p="User" t="Include">
+          <e p="User.cs" t="Include" />
+          <e p="UserLoginInfo.cs" t="Include" />
+          <e p="UserRegistrationInfo.cs" t="Include" />
+        </e>
       </e>
       <e p="Converters" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
         <e p="CardItemConverter.cs" t="Include" />
         <e p="Converters.csproj" t="IncludeRecursive" />
-        <e p="UserConverter.cs" t="Include" />
-        <e p="bin" t="ExcludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp2.1" t="Include">
@@ -36,12 +33,16 @@
             </e>
           </e>
         </e>
+        <e p="UserConverter.cs" t="Include" />
       </e>
       <e p="MemoryCardsAPI" t="IncludeRecursive">
+        <e p="appsettings.json" t="Include" />
         <e p="Auth" t="Include">
           <e p="IAuthenicator.cs" t="Include" />
           <e p="SessionState.cs" t="Include" />
         </e>
+        <e p="AuthorizationHeaderParameterOperationFilter.cs" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
         <e p="Controllers" t="Include">
           <e p="CardsController.cs" t="Include" />
           <e p="UsersController.cs" t="Include" />
@@ -56,14 +57,6 @@
           <e p="DataContext.cs" t="Include" />
         </e>
         <e p="MemoryCardsAPI.csproj" t="IncludeRecursive" />
-        <e p="Program.cs" t="Include" />
-        <e p="Services" t="Include">
-          <e p="UserService.cs" t="Include" />
-        </e>
-        <e p="Startup.cs" t="Include" />
-        <e p="StyleCop.Cache" t="Include" />
-        <e p="appsettings.json" t="Include" />
-        <e p="bin" t="ExcludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp2.1" t="Include">
@@ -71,8 +64,16 @@
             </e>
           </e>
         </e>
+        <e p="Program.cs" t="Include" />
+        <e p="Services" t="Include">
+          <e p="CardService.cs" t="Include" />
+          <e p="UserService.cs" t="Include" />
+        </e>
+        <e p="Startup.cs" t="Include" />
+        <e p="StyleCop.Cache" t="Include" />
       </e>
       <e p="Models" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
         <e p="CardItem" t="Include">
           <e p="CardCreationInfo.cs" t="Include" />
           <e p="CardItem.cs" t="Include" />
@@ -88,6 +89,13 @@
           <e p="CardsCollection.cs" t="Include" />
         </e>
         <e p="Models.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.1" t="Include">
+              <e p="Models.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
         <e p="Training" t="Include">
           <e p="MemorizationLevels.cs" t="Include" />
           <e p="Training.cs" t="Include" />
@@ -96,17 +104,13 @@
           <e p="User.cs" t="Include" />
           <e p="UserInfo.cs" t="Include" />
         </e>
-        <e p="bin" t="ExcludeRecursive" />
-        <e p="obj" t="ExcludeRecursive">
-          <e p="Debug" t="Include">
-            <e p="netcoreapp2.1" t="Include">
-              <e p="Models.AssemblyInfo.cs" t="Include" />
-            </e>
-          </e>
-        </e>
       </e>
-      <e p="Project42.sln" t="IncludeFlat" />
       <e p="packages" t="ExcludeRecursive" />
+      <e p="Project42.sln" t="IncludeFlat" />
     </e>
+    <e p="$USER_HOME$/Library/Caches/Rider2018.3/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/Rider2018.3/resharper-host/local/Transient/ReSharperHost/v183/SolutionCaches/_Project42.-1640484017.00" t="ExcludeRecursive" />
+    <e p="$APPLICATION_CONFIG_DIR$/consoles/db" t="IncludeRecursive" />
+    <e p="$APPLICATION_CONFIG_DIR$/extensions" t="IncludeRecursive" />
   </component>
 </project>
