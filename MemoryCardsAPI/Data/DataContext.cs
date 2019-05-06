@@ -10,5 +10,6 @@ namespace Project42.Helpers
 
         public DbSet<User> Users { get; set; }
         public DbSet<CardItem> Cards { get; set; }
+        public DbSet<Models.CardsCollection.CardsCollection> Collections { get; set; }
     }
 }

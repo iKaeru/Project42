@@ -35,7 +35,7 @@ namespace MemoryCardsAPI.Controllers
 
         [HttpGet]
         [Route("")]
-        public async Task CreateAsync(CancellationToken cancellationToken)
+        public async Task<ActionResult<CardItem>> CreateDefaultAsync(CancellationToken cancellationToken)
         {
             Guid.TryParse(HttpContext.User.Identity.Name, out var uId);
             var card = new CardItem
@@ -48,11 +48,47 @@ namespace MemoryCardsAPI.Controllers
             };
             //await db.CardItems.AddAsync(card);
             //await db.SaveChangesAsync();
-            _cardService.AddAsync(card);
-            _cardService.SaveChangesAsync();
+            await _cardService.AddAsync(card);
+            await _cardService.SaveChangesAsync();
         //    _cardService.Create(card);
 
             Console.WriteLine("{0} records saved to database");
+            return Ok(card);
+        }
+
+        /// <summary>
+        /// Post Card
+        /// </summary>
+        /// <param name="cancellationToken"></param>
+        /// <returns code="200"></returns> 
+
+        [HttpPost]
+        [Route("")]
+        public async Task<ActionResult<CardItem>> CreateAsync([FromBody]CardCreationInfo cardCreationInfo, CancellationToken cancellationToken)
+        {
+            Guid.TryParse(HttpContext.User.Identity.Name, out var uId);
+
+            if (cardCreationInfo == null)
+            {
+                return BadRequest(new { message = "Could not get cardCreationInfo from body"});
+            }
+
+            var card = new CardItem
+            {
+                Id = Guid.NewGuid(),
+                UserId = uId,
+                Question = cardCreationInfo.Question,
+                Answer = cardCreationInfo.Answer,
+                CreatedAt = DateTime.Now,
+            };
+            //await db.CardItems.AddAsync(card);
+            //await db.SaveChangesAsync();
+            await _cardService.AddAsync(card);
+            await _cardService.SaveChangesAsync();
+            //    _cardService.Create(card);
+
+            Console.WriteLine("1 record saved to database");
+            return Ok(card);
         }
 
         [HttpGet]
