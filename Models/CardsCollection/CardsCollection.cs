@@ -11,7 +11,7 @@ namespace Models.CardsCollection
     [Table("Collectons")]
     public class CardsCollection
     {
-        public virtual CardItem.CardItemInfo Card { get; set; }
+     // хз зачем --->   public virtual CardItem.CardItemInfo Card { get; set; }
 
         /// <summary>
         /// Уникальный идентификатор коллекции
@@ -30,7 +30,7 @@ namespace Models.CardsCollection
         /// <summary>
         /// Множество карт
         /// </summary>
-        [Column("Id", Order = 3)] public ICollection<CardItem.CardItem> CardItems;
+        [Column("Id", Order = 3)] public ICollection<Guid> CardItems;
 
         /// <summary>
         /// Пользователь создавший коллекцию
@@ -42,6 +42,6 @@ namespace Models.CardsCollection
         /// Дата создания коллекции
         /// </summary>
         [Column("Date", Order = 5)]
-        public DataType CreationDate { get; set; }
+        public DateTime CreationDate { get; set; }
     }
 }

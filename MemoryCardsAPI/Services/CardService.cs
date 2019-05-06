@@ -5,6 +5,7 @@ using Project42.Helpers;
 using MemoryCardsAPI.Data;
 using Model = Models.CardItem;
 using View = Client.Models.CardItem;
+using System.Threading.Tasks;
 
 namespace Project42.Services
 {
@@ -15,8 +16,8 @@ namespace Project42.Services
         Model.CardItem Create(Model.CardItem card);
         void Update(Model.CardItem card);
         void Delete(int id);
-        void AddAsync(Model.CardItem card);
-        void SaveChangesAsync();
+        Task AddAsync(Model.CardItem card);
+        Task SaveChangesAsync();
     }
 
     public class CardService : ICardService
@@ -67,14 +68,14 @@ namespace Project42.Services
             }
         }
 
-        public void AddAsync(Model.CardItem card)
+        public async Task AddAsync(Model.CardItem card)
         {
-            _context.Cards.AddAsync(card);
+           await _context.Cards.AddAsync(card);
         }
 
-        public void SaveChangesAsync()
+        public async Task SaveChangesAsync()
         {
-            _context.SaveChangesAsync();
+           await _context.SaveChangesAsync();
         }
     }
 }

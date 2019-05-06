@@ -33,6 +33,7 @@ namespace MemoryCardsAPI
             //    .BuildServiceProvider();
             services.AddSingleton<IUserService, UserService>();
             services.AddSingleton<ICardService, CardService>();
+            services.AddSingleton<ICollectionService, CollectionService>();
             services.AddCors();
             services.AddDbContext<DataContext>(x => x.UseInMemoryDatabase("TestDb"));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
