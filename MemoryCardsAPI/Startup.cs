@@ -1,19 +1,18 @@
-using MemoryCardsAPI.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
 using Microsoft.EntityFrameworkCore;
-using Project42.Helpers;
-using Project42.Services;
+using MemoryCardsAPI.Helpers;
+using MemoryCardsAPI.Services;
 using AutoMapper;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Mvc;
 using System;
-using System.Collections.Generic;
-using Swashbuckle.AspNetCore.Swagger;
+using MemoryCardsAPI.Auth;
+using MemoryCardsAPI.Data;
 
 namespace MemoryCardsAPI
 {
@@ -85,7 +84,9 @@ namespace MemoryCardsAPI
                         ValidateIssuerSigningKey = true,
                         IssuerSigningKey = new SymmetricSecurityKey(key),
                         ValidateIssuer = false,
-                        ValidateAudience = false
+                        ValidateAudience = false,
+                        ValidateLifetime = true,
+                        ClockSkew = TimeSpan.FromSeconds(5)
                     };
                 });
         }

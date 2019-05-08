@@ -38,23 +38,23 @@
       <e p="MemoryCardsAPI" t="IncludeRecursive">
         <e p="appsettings.json" t="Include" />
         <e p="Auth" t="Include">
+          <e p="AuthorizationHeaderParameterOperationFilter.cs" t="Include" />
           <e p="IAuthenicator.cs" t="Include" />
           <e p="SessionState.cs" t="Include" />
         </e>
-        <e p="AuthorizationHeaderParameterOperationFilter.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="Controllers" t="Include">
           <e p="CardsController.cs" t="Include" />
           <e p="UsersController.cs" t="Include" />
         </e>
         <e p="Data" t="Include">
+          <e p="DataContext.cs" t="Include" />
           <e p="PostgreContext.cs" t="Include" />
         </e>
         <e p="Helpers" t="Include">
           <e p="AppException.cs" t="Include" />
           <e p="AppSettings.cs" t="Include" />
           <e p="AutoMapperProfile.cs" t="Include" />
-          <e p="DataContext.cs" t="Include" />
         </e>
         <e p="MemoryCardsAPI.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
@@ -67,6 +67,8 @@
         <e p="Program.cs" t="Include" />
         <e p="Services" t="Include">
           <e p="CardService.cs" t="Include" />
+          <e p="ICardService.cs" t="Include" />
+          <e p="IUserService.cs" t="Include" />
           <e p="UserService.cs" t="Include" />
         </e>
         <e p="Startup.cs" t="Include" />

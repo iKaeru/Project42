@@ -1,30 +1,20 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Project42.Helpers;
+using MemoryCardsAPI.Helpers;
 using MemoryCardsAPI.Data;
 using Model = Models.User;
 using View = Client.Models.User;
 
-namespace Project42.Services
+namespace MemoryCardsAPI.Services
 {
-    public interface IUserService
-    {
-        Model.User Authenticate(string username, string password);
-        IEnumerable<Model.User> GetAll();
-        Model.User GetById(Guid id);
-        Model.User Create(Model.User user, string password);
-        void Update(Model.User user, string password = null);
-        void Delete(int id);
-    }
-
     public class UserService : IUserService
     {
-        private DataContext _context;
+        private DataContext context;
         //private PostgreContext _context = new PostgreContext();
         public UserService(DataContext context)
         {
-            _context = context;
+            this.context = context;
         }
 
         public Model.User Authenticate(string username, string password)
@@ -32,7 +22,7 @@ namespace Project42.Services
             if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
                 return null;
 
-            var user = _context.Users.SingleOrDefault(x => x.Login == username);
+            var user = context.Users.SingleOrDefault(x => x.Login == username);
 
             // check if username exists
             if (user == null)
@@ -48,12 +38,12 @@ namespace Project42.Services
 
         public IEnumerable<Model.User> GetAll()
         {
-            return _context.Users;
+            return context.Users;
         }
 
         public Model.User GetById(Guid id)
         {
-            return _context.Users.Find(id);
+            return context.Users.Find(id);
         }
 
         public Model.User Create(Model.User user, string password)
@@ -62,7 +52,7 @@ namespace Project42.Services
             if (string.IsNullOrWhiteSpace(password))
                 throw new AppException("Password is required");
 
-            if (_context.Users.Any(x => x.Login == user.Login))
+            if (context.Users.Any(x => x.Login == user.Login))
                 throw new AppException("Username \"" + user.Login + "\" is already taken");
 
             byte[] passwordHash, passwordSalt;
@@ -71,15 +61,15 @@ namespace Project42.Services
             user.PasswordHash = passwordHash;
             user.PasswordSalt = passwordSalt;
 
-            _context.Users.Add(user);
-            _context.SaveChanges();
+            context.Users.Add(user);
+            context.SaveChanges();
 
             return user;
         }
 
         public void Update(Model.User userParam, string password = null)
         {
-            var user = _context.Users.Find(userParam.Id);
+            var user = context.Users.Find(userParam.Id);
 
             if (user == null)
                 throw new AppException("User not found");
@@ -87,7 +77,7 @@ namespace Project42.Services
             if (userParam.Login != user.Login)
             {
                 // username has changed so check if the new username is already taken
-                if (_context.Users.Any(x => x.Login == userParam.Login))
+                if (context.Users.Any(x => x.Login == userParam.Login))
                     throw new AppException("Username " + userParam.Login + " is already taken");
             }
 
@@ -106,17 +96,17 @@ namespace Project42.Services
                 user.PasswordSalt = passwordSalt;
             }
 
-            _context.Users.Update(user);
-            _context.SaveChanges();
+            context.Users.Update(user);
+            context.SaveChanges();
         }
 
         public void Delete(int id)
         {
-            var user = _context.Users.Find(id);
+            var user = context.Users.Find(id);
             if (user != null)
             {
-                _context.Users.Remove(user);
-                _context.SaveChanges();
+                context.Users.Remove(user);
+                context.SaveChanges();
             }
         }
 

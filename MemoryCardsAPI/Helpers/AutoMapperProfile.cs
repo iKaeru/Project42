@@ -2,7 +2,7 @@
 using Model = Models.User;
 using View = Client.Models.User;
 
-namespace WebApi.Helpers
+namespace MemoryCardsAPI.Helpers
 {
     public class AutoMapperProfile : Profile
     {
