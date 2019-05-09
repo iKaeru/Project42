@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc.Authorization;
 using Swashbuckle.AspNetCore.Swagger;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
-namespace MemoryCardsAPI
+namespace MemoryCardsAPI.Auth
 {
     public class AuthorizationHeaderParameterOperationFilter : IOperationFilter
     {

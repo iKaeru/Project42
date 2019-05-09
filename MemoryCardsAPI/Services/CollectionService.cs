@@ -1,39 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Project42.Helpers;
 using MemoryCardsAPI.Data;
 using Model = Models.CardItem;
 using View = Client.Models.CardItem;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
 using Models.CardsCollection;
 
-namespace Project42.Services
+namespace MemoryCardsAPI.Services
 {
-    public interface ICollectionService
-    {
-        IEnumerable<CardsCollection> GetCollections(Guid userId);
-        bool AddCard(string collectionName, Guid cardId, Guid userId);
-        bool DeleteCard(Guid CardId);
-        Task AddAsync(CardsCollection cardCollection);
-        Task SaveChangesAsync();
-        bool NameExists(string v, Guid userId);
-        CardsCollection FindByName(string collectionName, Guid userId);
-    }
-
     public class CollectionService : ICollectionService
     {
-        private DataContext _context;
+        private DataContext context;
         //private PostgreContext _context = new PostgreContext();
         public CollectionService(DataContext context)
         {
-            _context = context;
+            this.context = context;
         }
 
         public bool AddCard(string collectionName, Guid cardId, Guid userId)
         {
-            var desiredCollection = _context.Collections
+            var desiredCollection = context.Collections
                 .Where(x => x.UserId == userId)
                 .FirstOrDefault(x => x.Name == collectionName);
 
@@ -43,8 +30,8 @@ namespace Project42.Services
             }
 
             desiredCollection.CardItems.Add(cardId);
-            _context.Collections.Update(desiredCollection);
-            _context.SaveChangesAsync();
+            context.Collections.Update(desiredCollection);
+            context.SaveChangesAsync();
             return true;
         }
 
@@ -61,31 +48,31 @@ namespace Project42.Services
 
         public async Task AddAsync(CardsCollection card)
         {
-            await _context.Collections.AddAsync(card);
+            await context.Collections.AddAsync(card);
         }
 
         public async Task SaveChangesAsync()
         {
-            await _context.SaveChangesAsync();
+            await context.SaveChangesAsync();
         }
 
         public bool NameExists(string collectionName, Guid userId)
         {
-            return _context.Collections
+            return context.Collections
                                 .Where(x => x.UserId == userId)
                                 .Any(x => x.Name == collectionName);
         }
 
         public CardsCollection FindByName(string collectionName, Guid userId)
         {
-            return _context.Collections
+            return context.Collections
                 .Where(x => x.UserId == userId)
                 .FirstOrDefault(x => x.Name == collectionName);
         }
 
         public IEnumerable<CardsCollection> GetCollections(Guid userId)
         {
-            return _context.Collections.Where(x => x.UserId == userId);
+            return context.Collections.Where(x => x.UserId == userId);
         }
     }
 }

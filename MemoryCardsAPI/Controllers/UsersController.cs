@@ -3,50 +3,48 @@ using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using AutoMapper;
 using System.IdentityModel.Tokens.Jwt;
-using Project42.Helpers;
+using MemoryCardsAPI.Helpers;
 using Microsoft.Extensions.Options;
 using System.Text;
 using Microsoft.IdentityModel.Tokens;
 using System.Security.Claims;
 using Client.Models.User;
+using MemoryCardsAPI.Services;
 using Microsoft.AspNetCore.Authorization;
-using Project42.Services;
 using Microsoft.IdentityModel.Logging;
-//using Project42.Dtos;
-//using Project42.Entities;
 
-namespace Project42.Controllers
+namespace MemoryCardsAPI.Controllers
 {
     [Authorize]
   //  [ApiController]
     [Route("v1/api")]
     public class UsersController : ControllerBase
     {
-        private IUserService _userService;
-        private IMapper _mapper;
-        private readonly AppSettings _appSettings;
+        private IUserService userService;
+        private IMapper mapper;
+        private readonly AppSettings appSettings;
 
         public UsersController(
             IUserService userService,
             IMapper mapper,
             IOptions<AppSettings> appSettings)
         {
-            _userService = userService;
-            _mapper = mapper;
-            _appSettings = appSettings.Value;
+            this.userService = userService;
+            this.mapper = mapper;
+            this.appSettings = appSettings.Value;
         }
 
         [AllowAnonymous]
         [HttpPost("auth")]
         public IActionResult Authenticate([FromBody]UserLoginInfo userDto)
         {
-            var user = _userService.Authenticate(userDto.Login, userDto.Password);
+            var user = userService.Authenticate(userDto.Login, userDto.Password);
 
             if (user == null)
                 return BadRequest(new { message = "Username or password is incorrect" });
             IdentityModelEventSource.ShowPII = true;
             var tokenHandler = new JwtSecurityTokenHandler();
-            var key = Encoding.ASCII.GetBytes(_appSettings.Secret);
+            var key = Encoding.ASCII.GetBytes(appSettings.Secret);
             var tokenDescriptor = new SecurityTokenDescriptor
             {
                 Subject = new ClaimsIdentity(new Claim[] 
@@ -74,7 +72,7 @@ namespace Project42.Controllers
         public IActionResult Register([FromBody]UserRegistrationInfo userDto)
         {
             // map dto to entity
-            var modelUser = _mapper.Map<Models.User.User>(userDto);
+            var modelUser = mapper.Map<Models.User.User>(userDto);
 
             var user = new Models.User.User()
             {
@@ -87,7 +85,7 @@ namespace Project42.Controllers
             try 
             {
                 // save 
-                _userService.Create(user, userDto.Password);
+                userService.Create(user, userDto.Password);
                 return Ok();
             } 
             catch(AppException ex)
@@ -100,8 +98,8 @@ namespace Project42.Controllers
         [HttpGet]
         public IActionResult GetAll()
         {
-            var users =  _userService.GetAll();
-            var userDtos = _mapper.Map<IList<UserRegistrationInfo>>(users);
+            var users =  userService.GetAll();
+            var userDtos = mapper.Map<IList<UserRegistrationInfo>>(users);
             return Ok(userDtos);
         }
 
@@ -109,8 +107,8 @@ namespace Project42.Controllers
         public IActionResult GetById(string id)
         {
             var GuidId = Guid.Parse(id);
-            var user =  _userService.GetById(GuidId);
-            var userDto = _mapper.Map<UserRegistrationInfo>(user);
+            var user =  userService.GetById(GuidId);
+            var userDto = mapper.Map<UserRegistrationInfo>(user);
             return Ok(userDto);
         }
 
@@ -137,7 +135,7 @@ namespace Project42.Controllers
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
-            _userService.Delete(id);
+            userService.Delete(id);
             return Ok();
         }
     }
