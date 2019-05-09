@@ -1,13 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Models.CardItem;
 using Models.CardsCollection;
-using Project42.Services;
+using MemoryCardsAPI.Services;
 
 namespace MemoryCardsAPI.Controllers
 {
@@ -72,8 +70,8 @@ namespace MemoryCardsAPI.Controllers
 
         [HttpPost]
         [Route("")]
-        public async Task<ActionResult<CardsCollection>>
-    CreateAsync(CancellationToken cancellationToken, [FromQuery]string name)
+        public async Task<ActionResult<CardsCollection>> CreateAsync
+            (CancellationToken cancellationToken, [FromQuery]string name)
         {
             if (string.IsNullOrEmpty(name))
             {

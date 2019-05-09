@@ -1,10 +1,10 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "/Users/kaeru/Downloads/temp/Project42/Models/Models.csproj",
+    "projectUniqueName": "/Users/kaeru/Downloads/ex/Project42/Models/Models.csproj",
     "projectName": "Models",
-    "projectPath": "/Users/kaeru/Downloads/temp/Project42/Models/Models.csproj",
-    "outputPath": "/Users/kaeru/Downloads/temp/Project42/Models/obj/",
+    "projectPath": "/Users/kaeru/Downloads/ex/Project42/Models/Models.csproj",
+    "outputPath": "/Users/kaeru/Downloads/ex/Project42/Models/obj/",
     "projectStyle": "PackageReference",
     "fallbackFolders": [
       "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
