@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Models.User;
 
-namespace Project42.Helpers
+namespace MemoryCardsAPI.Data
 {
     public class DataContext : DbContext
     {
