@@ -38,23 +38,24 @@
       <e p="MemoryCardsAPI" t="IncludeRecursive">
         <e p="appsettings.json" t="Include" />
         <e p="Auth" t="Include">
+          <e p="AuthorizationHeaderParameterOperationFilter.cs" t="Include" />
           <e p="IAuthenicator.cs" t="Include" />
           <e p="SessionState.cs" t="Include" />
         </e>
-        <e p="AuthorizationHeaderParameterOperationFilter.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="Controllers" t="Include">
           <e p="CardsController.cs" t="Include" />
+          <e p="CollectionsController.cs" t="Include" />
           <e p="UsersController.cs" t="Include" />
         </e>
         <e p="Data" t="Include">
+          <e p="DataContext.cs" t="Include" />
           <e p="PostgreContext.cs" t="Include" />
         </e>
         <e p="Helpers" t="Include">
           <e p="AppException.cs" t="Include" />
           <e p="AppSettings.cs" t="Include" />
           <e p="AutoMapperProfile.cs" t="Include" />
-          <e p="DataContext.cs" t="Include" />
         </e>
         <e p="MemoryCardsAPI.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
@@ -67,6 +68,10 @@
         <e p="Program.cs" t="Include" />
         <e p="Services" t="Include">
           <e p="CardService.cs" t="Include" />
+          <e p="CollectionService.cs" t="Include" />
+          <e p="ICardService.cs" t="Include" />
+          <e p="ICollectionService.cs" t="Include" />
+          <e p="IUserService.cs" t="Include" />
           <e p="UserService.cs" t="Include" />
         </e>
         <e p="Startup.cs" t="Include" />
@@ -109,7 +114,7 @@
       <e p="Project42.sln" t="IncludeFlat" />
     </e>
     <e p="$USER_HOME$/Library/Caches/Rider2018.3/extResources" t="IncludeRecursive" />
-    <e p="$USER_HOME$/Library/Caches/Rider2018.3/resharper-host/local/Transient/ReSharperHost/v183/SolutionCaches/_Project42.-1640484017.00" t="ExcludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/Rider2018.3/resharper-host/local/Transient/ReSharperHost/v183/SolutionCaches/_Project42.-469858258.00" t="ExcludeRecursive" />
     <e p="$APPLICATION_CONFIG_DIR$/consoles/db" t="IncludeRecursive" />
     <e p="$APPLICATION_CONFIG_DIR$/extensions" t="IncludeRecursive" />
   </component>

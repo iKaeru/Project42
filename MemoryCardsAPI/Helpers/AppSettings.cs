@@ -1,4 +1,4 @@
-namespace Project42.Helpers
+namespace MemoryCardsAPI.Helpers
 {
     public class AppSettings
     {

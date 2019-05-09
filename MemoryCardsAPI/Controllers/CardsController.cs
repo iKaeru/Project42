@@ -2,10 +2,10 @@ using System;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using MemoryCardsAPI.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Models.CardItem;
-using Project42.Services;
 
 namespace MemoryCardsAPI.Controllers
 {
@@ -19,12 +19,12 @@ namespace MemoryCardsAPI.Controllers
     {
         //private PostgreContext db = new PostgreContext();
 
-        private ICardService _cardService;
+        private ICardService cardService;
 
         public CardsController(
             ICardService cardService)
         {
-            _cardService = cardService;
+            this.cardService = cardService;
         }
 
         /// <summary>
@@ -48,8 +48,8 @@ namespace MemoryCardsAPI.Controllers
             };
             //await db.CardItems.AddAsync(card);
             //await db.SaveChangesAsync();
-            await _cardService.AddAsync(card);
-            await _cardService.SaveChangesAsync();
+            await cardService.AddAsync(card);
+            await cardService.SaveChangesAsync();
         //    _cardService.Create(card);
 
             Console.WriteLine("{0} records saved to database");
@@ -83,8 +83,8 @@ namespace MemoryCardsAPI.Controllers
             };
             //await db.CardItems.AddAsync(card);
             //await db.SaveChangesAsync();
-            await _cardService.AddAsync(card);
-            await _cardService.SaveChangesAsync();
+            await cardService.AddAsync(card);
+            await cardService.SaveChangesAsync();
             //    _cardService.Create(card);
 
             Console.WriteLine("1 record saved to database");
@@ -95,7 +95,7 @@ namespace MemoryCardsAPI.Controllers
         [Route("all")]
         public IActionResult GetCards(CancellationToken cancellationToken)
         {
-            var cards = _cardService.GetAll();
+            var cards = cardService.GetAll();
             return Ok(cards);
         }
 
@@ -104,7 +104,7 @@ namespace MemoryCardsAPI.Controllers
         public IActionResult GetCardsForUser(CancellationToken cancellationToken)
         {
             Guid.TryParse(HttpContext.User.Identity.Name, out var uId);
-            var cards = _cardService.GetAll().Where(x => x.UserId==uId || x.UserId==default(Guid));
+            var cards = cardService.GetAll().Where(x => x.UserId==uId || x.UserId==default(Guid));
             return Ok(cards);
         }
     }
