@@ -86,7 +86,11 @@ namespace MemoryCardsAPI.Controllers
             try
             {
                 await userService.AddUserAsync(user, userDto.Password, cancellationToken);
-                return Ok();
+                return Ok(new
+                {
+                    Id = user.Id,
+                    Username = user.Login
+                });
             }
             catch (AppException ex)
             {
@@ -117,7 +121,14 @@ namespace MemoryCardsAPI.Controllers
             try 
             {
                 userService.Update(user, userDto.Password);
-                return Ok();
+                return Ok(new
+                {
+                    Id = user.Id,
+                    Username = user.Login,
+                    FirstName = user.FirstName,
+                    LastName = user.LastName,
+                    Token = token
+                });
             } 
             catch(AppException ex)
             {
