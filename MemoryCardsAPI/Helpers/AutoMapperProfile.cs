@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using Model = Models.User;
-using View = Client.Models.User;
 
 namespace MemoryCardsAPI.Helpers
 {
@@ -8,8 +7,8 @@ namespace MemoryCardsAPI.Helpers
     {
         public AutoMapperProfile()
         {
-            CreateMap<Model.User, View.UserRegistrationInfo>();
-            CreateMap<View.UserRegistrationInfo, Model.User>();
+            CreateMap<Model.User, Model.UserRegistrationInfo>();
+            CreateMap<Model.UserRegistrationInfo, Model.User>();
         }
     }
 }

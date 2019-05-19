@@ -2,12 +2,22 @@ using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
+using Models.Data;
 
 namespace Models.CardItem.Repositories
 {
     public class PostgreCardsRepository : ICardsRepository
     {    
-        public Task<CardItemInfo> CreateAsync(CardCreationInfo creationInfo, CancellationToken cancellationToken)
+        private PostgreContext context = new PostgreContext();
+
+        public async Task<CardItemInfo> CreateAsync(CardItem cardToCreate, CancellationToken cancellationToken)
+        {
+            await context.CardItems.AddAsync(cardToCreate);
+            await context.SaveChangesAsync();
+            return cardToCreate; // todo
+        }
+
+        public Task<IEnumerable<CardItem>> GetAllUserCards(Guid uId, CancellationToken cancellationToken)
         {
             throw new NotImplementedException();
         }
@@ -19,7 +29,6 @@ namespace Models.CardItem.Repositories
 
         public Task<CardItemInfo> GetAsync(Guid cardId, CancellationToken cancellationToken)
         {
-            
             throw new NotImplementedException();
         }
 
