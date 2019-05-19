@@ -13,12 +13,21 @@ namespace Models.CardItem.Repositories
         /// <summary>
         /// Создать новую карту
         /// </summary>
-        /// <param name="creationInfo">Информация для создания карты</param>
+        /// <param name="cardToCreate">Информация для создания карты</param>
         /// <param name="cancellationToken">Токен отмены операции</param>
         /// <returns>Задача, представляющая асинхронное создание карты.
         /// Результат выполнения операции - информация о созданной карте</returns>
-        Task<CardItemInfo> CreateAsync(CardCreationInfo creationInfo, CancellationToken cancellationToken);
+        Task<CardItemInfo> CreateAsync(CardItem cardToCreate, CancellationToken cancellationToken);
 
+        /// <summary>
+        /// Выдать все карты, соответствующие пользователю
+        /// </summary>
+        /// <param name="uId">Информация об Id пользователя</param>
+        /// <param name="cancellationToken">Токен отмены операции</param>
+        /// <returns>Задача, представляющая асинхронное создание карты.
+        /// Результат выполнения операции - информация о созданной карте</returns>
+        Task<IEnumerable<CardItem>> GetAllUserCards(Guid uId, CancellationToken cancellationToken);
+        
         /// <summary>
         /// Найти карты
         /// </summary>

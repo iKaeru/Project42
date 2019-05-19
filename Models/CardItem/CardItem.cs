@@ -12,12 +12,12 @@ namespace Models.CardItem
         /// Вопрос/задача карты
         /// </summary>
         [Column("Question")]
-        public string Question { get; set; }
+        public CardContent Question { get; set; }
         
         /// <summary>
         /// Ответ на вопрос карты
         /// </summary>
         [Column("Answer")]
-        public string Answer { get; set; }
+        public CardContent Answer { get; set; }
     }
 }

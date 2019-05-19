@@ -15,4 +15,9 @@
   <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <Import Project="$(NuGetPackageRoot)microsoft.netcore.app/2.1.0/build/netcoreapp2.1/Microsoft.NETCore.App.props" Condition="Exists('$(NuGetPackageRoot)microsoft.netcore.app/2.1.0/build/netcoreapp2.1/Microsoft.NETCore.App.props')" />
   </ImportGroup>
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgNewtonsoft_Json Condition=" '$(PkgNewtonsoft_Json)' == '' ">/Users/kaeru/.nuget/packages/newtonsoft.json/10.0.1</PkgNewtonsoft_Json>
+    <PkgMicrosoft_EntityFrameworkCore_Tools_DotNet Condition=" '$(PkgMicrosoft_EntityFrameworkCore_Tools_DotNet)' == '' ">/Users/kaeru/.nuget/packages/microsoft.entityframeworkcore.tools.dotnet/2.1.0-preview1-final</PkgMicrosoft_EntityFrameworkCore_Tools_DotNet>
+    <PkgMicrosoft_EntityFrameworkCore_Tools Condition=" '$(PkgMicrosoft_EntityFrameworkCore_Tools)' == '' ">/Users/kaeru/.nuget/packages/microsoft.entityframeworkcore.tools/2.1.1</PkgMicrosoft_EntityFrameworkCore_Tools>
+  </PropertyGroup>
 </Project>

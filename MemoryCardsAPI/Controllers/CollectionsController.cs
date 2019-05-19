@@ -5,21 +5,20 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Models.CardsCollection;
-using MemoryCardsAPI.Services;
+using Models.CardsCollection.Services;
+using Models.Errors;
 
 namespace MemoryCardsAPI.Controllers
 {
     /// <summary>
-    /// Cards
+    /// Collections
     /// </summary>
-
     [Authorize]
     [Route("v1/api/[controller]")]
     public class CollectionsController : Controller
     {
-        //private PostgreContext db = new PostgreContext();
-
         private ICollectionService collectionService;
+        private string defaultCollectionName = "Global";
 
         public CollectionsController(ICollectionService collectionService)
         {
@@ -31,70 +30,54 @@ namespace MemoryCardsAPI.Controllers
         /// </summary>
         /// <param name="cancellationToken"></param>
         /// <returns code="200"></returns> 
-
         [HttpGet]
         [Route("default")]
-        public async Task<ActionResult<CardsCollection>> 
-            CreateDefaultAsync(CancellationToken cancellationToken)
+        public async Task<ActionResult<CardsCollection>> CreateDefaultAsync(CancellationToken cancellationToken)
         {
             Guid.TryParse(HttpContext.User.Identity.Name, out var uId);
-            if (collectionService.NameExists("Global", uId))
+
+            if (await collectionService.IsNameExistAsync(defaultCollectionName, uId))
             {
-                return BadRequest(new { message = "Default collection already exists" });                        
+                return BadRequest(new {message = "Default collection already exists"});
             }
-           
-            var cardCollection = new CardsCollection
+
+            var cardCollection = collectionService.CreateCollection(uId, defaultCollectionName);
+
+            try
             {
-                Id = Guid.NewGuid(),
-                UserId = uId,
-                CreationDate = DateTime.UtcNow,
-                Name = "Global",
-                CardItems = new List<Guid>()                
-            };
-
-            //await db.CardItems.AddAsync(card);
-            //await db.SaveChangesAsync();
-            await collectionService.AddAsync(cardCollection);
-            await collectionService.SaveChangesAsync();
-            //    _cardService.Create(card);
-
-            Console.WriteLine("{0} records saved to database");
-            return Ok(cardCollection);
+                await collectionService.AddCollectionAsync(cardCollection);
+                return Ok(cardCollection);
+            }
+            catch (AppException ex)
+            {
+                return BadRequest(new {message = ex.Message});
+            }
         }
 
         /// <summary>
         /// Create collection with name from query
         /// </summary>
         /// <param name="cancellationToken"></param>
+        /// <param name="name"></param>
         /// <returns code="200"></returns> 
-
         [HttpPost]
         [Route("")]
-        public async Task<ActionResult<CardsCollection>> CreateAsync
-            (CancellationToken cancellationToken, [FromQuery]string name)
+        public async Task<ActionResult<CardsCollection>> CreateAsync(CancellationToken cancellationToken,
+            [FromQuery] string name)
         {
-            if (string.IsNullOrEmpty(name))
-            {
-                return BadRequest(new { message = "null or empty name" });
-            }
             Guid.TryParse(HttpContext.User.Identity.Name, out var uId);
-            var cardCollection = new CardsCollection
+
+            var cardCollection = collectionService.CreateCollection(uId, name);
+
+            try
             {
-                Id = Guid.NewGuid(),
-                UserId = uId,
-                CreationDate = DateTime.UtcNow,
-                Name = name,
-                CardItems = new List<Guid>()
-            };
-
-            //await db.CardItems.AddAsync(card);
-            //await db.SaveChangesAsync();
-            await collectionService.AddAsync(cardCollection);
-            await collectionService.SaveChangesAsync();
-            //    _cardService.Create(card);
-
-            Console.WriteLine("{0} records saved to database");
-            return Ok(cardCollection);
+                await collectionService.AddCollectionAsync(cardCollection);
+                return Ok(cardCollection);
+            }
+            catch (AppException ex)
+            {
+                return BadRequest(new {message = ex.Message});
+            }
         }
 
         /// <summary>
@@ -106,30 +89,23 @@ namespace MemoryCardsAPI.Controllers
         /// <returns></returns>
         [HttpPost]
         [Route("{collectionName}/AddCard")]
-        public async Task<ActionResult>
-            AddCardToCollection(string collectionName, [FromQuery]Guid cardId, CancellationToken cancellationToken)
+        public async Task<ActionResult> AddCardToCollection(string collectionName, [FromQuery] Guid cardId,
+            CancellationToken cancellationToken)
         {
-            if (string.IsNullOrEmpty(collectionName))
-            {
-                return BadRequest(new { message = "null or empty collectionName" });
-            }
-
             Guid.TryParse(HttpContext.User.Identity.Name, out var uId);
 
-            if (!collectionService.NameExists(collectionName, uId))
+            if (!await collectionService.IsNameExistAsync(collectionName, uId))
             {
-                return BadRequest(new { message = "No collection with such name" });
+                return BadRequest(new {message = "No collection with name \"" + collectionName + "\""});
             }
 
-            if (collectionService.AddCard(collectionName, cardId, uId))
+            if (await collectionService.AddCardToCollectionAsync(collectionName, cardId, uId))
             {
                 Console.WriteLine("Card added to collection in database");
                 return Ok();
             }
-            else
-            {
-                return BadRequest(new { message = "Could not add card (it might already exist there)" });
-            }
+
+            return BadRequest(new {message = "Could not add card (it might already exist there)"});
         }
 
 
@@ -141,22 +117,16 @@ namespace MemoryCardsAPI.Controllers
         /// <returns></returns>
         [HttpGet]
         [Route("{collectionName}")]
-        public async Task<ActionResult>
-            ShowCollection(string collectionName, CancellationToken cancellationToken)
+        public async Task<ActionResult> ShowCollection(string collectionName, CancellationToken cancellationToken)
         {
-            if (string.IsNullOrEmpty(collectionName))
-            {
-                return BadRequest(new { message = "null or empty collectionName" });
-            }
-
             Guid.TryParse(HttpContext.User.Identity.Name, out var uId);
 
-            if (!collectionService.NameExists(collectionName, uId))
+            if (!await collectionService.IsNameExistAsync(collectionName, uId))
             {
-                return BadRequest(new { message = "No collection with such name" });
+                return BadRequest(new {message = "No collection with name \"" + collectionName + "\""});
             }
 
-            var cardCollection = collectionService.FindByName(collectionName, uId);
+            var cardCollection = collectionService.FindCollectionByName(collectionName, uId);
 
             return Ok(cardCollection);
         }
@@ -166,16 +136,12 @@ namespace MemoryCardsAPI.Controllers
         /// </summary>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-
         [HttpGet]
         [Route("")]
-        public async Task<ActionResult<List<CardsCollection>>>
-    ListCollections(CancellationToken cancellationToken)
+        public ActionResult<List<CardsCollection>> ListCollections(CancellationToken cancellationToken)
         {
             Guid.TryParse(HttpContext.User.Identity.Name, out var uId);
             return Ok(collectionService.GetCollections(uId));
         }
-
-
     }
 }
