@@ -18,6 +18,8 @@ using Models.CardsCollection.Services;
 using Models.User.Services;
 using Models.Data;
 using Models.User.Repositories;
+using Models.Training.Services;
+using Models.Training.Repositories;
 
 namespace MemoryCardsAPI
 {
@@ -35,6 +37,7 @@ namespace MemoryCardsAPI
             services.AddSingleton<IUserService, UserService>();
             services.AddSingleton<ICardService, CardService>();
             services.AddSingleton<ICollectionService, CollectionService>();
+            services.AddSingleton<ITrainingService, TrainingService>();
 
             SetUpInMemoryDataBase(services);
 
@@ -119,6 +122,7 @@ namespace MemoryCardsAPI
             services.AddSingleton<IUsersRepository, InMemoryUsersRepository>();
             services.AddSingleton<ICardsRepository, InMemoryCardsRepository>();
             services.AddSingleton<ICollectionsRepository, InMemoryCollectionsRepository>();
+            services.AddSingleton<ITrainingRepository, InMemoryTrainingRepository>();
             services.AddDbContext<InMemoryContext>(x => x.UseInMemoryDatabase("TestDb"));
         }
 

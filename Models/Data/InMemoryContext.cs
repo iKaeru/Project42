@@ -11,5 +11,6 @@ namespace Models.Data
         public DbSet<User.User> Users { get; set; }
         public DbSet<CardItem.CardItem> Cards { get; set; }
         public DbSet<Models.CardsCollection.CardsCollection> Collections { get; set; }
+        public DbSet<Models.Training.Training> Trainings { get; set; }
     }
 }

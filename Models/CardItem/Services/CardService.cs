@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using Models.CardItem.Repositories;
+using Models.Errors;
 
 namespace Models.CardItem.Services
 {
@@ -58,6 +59,22 @@ namespace Models.CardItem.Services
             }
 
             return await repository.GetAllUserCards(uId, cancellationToken);
+        }
+
+        public async Task<CardItem> GetCardByIdAsync(Guid id, CancellationToken cancellationToken)
+        {
+            if (id == Guid.Empty)
+            {
+                throw new NullReferenceException();
+            }
+
+            return await repository.GetAsync(id, cancellationToken);
+        }
+
+        public void CheckOwnership(CardItem card, Guid userId)
+        {
+            if (!ValidateCard(card) || userId == Guid.Empty)
+                throw new AppException("Bad info");
         }
 
         #region private helper methods

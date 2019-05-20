@@ -27,7 +27,7 @@ namespace Models.CardItem.Repositories
             throw new NotImplementedException();
         }
 
-        public Task<CardItemInfo> GetAsync(Guid cardId, CancellationToken cancellationToken)
+        public Task<CardItem> GetAsync(Guid cardId, CancellationToken cancellationToken)
         {
             throw new NotImplementedException();
         }

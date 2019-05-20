@@ -44,7 +44,7 @@ namespace Models.CardItem.Repositories
         /// <param name="cancellationToken">Токен отмены операции</param>
         /// <returns>Задача, представлящая асинхронный запрос карты.
         /// Результат выполнения - карта</returns>
-        Task<CardItemInfo> GetAsync(Guid cardId, CancellationToken cancellationToken);
+        Task<CardItem> GetAsync(Guid cardId, CancellationToken cancellationToken);
 
         /// <summary>
         /// Изменить карту
