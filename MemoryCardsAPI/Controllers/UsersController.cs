@@ -40,7 +40,7 @@ namespace MemoryCardsAPI.Controllers
             var user = await userService.AuthenticateAsync(userDto.Login, userDto.Password);
 
             if (user == null)
-                return BadRequest(new {message = "Username or password is incorrect"});
+                return BadRequest(new { message = "Username or password is incorrect" });
 
             var token = TokenGenerator(user.Id.ToString());
 
@@ -79,12 +79,13 @@ namespace MemoryCardsAPI.Controllers
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody] UserRegistrationInfo userDto,
             CancellationToken cancellationToken)
-        {            
-            var user = userService.CreateUser(userDto);
-            userService.ValidateUser(user);
-
+        {
             try
             {
+                var user = userService.CreateUser(userDto);
+                userService.ValidateUser(user);
+
+
                 await userService.AddUserAsync(user, userDto.Password, cancellationToken);
                 return Ok(new
                 {
@@ -94,7 +95,7 @@ namespace MemoryCardsAPI.Controllers
             }
             catch (AppException ex)
             {
-                return BadRequest(new {message = ex.Message});
+                return BadRequest(new { message = ex.Message });
             }
         }
 
@@ -103,10 +104,10 @@ namespace MemoryCardsAPI.Controllers
         {
             var guidId = Guid.Parse(id);
             var user = await userService.GetById(guidId);
-            
+
             if (user == null)
-                return BadRequest(new {message = "User id is incorrect"});
-            
+                return BadRequest(new { message = "User id is incorrect" });
+
             var userDto = mapper.Map<UserRegistrationInfo>(user);
             return Ok(userDto);
         }
@@ -118,19 +119,12 @@ namespace MemoryCardsAPI.Controllers
             var guidId = Guid.Parse(id);
             user.Id = guidId;
 
-            try 
+            try
             {
                 userService.Update(user, userDto.Password);
-                return Ok(new
-                {
-                    Id = user.Id,
-                    Username = user.Login,
-                    FirstName = user.FirstName,
-                    LastName = user.LastName,
-                    Token = token
-                });
-            } 
-            catch(AppException ex)
+                return Ok();
+            }
+            catch (AppException ex)
             {
                 return BadRequest(new { message = ex.Message });
             }
@@ -140,7 +134,7 @@ namespace MemoryCardsAPI.Controllers
         public async Task<IActionResult> Delete(string id)
         {
             var guidId = Guid.Parse(id);
-            
+
             if (await userService.Delete(guidId))
             {
                 return Ok();

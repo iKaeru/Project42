@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -10,9 +11,6 @@ namespace Models.Training
     [Table("Training")]
     public class Training
     {
-        public virtual CardItem.CardItemInfo Card { get; set; }
-        public virtual User.UserInfo User { get; set; }
-
         /// <summary>
         /// Уникальный идентификатор пользователя
         /// </summary>
@@ -32,10 +30,10 @@ namespace Models.Training
         public Guid CardId { get; set; }
 
         /// <summary>
-        /// Даты решения задачи с карты
+        /// Дата решения задачи с карты
         /// </summary>
         [Column("CompletionDate", Order = 3)]
-        public DateTime[] CompletedAt { get; set; }
+        public DateTime CompletedAt { get; set; }
 
         /// <summary>
         /// Уровень сложности запоминания карты

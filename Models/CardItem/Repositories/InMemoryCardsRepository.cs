@@ -37,9 +37,10 @@ namespace Models.CardItem.Repositories
             throw new NotImplementedException();
         }
 
-        public Task<CardItemInfo> GetAsync(Guid cardId, CancellationToken cancellationToken)
+        public Task<CardItem> GetAsync(Guid cardId, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            return Task.FromResult
+                (context.Cards.FirstOrDefault(x => x.Id == cardId));
         }
 
         public Task<CardItem> PatchAsync(CardPatchInfo patchInfo, CancellationToken cancelltionToken)
