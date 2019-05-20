@@ -30,7 +30,8 @@ namespace Models.CardsCollection
         /// <summary>
         /// Множество карт
         /// </summary>
-        [Column("Id", Order = 3)] public ICollection<Guid> CardItems;
+        [Column("Id", Order = 3)] 
+        public ICollection<Guid> CardItems;
 
         /// <summary>
         /// Пользователь создавший коллекцию

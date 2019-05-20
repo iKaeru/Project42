@@ -1,12 +1,12 @@
-namespace Client.Models.User
-{
-    using System.Runtime.Serialization;
+using System.Runtime.Serialization;
 
+namespace Models.User
+{
     /// <summary>
-    /// Информация для регистрации пользователя
+    /// Информация для логина пользователя
     /// </summary>
     [DataContract]
-    public class UserRegistrationInfo
+    public class UserLoginInfo
     {
         /// <summary>
         /// Логин пользователя
@@ -15,15 +15,15 @@ namespace Client.Models.User
         public string Login { get; set; }
 
         /// <summary>
-        /// Почта пользователя
-        /// </summary>
-        [DataMember(IsRequired = true)]
-        public string EmailAdress { get; set; }
-
-        /// <summary>
         /// Пароль пользователя
         /// </summary>
         [DataMember(IsRequired = true)]
         public string Password { get; set; }
+        
+        /// <summary>
+        /// Запоминать ли пользователя
+        /// </summary>
+        [DataMember(IsRequired = true)]
+        public bool RememberMe { get; set; }
     }
 }

@@ -1,10 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using Models.CardItem;
-using Models.CardsCollection;
-using Models.Training;
 using Models.User;
 
-namespace MemoryCardsAPI.Data
+namespace Models.Data
 {
     public class PostgreContext : DbContext
     {
@@ -18,11 +16,11 @@ namespace MemoryCardsAPI.Data
                 "Password=12345");
         }
 
-        public DbSet<CardItem> CardItems { get; set; }
+        public DbSet<CardItem.CardItem> CardItems { get; set; }
         public DbSet<CardItemInfo> CardItemsInfos { get; set; }
-        public DbSet<CardsCollection> CardsCollections { get; set; }
-        public DbSet<Training> Trainings { get; set; }
-        public DbSet<User> Users { get; set; }
+        public DbSet<CardsCollection.CardsCollection> CardsCollections { get; set; }
+        public DbSet<Training.Training> Trainings { get; set; }
+        public DbSet<User.User> Users { get; set; }
         public DbSet<UserInfo> UsersInfos { get; set; }
     }
 }

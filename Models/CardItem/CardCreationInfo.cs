@@ -3,13 +3,13 @@ namespace Models.CardItem
     public class CardCreationInfo
     {
         /// <summary>
-        /// Вопрос/задача карты
+        /// Р’РѕРїСЂРѕСЃ/Р·Р°РґР°С‡Р° РєР°СЂС‚С‹
         /// </summary>
-        public string Question { get; set; }
+        public CardContent Question { get; set; }
 
         /// <summary>
-        /// Ответ на вопрос карты
+        /// РћС‚РІРµС‚ РЅР° РІРѕРїСЂРѕСЃ РєР°СЂС‚С‹
         /// </summary>
-        public string Answer { get; set; }
+        public CardContent Answer { get; set; }
     }
 }
