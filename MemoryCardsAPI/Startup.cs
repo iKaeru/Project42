@@ -4,7 +4,6 @@ using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
 using Microsoft.EntityFrameworkCore;
 using MemoryCardsAPI.Helpers;
-using MemoryCardsAPI.Services;
 using AutoMapper;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
@@ -12,7 +11,15 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using MemoryCardsAPI.Auth;
-using MemoryCardsAPI.Data;
+using Models.CardItem.Repositories;
+using Models.CardItem.Services;
+using Models.CardsCollection.Repositories;
+using Models.CardsCollection.Services;
+using Models.User.Services;
+using Models.Data;
+using Models.User.Repositories;
+using Models.Training.Services;
+using Models.Training.Repositories;
 
 namespace MemoryCardsAPI
 {
@@ -27,14 +34,14 @@ namespace MemoryCardsAPI
 
         public void ConfigureServices(IServiceCollection services)
         {
-            //services.AddEntityFrameworkNpgsql()
-            //    .AddDbContext<PostgreContext>()
-            //    .BuildServiceProvider();
             services.AddSingleton<IUserService, UserService>();
             services.AddSingleton<ICardService, CardService>();
             services.AddSingleton<ICollectionService, CollectionService>();
+            services.AddSingleton<ITrainingService, TrainingService>();
+
+            SetUpInMemoryDataBase(services);
+
             services.AddCors();
-            services.AddDbContext<DataContext>(x => x.UseInMemoryDatabase("TestDb"));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.AddAutoMapper();
 
@@ -108,6 +115,26 @@ namespace MemoryCardsAPI
             app.UseAuthentication();
 
             app.UseMvc();
+        }
+
+        private void SetUpInMemoryDataBase(IServiceCollection services)
+        {
+            services.AddSingleton<IUsersRepository, InMemoryUsersRepository>();
+            services.AddSingleton<ICardsRepository, InMemoryCardsRepository>();
+            services.AddSingleton<ICollectionsRepository, InMemoryCollectionsRepository>();
+            services.AddSingleton<ITrainingRepository, InMemoryTrainingRepository>();
+            services.AddDbContext<InMemoryContext>(x => x.UseInMemoryDatabase("TestDb"));
+        }
+
+        private void SetUpPostgreDataBase(IServiceCollection services)
+        {
+            services.AddSingleton<IUsersRepository, PostgreUsersRepository>();
+            services.AddSingleton<ICardsRepository, PostgreCardsRepository>();
+            services.AddSingleton<ICollectionsRepository, PostgreCollectionsRepository>();
+            
+            services.AddEntityFrameworkNpgsql()
+                .AddDbContext<PostgreContext>()
+                .BuildServiceProvider();
         }
     }
 }

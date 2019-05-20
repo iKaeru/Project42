@@ -34,6 +34,14 @@ C:/Users/Fedya/Downloads/Project42-NewBranch/Project42-NewBranch/Client.Models/b
 /Users/kaeru/Downloads/temp/Project42/Client.Models/obj/Debug/netcoreapp2.1/Client.Models.AssemblyInfo.cs
 /Users/kaeru/Downloads/temp/Project42/Client.Models/obj/Debug/netcoreapp2.1/Client.Models.dll
 /Users/kaeru/Downloads/temp/Project42/Client.Models/obj/Debug/netcoreapp2.1/Client.Models.pdb
+/Users/kaeru/Downloads/ex/Project42/Client.Models/bin/Debug/netcoreapp2.1/Client.Models.deps.json
+/Users/kaeru/Downloads/ex/Project42/Client.Models/bin/Debug/netcoreapp2.1/Client.Models.dll
+/Users/kaeru/Downloads/ex/Project42/Client.Models/bin/Debug/netcoreapp2.1/Client.Models.pdb
+/Users/kaeru/Downloads/ex/Project42/Client.Models/obj/Debug/netcoreapp2.1/Client.Models.csproj.CoreCompileInputs.cache
+/Users/kaeru/Downloads/ex/Project42/Client.Models/obj/Debug/netcoreapp2.1/Client.Models.AssemblyInfoInputs.cache
+/Users/kaeru/Downloads/ex/Project42/Client.Models/obj/Debug/netcoreapp2.1/Client.Models.AssemblyInfo.cs
+/Users/kaeru/Downloads/ex/Project42/Client.Models/obj/Debug/netcoreapp2.1/Client.Models.dll
+/Users/kaeru/Downloads/ex/Project42/Client.Models/obj/Debug/netcoreapp2.1/Client.Models.pdb
 T:\KonturProj\Project42\Client.Models\bin\Debug\netcoreapp2.1\Client.Models.deps.json
 T:\KonturProj\Project42\Client.Models\bin\Debug\netcoreapp2.1\Client.Models.dll
 T:\KonturProj\Project42\Client.Models\bin\Debug\netcoreapp2.1\Client.Models.pdb
