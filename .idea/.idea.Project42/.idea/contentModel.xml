@@ -44,6 +44,7 @@
         <e p="Controllers" t="Include">
           <e p="CardsController.cs" t="Include" />
           <e p="CollectionsController.cs" t="Include" />
+          <e p="TrainingsController.cs" t="Include" />
           <e p="UsersController.cs" t="Include" />
         </e>
         <e p="Helpers" t="Include">
@@ -110,6 +111,14 @@
         </e>
         <e p="Training" t="Include">
           <e p="MemorizationLevels.cs" t="Include" />
+          <e p="Repositories" t="Include">
+            <e p="InMemoryTrainingRepository.cs" t="Include" />
+            <e p="ITrainingRepository.cs" t="Include" />
+          </e>
+          <e p="Services" t="Include">
+            <e p="ITrainingService.cs" t="Include" />
+            <e p="TrainingService.cs" t="Include" />
+          </e>
           <e p="Training.cs" t="Include" />
         </e>
         <e p="User" t="Include">
@@ -134,7 +143,7 @@
       <e p="Project42.sln" t="IncludeFlat" />
     </e>
     <e p="$USER_HOME$/Library/Caches/Rider2018.3/extResources" t="IncludeRecursive" />
-    <e p="$USER_HOME$/Library/Caches/Rider2018.3/resharper-host/local/Transient/ReSharperHost/v183/SolutionCaches/_Project42.-469858258.00" t="ExcludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/Rider2018.3/resharper-host/local/Transient/ReSharperHost/v183/SolutionCaches/_Project42.1506134978.00" t="ExcludeRecursive" />
     <e p="$APPLICATION_CONFIG_DIR$/consoles/db" t="IncludeRecursive" />
     <e p="$APPLICATION_CONFIG_DIR$/extensions" t="IncludeRecursive" />
   </component>

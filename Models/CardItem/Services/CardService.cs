@@ -34,21 +34,19 @@ namespace Models.CardItem.Services
             return card;
         }
 
-        public async Task<bool> AddCardAsync(CardItem cardToAddToRepo, CancellationToken cancellationToken)
+        public async Task AddCardAsync(CardItem cardToAddToRepo, CancellationToken cancellationToken)
         {
-            if (!ValidateCard(cardToAddToRepo))
-                return false;
-
+            if (!IsCardValid(cardToAddToRepo))
+                throw new AppException(nameof(cardToAddToRepo) + " is incorrect");
+            
             try
             {
                 await repository.CreateAsync(cardToAddToRepo, cancellationToken);
             }
             catch
             {
-                return false;
+                throw new AppException("Couldn't add card");
             }
-
-            return true;
         }
 
         public async Task<IEnumerable<CardItem>> GetAllUserCards(Guid uId, CancellationToken cancellationToken)
@@ -71,10 +69,13 @@ namespace Models.CardItem.Services
             return await repository.GetAsync(id, cancellationToken);
         }
 
-        public void CheckOwnership(CardItem card, Guid userId)
+        public async void CheckOwnership(CardItem card, Guid userId)
         {
-            if (!ValidateCard(card) || userId == Guid.Empty)
+            if (!IsCardValid(card) || userId == Guid.Empty)
                 throw new AppException("Bad info");
+            var cardInRepo = await repository.GetAsync(card.Id, CancellationToken.None);
+            if(cardInRepo.UserId != userId)
+                throw new AppException("No access");
         }
 
         #region private helper methods
@@ -97,7 +98,7 @@ namespace Models.CardItem.Services
             return true;
         }
 
-        private bool ValidateCard(CardItem cardToValidate)
+        private bool IsCardValid(CardItem cardToValidate)
         {
             if (cardToValidate.UserId == Guid.Empty)
             {
