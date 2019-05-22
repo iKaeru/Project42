@@ -20,10 +20,12 @@ namespace MemoryCardsAPI.Controllers
     public class CardsController : Controller
     {
         private readonly ICardService cardsService;
+        private readonly ITrainingService trainingService;
 
-        public CardsController(ICardService cardsService)
+        public CardsController(ICardService cardsService, ITrainingService trainingService)
         {
             this.cardsService = cardsService;
+            this.trainingService = trainingService;
         }
 
         /// <summary>
@@ -44,6 +46,8 @@ namespace MemoryCardsAPI.Controllers
 
                 var card = cardsService.CreateCard(cardCreationInfo, uId);
                 await cardsService.AddCardAsync(card, cancellationToken);
+                var training = trainingService.CreateTraining(uId, card.Id);
+                await trainingService.AddToRepositoryAsync(training);
                 return Ok(card);
             }
             catch (AppException ex)

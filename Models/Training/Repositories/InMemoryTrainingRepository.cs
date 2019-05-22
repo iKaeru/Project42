@@ -17,8 +17,12 @@ namespace Models.Training.Repositories
             this.context = context;
         }
         
-        public async Task<Training> AddAsync(Training training)
+        public async Task<Training> AddAsync(Training trainingToAdd)
         {
+            var id = Guid.NewGuid();
+            var training = trainingToAdd;
+            training.Id = id;
+            
             await context.Trainings.AddAsync(training);
             await context.SaveChangesAsync();
 

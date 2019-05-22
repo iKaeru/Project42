@@ -2,94 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8666427f-6cb7-4473-aeea-3b9208586060" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Project42/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project42/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Project42/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project42/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client.Models/bin/Debug/netcoreapp2.1/Client.Models.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Client.Models/bin/Debug/netcoreapp2.1/Client.Models.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client.Models/bin/Debug/netcoreapp2.1/Client.Models.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Client.Models/bin/Debug/netcoreapp2.1/Client.Models.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client.Models/obj/Client.Models.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Client.Models/obj/Client.Models.csproj.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client.Models/obj/Client.Models.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/Client.Models/obj/Client.Models.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client.Models/obj/Client.Models.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/Client.Models/obj/Client.Models.csproj.nuget.g.targets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client.Models/obj/Debug/netcoreapp2.1/Client.Models.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Client.Models/obj/Debug/netcoreapp2.1/Client.Models.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client.Models/obj/Debug/netcoreapp2.1/Client.Models.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Client.Models/obj/Debug/netcoreapp2.1/Client.Models.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client.Models/obj/Debug/netcoreapp2.1/Client.Models.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Client.Models/obj/Debug/netcoreapp2.1/Client.Models.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client.Models/obj/Debug/netcoreapp2.1/Client.Models.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Client.Models/obj/Debug/netcoreapp2.1/Client.Models.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client.Models/obj/Debug/netcoreapp2.1/Client.Models.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Client.Models/obj/Debug/netcoreapp2.1/Client.Models.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client.Models/obj/Debug/netcoreapp2.1/Client.Models.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Client.Models/obj/Debug/netcoreapp2.1/Client.Models.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client.Models/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Client.Models/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client.Models/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Client.Models/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Converters/bin/Debug/netcoreapp2.1/Client.Models.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Converters/bin/Debug/netcoreapp2.1/Client.Models.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Converters/bin/Debug/netcoreapp2.1/Client.Models.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Converters/bin/Debug/netcoreapp2.1/Client.Models.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Converters/bin/Debug/netcoreapp2.1/Converters.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/Converters/bin/Debug/netcoreapp2.1/Converters.deps.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Converters/bin/Debug/netcoreapp2.1/Converters.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Converters/bin/Debug/netcoreapp2.1/Converters.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Converters/bin/Debug/netcoreapp2.1/Converters.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Converters/bin/Debug/netcoreapp2.1/Converters.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Converters/bin/Debug/netcoreapp2.1/Models.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Converters/bin/Debug/netcoreapp2.1/Models.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Converters/bin/Debug/netcoreapp2.1/Models.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Converters/bin/Debug/netcoreapp2.1/Models.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Converters/obj/Converters.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Converters/obj/Converters.csproj.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Converters/obj/Converters.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/Converters/obj/Converters.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Converters/obj/Converters.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/Converters/obj/Converters.csproj.nuget.g.targets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Converters/obj/Debug/netcoreapp2.1/Converters.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Converters/obj/Debug/netcoreapp2.1/Converters.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Converters/obj/Debug/netcoreapp2.1/Converters.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Converters/obj/Debug/netcoreapp2.1/Converters.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Converters/obj/Debug/netcoreapp2.1/Converters.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Converters/obj/Debug/netcoreapp2.1/Converters.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Converters/obj/Debug/netcoreapp2.1/Converters.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Converters/obj/Debug/netcoreapp2.1/Converters.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Converters/obj/Debug/netcoreapp2.1/Converters.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Converters/obj/Debug/netcoreapp2.1/Converters.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Converters/obj/Debug/netcoreapp2.1/Converters.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Converters/obj/Debug/netcoreapp2.1/Converters.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Converters/obj/Debug/netcoreapp2.1/Converters.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Converters/obj/Debug/netcoreapp2.1/Converters.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Converters/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Converters/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Converters/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Converters/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryCardsAPI/Controllers/CardsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryCardsAPI/Controllers/CardsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryCardsAPI/Controllers/CollectionsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryCardsAPI/Controllers/CollectionsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryCardsAPI/Controllers/UsersController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryCardsAPI/Controllers/UsersController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryCardsAPI/bin/Debug/netcoreapp2.1/Client.Models.dll" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryCardsAPI/bin/Debug/netcoreapp2.1/Client.Models.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryCardsAPI/bin/Debug/netcoreapp2.1/Client.Models.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryCardsAPI/bin/Debug/netcoreapp2.1/Client.Models.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryCardsAPI/bin/Debug/netcoreapp2.1/Converters.dll" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryCardsAPI/bin/Debug/netcoreapp2.1/Converters.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryCardsAPI/bin/Debug/netcoreapp2.1/Converters.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryCardsAPI/bin/Debug/netcoreapp2.1/Converters.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryCardsAPI/bin/Debug/netcoreapp2.1/MemoryCardsAPI.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryCardsAPI/bin/Debug/netcoreapp2.1/MemoryCardsAPI.deps.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryCardsAPI/bin/Debug/netcoreapp2.1/MemoryCardsAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryCardsAPI/bin/Debug/netcoreapp2.1/MemoryCardsAPI.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryCardsAPI/bin/Debug/netcoreapp2.1/MemoryCardsAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryCardsAPI/bin/Debug/netcoreapp2.1/MemoryCardsAPI.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryCardsAPI/bin/Debug/netcoreapp2.1/MemoryCardsAPI.runtimeconfig.dev.json" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryCardsAPI/bin/Debug/netcoreapp2.1/MemoryCardsAPI.runtimeconfig.dev.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryCardsAPI/bin/Debug/netcoreapp2.1/Models.dll" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryCardsAPI/bin/Debug/netcoreapp2.1/Models.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryCardsAPI/bin/Debug/netcoreapp2.1/Models.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryCardsAPI/bin/Debug/netcoreapp2.1/Models.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryCardsAPI/obj/Debug/netcoreapp2.1/MemoryCardsAPI.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryCardsAPI/obj/Debug/netcoreapp2.1/MemoryCardsAPI.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryCardsAPI/obj/Debug/netcoreapp2.1/MemoryCardsAPI.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryCardsAPI/obj/Debug/netcoreapp2.1/MemoryCardsAPI.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryCardsAPI/obj/Debug/netcoreapp2.1/MemoryCardsAPI.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryCardsAPI/obj/Debug/netcoreapp2.1/MemoryCardsAPI.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryCardsAPI/obj/Debug/netcoreapp2.1/MemoryCardsAPI.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryCardsAPI/obj/Debug/netcoreapp2.1/MemoryCardsAPI.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryCardsAPI/obj/Debug/netcoreapp2.1/MemoryCardsAPI.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryCardsAPI/obj/Debug/netcoreapp2.1/MemoryCardsAPI.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryCardsAPI/obj/Debug/netcoreapp2.1/MemoryCardsAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryCardsAPI/obj/Debug/netcoreapp2.1/MemoryCardsAPI.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryCardsAPI/obj/Debug/netcoreapp2.1/MemoryCardsAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryCardsAPI/obj/Debug/netcoreapp2.1/MemoryCardsAPI.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryCardsAPI/obj/MemoryCardsAPI.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryCardsAPI/obj/MemoryCardsAPI.csproj.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryCardsAPI/obj/MemoryCardsAPI.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryCardsAPI/obj/MemoryCardsAPI.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryCardsAPI/obj/MemoryCardsAPI.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryCardsAPI/obj/MemoryCardsAPI.csproj.nuget.g.targets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryCardsAPI/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryCardsAPI/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryCardsAPI/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryCardsAPI/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/CardItem/Repositories/InMemoryCardsRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/CardItem/Repositories/InMemoryCardsRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/CardItem/Repositories/PostgreCardsRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/CardItem/Repositories/PostgreCardsRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/CardItem/Services/CardService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/CardItem/Services/CardService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/CardItem/Services/ICardService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/CardItem/Services/ICardService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/CardsCollection/Repositories/PostgreCollectionsRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/CardsCollection/Repositories/PostgreCollectionsRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/CardsCollection/Services/CollectionService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/CardsCollection/Services/CollectionService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Data/PostgreContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Data/PostgreContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Training/Repositories/ITrainingRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Training/Repositories/ITrainingRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Models/Training/Repositories/InMemoryTrainingRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Training/Repositories/InMemoryTrainingRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Training/Services/TrainingService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Training/Services/TrainingService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/User/Repositories/IUsersRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/User/Repositories/IUsersRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/User/Repositories/InMemoryUsersRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/User/Repositories/InMemoryUsersRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/User/Repositories/PostgreUsersRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/User/Repositories/PostgreUsersRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/bin/Debug/netcoreapp2.1/Models.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/Models/bin/Debug/netcoreapp2.1/Models.deps.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/bin/Debug/netcoreapp2.1/Models.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Models/bin/Debug/netcoreapp2.1/Models.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/bin/Debug/netcoreapp2.1/Models.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Models/bin/Debug/netcoreapp2.1/Models.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/bin/Debug/netcoreapp2.1/Models.runtimeconfig.dev.json" beforeDir="false" afterPath="$PROJECT_DIR$/Models/bin/Debug/netcoreapp2.1/Models.runtimeconfig.dev.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/obj/Debug/netcoreapp2.1/Models.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/obj/Debug/netcoreapp2.1/Models.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/obj/Debug/netcoreapp2.1/Models.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Models/obj/Debug/netcoreapp2.1/Models.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/obj/Debug/netcoreapp2.1/Models.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Models/obj/Debug/netcoreapp2.1/Models.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/obj/Debug/netcoreapp2.1/Models.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Models/obj/Debug/netcoreapp2.1/Models.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/obj/Debug/netcoreapp2.1/Models.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Models/obj/Debug/netcoreapp2.1/Models.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/obj/Debug/netcoreapp2.1/Models.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Models/obj/Debug/netcoreapp2.1/Models.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/obj/Debug/netcoreapp2.1/Models.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Models/obj/Debug/netcoreapp2.1/Models.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/obj/Models.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Models/obj/Models.csproj.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/obj/Models.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/Models/obj/Models.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/obj/Models.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/Models/obj/Models.csproj.nuget.g.targets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Models/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Models/obj/project.packagespec.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -102,8 +15,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MemoryCardsAPI/Controllers/CardsController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-288">
-              <caret line="65" column="25" selection-start-line="65" selection-start-column="25" selection-end-line="65" selection-end-column="25" />
+            <state relative-caret-position="192">
+              <caret line="44" column="24" lean-forward="true" selection-start-line="44" selection-start-column="24" selection-end-line="44" selection-end-column="24" />
               <folding>
                 <marker date="1558550135145" expanded="false" signature="6:272" ph="..." />
                 <marker date="1558550135145" expanded="true" signature="310:3139" ph="{...}" />
@@ -128,37 +41,73 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Models/CardItem/Services/CardService.cs">
+        <entry file="file://$PROJECT_DIR$/MemoryCardsAPI/Controllers/TrainingsController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="20">
-              <caret line="36" column="31" lean-forward="true" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
+            <state relative-caret-position="134">
+              <caret line="63" column="53" lean-forward="true" selection-start-line="63" selection-start-column="53" selection-end-line="63" selection-end-column="53" />
               <folding>
-                <marker date="1558550078494" expanded="false" signature="6:158" ph="..." />
-                <marker date="1558550078494" expanded="true" signature="194:4468" ph="{...}" />
-                <marker date="1558550078494" expanded="true" signature="240:4466" ph="{...}" />
-                <marker date="1558550078494" expanded="true" signature="457:519" ph="{...}" />
-                <marker date="1558550078494" expanded="true" signature="596:949" ph="{...}" />
-                <marker date="1558550078494" expanded="true" signature="730:912" ph="{...}" />
-                <marker date="1558550078494" expanded="true" signature="1052:1448" ph="{...}" />
-                <marker date="1558550078494" expanded="true" signature="1221:1331" ph="{...}" />
-                <marker date="1558550078494" expanded="true" signature="1362:1438" ph="{...}" />
-                <marker date="1558550078494" expanded="true" signature="1561:1767" ph="{...}" />
-                <marker date="1558550078494" expanded="true" signature="1606:1679" ph="{...}" />
-                <marker date="1558550078494" expanded="true" signature="1867:2071" ph="{...}" />
-                <marker date="1558550078494" expanded="true" signature="1911:1991" ph="{...}" />
-                <marker date="1558550078494" expanded="true" signature="2141:2459" ph="{...}" />
-                <marker date="1558550078494" expanded="true" signature="2469:4460" ph="private helper methods" />
-                <marker date="1558550078494" expanded="true" signature="2567:3161" ph="{...}" />
-                <marker date="1558550078494" expanded="true" signature="3220:3564" ph="{...}" />
-                <marker date="1558550078494" expanded="true" signature="3283:3341" ph="{...}" />
-                <marker date="1558550078494" expanded="true" signature="3399:3513" ph="{...}" />
-                <marker date="1558550078494" expanded="true" signature="3627:4077" ph="{...}" />
-                <marker date="1558550078494" expanded="true" signature="3771:3926" ph="{...}" />
-                <marker date="1558550078494" expanded="true" signature="3845:3912" ph="{...}" />
-                <marker date="1558550078494" expanded="true" signature="3983:4041" ph="{...}" />
-                <marker date="1558550078494" expanded="true" signature="4137:4440" ph="{...}" />
-                <marker date="1558550078494" expanded="true" signature="4186:4243" ph="{...}" />
-                <marker date="1558550078494" expanded="true" signature="4346:4404" ph="{...}" />
+                <marker date="1558549444534" expanded="false" signature="6:249" ph="..." />
+                <marker date="1558549444534" expanded="true" signature="287:3689" ph="{...}" />
+                <marker date="1558549444534" expanded="true" signature="294:340" ph="/// Cards ... " />
+                <marker date="1558549444534" expanded="true" signature="461:3687" ph="{...}" />
+                <marker date="1558549444534" expanded="true" signature="596:837" ph="/// Get Card Training ... " />
+                <marker date="1558549444534" expanded="true" signature="984:1569" ph="{...}" />
+                <marker date="1558549444534" expanded="true" signature="1010:1430" ph="{...}" />
+                <marker date="1558549444534" expanded="true" signature="1466:1559" ph="{...}" />
+                <marker date="1558549444534" expanded="true" signature="1579:1820" ph="/// Get Card Training ... " />
+                <marker date="1558549444534" expanded="true" signature="1977:2484" ph="{...}" />
+                <marker date="1558549444534" expanded="true" signature="2003:2345" ph="{...}" />
+                <marker date="1558549444534" expanded="true" signature="2381:2474" ph="{...}" />
+                <marker date="1558549444534" expanded="true" signature="2494:2825" ph="/// Get Card Training ... " />
+                <marker date="1558549444534" expanded="true" signature="3013:3681" ph="{...}" />
+                <marker date="1558549444534" expanded="true" signature="3039:3542" ph="{...}" />
+                <marker date="1558549444534" expanded="true" signature="3578:3671" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Models/Training/Services/TrainingService.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="493">
+              <caret line="47" column="42" lean-forward="true" selection-start-line="47" selection-start-column="42" selection-end-line="47" selection-end-column="42" />
+              <folding>
+                <marker date="1558550680653" expanded="false" signature="6:176" ph="..." />
+                <marker date="1558550680653" expanded="true" signature="212:2002" ph="{...}" />
+                <marker date="1558550680653" expanded="true" signature="266:2000" ph="{...}" />
+                <marker date="1558550680653" expanded="true" signature="393:455" ph="{...}" />
+                <marker date="1558550680653" expanded="true" signature="521:872" ph="{...}" />
+                <marker date="1558550680653" expanded="true" signature="702:831" ph="{...}" />
+                <marker date="1558550680653" expanded="true" signature="949:1065" ph="{...}" />
+                <marker date="1558550680653" expanded="true" signature="1152:1286" ph="{...}" />
+                <marker date="1558550680653" expanded="true" signature="1377:1604" ph="{...}" />
+                <marker date="1558550680653" expanded="false" signature="1614:1994" ph="private helper methods" />
+                <marker date="1558550680653" expanded="true" signature="1702:1974" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Models/User/Repositories/InMemoryUsersRepository.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="93">
+              <caret line="23" column="12" selection-start-line="23" selection-start-column="12" selection-end-line="25" selection-end-column="25" />
+              <folding>
+                <marker date="1558428667740" expanded="false" signature="6:220" ph="..." />
+                <marker date="1558428667740" expanded="true" signature="256:2207" ph="{...}" />
+                <marker date="1558428667740" expanded="true" signature="318:2205" ph="{...}" />
+                <marker date="1558428667740" expanded="true" signature="430:486" ph="{...}" />
+                <marker date="1558428667740" expanded="true" signature="588:825" ph="{...}" />
+                <marker date="1558428667740" expanded="true" signature="891:998" ph="{...}" />
+                <marker date="1558428667740" expanded="true" signature="1053:1127" ph="{...}" />
+                <marker date="1558428667740" expanded="true" signature="1197:1289" ph="{...}" />
+                <marker date="1558428667740" expanded="true" signature="1356:1460" ph="{...}" />
+                <marker date="1558428667740" expanded="true" signature="1518:1793" ph="{...}" />
+                <marker date="1558428667740" expanded="true" signature="1616:1756" ph="{...}" />
+                <marker date="1558428667740" expanded="true" signature="1913:1982" ph="{...}" />
+                <marker date="1558428667740" expanded="true" signature="2044:2199" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -282,7 +231,6 @@
         <option value="$PROJECT_DIR$/Models/User/Repositories/IUsersRepository.cs" />
         <option value="$PROJECT_DIR$/Models/User/Repositories/PostgreUsersRepository.cs" />
         <option value="$PROJECT_DIR$/Models/Training/Repositories/ITrainingRepository.cs" />
-        <option value="$PROJECT_DIR$/Models/Training/Repositories/InMemoryTrainingRepository.cs" />
         <option value="$PROJECT_DIR$/MemoryCardsAPI/Controllers/TrainingsController.cs" />
         <option value="$PROJECT_DIR$/Models/CardItem/Services/CardService.cs" />
         <option value="$PROJECT_DIR$/Models/CardItem/Services/ICardService.cs" />
@@ -291,6 +239,7 @@
         <option value="$PROJECT_DIR$/MemoryCardsAPI/Controllers/UsersController.cs" />
         <option value="$PROJECT_DIR$/Models/CardsCollection/Services/CollectionService.cs" />
         <option value="$PROJECT_DIR$/MemoryCardsAPI/Controllers/CollectionsController.cs" />
+        <option value="$PROJECT_DIR$/Models/Training/Repositories/InMemoryTrainingRepository.cs" />
       </list>
     </option>
   </component>
@@ -354,14 +303,34 @@
               <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
               <item name="Project42" type="24d0babc:SolutionExplorerModelNode" />
               <item name="Models" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="CardsCollection" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Training" type="24d0babc:SolutionExplorerModelNode" />
             </path>
             <path>
               <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
               <item name="Project42" type="24d0babc:SolutionExplorerModelNode" />
               <item name="Models" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="CardsCollection" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Training" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Repositories" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="Project42" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Models" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Training" type="24d0babc:SolutionExplorerModelNode" />
               <item name="Services" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="Project42" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Models" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="User" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="Project42" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Models" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="User" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Repositories" type="24d0babc:SolutionExplorerModelNode" />
             </path>
           </expand>
           <select />
@@ -456,12 +425,12 @@
       <workItem from="1555937854191" duration="405000" />
       <workItem from="1556526153503" duration="4689000" />
       <workItem from="1557312073497" duration="57128000" />
-      <workItem from="1558426013313" duration="6368000" />
+      <workItem from="1558426013313" duration="6797000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83743000" />
+    <option name="totallyTimeSpent" value="84172000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -946,24 +915,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Models/CardsCollection/Repositories/PostgreCollectionsRepository.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="45" column="27" selection-start-line="45" selection-start-column="27" selection-end-line="45" selection-end-column="27" />
-          <folding>
-            <marker date="1558428359255" expanded="false" signature="6:152" ph="..." />
-            <marker date="1558428359255" expanded="true" signature="199:1583" ph="{...}" />
-            <marker date="1558428359255" expanded="true" signature="272:1581" ph="{...}" />
-            <marker date="1558428359255" expanded="true" signature="387:443" ph="{...}" />
-            <marker date="1558428359255" expanded="true" signature="523:691" ph="{...}" />
-            <marker date="1558428359255" expanded="true" signature="780:947" ph="{...}" />
-            <marker date="1558428359255" expanded="true" signature="1043:1225" ph="{...}" />
-            <marker date="1558428359255" expanded="true" signature="1292:1410" ph="{...}" />
-            <marker date="1558428359255" expanded="true" signature="1484:1575" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Models/CardsCollection/Repositories/InMemoryCollectionsRepository.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="350">
@@ -1012,46 +963,6 @@
             <marker date="1558428667730" expanded="true" signature="1517:1657" ph="{...}" />
             <marker date="1558428667730" expanded="true" signature="1814:1883" ph="{...}" />
             <marker date="1558428667730" expanded="true" signature="1945:2100" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Models/User/Repositories/IUsersRepository.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-18">
-          <caret line="51" selection-start-line="51" selection-end-line="51" />
-          <folding>
-            <marker date="1558428667743" expanded="false" signature="6:124" ph="..." />
-            <marker date="1558428667743" expanded="true" signature="160:2719" ph="{...}" />
-            <marker date="1558428667743" expanded="true" signature="200:2717" ph="{...}" />
-            <marker date="1558428667743" expanded="true" signature="215:618" ph="/// Создать нового пользователя ... " />
-            <marker date="1558428667743" expanded="true" signature="720:1014" ph="/// Найти пользователя по логину ... " />
-            <marker date="1558428667743" expanded="true" signature="1077:1381" ph="/// Найти пользователя по идентификатору ... " />
-            <marker date="1558428667743" expanded="true" signature="1441:1742" ph="/// Удалить пользователя по идентификатору ... " />
-            <marker date="1558428667743" expanded="true" signature="1805:2147" ph="/// Найти карты ... " />
-            <marker date="1558428667743" expanded="true" signature="2270:2558" ph="/// Изменить карту ... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Models/User/Repositories/InMemoryUsersRepository.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="12">
-          <caret line="68" column="9" selection-start-line="68" selection-start-column="9" selection-end-line="68" selection-end-column="9" />
-          <folding>
-            <marker date="1558428667740" expanded="false" signature="6:220" ph="..." />
-            <marker date="1558428667740" expanded="true" signature="256:2207" ph="{...}" />
-            <marker date="1558428667740" expanded="true" signature="318:2205" ph="{...}" />
-            <marker date="1558428667740" expanded="true" signature="430:486" ph="{...}" />
-            <marker date="1558428667740" expanded="true" signature="588:825" ph="{...}" />
-            <marker date="1558428667740" expanded="true" signature="891:998" ph="{...}" />
-            <marker date="1558428667740" expanded="true" signature="1053:1127" ph="{...}" />
-            <marker date="1558428667740" expanded="true" signature="1197:1289" ph="{...}" />
-            <marker date="1558428667740" expanded="true" signature="1356:1460" ph="{...}" />
-            <marker date="1558428667740" expanded="true" signature="1518:1793" ph="{...}" />
-            <marker date="1558428667740" expanded="true" signature="1616:1756" ph="{...}" />
-            <marker date="1558428667740" expanded="true" signature="1913:1982" ph="{...}" />
-            <marker date="1558428667740" expanded="true" signature="2044:2199" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1108,21 +1019,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Models/Training/Repositories/InMemoryTrainingRepository.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="27" column="65" lean-forward="true" selection-start-line="27" selection-start-column="65" selection-end-line="27" selection-end-column="65" />
-          <folding>
-            <marker date="1558549242346" expanded="false" signature="6:197" ph="..." />
-            <marker date="1558549242346" expanded="true" signature="237:892" ph="{...}" />
-            <marker date="1558549242346" expanded="true" signature="305:890" ph="{...}" />
-            <marker date="1558549242346" expanded="true" signature="419:475" ph="{...}" />
-            <marker date="1558549242346" expanded="true" signature="548:700" ph="{...}" />
-            <marker date="1558549242346" expanded="true" signature="767:884" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Models/CardItem/Services/ICardService.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -1159,26 +1055,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Models/Training/Services/TrainingService.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="583">
-          <caret line="67" column="1" lean-forward="true" selection-start-line="67" selection-start-column="1" selection-end-line="67" selection-end-column="1" />
-          <folding>
-            <marker date="1558550680653" expanded="false" signature="6:176" ph="..." />
-            <marker date="1558550680653" expanded="true" signature="212:2002" ph="{...}" />
-            <marker date="1558550680653" expanded="true" signature="266:2000" ph="{...}" />
-            <marker date="1558550680653" expanded="true" signature="393:455" ph="{...}" />
-            <marker date="1558550680653" expanded="true" signature="521:872" ph="{...}" />
-            <marker date="1558550680653" expanded="true" signature="702:831" ph="{...}" />
-            <marker date="1558550680653" expanded="true" signature="949:1065" ph="{...}" />
-            <marker date="1558550680653" expanded="true" signature="1152:1286" ph="{...}" />
-            <marker date="1558550680653" expanded="true" signature="1377:1604" ph="{...}" />
-            <marker date="1558550680653" expanded="false" signature="1614:1994" ph="private helper methods" />
-            <marker date="1558550680653" expanded="true" signature="1702:1974" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MemoryCardsAPI/Controllers/UsersController.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="29">
@@ -1209,31 +1085,6 @@
             <marker date="1558550808718" expanded="true" signature="4343:5148" ph="{...}" />
             <marker date="1558550808718" expanded="true" signature="4610:4976" ph="{...}" />
             <marker date="1558550808718" expanded="true" signature="4685:4755" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MemoryCardsAPI/Controllers/TrainingsController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="745">
-          <caret line="89" column="55" selection-start-line="89" selection-start-column="55" selection-end-line="89" selection-end-column="55" />
-          <folding>
-            <marker date="1558549444534" expanded="false" signature="6:249" ph="..." />
-            <marker date="1558549444534" expanded="true" signature="287:3689" ph="{...}" />
-            <marker date="1558549444534" expanded="true" signature="294:340" ph="/// Cards ... " />
-            <marker date="1558549444534" expanded="true" signature="461:3687" ph="{...}" />
-            <marker date="1558549444534" expanded="true" signature="596:837" ph="/// Get Card Training ... " />
-            <marker date="1558549444534" expanded="true" signature="984:1569" ph="{...}" />
-            <marker date="1558549444534" expanded="true" signature="1010:1430" ph="{...}" />
-            <marker date="1558549444534" expanded="true" signature="1466:1559" ph="{...}" />
-            <marker date="1558549444534" expanded="true" signature="1579:1820" ph="/// Get Card Training ... " />
-            <marker date="1558549444534" expanded="true" signature="1977:2484" ph="{...}" />
-            <marker date="1558549444534" expanded="true" signature="2003:2345" ph="{...}" />
-            <marker date="1558549444534" expanded="true" signature="2381:2474" ph="{...}" />
-            <marker date="1558549444534" expanded="true" signature="2494:2825" ph="/// Get Card Training ... " />
-            <marker date="1558549444534" expanded="true" signature="3013:3681" ph="{...}" />
-            <marker date="1558549444534" expanded="true" signature="3039:3542" ph="{...}" />
-            <marker date="1558549444534" expanded="true" signature="3578:3671" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1344,10 +1195,128 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Models/User/Repositories/IUsersRepository.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="705">
+          <caret line="51" selection-start-line="51" selection-end-line="51" />
+          <folding>
+            <marker date="1558428667743" expanded="false" signature="6:124" ph="..." />
+            <marker date="1558428667743" expanded="true" signature="160:2719" ph="{...}" />
+            <marker date="1558428667743" expanded="true" signature="200:2717" ph="{...}" />
+            <marker date="1558428667743" expanded="true" signature="215:618" ph="/// Создать нового пользователя ... " />
+            <marker date="1558428667743" expanded="true" signature="720:1014" ph="/// Найти пользователя по логину ... " />
+            <marker date="1558428667743" expanded="true" signature="1077:1381" ph="/// Найти пользователя по идентификатору ... " />
+            <marker date="1558428667743" expanded="true" signature="1441:1742" ph="/// Удалить пользователя по идентификатору ... " />
+            <marker date="1558428667743" expanded="true" signature="1805:2147" ph="/// Найти карты ... " />
+            <marker date="1558428667743" expanded="true" signature="2270:2558" ph="/// Изменить карту ... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Models/CardsCollection/Repositories/PostgreCollectionsRepository.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="40" column="9" lean-forward="true" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
+          <folding>
+            <marker date="1558428359255" expanded="false" signature="6:152" ph="..." />
+            <marker date="1558428359255" expanded="true" signature="199:1583" ph="{...}" />
+            <marker date="1558428359255" expanded="true" signature="272:1581" ph="{...}" />
+            <marker date="1558428359255" expanded="true" signature="387:443" ph="{...}" />
+            <marker date="1558428359255" expanded="true" signature="523:691" ph="{...}" />
+            <marker date="1558428359255" expanded="true" signature="780:947" ph="{...}" />
+            <marker date="1558428359255" expanded="true" signature="1043:1225" ph="{...}" />
+            <marker date="1558428359255" expanded="true" signature="1292:1410" ph="{...}" />
+            <marker date="1558428359255" expanded="true" signature="1484:1575" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Models/User/Repositories/InMemoryUsersRepository.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="23" column="12" selection-start-line="23" selection-start-column="12" selection-end-line="25" selection-end-column="25" />
+          <folding>
+            <marker date="1558428667740" expanded="false" signature="6:220" ph="..." />
+            <marker date="1558428667740" expanded="true" signature="256:2207" ph="{...}" />
+            <marker date="1558428667740" expanded="true" signature="318:2205" ph="{...}" />
+            <marker date="1558428667740" expanded="true" signature="430:486" ph="{...}" />
+            <marker date="1558428667740" expanded="true" signature="588:825" ph="{...}" />
+            <marker date="1558428667740" expanded="true" signature="891:998" ph="{...}" />
+            <marker date="1558428667740" expanded="true" signature="1053:1127" ph="{...}" />
+            <marker date="1558428667740" expanded="true" signature="1197:1289" ph="{...}" />
+            <marker date="1558428667740" expanded="true" signature="1356:1460" ph="{...}" />
+            <marker date="1558428667740" expanded="true" signature="1518:1793" ph="{...}" />
+            <marker date="1558428667740" expanded="true" signature="1616:1756" ph="{...}" />
+            <marker date="1558428667740" expanded="true" signature="1913:1982" ph="{...}" />
+            <marker date="1558428667740" expanded="true" signature="2044:2199" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Models/Training/Services/TrainingService.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="47" column="42" lean-forward="true" selection-start-line="47" selection-start-column="42" selection-end-line="47" selection-end-column="42" />
+          <folding>
+            <marker date="1558550680653" expanded="false" signature="6:176" ph="..." />
+            <marker date="1558550680653" expanded="true" signature="212:2002" ph="{...}" />
+            <marker date="1558550680653" expanded="true" signature="266:2000" ph="{...}" />
+            <marker date="1558550680653" expanded="true" signature="393:455" ph="{...}" />
+            <marker date="1558550680653" expanded="true" signature="521:872" ph="{...}" />
+            <marker date="1558550680653" expanded="true" signature="702:831" ph="{...}" />
+            <marker date="1558550680653" expanded="true" signature="949:1065" ph="{...}" />
+            <marker date="1558550680653" expanded="true" signature="1152:1286" ph="{...}" />
+            <marker date="1558550680653" expanded="true" signature="1377:1604" ph="{...}" />
+            <marker date="1558550680653" expanded="false" signature="1614:1994" ph="private helper methods" />
+            <marker date="1558550680653" expanded="true" signature="1702:1974" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MemoryCardsAPI/Controllers/TrainingsController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="63" column="53" lean-forward="true" selection-start-line="63" selection-start-column="53" selection-end-line="63" selection-end-column="53" />
+          <folding>
+            <marker date="1558549444534" expanded="false" signature="6:249" ph="..." />
+            <marker date="1558549444534" expanded="true" signature="287:3689" ph="{...}" />
+            <marker date="1558549444534" expanded="true" signature="294:340" ph="/// Cards ... " />
+            <marker date="1558549444534" expanded="true" signature="461:3687" ph="{...}" />
+            <marker date="1558549444534" expanded="true" signature="596:837" ph="/// Get Card Training ... " />
+            <marker date="1558549444534" expanded="true" signature="984:1569" ph="{...}" />
+            <marker date="1558549444534" expanded="true" signature="1010:1430" ph="{...}" />
+            <marker date="1558549444534" expanded="true" signature="1466:1559" ph="{...}" />
+            <marker date="1558549444534" expanded="true" signature="1579:1820" ph="/// Get Card Training ... " />
+            <marker date="1558549444534" expanded="true" signature="1977:2484" ph="{...}" />
+            <marker date="1558549444534" expanded="true" signature="2003:2345" ph="{...}" />
+            <marker date="1558549444534" expanded="true" signature="2381:2474" ph="{...}" />
+            <marker date="1558549444534" expanded="true" signature="2494:2825" ph="/// Get Card Training ... " />
+            <marker date="1558549444534" expanded="true" signature="3013:3681" ph="{...}" />
+            <marker date="1558549444534" expanded="true" signature="3039:3542" ph="{...}" />
+            <marker date="1558549444534" expanded="true" signature="3578:3671" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Models/Training/Repositories/InMemoryTrainingRepository.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="28" column="20" lean-forward="true" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
+          <folding>
+            <marker date="1558557585503" expanded="false" signature="6:197" ph="..." />
+            <marker date="1558557585503" expanded="true" signature="237:1019" ph="{...}" />
+            <marker date="1558557585503" expanded="true" signature="305:1017" ph="{...}" />
+            <marker date="1558557585503" expanded="true" signature="419:475" ph="{...}" />
+            <marker date="1558557585503" expanded="true" signature="553:827" ph="{...}" />
+            <marker date="1558557585503" expanded="true" signature="894:1011" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/MemoryCardsAPI/Controllers/CardsController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-288">
-          <caret line="65" column="25" selection-start-line="65" selection-start-column="25" selection-end-line="65" selection-end-column="25" />
+        <state relative-caret-position="192">
+          <caret line="44" column="24" lean-forward="true" selection-start-line="44" selection-start-column="24" selection-end-line="44" selection-end-column="24" />
           <folding>
             <marker date="1558550135145" expanded="false" signature="6:272" ph="..." />
             <marker date="1558550135145" expanded="true" signature="310:3139" ph="{...}" />
