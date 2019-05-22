@@ -17,7 +17,7 @@ namespace MemoryCardsAPI.Controllers
     [Route("v1/api/[controller]")]
     public class CollectionsController : Controller
     {
-        private ICollectionService collectionService;
+        private readonly ICollectionService collectionService;
         private string defaultCollectionName = "Global";
 
         public CollectionsController(ICollectionService collectionService)
@@ -34,19 +34,18 @@ namespace MemoryCardsAPI.Controllers
         [Route("default")]
         public async Task<ActionResult<CardsCollection>> CreateDefaultAsync(CancellationToken cancellationToken)
         {
-            Guid.TryParse(HttpContext.User.Identity.Name, out var uId);
-
-            if (await collectionService.IsNameExistAsync(defaultCollectionName, uId))
-            {
-                return BadRequest(new {message = "Default collection already exists"});
-            }
-
-            var cardCollection = collectionService.CreateCollection(uId, defaultCollectionName);
-
             try
             {
-                await collectionService.AddCollectionAsync(cardCollection);
-                return Ok(cardCollection);
+                Guid.TryParse(HttpContext.User.Identity.Name, out var uId);
+                if (await collectionService.IsNameExistAsync(defaultCollectionName, uId))
+                {
+                    return BadRequest(new {message = "Default collection already exists"});
+                }
+
+                var cardCollection = collectionService.CreateCollection(uId, defaultCollectionName);
+                if (await collectionService.AddCollectionAsync(cardCollection))
+                    return Ok(cardCollection);
+                throw new AppException("Couldn't add card to a collection");
             }
             catch (AppException ex)
             {
@@ -65,14 +64,14 @@ namespace MemoryCardsAPI.Controllers
         public async Task<ActionResult<CardsCollection>> CreateAsync(CancellationToken cancellationToken,
             [FromQuery] string name)
         {
-            Guid.TryParse(HttpContext.User.Identity.Name, out var uId);
-
-            var cardCollection = collectionService.CreateCollection(uId, name);
-
             try
             {
-                await collectionService.AddCollectionAsync(cardCollection);
-                return Ok(cardCollection);
+                Guid.TryParse(HttpContext.User.Identity.Name, out var uId);
+                var cardCollection = collectionService.CreateCollection(uId, name);
+                if (await collectionService.AddCollectionAsync(cardCollection))
+                    return Ok(cardCollection);
+
+                throw new AppException("Couldn't add card to a collection");
             }
             catch (AppException ex)
             {
@@ -92,20 +91,23 @@ namespace MemoryCardsAPI.Controllers
         public async Task<ActionResult> AddCardToCollection(string collectionName, [FromQuery] Guid cardId,
             CancellationToken cancellationToken)
         {
-            Guid.TryParse(HttpContext.User.Identity.Name, out var uId);
-
-            if (!await collectionService.IsNameExistAsync(collectionName, uId))
+            try
             {
-                return BadRequest(new {message = "No collection with name \"" + collectionName + "\""});
-            }
+                Guid.TryParse(HttpContext.User.Identity.Name, out var uId);
+                if (!await collectionService.IsNameExistAsync(collectionName, uId))
+                {
+                    return BadRequest(new {message = "No collection with name \"" + collectionName + "\""});
+                }
 
-            if (await collectionService.AddCardToCollectionAsync(collectionName, cardId, uId))
+                if (await collectionService.AddCardToCollectionAsync(collectionName, cardId, uId))
+                    return Ok();
+                
+                throw new AppException("Couldn't add card to a collection");
+            }
+            catch (AppException ex)
             {
-                Console.WriteLine("Card added to collection in database");
-                return Ok();
+                return BadRequest(new {message = ex.Message});
             }
-
-            return BadRequest(new {message = "Could not add card (it might already exist there)"});
         }
 
 
@@ -119,16 +121,21 @@ namespace MemoryCardsAPI.Controllers
         [Route("{collectionName}")]
         public async Task<ActionResult> ShowCollection(string collectionName, CancellationToken cancellationToken)
         {
-            Guid.TryParse(HttpContext.User.Identity.Name, out var uId);
-
-            if (!await collectionService.IsNameExistAsync(collectionName, uId))
+            try
             {
-                return BadRequest(new {message = "No collection with name \"" + collectionName + "\""});
+                Guid.TryParse(HttpContext.User.Identity.Name, out var uId);
+                if (!await collectionService.IsNameExistAsync(collectionName, uId))
+                {
+                    return BadRequest(new {message = "No collection with name \"" + collectionName + "\""});
+                }
+
+                var cardCollection = collectionService.FindCollectionByName(collectionName, uId);
+                return Ok(cardCollection);
             }
-
-            var cardCollection = collectionService.FindCollectionByName(collectionName, uId);
-
-            return Ok(cardCollection);
+            catch (AppException ex)
+            {
+                return BadRequest(new {message = ex.Message});
+            }
         }
 
         /// <summary>
@@ -140,8 +147,15 @@ namespace MemoryCardsAPI.Controllers
         [Route("")]
         public ActionResult<List<CardsCollection>> ListCollections(CancellationToken cancellationToken)
         {
-            Guid.TryParse(HttpContext.User.Identity.Name, out var uId);
-            return Ok(collectionService.GetCollections(uId));
+            try
+            {
+                Guid.TryParse(HttpContext.User.Identity.Name, out var uId);
+                return Ok(collectionService.GetCollections(uId));
+            }
+            catch (AppException ex)
+            {
+                return BadRequest(new {message = ex.Message});
+            }
         }
     }
 }

@@ -1,39 +1,51 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using Models.Data;
 
 namespace Models.CardsCollection.Repositories
 {
     public class PostgreCollectionsRepository : ICollectionsRepository
     {
-        public Task<bool> FindNameAsync(string login)
+        private PostgreContext context;
+
+        public PostgreCollectionsRepository(PostgreContext context)
         {
-            throw new System.NotImplementedException();
+            this.context = context;
         }
 
-        public Task<CardsCollection> CreateAsync(CardsCollection collectionToAdd)
+        public async Task<bool> FindNameAsync(string collectionName, Guid uId)
         {
-            throw new NotImplementedException();
+            return await context.Collections
+                .Where(x => x.UserId == uId)
+                .AnyAsync(x => x.Name == collectionName);
         }
 
-        public Task UpdateAsync(CardsCollection collection)
+        public async Task<CardsCollection> CreateAsync(CardsCollection collectionToAdd)
         {
-            throw new NotImplementedException();
+            await context.Collections.AddAsync(collectionToAdd);
+            await context.SaveChangesAsync();
+            return collectionToAdd;
         }
 
-        public Task<bool> FindNameAsync(string collectionName, Guid uId)
+        public async Task<CardsCollection> FindByNameAsync(string collectionName, Guid userId)
         {
-            throw new NotImplementedException();
+            return await context.Collections
+                .Where(x => x.UserId == userId)
+                .FirstOrDefaultAsync(x => x.Name == collectionName);
         }
 
-        public Task<CardsCollection> FindByNameAsync(string collectionName, Guid userId)
+        public async Task UpdateAsync(CardsCollection collection)
         {
-            throw new NotImplementedException();
+            context.Collections.Update(collection);
+            await context.SaveChangesAsync();
         }
 
         public IEnumerable<CardsCollection> FindCollections(Guid userId)
         {
-            throw new NotImplementedException();
+            return context.Collections.Where(x => x.UserId == userId);
         }
     }
 }

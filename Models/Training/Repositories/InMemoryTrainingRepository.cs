@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 using Models.Data;
 using Models.Errors;
 
@@ -24,12 +25,9 @@ namespace Models.Training.Repositories
             return training;
         }
 
-        public async Task<Training> GetCardTrainingAsync(Guid id, Guid userId)
+        public async Task<Training> GetCardTrainingAsync(Guid id)
         {
-            //     var found = await context.Trainings.FindAsync(id);
-            var found = context.Trainings.FirstOrDefault(x => x.CardId == id);
-            if (found.UserId != userId) throw new AppException("You are not user of this training");
-            return found;
+            return await context.Trainings.FirstOrDefaultAsync(x => x.CardId == id);            
         }
     }
 }

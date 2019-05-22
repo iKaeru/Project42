@@ -59,7 +59,7 @@ namespace Models.CardsCollection.Services
 
             if (desiredCollection.CardItems.Contains(cardId))
             {
-                return false;
+                throw new AppException("Collection doesn't contain this card");
             }
 
             desiredCollection.CardItems.Add(cardId);

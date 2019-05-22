@@ -51,29 +51,12 @@ namespace Models.User.Repositories
         Task<IReadOnlyList<CardItemInfo>> SearchAsync(UserSearchInfo query, CancellationToken cancelltionToken);
 
         /// <summary>
-        /// Запросить карту
-        /// </summary>
-        /// <param name="userId">Идентификатор карты</param>
-        /// <param name="cancellationToken">Токен отмены операции</param>
-        /// <returns>Задача, представлящая асинхронный запрос карты.
-        /// Результат выполнения - карта</returns>
-        Task<UserInfo> GetAsync(Guid userId, CancellationToken cancellationToken);
-
-        /// <summary>
         /// Изменить карту
         /// </summary>
         /// <param name="updateInfo">Описание изменений карты</param>
         /// <returns>Задача, представляющая асинхронный запрос на изменение карты.
         /// Результат выполнения - актуальное состояние карты</returns>
         Task<User> UpdateAsync(User updateInfo);
-
-        /// <summary>
-        /// Удалить карту
-        /// </summary>
-        /// <param name="userId">Идентификатор карту</param>
-        /// <param name="cancelltionToken">Токен отмены операции</param>
-        /// <returns>Задача, представляющая асинхронный запрос на удаление карты</returns>
-        Task RemoveAsync(Guid userId, CancellationToken cancelltionToken);
 
         Task<bool> FindLoginAsync(string login);
         Task<bool> FindMailAsync(string mailAddress);

@@ -37,42 +37,25 @@ namespace MemoryCardsAPI.Controllers
         [HttpPost("auth")]
         public async Task<IActionResult> Authenticate([FromBody] UserLoginInfo userDto)
         {
-            var user = await userService.AuthenticateAsync(userDto.Login, userDto.Password);
-
-            if (user == null)
-                return BadRequest(new { message = "Username or password is incorrect" });
-
-            var token = TokenGenerator(user.Id.ToString());
-
-            // return basic user info (without password) and token to store client side
-            return Ok(new
+            try
             {
-                Id = user.Id,
-                Username = user.Login,
-                FirstName = user.FirstName,
-                LastName = user.LastName,
-                Token = token
-            });
-        }
-
-        private string TokenGenerator(string id)
-        {
-            IdentityModelEventSource.ShowPII = true;
-            var tokenHandler = new JwtSecurityTokenHandler();
-            var key = Encoding.ASCII.GetBytes(appSettings.Secret);
-            var tokenDescriptor = new SecurityTokenDescriptor
-            {
-                Subject = new ClaimsIdentity(new Claim[]
+                var user = await userService.AuthenticateAsync(userDto.Login, userDto.Password);
+                if (user == null)
+                    return BadRequest(new {message = "Username or password is incorrect"});
+                var token = TokenHmacSha256Generator(user.Id.ToString());
+                return Ok(new
                 {
-                    new Claim(ClaimTypes.Name, id)
-                }),
-                Expires = DateTime.UtcNow.AddDays(7),
-                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key),
-                    SecurityAlgorithms.HmacSha256Signature)
-            };
-            var token = tokenHandler.CreateToken(tokenDescriptor);
-            var tokenString = tokenHandler.WriteToken(token);
-            return tokenString;
+                    Id = user.Id,
+                    Username = user.Login,
+                    FirstName = user.FirstName,
+                    LastName = user.LastName,
+                    Token = token
+                });
+            }
+            catch (AppException ex)
+            {
+                return BadRequest(new {message = ex.Message});
+            }
         }
 
         [AllowAnonymous]
@@ -95,25 +78,32 @@ namespace MemoryCardsAPI.Controllers
             }
             catch (AppException ex)
             {
-                return BadRequest(new { message = ex.Message });
+                return BadRequest(new {message = ex.Message});
             }
         }
 
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(string id)
         {
-            var guidId = Guid.Parse(id);
-            var user = await userService.GetById(guidId);
+            try
+            {
+                var guidId = Guid.Parse(id);
+                var user = await userService.GetById(guidId);
 
-            if (user == null)
-                return BadRequest(new { message = "User id is incorrect" });
+                if (user == null)
+                    return BadRequest(new {message = "User id is incorrect"});
 
-            var userDto = mapper.Map<UserRegistrationInfo>(user);
-            return Ok(userDto);
+                var userDto = mapper.Map<UserRegistrationInfo>(user);
+                return Ok(userDto);
+            }
+            catch (AppException ex)
+            {
+                return BadRequest(new {message = ex.Message});
+            }
         }
 
         [HttpPut("{id}")]
-        public IActionResult Update(string id, [FromBody]UserRegistrationInfo userDto)
+        public IActionResult Update(string id, [FromBody] UserRegistrationInfo userDto)
         {
             var user = mapper.Map<User>(userDto);
             var guidId = Guid.Parse(id);
@@ -126,21 +116,48 @@ namespace MemoryCardsAPI.Controllers
             }
             catch (AppException ex)
             {
-                return BadRequest(new { message = ex.Message });
+                return BadRequest(new {message = ex.Message});
             }
         }
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(string id)
         {
-            var guidId = Guid.Parse(id);
-
-            if (await userService.Delete(guidId))
+            try
             {
-                return Ok();
-            }
+                var guidId = Guid.Parse(id);
 
-            return BadRequest(id);
+                if (await userService.Delete(guidId))
+                {
+                    return Ok();
+                }
+
+                throw new AppException("Couldn't delete user");
+            }
+            catch (AppException ex)
+            {
+                return BadRequest(new {message = ex.Message});
+            }
+        }
+
+        private string TokenHmacSha256Generator(string id)
+        {
+            IdentityModelEventSource.ShowPII = true;
+            var tokenHandler = new JwtSecurityTokenHandler();
+            var key = Encoding.ASCII.GetBytes(appSettings.Secret);
+            var tokenDescriptor = new SecurityTokenDescriptor
+            {
+                Subject = new ClaimsIdentity(new Claim[]
+                {
+                    new Claim(ClaimTypes.Name, id)
+                }),
+                Expires = DateTime.UtcNow.AddDays(7),
+                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key),
+                    SecurityAlgorithms.HmacSha256Signature)
+            };
+            var token = tokenHandler.CreateToken(tokenDescriptor);
+            var tokenString = tokenHandler.WriteToken(token);
+            return tokenString;
         }
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 using Models.Data;
 
 namespace Models.CardItem.Repositories
@@ -21,7 +22,7 @@ namespace Models.CardItem.Repositories
             var card = cardToCreate;
             card.Id = id;
             
-            await context.AddAsync(card);
+            await context.Cards.AddAsync(card);
             await context.SaveChangesAsync();
             return card;
         }
@@ -37,10 +38,9 @@ namespace Models.CardItem.Repositories
             throw new NotImplementedException();
         }
 
-        public Task<CardItem> GetAsync(Guid cardId, CancellationToken cancellationToken)
+        public async Task<CardItem> GetAsync(Guid cardId, CancellationToken cancellationToken)
         {
-            return Task.FromResult
-                (context.Cards.FirstOrDefault(x => x.Id == cardId));
+            return await context.Cards.FirstOrDefaultAsync(x => x.Id == cardId);
         }
 
         public Task<CardItem> PatchAsync(CardPatchInfo patchInfo, CancellationToken cancelltionToken)
