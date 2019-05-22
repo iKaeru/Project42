@@ -51,30 +51,6 @@ namespace MemoryCardsAPI.Controllers
         /// Get Card Training
         /// </summary>
         /// <param name="id">Id карты, с которой происходит тренировка</param>
-        /// <param name="cancellationToken"></param>
-        /// <returns code="200"></returns>
-        [HttpGet]
-        [Route("{id}/create")]
-        public async Task<IActionResult> CreateCardTraining(string id, CancellationToken cancellationToken)
-        {
-            try
-            {
-                Guid.TryParse(HttpContext.User.Identity.Name, out var uId);
-                Guid.TryParse(id, out var cardGuid);
-                var training = trainingService.CreateTraining(uId, cardGuid);
-                await trainingService.AddToRepositoryAsync(training);
-                return Ok(training);
-            }
-            catch (AppException ex)
-            {
-                return BadRequest(new { message = ex.Message });
-            }
-        }
-
-        /// <summary>
-        /// Get Card Training
-        /// </summary>
-        /// <param name="id">Id карты, с которой происходит тренировка</param>
         /// <param name="level">Уровень сложности запоминания карты пользователем</param>
         /// <param name="cancellationToken"></param>
         /// <returns code="200"></returns>
