@@ -43,9 +43,10 @@ namespace Models.CardsCollection.Repositories
             await context.SaveChangesAsync();
         }
 
-        public IEnumerable<CardsCollection> FindCollections(Guid userId)
+        public Task<IEnumerable<CardsCollection>> FindCollections(Guid userId)
         {
-            return context.Collections.Where(x => x.UserId == userId);
+            return Task.FromResult<IEnumerable<CardsCollection>>
+                (context.Collections.Where(x => x.UserId == userId));
         }
     }
 }

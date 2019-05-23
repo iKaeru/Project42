@@ -91,12 +91,12 @@ namespace Models.CardsCollection.Services
             return await repository.FindNameAsync(collectionName, userId);
         }
         
-        public IEnumerable<CardsCollection> GetCollections(Guid userId)
+        public async Task<IEnumerable<CardsCollection>> GetAllCollections(Guid userId)
         {
             if (userId == Guid.Empty)
                 throw new AppException(nameof(userId) + " is required");
             
-            return repository.FindCollections(userId);
+            return await repository.FindCollections(userId);
         }
 
         #region private helper methods

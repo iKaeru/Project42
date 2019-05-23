@@ -1,7 +1,6 @@
-using System;
 using System.Runtime.Serialization;
 
-namespace Models.User
+namespace Client.Models.User
 {
     /// <summary>
     /// Информация для редактирования пользователя
@@ -9,12 +8,6 @@ namespace Models.User
     [DataContract]
     public class UserPatchInfo
     {
-        /// <summary>
-        /// Идентификатор пользователя
-        /// </summary>
-        [DataMember]
-        public Guid Id { get; set; }
-        
         /// <summary>
         /// Логин пользователя
         /// </summary>

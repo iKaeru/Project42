@@ -86,6 +86,8 @@ namespace Models.User.Services
         {
             if (id == Guid.Empty)
             {
+                Console.WriteLine(Guid.Empty);
+                Console.WriteLine(11);
                 return null;
             }
 
@@ -102,7 +104,7 @@ namespace Models.User.Services
             return await repository.DeleteUserAsync(id);
         }
 
-        public async void Update(User userToUpdate, string password = null)
+        public async void Update(UserPatchInfo userToUpdate, string password = null)
         {
             ValidateUser(userToUpdate);
             var userFromRepository = await repository.GetUserAsync(userToUpdate.Id);
@@ -136,6 +138,34 @@ namespace Models.User.Services
                 throw new AppException("Username length \"" + userToValidate.Login + "\" is incorrect");
             if (!LengthIsCorrect(userToValidate.Password, MinimumPassLength, MaximumPassLength))
                 throw new AppException("Password length \"" + userToValidate.Password+ "\" is incorrect");
+        }
+        
+        private void ValidateUser(UserPatchInfo userToValidate)
+        {
+            if (!FieldsAreFilled(userToValidate))
+                throw new AppException("Not enough information");
+            if (!LengthIsCorrect(userToValidate.Login, MinimumLoginLength, MaximumLoginLength))
+                throw new AppException("Username length \"" + userToValidate.Login + "\" is incorrect");
+            if (!LengthIsCorrect(userToValidate.Password, MinimumPassLength, MaximumPassLength))
+                throw new AppException("Password length \"" + userToValidate.Password+ "\" is incorrect");
+            if (!LengthIsCorrect(userToValidate.FirstName, 0, 20)) // todo
+                throw new AppException("Username length \"" + userToValidate.FirstName + "\" is incorrect");
+            if (!LengthIsCorrect(userToValidate.LastName, 0, 20)) // todo
+                throw new AppException("Username length \"" + userToValidate.LastName + "\" is incorrect");
+        }
+        
+        private bool FieldsAreFilled(UserPatchInfo userToCheck)
+        {
+            var type = userToCheck.GetType();
+            foreach (var property in type.GetProperties())
+            {
+                if (property.GetValue(userToCheck) == null)
+                {
+                    return false;
+                }
+            }
+
+            return true;
         }
 
         private bool FieldsAreFilled(UserRegistrationInfo userToCheck)
@@ -209,7 +239,7 @@ namespace Models.User.Services
             return true;
         }
 
-        private async void CheckInfoNotExist(User newInfo, User repositoryInfo)
+        private async void CheckInfoNotExist(UserPatchInfo newInfo, User repositoryInfo)
         {
             if (newInfo.Login != repositoryInfo.Login)
             {
@@ -224,7 +254,7 @@ namespace Models.User.Services
             }
         }
 
-        private void UpdateUserInfo(User userToUpdate, User userFromRepository)
+        private void UpdateUserInfo(UserPatchInfo userToUpdate, User userFromRepository)
         {
             userFromRepository.FirstName = userToUpdate.FirstName;
             userFromRepository.LastName = userToUpdate.LastName;

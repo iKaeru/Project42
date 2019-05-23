@@ -9,11 +9,14 @@ using Microsoft.IdentityModel.Tokens;
 using System.Security.Claims;
 using System.Threading;
 using System.Threading.Tasks;
+using Converters;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.IdentityModel.Logging;
 using Models.Errors;
 using Models.User;
 using Models.User.Services;
+using View = Client.Models.User;
+using Model = Models.User;
 
 namespace MemoryCardsAPI.Controllers
 {
@@ -68,7 +71,6 @@ namespace MemoryCardsAPI.Controllers
                 var user = userService.CreateUser(userDto);
                 userService.ValidateUser(user);
 
-
                 await userService.AddUserAsync(user, userDto.Password, cancellationToken);
                 return Ok(new
                 {
@@ -93,7 +95,7 @@ namespace MemoryCardsAPI.Controllers
                 if (user == null)
                     return BadRequest(new {message = "User id is incorrect"});
 
-                var userDto = mapper.Map<UserRegistrationInfo>(user);
+                var userDto = mapper.Map<View.User>(user);
                 return Ok(userDto);
             }
             catch (AppException ex)
@@ -103,15 +105,15 @@ namespace MemoryCardsAPI.Controllers
         }
 
         [HttpPut("{id}")]
-        public IActionResult Update(string id, [FromBody] UserRegistrationInfo userDto)
+        public IActionResult Update(string id, [FromBody] View.UserPatchInfo userToUpdate)
         {
-            var user = mapper.Map<User>(userDto);
+            var user = UserConverter.ConvertPatchInfo(userToUpdate);
             var guidId = Guid.Parse(id);
             user.Id = guidId;
-
+            
             try
             {
-                userService.Update(user, userDto.Password);
+                userService.Update(user, userToUpdate.Password);
                 return Ok();
             }
             catch (AppException ex)

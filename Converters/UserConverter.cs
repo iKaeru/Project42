@@ -2,7 +2,6 @@ using System;
 using View = Client.Models.User;
 using Model = Models.User;
 
-
 namespace Converters
 {
         /// <summary>
@@ -11,42 +10,28 @@ namespace Converters
         public static class UserConverter
         {
             /// <summary>
-            /// Переводит подьзователя из серверной модели в клиентскую
+            /// Переводит информацию для редактирования пользователя из клиентской модели в серверную
             /// </summary>
-            /// <param name="modelUser">Пользователь в серверной модели</param>
-            /// <returns>Пользователь в клиентской модели</returns>
-            public static View.User Convert(Model.User modelUser)
+            /// <param name="viewUser">Пользователь в клиентской модели</param>
+            /// <returns>Пользователь в серверной модели</returns>
+            public static Model.UserPatchInfo ConvertPatchInfo(View.UserPatchInfo viewUser)
             {
-                if (modelUser == null)
+                if (viewUser == null)
                 {
-                    throw new ArgumentNullException(nameof(modelUser));
+                    throw new ArgumentNullException(nameof(viewUser));
                 }
 
-                var clientUser = new View.User
+                var clientUser = new Model.UserPatchInfo()
                 {
-                    Id = modelUser.Id.ToString(),
-                    Login = modelUser.Login,
-                    RegisteredAt = modelUser.RegistrationDate.ToString()
+                    EmailAdress = viewUser.EmailAdress,
+                    Login = viewUser.Login,
+                    Password = viewUser.Password,
+                    FirstName = viewUser.FirstName,
+                    LastName= viewUser.LastName,
+                    Id = Guid.Empty
                 };
 
                 return clientUser;
-            }
-            
-            /// <summary>
-            /// Переводит подьзователя из клиентской модели в серверную
-            /// </summary>
-            /// <param name="clientUser">Пользователь в клиентской модели</param>
-            /// <returns>Пользователь в серверной модели</returns>
-            public static Model.User Convert(View.User clientUser)
-            {
-                if (clientUser == null)
-                {
-                    throw new ArgumentNullException(nameof(clientUser));
-                }
-
-                var modelUser = new Model.User();
-
-                return modelUser;
             }
         }
 }
