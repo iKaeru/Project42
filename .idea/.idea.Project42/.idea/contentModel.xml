@@ -16,8 +16,13 @@
             </e>
           </e>
         </e>
+        <e p="Training" t="Include">
+          <e p="MemorizationLevels.cs" t="Include" />
+          <e p="TrainingPatchInfo.cs" t="Include" />
+        </e>
         <e p="User" t="Include">
           <e p="User.cs" t="Include" />
+          <e p="UserPatchInfo.cs" t="Include" />
         </e>
       </e>
       <e p="Converters" t="IncludeRecursive">
@@ -31,6 +36,7 @@
             </e>
           </e>
         </e>
+        <e p="TrainingConverter.cs" t="Include" />
         <e p="UserConverter.cs" t="Include" />
       </e>
       <e p="MemoryCardsAPI" t="IncludeRecursive">

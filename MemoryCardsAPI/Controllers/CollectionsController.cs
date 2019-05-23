@@ -18,7 +18,7 @@ namespace MemoryCardsAPI.Controllers
     public class CollectionsController : Controller
     {
         private readonly ICollectionService collectionService;
-        private string defaultCollectionName = "Global";
+        private string defaultCollectionName = "Default";
 
         public CollectionsController(ICollectionService collectionService)
         {
@@ -26,11 +26,11 @@ namespace MemoryCardsAPI.Controllers
         }
 
         /// <summary>
-        /// Create Global Collection
+        /// Create Default Collection
         /// </summary>
         /// <param name="cancellationToken"></param>
         /// <returns code="200"></returns> 
-        [HttpGet]
+        [HttpPost]
         [Route("default")]
         public async Task<ActionResult<CardsCollection>> CreateDefaultAsync(CancellationToken cancellationToken)
         {
@@ -45,7 +45,7 @@ namespace MemoryCardsAPI.Controllers
                 var cardCollection = collectionService.CreateCollection(uId, defaultCollectionName);
                 if (await collectionService.AddCollectionAsync(cardCollection))
                     return Ok(cardCollection);
-                throw new AppException("Couldn't add card to a collection");
+                throw new AppException("Couldn't create collection");
             }
             catch (AppException ex)
             {
@@ -67,6 +67,11 @@ namespace MemoryCardsAPI.Controllers
             try
             {
                 Guid.TryParse(HttpContext.User.Identity.Name, out var uId);
+                if (await collectionService.IsNameExistAsync(name, uId))
+                {
+                    return BadRequest(new {message = $"Collection {name} already exists"});
+                }
+                
                 var cardCollection = collectionService.CreateCollection(uId, name);
                 if (await collectionService.AddCollectionAsync(cardCollection))
                     return Ok(cardCollection);
@@ -145,12 +150,13 @@ namespace MemoryCardsAPI.Controllers
         /// <returns></returns>
         [HttpGet]
         [Route("")]
-        public ActionResult<List<CardsCollection>> ListCollections(CancellationToken cancellationToken)
+        public ActionResult ListCollections(CancellationToken cancellationToken)
         {
             try
             {
                 Guid.TryParse(HttpContext.User.Identity.Name, out var uId);
-                return Ok(collectionService.GetCollections(uId));
+                var collections = collectionService.GetAllCollections(uId);
+                return Ok(collections);
             }
             catch (AppException ex)
             {

@@ -11,7 +11,7 @@ namespace Models.CardsCollection
     [Table("Collectons")]
     public class CardsCollection
     {
-     // хз зачем --->   public virtual CardItem.CardItemInfo Card { get; set; }
+        // public virtual CardItem.CardItemInfo Card { get; set; }
 
         /// <summary>
         /// Уникальный идентификатор коллекции
