@@ -53,7 +53,7 @@ namespace Models.CardItem.Repositories
         /// <param name="cancelltionToken">Токен отмены операции</param>
         /// <returns>Задача, представляющая асинхронный запрос на изменение карты.
         /// Результат выполнения - актуальное состояние карты</returns>
-        Task<CardItem> PatchAsync(CardPatchInfo patchInfo, CancellationToken cancelltionToken);
+        Task<CardItem> PatchAsync(CardItem patchInfo, CancellationToken cancelltionToken);
 
         /// <summary>
         /// Удалить карту

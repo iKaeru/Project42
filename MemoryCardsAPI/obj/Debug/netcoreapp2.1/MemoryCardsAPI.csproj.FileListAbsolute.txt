@@ -131,3 +131,5 @@ T:/KonturProj/Project42/MemoryCardsAPI/obj/Debug/netcoreapp2.1/MemoryCardsAPI.cs
 /Users/kaeru/Downloads/kontur/Project42/MemoryCardsAPI/obj/Debug/netcoreapp2.1/MemoryCardsAPI.csproj.CopyComplete
 /Users/kaeru/Downloads/kontur/Project42/MemoryCardsAPI/obj/Debug/netcoreapp2.1/MemoryCardsAPI.dll
 /Users/kaeru/Downloads/kontur/Project42/MemoryCardsAPI/obj/Debug/netcoreapp2.1/MemoryCardsAPI.pdb
+/Users/kaeru/Downloads/kontur/Project42/MemoryCardsAPI/bin/Debug/netcoreapp2.1/MemoryCardsAPI.xml
+/Users/kaeru/Downloads/kontur/Project42/MemoryCardsAPI/obj/Debug/netcoreapp2.1/MemoryCardsAPI.xml

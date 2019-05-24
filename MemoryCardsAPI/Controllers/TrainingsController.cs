@@ -97,7 +97,7 @@ namespace MemoryCardsAPI.Controllers
                 var card = await cardsService.GetCardByIdAsync(cardGuid, cancellationToken);
                 cardsService.CheckOwnership(card, uId);
                 var completeTraining = await trainingService.GetTrainingAsync(card, uId);
-                completeTraining = trainingService.CompleteTraining(completeTraining, 
+                completeTraining = trainingService.UpdateTraining(completeTraining, 
                     TrainingConverter.ConvertLevels(training.MemorizationLevel));
                 return Ok(completeTraining);
             }

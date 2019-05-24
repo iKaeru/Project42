@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Runtime.Serialization;
 
 namespace Models.CardsCollection
 {
@@ -9,6 +10,7 @@ namespace Models.CardsCollection
     /// Коллекция карт
     /// </summary>
     [Table("Collectons")]
+    [DataContract]
     public class CardsCollection
     {
         // public virtual CardItem.CardItemInfo Card { get; set; }
@@ -18,6 +20,7 @@ namespace Models.CardsCollection
         /// </summary>
         [Key]
         [Column("Id", Order = 1)]
+        [DataMember(IsRequired = true)]
         public Guid Id { get; set; }
 
         /// <summary>
@@ -25,24 +28,28 @@ namespace Models.CardsCollection
         /// </summary>
         [StringLength(20)]
         [Column("Name", Order = 2)]
+        [DataMember(IsRequired = true)]
         public string Name { get; set; }
 
         /// <summary>
         /// Множество карт
         /// </summary>
         [Column("Id", Order = 3)] 
+        [DataMember(IsRequired = true)]
         public ICollection<Guid> CardItems;
 
         /// <summary>
         /// Пользователь создавший коллекцию
         /// </summary>
         [Column("User", Order = 4)]
+        [DataMember(IsRequired = true)]
         public Guid UserId { get; set; }
 
         /// <summary>
         /// Дата создания коллекции
         /// </summary>
         [Column("Date", Order = 5)]
+        [DataMember(IsRequired = true)]
         public DateTime CreationDate { get; set; }
     }
 }

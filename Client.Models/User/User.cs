@@ -1,4 +1,3 @@
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Runtime.Serialization;
 
 namespace Client.Models.User
@@ -6,7 +5,7 @@ namespace Client.Models.User
     /// <summary>
     /// Пользователь
     /// </summary>
-    [Table("Users")]
+    [DataContract]
     public class User
     {
         /// <summary>

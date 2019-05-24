@@ -39,7 +39,7 @@ namespace Models.CardItem.Repositories
             return await context.Cards.FirstOrDefaultAsync(x => x.Id == cardId);
         }
 
-        public Task<CardItem> PatchAsync(CardPatchInfo patchInfo, CancellationToken cancelltionToken)
+        public Task<CardItem> PatchAsync(CardItem patchInfo, CancellationToken cancelltionToken)
         {
             throw new NotImplementedException();
         }

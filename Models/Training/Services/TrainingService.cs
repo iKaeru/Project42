@@ -26,7 +26,9 @@ namespace Models.Training.Services
             {
                 CardId = cardId,
                 UserId = userId,
-                Level = MemorizationLevels.Hard
+                Level = MemorizationLevels.Hard,
+                CompletedAt = DateTime.Now
+                
             };
 
             return training;
@@ -38,7 +40,7 @@ namespace Models.Training.Services
             return await repository.AddAsync(training);
         }
 
-        public Training CompleteTraining(Training training, MemorizationLevels level)
+        public Training UpdateTraining(Training training, MemorizationLevels level)
         {
             training.CompletedAt = DateTime.Now;
             training.Level = level;
