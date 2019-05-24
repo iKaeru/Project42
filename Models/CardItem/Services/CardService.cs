@@ -69,6 +69,21 @@ namespace Models.CardItem.Services
             return await repository.GetAsync(id, cancellationToken);
         }
 
+        public async void UpdateCardByIdAsync(CardPatchInfo cardToUpdate, CancellationToken cancellationToken)
+        {
+            var cardFromRepository = await repository.GetAsync(cardToUpdate.Id, cancellationToken);
+
+            if (cardFromRepository == null)
+                throw new AppException("Card not found");
+            
+            UpdateCardInfo(cardToUpdate, cardFromRepository);
+
+            if (!IsCardValid(cardFromRepository))
+                throw new AppException("Bad card info");
+            
+            await repository.PatchAsync(cardFromRepository, cancellationToken);
+        }
+        
         public async void CheckOwnership(CardItem card, Guid userId)
         {
             if (!IsCardValid(card) || userId == Guid.Empty)
@@ -147,6 +162,12 @@ namespace Models.CardItem.Services
             }
 
             return true;
+        }
+        
+        private void UpdateCardInfo(CardPatchInfo cardToUpdate, CardItem cardFromRepository)
+        {
+            cardFromRepository.Answer = cardToUpdate.Answer;
+            cardFromRepository.Question = cardToUpdate.Answer;
         }
 
         #endregion

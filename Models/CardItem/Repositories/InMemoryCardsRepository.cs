@@ -11,22 +11,23 @@ namespace Models.CardItem.Repositories
     public class InMemoryCardsRepository : ICardsRepository
     {
         private InMemoryContext context;
+
         public InMemoryCardsRepository(InMemoryContext context)
         {
             this.context = context;
         }
-        
+
         public async Task<CardItemInfo> CreateAsync(CardItem cardToCreate, CancellationToken cancellationToken)
         {
             var id = Guid.NewGuid();
             var card = cardToCreate;
             card.Id = id;
-            
+
             await context.Cards.AddAsync(card);
             await context.SaveChangesAsync();
             return card;
         }
-        
+
         public Task<IEnumerable<CardItem>> GetAllUserCards(Guid uId, CancellationToken cancellationToken)
         {
             return Task.FromResult<IEnumerable<CardItem>>
@@ -43,9 +44,11 @@ namespace Models.CardItem.Repositories
             return await context.Cards.FirstOrDefaultAsync(x => x.Id == cardId);
         }
 
-        public Task<CardItem> PatchAsync(CardPatchInfo patchInfo, CancellationToken cancelltionToken)
+        public async Task<CardItem> PatchAsync(CardItem patchInfo, CancellationToken cancelltionToken)
         {
-            throw new NotImplementedException();
+            var card = context.Cards.Update(patchInfo);
+            await context.SaveChangesAsync();
+            return card.Entity;
         }
 
         public Task RemoveAsync(Guid cardId, CancellationToken cancelltionToken)

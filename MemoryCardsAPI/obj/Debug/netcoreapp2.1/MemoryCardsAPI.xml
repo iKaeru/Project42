@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MemoryCardsAPI</name>
+    </assembly>
+    <members>
+        <member name="T:MemoryCardsAPI.Controllers.CardsController">
+            <summary>
+            Cards
+            </summary>
+        </member>
+        <member name="M:MemoryCardsAPI.Controllers.CardsController.CreateAsync(Models.CardItem.CardCreationInfo,System.Threading.CancellationToken)">
+            <summary>
+            Post Card
+            </summary>
+            <param name="cardCreationInfo"></param>
+            <param name="cancellationToken"></param>
+            <returns code="200"></returns>
+            <returns code="404"></returns>
+        </member>
+        <member name="M:MemoryCardsAPI.Controllers.CardsController.GetCardsForUser(System.Threading.CancellationToken)">
+            <summary>
+            Post Card
+            </summary>
+            <param name="cancellationToken"></param>
+            <returns code="200"></returns>
+        </member>
+        <member name="M:MemoryCardsAPI.Controllers.CardsController.GetCardByIdAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Get Card By Id
+            </summary>
+            <param name="id">Идентификатор карты</param>
+            <param name="cancellationToken"></param>
+            <returns code="200"></returns>
+        </member>
+        <member name="M:MemoryCardsAPI.Controllers.CardsController.UpdateCardByIdAsync(System.String,Client.Models.CardItem.CardPatchInfo,System.Threading.CancellationToken)">
+            <summary>
+            Update Card
+            </summary>
+            <param name="id">Идентификатор карты</param>
+            <param name="cardToUpdate">Информация о карте для редактирования</param>
+            <param name="cancellationToken"></param>
+            <returns code="200"></returns>
+        </member>
+        <member name="T:MemoryCardsAPI.Controllers.CollectionsController">
+            <summary>
+            Collections
+            </summary>
+        </member>
+        <member name="M:MemoryCardsAPI.Controllers.CollectionsController.CreateDefaultAsync(System.Threading.CancellationToken)">
+            <summary>
+            Create Default Collection
+            </summary>
+            <param name="cancellationToken"></param>
+            <returns code="200"></returns> 
+        </member>
+        <member name="M:MemoryCardsAPI.Controllers.CollectionsController.CreateAsync(System.Threading.CancellationToken,System.String)">
+            <summary>
+            Create collection with name from query
+            </summary>
+            <param name="cancellationToken"></param>
+            <param name="name"></param>
+            <returns code="200"></returns> 
+        </member>
+        <member name="M:MemoryCardsAPI.Controllers.CollectionsController.AddCardToCollection(System.String,System.Guid,System.Threading.CancellationToken)">
+            <summary>
+            Adds card to a target collection
+            </summary>
+            <param name="collectionName"></param>
+            <param name="cardId"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MemoryCardsAPI.Controllers.CollectionsController.ShowCollection(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Shows target collection
+            </summary>
+            <param name="collectionName"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MemoryCardsAPI.Controllers.CollectionsController.ListCollections(System.Threading.CancellationToken)">
+            <summary>
+            Shows all existing collections
+            </summary>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MemoryCardsAPI.Controllers.TrainingsController">
+            <summary>
+            Cards
+            </summary>
+        </member>
+        <member name="M:MemoryCardsAPI.Controllers.TrainingsController.CreateCardTraining(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Create Card Training
+            </summary>
+            <param name="id">Идентификатор карты, с которой происходит тренировка</param>
+            <param name="cancellationToken"></param>
+            <returns code="200"></returns>
+        </member>
+        <member name="M:MemoryCardsAPI.Controllers.TrainingsController.GetCardTraining(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Get Card Training
+            </summary>
+            <param name="id">Идентификатор карты, с которой происходит тренировка</param>
+            <param name="cancellationToken"></param>
+            <returns code="200"></returns>
+        </member>
+        <member name="M:MemoryCardsAPI.Controllers.TrainingsController.TrainWithCard(Client.Models.Training.TrainingPatchInfo,System.Threading.CancellationToken)">
+            <summary>
+            Update Card Training
+            </summary>
+            <param name="training">Информация для обновления тренировки</param>
+            <param name="cancellationToken"></param>
+            <returns code="200"></returns>
+        </member>
+    </members>
+</doc>
