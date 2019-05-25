@@ -46,6 +46,6 @@ namespace Models.Training
         /// </summary>
         [Column("MemorizationLevel", Order = 4)]
         [DataMember(IsRequired = true)]
-        public MemorizationLevels Level { get; set; }
+        public MemorizationBoxes Box { get; set; }
     }
 }

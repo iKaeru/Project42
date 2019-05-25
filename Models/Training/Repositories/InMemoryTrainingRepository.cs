@@ -33,5 +33,32 @@ namespace Models.Training.Repositories
         {
             return await context.Trainings.FirstOrDefaultAsync(x => x.CardId == id);            
         }
+
+        public List<Training> GetDateTrainingCards(DateTime date)
+        {
+            return context.Trainings
+                .Where(x => GetNextTrainingDay(x) == date).ToList();
+        }
+
+        private DateTime GetNextTrainingDay(Training x)
+        {
+            var daysToAdd = GetDaysCountFromBox(x.Box);
+            return x.CompletedAt.AddDays(daysToAdd);
+        }
+
+        private int GetDaysCountFromBox(MemorizationBoxes box)
+        {
+            switch (box)
+            {
+                case MemorizationBoxes.NotLearned:
+                    return 1;
+                case MemorizationBoxes.PartlyLearned:
+                    return 3;
+                case MemorizationBoxes.FullyLearned:
+                    return 5;
+            }
+
+            throw new AppException("Unknown card box");
+        }
     }
 }

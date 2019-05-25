@@ -106,5 +106,27 @@ namespace MemoryCardsAPI.Controllers
                 return BadRequest(new { message = ex.Message });
             }
         }
+
+        /// <summary>
+        /// Get Cards That Require Training For Selected Day
+        /// </summary>
+        /// <param name="date">Дата к которой получить тренировку (обычно надо указывать ту дату, которая сегодня) </param>
+        /// <param name="cancellationToken"></param>
+        /// <returns code="200"></returns>
+        [HttpGet]
+        [Route("{id}")]
+        public async Task<IActionResult> GetTodaysTraining(DateTime date, CancellationToken cancellationToken)
+        {
+            try
+            {
+                Guid.TryParse(HttpContext.User.Identity.Name, out var uId);
+                var cardList = await trainingService.GetDateTrainingAsync(date, uId);
+                return Ok(cardList);
+            }
+            catch (AppException ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
+        }
     }
 }
