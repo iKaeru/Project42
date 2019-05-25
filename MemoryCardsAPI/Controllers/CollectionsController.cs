@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
+using Converters;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Models.CardsCollection;
 using Models.CardsCollection.Services;
 using Models.Errors;
+using View = Client.Models.CardsCollection;
 using System.Linq;
 
 namespace MemoryCardsAPI.Controllers
@@ -167,7 +169,7 @@ namespace MemoryCardsAPI.Controllers
         }
 
         /// <summary>
-        /// Shows all existing collections For User
+        /// Shows number of learned collections For User
         /// </summary>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
@@ -184,6 +186,64 @@ namespace MemoryCardsAPI.Controllers
             catch (AppException ex)
             {
                 return BadRequest(new { message = ex.Message });
+            }
+        }
+
+        /// <summary>
+        /// Update Collection By Name
+        /// </summary>
+        /// <param name="collectionName">Название коллекции</param>
+        /// <param name="updateInfo">Информация о коллекции для редактирования</param>
+        /// <param name="cancellationToken"></param>
+        /// <returns code="200"></returns>
+        [HttpPut]
+        [Route("{collectionName}")]
+        public async Task<IActionResult> UpdateCardByIdAsync(string collectionName,
+            [FromBody] View.CardsCollectionPatchInfo updateInfo, CancellationToken cancellationToken)
+        {
+            try
+            {
+                Guid.TryParse(HttpContext.User.Identity.Name, out var userId);
+                
+                if (!await collectionService.IsNameExistAsync(collectionName, userId))
+                {
+                    return BadRequest(new {message = "No collection with name \"" + collectionName + "\""});
+                }
+                
+                var collection = CardsCollectionConverter.ConvertPatchInfo(updateInfo);
+                collectionService.UpdateByIdAsync(collection, collectionName, userId);
+                return Ok();
+            }
+            catch (AppException ex)
+            {
+                return BadRequest(new {message = ex.Message});
+            }
+        }
+
+        /// <summary>
+        /// Delete Collection By Name
+        /// </summary>
+        /// <param name="collectionName">Название коллекции</param>
+        /// <param name="cancellationToken"></param>
+        /// <returns code="200"></returns>
+        [HttpDelete]
+        [Route("{collectionName}")]
+        public async Task<IActionResult> Delete(string collectionName, CancellationToken cancellationToken)
+        {
+            try
+            {
+                Guid.TryParse(HttpContext.User.Identity.Name, out var userId);
+
+                if (await collectionService.Delete(userId, collectionName))
+                {
+                    return Ok();
+                }
+
+                throw new AppException("Couldn't delete collection");
+            }
+            catch (AppException ex)
+            {
+                return BadRequest(new {message = ex.Message});
             }
         }
     }

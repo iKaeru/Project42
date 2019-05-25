@@ -1268,6 +1268,16 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlDocument.dll": {}
         }
+      },
+      "Client.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "compile": {
+          "bin/placeholder/Client.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Client.Models.dll": {}
+        }
       }
     }
   },
@@ -4905,10 +4915,16 @@
         "system.xml.xmldocument.4.3.0.nupkg.sha512",
         "system.xml.xmldocument.nuspec"
       ]
+    },
+    "Client.Models/1.0.0": {
+      "type": "project",
+      "path": "../Client.Models/Client.Models.csproj",
+      "msbuildProject": "../Client.Models/Client.Models.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
+      "Client.Models >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 2.1.1",
       "Microsoft.EntityFrameworkCore.Design >= 2.1.1",
       "Microsoft.EntityFrameworkCore.InMemory >= 2.1.1",
@@ -4948,7 +4964,11 @@
       },
       "frameworks": {
         "netcoreapp2.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "T:\\KonturProj\\Project42\\Client.Models\\Client.Models.csproj": {
+              "projectPath": "T:\\KonturProj\\Project42\\Client.Models\\Client.Models.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

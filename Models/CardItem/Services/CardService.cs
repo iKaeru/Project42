@@ -86,6 +86,9 @@ namespace Models.CardItem.Services
         
         public async void CheckOwnership(CardItem card, Guid userId)
         {
+            if (card == null)
+                throw new AppException("Card not found");
+
             if (!IsCardValid(card) || userId == Guid.Empty)
                 throw new AppException("Bad info");
             var cardInRepo = await repository.GetAsync(card.Id, CancellationToken.None);

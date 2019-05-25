@@ -9,8 +9,10 @@ namespace Models.Training.Repositories
     {
         Task<Training> AddAsync(Training training);
         Task<Training> GetCardTrainingAsync(Guid id);
+        Task<Training> GetCardTrainingByTrainIdAsync(Guid trainingId);
         List<Training> GetDateTrainingCards(DateTime date);
         List<Training> GetTrainingsFromBox(MemorizationBoxes box);
+        Task<bool> DeleteTrainAsync(Guid id);
     }
 }
 

@@ -34,6 +34,11 @@ namespace Models.Training.Repositories
             return await context.Trainings.FirstOrDefaultAsync(x => x.CardId == id);            
         }
 
+        public async Task<Training> GetCardTrainingByTrainIdAsync(Guid trainingId)
+        {
+            return await context.Trainings.FirstOrDefaultAsync(x => x.Id == trainingId);
+        }
+
         public List<Training> GetDateTrainingCards(DateTime date)
         {
             return context.Trainings
@@ -44,6 +49,19 @@ namespace Models.Training.Repositories
         {
             return context.Trainings
                 .Where(x => x.Box == box).ToList();
+        }
+
+        public async Task<bool> DeleteTrainAsync(Guid id)
+        {
+            var training = await context.Trainings.FindAsync(id);
+            if (training != null)
+            {
+                context.Trainings.Remove(training);
+                context.SaveChanges();
+                return true;
+            }
+
+            return false;
         }
 
         private DateTime GetNextTrainingDay(Training x)

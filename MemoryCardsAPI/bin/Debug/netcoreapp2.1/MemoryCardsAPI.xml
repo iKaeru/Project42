@@ -95,10 +95,27 @@
         </member>
         <member name="M:MemoryCardsAPI.Controllers.CollectionsController.LearnedCollectionsAsync(System.Threading.CancellationToken)">
             <summary>
-            Shows all existing collections For User
+            Shows number of learned collections For User
             </summary>
             <param name="cancellationToken"></param>
             <returns></returns>
+        </member>
+        <member name="M:MemoryCardsAPI.Controllers.CollectionsController.UpdateCardByIdAsync(System.String,Client.Models.CardsCollection.CardsCollectionPatchInfo,System.Threading.CancellationToken)">
+            <summary>
+            Update Collection By Name
+            </summary>
+            <param name="collectionName">Название коллекции</param>
+            <param name="updateInfo">Информация о коллекции для редактирования</param>
+            <param name="cancellationToken"></param>
+            <returns code="200"></returns>
+        </member>
+        <member name="M:MemoryCardsAPI.Controllers.CollectionsController.Delete(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Delete Collection By Name
+            </summary>
+            <param name="collectionName">Название коллекции</param>
+            <param name="cancellationToken"></param>
+            <returns code="200"></returns>
         </member>
         <member name="T:MemoryCardsAPI.Controllers.TrainingsController">
             <summary>
@@ -110,6 +127,14 @@
             Create Card Training
             </summary>
             <param name="id">Идентификатор карты, с которой происходит тренировка</param>
+            <param name="cancellationToken"></param>
+            <returns code="200"></returns>
+        </member>
+        <member name="M:MemoryCardsAPI.Controllers.TrainingsController.GetCardTrainingById(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Get Card Training By Id
+            </summary>
+            <param name="id">Идентификатор тренировки</param>
             <param name="cancellationToken"></param>
             <returns code="200"></returns>
         </member>
@@ -127,6 +152,13 @@
             </summary>
             <param name="training">Информация для обновления тренировки</param>
             <param name="cancellationToken"></param>
+            <returns code="200"></returns>
+        </member>
+        <member name="M:MemoryCardsAPI.Controllers.TrainingsController.Delete(System.String)">
+            <summary>
+            Delete Training By Id
+            </summary>
+            <param name="id">Идентификатор тренировки</param>
             <returns code="200"></returns>
         </member>
         <member name="M:MemoryCardsAPI.Controllers.TrainingsController.GetTodaysTraining(System.DateTime,System.Threading.CancellationToken)">

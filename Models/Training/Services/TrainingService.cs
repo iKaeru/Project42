@@ -1,4 +1,5 @@
-﻿using Models.CardItem;
+﻿using Client.Models.Training;
+using Models.CardItem;
 using Models.Errors;
 using Models.Training.Repositories;
 using System;
@@ -33,6 +34,16 @@ namespace Models.Training.Services
             };
 
             return training;
+        }
+
+        public async Task<Training> GetTrainingByIdAsync(Guid trainId, Guid userId)
+        {
+            var found = await repository.GetCardTrainingByTrainIdAsync(trainId);
+            if (found == null)
+                throw new AppException("Training not found");
+            if (found.UserId != userId)
+                throw new AppException("Not allowed for this user");
+            return found;
         }
 
         public async Task<Training> AddToRepositoryAsync(Training training)
@@ -82,8 +93,21 @@ namespace Models.Training.Services
         }
 
 
+        public async Task<bool> Delete(Guid id)
+        {
+            if (id == Guid.Empty)
+            {
+                throw new ArgumentException("Incorrect value", nameof(id));
+            }
+
+            return await repository.DeleteTrainAsync(id);
+        }
+
+
+
 
         #region private helper methods
+
         private void ValidateTraining(Training training)
         {
             if (training.CompletedAt == null)
@@ -92,8 +116,5 @@ namespace Models.Training.Services
                 throw new AppException(nameof(training) + "card id is not filled");
         }
         #endregion
-
-
-
     }
 }

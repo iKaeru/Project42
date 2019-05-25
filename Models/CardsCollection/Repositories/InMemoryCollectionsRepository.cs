@@ -52,5 +52,28 @@ namespace Models.CardsCollection.Repositories
             return Task.FromResult<IEnumerable<CardsCollection>>
                 (context.Collections.Where(x => x.UserId == userId));
         }
+        
+        public async Task<CardsCollection> PatchAsync(CardsCollection patchInfo)
+        {
+            var card = context.Collections.Update(patchInfo);
+            await context.SaveChangesAsync();
+            return card.Entity;
+        }
+
+        public async Task<bool> DeleteCollectionAsync(Guid userId, string collectionName)
+        {
+            var collection = await context.Collections
+                .Where(x => x.UserId == userId)
+                .FirstOrDefaultAsync(x => x.Name == collectionName);
+            
+            if (collection != null)
+            {
+                context.Collections.Remove(collection);
+                context.SaveChanges();
+                return true;
+            }
+
+            return false;
+        }
     }
 }
