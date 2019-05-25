@@ -54,23 +54,21 @@ namespace MemoryCardsAPI.Controllers
         }
         
         /// <summary>
-        /// Get Card Training By Card Id
+        /// Get Card Training By Id
         /// </summary>
-        /// <param name="id">Идентификатор карты, с которой происходит тренировка</param>
+        /// <param name="id">Идентификатор тренировки</param>
         /// <param name="cancellationToken"></param>
         /// <returns code="200"></returns>
         [HttpGet]
         [Route("{id}")]
-        public async Task<IActionResult> GetCardTraining(string id, CancellationToken cancellationToken)
+        public async Task<IActionResult> GetCardTrainingById(string id, CancellationToken cancellationToken)
         {
             try
             {
                 Guid.TryParse(HttpContext.User.Identity.Name, out var uId);
-                Guid.TryParse(id, out var cardGuid);
-                var card = await cardsService.GetCardByIdAsync(cardGuid, cancellationToken);
-                cardsService.CheckOwnership(card, uId);
+                Guid.TryParse(id, out var trainId);
 
-                var training = trainingService.GetTrainingAsync(card, uId);
+                var training = await trainingService.GetTrainingByIdAsync(trainId, uId);
                 return Ok(training);
             }
             catch (AppException ex)
@@ -78,7 +76,7 @@ namespace MemoryCardsAPI.Controllers
                 return BadRequest(new { message = ex.Message });
             }
         }
-
+        
         /// <summary>
         /// Update Card Training By Card Id
         /// </summary>
@@ -104,6 +102,31 @@ namespace MemoryCardsAPI.Controllers
             catch (AppException ex)
             {
                 return BadRequest(new { message = ex.Message });
+            }
+        }
+        
+        /// <summary>
+        /// Delete Training By Id
+        /// </summary>
+        /// <param name="id">Идентификатор тренировки</param>
+        /// <returns code="200"></returns>
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(string id)
+        {
+            try
+            {
+                var trainId = Guid.Parse(id);
+
+                if (await trainingService.Delete(trainId))
+                {
+                    return Ok();
+                }
+
+                throw new AppException("Couldn't delete training");
+            }
+            catch (AppException ex)
+            {
+                return BadRequest(new {message = ex.Message});
             }
         }
     }
