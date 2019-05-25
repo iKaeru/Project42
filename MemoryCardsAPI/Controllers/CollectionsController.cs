@@ -92,19 +92,20 @@ namespace MemoryCardsAPI.Controllers
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
         [HttpPost]
-        [Route("{collectionName}/AddCard")]
-        public async Task<ActionResult> AddCardToCollection(string collectionName, [FromQuery] Guid cardId,
+        [Route("{collectionName}/{cardId}")]
+        public async Task<ActionResult> AddCardToCollection(string collectionName, string cardId,
             CancellationToken cancellationToken)
         {
             try
             {
-                Guid.TryParse(HttpContext.User.Identity.Name, out var uId);
-                if (!await collectionService.IsNameExistAsync(collectionName, uId))
+                Guid.TryParse(HttpContext.User.Identity.Name, out var userId);
+                Guid.TryParse(cardId, out var cardGuid);
+                if (!await collectionService.IsNameExistAsync(collectionName, userId))
                 {
                     return BadRequest(new {message = "No collection with name \"" + collectionName + "\""});
                 }
 
-                if (await collectionService.AddCardToCollectionAsync(collectionName, cardId, uId))
+                if (await collectionService.AddCardToCollectionAsync(collectionName, cardGuid, userId))
                     return Ok();
                 
                 throw new AppException("Couldn't add card to a collection");
