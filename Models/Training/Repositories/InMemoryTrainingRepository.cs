@@ -33,12 +33,24 @@ namespace Models.Training.Repositories
         {
             return await context.Trainings.FirstOrDefaultAsync(x => x.CardId == id);            
         }
-        
-        public async Task<Training> GetCardTrainingByIdAsync(Guid id)
+
+        public async Task<Training> GetCardTrainingByTrainIdAsync(Guid trainingId)
         {
-            return await context.Trainings.FirstOrDefaultAsync(x => x.Id == id);            
+            return await context.Trainings.FirstOrDefaultAsync(x => x.Id == trainingId);
         }
-        
+
+        public List<Training> GetDateTrainingCards(DateTime date)
+        {
+            return context.Trainings
+                .Where(x => GetNextTrainingDay(x) == date).ToList();
+        }
+
+        public List<Training> GetTrainingsFromBox(MemorizationBoxes box)
+        {
+            return context.Trainings
+                .Where(x => x.Box == box).ToList();
+        }
+
         public async Task<bool> DeleteTrainAsync(Guid id)
         {
             var training = await context.Trainings.FindAsync(id);
@@ -51,5 +63,27 @@ namespace Models.Training.Repositories
 
             return false;
         }
+
+        private DateTime GetNextTrainingDay(Training x)
+        {
+            var daysToAdd = GetDaysCountFromBox(x.Box);
+            return x.CompletedAt.AddDays(daysToAdd);
+        }
+
+        private int GetDaysCountFromBox(MemorizationBoxes box)
+        {
+            switch (box)
+            {
+                case MemorizationBoxes.NotLearned:
+                    return 1;
+                case MemorizationBoxes.PartlyLearned:
+                    return 3;
+                case MemorizationBoxes.FullyLearned:
+                    return 5;
+            }
+
+            throw new AppException("Unknown card box");
+        }
+
     }
 }

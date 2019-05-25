@@ -93,6 +93,13 @@
             <param name="cancellationToken"></param>
             <returns></returns>
         </member>
+        <member name="M:MemoryCardsAPI.Controllers.CollectionsController.LearnedCollectionsAsync(System.Threading.CancellationToken)">
+            <summary>
+            Shows number of learned collections For User
+            </summary>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
         <member name="M:MemoryCardsAPI.Controllers.CollectionsController.UpdateCardByIdAsync(System.String,Client.Models.CardsCollection.CardsCollectionPatchInfo,System.Threading.CancellationToken)">
             <summary>
             Update Collection By Name
@@ -131,6 +138,14 @@
             <param name="cancellationToken"></param>
             <returns code="200"></returns>
         </member>
+        <member name="M:MemoryCardsAPI.Controllers.TrainingsController.GetCardTraining(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Get Card Training By Card Id
+            </summary>
+            <param name="id">Идентификатор карты, с которой происходит тренировка</param>
+            <param name="cancellationToken"></param>
+            <returns code="200"></returns>
+        </member>
         <member name="M:MemoryCardsAPI.Controllers.TrainingsController.TrainWithCard(Client.Models.Training.TrainingPatchInfo,System.Threading.CancellationToken)">
             <summary>
             Update Card Training By Card Id
@@ -144,6 +159,22 @@
             Delete Training By Id
             </summary>
             <param name="id">Идентификатор тренировки</param>
+            <returns code="200"></returns>
+        </member>
+        <member name="M:MemoryCardsAPI.Controllers.TrainingsController.GetTodaysTraining(System.DateTime,System.Threading.CancellationToken)">
+            <summary>
+            Get Cards That Require Training For Selected Day
+            </summary>
+            <param name="date">Дата к которой получить тренировку (обычно надо указывать ту дату, которая сегодня) </param>
+            <param name="cancellationToken"></param>
+            <returns code="200"></returns>
+        </member>
+        <member name="M:MemoryCardsAPI.Controllers.TrainingsController.GetNumberOfCardsInBox(Models.Training.MemorizationBoxes,System.Threading.CancellationToken)">
+            <summary>
+            Get count of cards in the box
+            </summary>
+            <param name="box"> box where to count cards </param>
+            <param name="cancellationToken"></param>
             <returns code="200"></returns>
         </member>
         <member name="M:MemoryCardsAPI.Controllers.UsersController.Authenticate(Models.User.UserLoginInfo)">
