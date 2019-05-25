@@ -7,7 +7,7 @@ namespace Models.User.Services
 {
     public interface IUserService
     {
-        void ValidateUser(User userToValidate);
+        Task ValidateUserAsync(User userToValidate);
         User CreateUser(UserRegistrationInfo cardToCreate);
         Task<bool> AddUserAsync(User userToAdd, string password, CancellationToken cancellationToken);
         Task<User> AuthenticateAsync(string username, string password);

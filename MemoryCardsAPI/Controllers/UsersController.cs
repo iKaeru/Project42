@@ -80,7 +80,7 @@ namespace MemoryCardsAPI.Controllers
             try
             {
                 var user = userService.CreateUser(userDto);
-                userService.ValidateUser(user);
+                await userService.ValidateUserAsync(user);
 
                 await userService.AddUserAsync(user, userDto.Password, cancellationToken);
                 return Ok(new

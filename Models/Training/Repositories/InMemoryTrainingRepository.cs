@@ -33,5 +33,23 @@ namespace Models.Training.Repositories
         {
             return await context.Trainings.FirstOrDefaultAsync(x => x.CardId == id);            
         }
+        
+        public async Task<Training> GetCardTrainingByIdAsync(Guid id)
+        {
+            return await context.Trainings.FirstOrDefaultAsync(x => x.Id == id);            
+        }
+        
+        public async Task<bool> DeleteTrainAsync(Guid id)
+        {
+            var training = await context.Trainings.FindAsync(id);
+            if (training != null)
+            {
+                context.Trainings.Remove(training);
+                context.SaveChanges();
+                return true;
+            }
+
+            return false;
+        }
     }
 }

@@ -12,5 +12,7 @@ namespace Models.CardsCollection.Services
         Task<IEnumerable<CardsCollection>> GetAllCollections(Guid userId);
         Task<CardsCollection> FindCollectionByName(string collectionName, Guid userId);
         Task<bool> IsNameExistAsync(string collectionName, Guid userId);
+        void UpdateByIdAsync(CardsCollectionPatchInfo collection, string collectionName, Guid userId);
+        Task<bool> Delete(Guid userId, string collectionName);
     }
 }
