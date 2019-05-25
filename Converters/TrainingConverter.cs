@@ -1,6 +1,5 @@
-using Client.Models.Training;
-using View = Client.Models;
-using Model = Models;
+using View = Client.Models.Training;
+using Model = Models.Training;
 
 namespace Converters
 {
@@ -14,9 +13,9 @@ namespace Converters
         /// </summary>
         /// <param name="viewLevels">Тренировка в клиентской модели</param>
         /// <returns>Тренировка в серверной модели</returns>
-        public static Model.Training.MemorizationLevels ConvertLevels(MemorizationLevels viewLevels)
+        public static Model.MemorizationLevels ConvertLevels(View.MemorizationLevels viewLevels)
         {
-            return (Model.Training.MemorizationLevels) viewLevels;
+            return (Model.MemorizationLevels) viewLevels;
         }
     }
 }

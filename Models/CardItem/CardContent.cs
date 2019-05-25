@@ -1,3 +1,4 @@
+using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Runtime.Serialization;
@@ -11,6 +12,13 @@ namespace Models.CardItem
     [DataContract]
     public class CardContent
     {
+//        /// <summary>
+//        /// Текст на карте
+//        /// </summary>
+//        [Key, Column("Id")]
+//        [DataMember(IsRequired = true)]
+//        public Guid Id { get; set; }
+
         /// <summary>
         /// Текст на карте
         /// </summary>
