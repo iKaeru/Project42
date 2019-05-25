@@ -93,6 +93,13 @@
             <param name="cancellationToken"></param>
             <returns></returns>
         </member>
+        <member name="M:MemoryCardsAPI.Controllers.CollectionsController.LearnedCollectionsAsync(System.Threading.CancellationToken)">
+            <summary>
+            Shows all existing collections For User
+            </summary>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
         <member name="T:MemoryCardsAPI.Controllers.TrainingsController">
             <summary>
             Cards
@@ -127,6 +134,14 @@
             Get Cards That Require Training For Selected Day
             </summary>
             <param name="date">Дата к которой получить тренировку (обычно надо указывать ту дату, которая сегодня) </param>
+            <param name="cancellationToken"></param>
+            <returns code="200"></returns>
+        </member>
+        <member name="M:MemoryCardsAPI.Controllers.TrainingsController.GetNumberOfCardsInBox(Models.Training.MemorizationBoxes,System.Threading.CancellationToken)">
+            <summary>
+            Get count of cards in the box
+            </summary>
+            <param name="box"> box where to count cards </param>
             <param name="cancellationToken"></param>
             <returns code="200"></returns>
         </member>

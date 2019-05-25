@@ -66,3 +66,4 @@ T:\KonturProj\Project42\Models\obj\Debug\netcoreapp2.1\Models.AssemblyInfoInputs
 T:\KonturProj\Project42\Models\obj\Debug\netcoreapp2.1\Models.AssemblyInfo.cs
 T:\KonturProj\Project42\Models\obj\Debug\netcoreapp2.1\Models.dll
 T:\KonturProj\Project42\Models\obj\Debug\netcoreapp2.1\Models.pdb
+T:\KonturProj\Project42\Models\obj\Debug\netcoreapp2.1\Models.csprojAssemblyReference.cache

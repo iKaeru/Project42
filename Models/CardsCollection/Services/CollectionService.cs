@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Models.CardsCollection.Repositories;
 using Models.Errors;
+using System.Linq;
+using Models.Training.Repositories;
 
 namespace Models.CardsCollection.Services
 {
@@ -11,6 +13,7 @@ namespace Models.CardsCollection.Services
         private const int MinimumNameLength = 4;
         private const int MaximumNameLength = 120;
         private readonly ICollectionsRepository repository;
+        private readonly ITrainingRepository trainingRepository;
 
         public CollectionService(ICollectionsRepository repository)
         {
@@ -76,7 +79,7 @@ namespace Models.CardsCollection.Services
             return true;
         }
 
-        public async Task<CardsCollection> FindCollectionByName(string collectionName, Guid userId)
+        public async Task<CardsCollection> FindCollectionByNameAsync(string collectionName, Guid userId)
         {
             FieldsAreFilled(userId, collectionName);
             
@@ -91,7 +94,7 @@ namespace Models.CardsCollection.Services
             return await repository.FindNameAsync(collectionName, userId);
         }
         
-        public async Task<IEnumerable<CardsCollection>> GetAllCollections(Guid userId)
+        public async Task<IEnumerable<CardsCollection>> GetAllCollectionsAsync(Guid userId)
         {
             if (userId == Guid.Empty)
                 throw new AppException(nameof(userId) + " is required");
@@ -99,8 +102,30 @@ namespace Models.CardsCollection.Services
             return await repository.FindCollections(userId);
         }
 
+        public async Task<IEnumerable<CardsCollection>> GetLearnedCollectionsAsync(Guid uId)
+        {
+            if (uId == Guid.Empty)
+                throw new AppException(nameof(uId) + " is required");
+
+            var allCollections = await repository.FindCollections(uId);
+
+            return allCollections.Where(collection => collection.CardItems.All(card => CardLearnedAsync(card).Result));
+        }
+
+        private async Task<bool> CardLearnedAsync(Guid card)
+        {
+            var cardTraining = await trainingRepository.GetCardTrainingAsync(card);
+            var box = cardTraining.Box;
+
+            if (box == Training.MemorizationBoxes.FullyLearned)
+                return true;
+            else
+                return false;
+        }
+
+
         #region private helper methods
-        
+
         private void FieldsAreFilled(Guid userId, string collectionName)
         {
             if (userId == Guid.Empty)
@@ -148,7 +173,6 @@ namespace Models.CardsCollection.Services
 
             return true;
         }
-        
         #endregion
     }
 }

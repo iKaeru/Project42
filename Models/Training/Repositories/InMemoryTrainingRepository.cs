@@ -40,6 +40,12 @@ namespace Models.Training.Repositories
                 .Where(x => GetNextTrainingDay(x) == date).ToList();
         }
 
+        public List<Training> GetTrainingsFromBox(MemorizationBoxes box)
+        {
+            return context.Trainings
+                .Where(x => x.Box == box).ToList();
+        }
+
         private DateTime GetNextTrainingDay(Training x)
         {
             var daysToAdd = GetDaysCountFromBox(x.Box);
@@ -60,5 +66,6 @@ namespace Models.Training.Repositories
 
             throw new AppException("Unknown card box");
         }
+
     }
 }
