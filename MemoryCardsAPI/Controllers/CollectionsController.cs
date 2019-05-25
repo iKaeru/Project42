@@ -26,7 +26,7 @@ namespace MemoryCardsAPI.Controllers
         }
 
         /// <summary>
-        /// Create Default Collection
+        /// Create Collection With Default Name
         /// </summary>
         /// <param name="cancellationToken"></param>
         /// <returns code="200"></returns> 
@@ -54,10 +54,10 @@ namespace MemoryCardsAPI.Controllers
         }
 
         /// <summary>
-        /// Create collection with name from query
+        /// Create Collection By Name
         /// </summary>
         /// <param name="cancellationToken"></param>
-        /// <param name="name"></param>
+        /// <param name="name">Имя коллекции</param>
         /// <returns code="200"></returns> 
         [HttpPost]
         [Route("")]
@@ -85,10 +85,10 @@ namespace MemoryCardsAPI.Controllers
         }
 
         /// <summary>
-        /// Adds card to a target collection
+        /// Add Card To A Collection By Name
         /// </summary>
-        /// <param name="collectionName"></param>
-        /// <param name="cardId"></param>
+        /// <param name="collectionName">Имя коллекции</param>
+        /// <param name="cardId">Идентификатор карты для добавления в коллекцию</param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
         [HttpPost]
@@ -117,9 +117,9 @@ namespace MemoryCardsAPI.Controllers
 
 
         /// <summary>
-        /// Shows target collection
+        /// Get Collection By Name
         /// </summary>
-        /// <param name="collectionName"></param>
+        /// <param name="collectionName">Название коллекции</param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
         [HttpGet]
@@ -144,7 +144,7 @@ namespace MemoryCardsAPI.Controllers
         }
 
         /// <summary>
-        /// Shows all existing collections
+        /// Shows all existing collections For User
         /// </summary>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>

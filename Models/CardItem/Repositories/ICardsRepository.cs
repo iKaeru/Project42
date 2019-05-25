@@ -58,9 +58,8 @@ namespace Models.CardItem.Repositories
         /// <summary>
         /// Удалить карту
         /// </summary>
-        /// <param name="cardId">Идентификатор карту</param>
-        /// <param name="cancelltionToken">Токен отмены операции</param>
+        /// <param name="cardId">Идентификатор карты</param>
         /// <returns>Задача, представляющая асинхронный запрос на удаление карты</returns>
-        Task RemoveAsync(Guid cardId, CancellationToken cancelltionToken);
+        Task<bool> DeleteCardAsync(Guid cardId);
     }
 }

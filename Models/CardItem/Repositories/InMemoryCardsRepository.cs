@@ -51,9 +51,17 @@ namespace Models.CardItem.Repositories
             return card.Entity;
         }
 
-        public Task RemoveAsync(Guid cardId, CancellationToken cancelltionToken)
+        public async Task<bool> DeleteCardAsync(Guid id)
         {
-            throw new NotImplementedException();
+            var cardItem = await context.Cards.FindAsync(id);
+            if (cardItem != null)
+            {
+                context.Cards.Remove(cardItem);
+                context.SaveChanges();
+                return true;
+            }
+
+            return false;
         }
     }
 }

@@ -21,7 +21,7 @@ namespace Converters
                 throw new ArgumentNullException(nameof(viewCard));
             }
 
-            var modelCard = new Model.CardPatchInfo()
+            var modelCard = new Model.CardPatchInfo
             {
                 Id = Guid.Empty,
                 Answer = ConvertCardContent(viewCard.Answer),
