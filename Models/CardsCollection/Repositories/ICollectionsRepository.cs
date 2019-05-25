@@ -11,5 +11,7 @@ namespace Models.CardsCollection.Repositories
         Task<bool> FindNameAsync(string collectionName, Guid uId);
         Task<CardsCollection> FindByNameAsync(string collectionName, Guid userId);
         Task<IEnumerable<CardsCollection>> FindCollections(Guid userId);
+        Task<CardsCollection> PatchAsync(CardsCollection patchInfo);
+        Task<bool> DeleteCollectionAsync(Guid userId, string collectionName);
     }
 }

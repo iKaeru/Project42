@@ -48,5 +48,15 @@ namespace Models.CardsCollection.Repositories
             return Task.FromResult<IEnumerable<CardsCollection>>
                 (context.Collections.Where(x => x.UserId == userId));
         }
+
+        public Task<CardsCollection> PatchAsync(CardsCollection patchInfo)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> DeleteCollectionAsync(Guid userId, string collectionName)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

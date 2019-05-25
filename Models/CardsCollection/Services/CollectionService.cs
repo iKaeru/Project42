@@ -79,6 +79,29 @@ namespace Models.CardsCollection.Services
             return true;
         }
 
+        public async void UpdateByIdAsync(CardsCollectionPatchInfo collection, string collectionName, Guid userId)
+        {
+            var collectionFromRepository = await repository.FindByNameAsync(collectionName, userId);
+
+            if (collectionFromRepository == null)
+                throw new AppException("Collection not found");
+            
+            UpdateCollectionInfo(collection, collectionFromRepository);
+            ValidateCollection(collectionFromRepository);
+
+            await repository.PatchAsync(collectionFromRepository);
+        }
+        
+        public async Task<bool> Delete(Guid userId, string collectionName)
+        {
+            if (userId == Guid.Empty)
+            {
+                throw new ArgumentException("Incorrect value", nameof(userId));
+            }
+
+            return await repository.DeleteCollectionAsync(userId, collectionName);
+        }
+        
         public async Task<CardsCollection> FindCollectionByNameAsync(string collectionName, Guid userId)
         {
             FieldsAreFilled(userId, collectionName);
@@ -125,7 +148,7 @@ namespace Models.CardsCollection.Services
 
 
         #region private helper methods
-
+        
         private void FieldsAreFilled(Guid userId, string collectionName)
         {
             if (userId == Guid.Empty)
@@ -173,6 +196,13 @@ namespace Models.CardsCollection.Services
 
             return true;
         }
+
+        private void UpdateCollectionInfo(CardsCollectionPatchInfo collectionToUpdate,
+            CardsCollection cardFromRepository)
+        {
+            cardFromRepository.Name = collectionToUpdate.Name;
+        }
+
         #endregion
     }
 }

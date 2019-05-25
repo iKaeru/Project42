@@ -20,7 +20,7 @@ namespace Models.User.Services
             this.repository = repository;
         }
         
-        public async void ValidateUser(User userToValidate)
+        public async Task ValidateUserAsync(User userToValidate)
         {
             var login = userToValidate.Login;
             if (IsFilled(login) && await repository.FindLoginAsync(login))
