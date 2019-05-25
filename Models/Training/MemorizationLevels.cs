@@ -6,21 +6,21 @@ namespace Models.Training
     /// Уровни сложности запоминания
     /// </summary>
     [DataContract]
-    public enum MemorizationLevels
+    public enum MemorizationBoxes
     {
         /// <summary>
         /// Легко
         /// </summary>
-        Easy = 0,
+        NotLearned = 0,
 
         /// <summary>
         /// Нормально
         /// </summary>
-        Normal = 1,
+        PartlyLearned = 1,
 
         /// <summary>
         /// Сложно
         /// </summary>
-        Hard = 2
+        FullyLearned = 2
     }
 }
