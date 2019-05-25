@@ -1,25 +1,35 @@
+using System.Runtime.Serialization;
+
 namespace Client.Models.User
 {
-  using System;
+    /// <summary>
+    /// Пользователь
+    /// </summary>
+    [DataContract]
+    public class User
+    {
+        /// <summary>
+        /// Имя пользователя
+        /// </summary>
+        [DataMember(IsRequired = true)]
+        public string FirstName { get; set; }
 
-  /// <summary>
-  /// Пользователь
-  /// </summary>
-  public class User
-  {
-    /// <summary>
-    /// Идентификатор пользователя
-    /// </summary>
-    public string Id { get; set; }
+        /// <summary>
+        /// Фамилия пользователя
+        /// </summary>
+        [DataMember(IsRequired = true)]
+        public string LastName { get; set; }
 
-    /// <summary>
-    /// Логин пользователя
-    /// </summary>
-    public string Login { get; set; }
-        
-    /// <summary>
-    /// Дата регистрации пользователя
-    /// </summary>
-    public string RegisteredAt { get; set; }
-  }
+        /// <summary>
+        /// Логин пользователя
+        /// </summary>
+        [DataMember(IsRequired = true)]
+        public string Login { get; set; }
+
+        /// <summary>
+        /// Почтовый адрес пользователя
+        /// </summary>
+        [DataMember(IsRequired = true)]
+        public string EmailAdress { get; set; }
+    }
 }

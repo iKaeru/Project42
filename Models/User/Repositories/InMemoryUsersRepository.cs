@@ -68,21 +68,11 @@ namespace Models.User.Repositories
             throw new NotImplementedException();
         }
 
-        public Task<UserInfo> GetAsync(Guid userId, CancellationToken cancellationToken)
-        {
-            throw new NotImplementedException();
-        }
-
         public async Task<User> UpdateAsync(User updateInfo)
         {
             var user = context.Users.Update(updateInfo);
             await context.SaveChangesAsync();
             return user.Entity;
-        }
-
-        public Task RemoveAsync(Guid userId, CancellationToken cancelltionToken)
-        {
-            throw new NotImplementedException();
         }
     }
 }

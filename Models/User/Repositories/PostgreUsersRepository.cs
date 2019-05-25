@@ -2,30 +2,59 @@ using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 using Models.CardItem;
+using Models.Data;
 
 namespace Models.User.Repositories
 {
     public class PostgreUsersRepository : IUsersRepository
     {
-        public Task<UserInfo> CreateAsync(User userToCreate, CancellationToken cancellationToken)
+        private PostgreContext context;
+
+        public PostgreUsersRepository(PostgreContext context)
         {
-            throw new NotImplementedException();
+            this.context = context;
+        }
+        
+        public async Task<UserInfo> CreateAsync(User userToCreate, CancellationToken cancellationToken)
+        {
+            await context.Users.AddAsync(userToCreate);
+            await context.SaveChangesAsync();
+            return userToCreate;
         }
 
-        public Task<User> SearchUserAsync(string username)
+        public async Task<User> SearchUserAsync(string username)
         {
-            throw new NotImplementedException();
+            return await context.Users.SingleOrDefaultAsync(x => x.Login == username);
         }
 
-        public Task<User> GetUserAsync(Guid id)
+        public async Task<User> GetUserAsync(Guid id)
         {
-            throw new NotImplementedException();
+            return await context.Users.FindAsync(id);
         }
-
-        public Task<bool> DeleteUserAsync(Guid id)
+        
+        public async Task<bool> FindLoginAsync(string login)
         {
-            throw new NotImplementedException();
+            return await context.Users.AnyAsync(x => x.Login == login);
+        }
+        
+        public async Task<bool> FindMailAsync(string mailAddress)
+        {
+            return await context.Users.AnyAsync(x => x.EmailAdress == mailAddress);
+        }
+        
+        public async Task<bool> DeleteUserAsync(Guid id)
+        {
+            var user = await context.Users.FindAsync(id);
+            if (user != null)
+            {
+                context.Users.Remove(user);
+                context.SaveChanges();
+                return true;
+            }
+
+            return false;
         }
 
         public Task<IReadOnlyList<CardItemInfo>> SearchAsync(UserSearchInfo query, CancellationToken cancelltionToken)
@@ -33,29 +62,11 @@ namespace Models.User.Repositories
             throw new NotImplementedException();
         }
 
-        public Task<UserInfo> GetAsync(Guid userId, CancellationToken cancellationToken)
+        public async Task<User> UpdateAsync(User updateInfo)
         {
-            throw new NotImplementedException();
-        }
-
-        public Task<User> UpdateAsync(User updateInfo)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task RemoveAsync(Guid userId, CancellationToken cancelltionToken)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<bool> FindLoginAsync(string login)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<bool> FindMailAsync(string mailAddress)
-        {
-            throw new NotImplementedException();
+            var user = context.Users.Update(updateInfo);
+            await context.SaveChangesAsync();
+            return user.Entity;
         }
     }
 }

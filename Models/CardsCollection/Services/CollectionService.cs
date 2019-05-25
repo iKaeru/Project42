@@ -59,7 +59,7 @@ namespace Models.CardsCollection.Services
 
             if (desiredCollection.CardItems.Contains(cardId))
             {
-                return false;
+                throw new AppException("Collection doesn't contain this card");
             }
 
             desiredCollection.CardItems.Add(cardId);
@@ -91,12 +91,12 @@ namespace Models.CardsCollection.Services
             return await repository.FindNameAsync(collectionName, userId);
         }
         
-        public IEnumerable<CardsCollection> GetCollections(Guid userId)
+        public async Task<IEnumerable<CardsCollection>> GetAllCollections(Guid userId)
         {
             if (userId == Guid.Empty)
                 throw new AppException(nameof(userId) + " is required");
             
-            return repository.FindCollections(userId);
+            return await repository.FindCollections(userId);
         }
 
         #region private helper methods

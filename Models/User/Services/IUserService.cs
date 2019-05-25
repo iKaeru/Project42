@@ -13,6 +13,6 @@ namespace Models.User.Services
         Task<User> AuthenticateAsync(string username, string password);
         Task<User> GetById(Guid id);
         Task<bool> Delete(Guid id);
-        void Update(User userToUpdate, string password = null);
+        void Update(UserPatchInfo userToUpdate, string password = null);
     }
 }

@@ -8,7 +8,7 @@ namespace Models.Training.Repositories
     public interface ITrainingRepository
     {
         Task<Training> AddAsync(Training training);
-        Task<Training> GetCardTrainingAsync(Guid id, Guid userId);
+        Task<Training> GetCardTrainingAsync(Guid id);
     }
 }
 

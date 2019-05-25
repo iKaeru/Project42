@@ -9,7 +9,7 @@ namespace Models.Training.Services
     public interface ITrainingService
     {
         Training CreateTraining(Guid userId, Guid cardId);
-        Training CompleteTraining(Training training, MemorizationLevels level);
+        Training UpdateTraining(Training training, MemorizationLevels level);
         Task<Training> AddToRepositoryAsync(Training training);
         Task<Training> GetTrainingAsync(CardItem.CardItem card, Guid userId);
     }
