@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using Converters;
@@ -8,6 +9,7 @@ using Models.CardsCollection;
 using Models.CardsCollection.Services;
 using Models.Errors;
 using View = Client.Models.CardsCollection;
+using System.Linq;
 
 namespace MemoryCardsAPI.Controllers
 {
@@ -72,7 +74,7 @@ namespace MemoryCardsAPI.Controllers
                 {
                     return BadRequest(new {message = $"Collection {name} already exists"});
                 }
-
+                
                 var cardCollection = collectionService.CreateCollection(uId, name);
                 if (await collectionService.AddCollectionAsync(cardCollection))
                     return Ok(cardCollection);
@@ -108,7 +110,7 @@ namespace MemoryCardsAPI.Controllers
 
                 if (await collectionService.AddCardToCollectionAsync(collectionName, cardGuid, userId))
                     return Ok();
-
+                
                 throw new AppException("Couldn't add card to a collection");
             }
             catch (AppException ex)
@@ -136,7 +138,7 @@ namespace MemoryCardsAPI.Controllers
                     return BadRequest(new {message = "No collection with name \"" + collectionName + "\""});
                 }
 
-                var cardCollection = collectionService.FindCollectionByName(collectionName, uId);
+                var cardCollection = collectionService.FindCollectionByNameAsync(collectionName, uId);
                 return Ok(cardCollection);
             }
             catch (AppException ex)
@@ -156,13 +158,34 @@ namespace MemoryCardsAPI.Controllers
         {
             try
             {
-                Guid.TryParse(HttpContext.User.Identity.Name, out var userId);
-                var collections = collectionService.GetAllCollections(userId);
+                Guid.TryParse(HttpContext.User.Identity.Name, out var uId);
+                var collections = collectionService.GetAllCollectionsAsync(uId);
                 return Ok(collections);
             }
             catch (AppException ex)
             {
                 return BadRequest(new {message = ex.Message});
+            }
+        }
+
+        /// <summary>
+        /// Shows number of learned collections For User
+        /// </summary>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("learned")]
+        public async Task<IActionResult> LearnedCollectionsAsync(CancellationToken cancellationToken)
+        {
+            try
+            {
+                Guid.TryParse(HttpContext.User.Identity.Name, out var uId);
+                var collections = await collectionService.GetLearnedCollectionsAsync(uId);
+                return Ok(collections.Count());
+            }
+            catch (AppException ex)
+            {
+                return BadRequest(new { message = ex.Message });
             }
         }
 

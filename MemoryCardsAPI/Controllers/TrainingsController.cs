@@ -52,7 +52,7 @@ namespace MemoryCardsAPI.Controllers
                 return BadRequest(new { message = ex.Message });
             }
         }
-        
+
         /// <summary>
         /// Get Card Training By Id
         /// </summary>
@@ -76,7 +76,33 @@ namespace MemoryCardsAPI.Controllers
                 return BadRequest(new { message = ex.Message });
             }
         }
-        
+
+        /// <summary>
+        /// Get Card Training By Card Id
+        /// </summary>
+        /// <param name="id">Идентификатор карты, с которой происходит тренировка</param>
+        /// <param name="cancellationToken"></param>
+        /// <returns code="200"></returns>
+        [HttpGet]
+        [Route("{id}")]
+        public async Task<IActionResult> GetCardTraining(string id, CancellationToken cancellationToken)
+        {
+            try
+            {
+                Guid.TryParse(HttpContext.User.Identity.Name, out var uId);
+                Guid.TryParse(id, out var cardGuid);
+                var card = await cardsService.GetCardByIdAsync(cardGuid, cancellationToken);
+                cardsService.CheckOwnership(card, uId);
+
+                var training = trainingService.GetTrainingAsync(card, uId);
+                return Ok(training);
+            }
+            catch (AppException ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
+        }
+
         /// <summary>
         /// Update Card Training By Card Id
         /// </summary>
@@ -104,7 +130,7 @@ namespace MemoryCardsAPI.Controllers
                 return BadRequest(new { message = ex.Message });
             }
         }
-        
+
         /// <summary>
         /// Delete Training By Id
         /// </summary>
@@ -127,6 +153,50 @@ namespace MemoryCardsAPI.Controllers
             catch (AppException ex)
             {
                 return BadRequest(new {message = ex.Message});
+            }
+        }
+
+        /// <summary>
+        /// Get Cards That Require Training For Selected Day
+        /// </summary>
+        /// <param name="date">Дата к которой получить тренировку (обычно надо указывать ту дату, которая сегодня) </param>
+        /// <param name="cancellationToken"></param>
+        /// <returns code="200"></returns>
+        [HttpGet]
+        [Route("today")]
+        public async Task<IActionResult> GetTodaysTraining(DateTime date, CancellationToken cancellationToken)
+        {
+            try
+            {
+                Guid.TryParse(HttpContext.User.Identity.Name, out var uId);
+                var cardList = await trainingService.GetDateTrainingAsync(date, uId);
+                return Ok(cardList);
+            }
+            catch (AppException ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
+        }
+
+        /// <summary>
+        /// Get count of cards in the box
+        /// </summary>
+        /// <param name="box"> box where to count cards </param>
+        /// <param name="cancellationToken"></param>
+        /// <returns code="200"></returns>
+        [HttpGet]
+        [Route("countLearnedCards")]
+        public async Task<IActionResult> GetNumberOfCardsInBox(MemorizationBoxes box, CancellationToken cancellationToken)
+        {
+            try
+            {
+                Guid.TryParse(HttpContext.User.Identity.Name, out var uId);
+                var cardNumber = await trainingService.GetCardsFromBoxAsync(box, uId);
+                return Ok(cardNumber);
+            }
+            catch (AppException ex)
+            {
+                return BadRequest(new { message = ex.Message });
             }
         }
     }

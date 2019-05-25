@@ -1,5 +1,7 @@
-using View = Client.Models.Training;
-using Model = Models.Training;
+using Client.Models.Training;
+using View = Client.Models;
+using Model = Models;
+using Models.Errors;
 
 namespace Converters
 {
@@ -13,9 +15,18 @@ namespace Converters
         /// </summary>
         /// <param name="viewLevels">Тренировка в клиентской модели</param>
         /// <returns>Тренировка в серверной модели</returns>
-        public static Model.MemorizationLevels ConvertLevels(View.MemorizationLevels viewLevels)
+        public static Model.Training.MemorizationBoxes ConvertLevels(MemorizationLevels viewLevels)
         {
-            return (Model.MemorizationLevels) viewLevels;
+            switch (viewLevels)
+            {
+                case MemorizationLevels.Easy:
+                    return Model.Training.MemorizationBoxes.FullyLearned;
+                case MemorizationLevels.Normal:
+                    return Model.Training.MemorizationBoxes.FullyLearned;
+                case MemorizationLevels.Hard:
+                    return Model.Training.MemorizationBoxes.FullyLearned;
+            }
+            throw new AppException("Don't know this memorizationLevel");
         }
     }
 }
