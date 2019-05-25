@@ -1,13 +1,13 @@
 using System;
 using System.Threading;
 using System.Threading.Tasks;
+using Converters;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Models.CardItem;
 using Models.CardItem.Services;
 using Models.Errors;
-using Models.Training;
-using Models.Training.Services;
+using View = Client.Models.CardItem;
 
 namespace MemoryCardsAPI.Controllers
 {
@@ -20,16 +20,14 @@ namespace MemoryCardsAPI.Controllers
     public class CardsController : Controller
     {
         private readonly ICardService cardsService;
-        private readonly ITrainingService trainingService;
 
-        public CardsController(ICardService cardsService, ITrainingService trainingService)
+        public CardsController(ICardService cardsService)
         {
             this.cardsService = cardsService;
-            this.trainingService = trainingService;
         }
 
         /// <summary>
-        /// Post Card
+        /// Create Card
         /// </summary>
         /// <param name="cardCreationInfo"></param>
         /// <param name="cancellationToken"></param>
@@ -37,22 +35,25 @@ namespace MemoryCardsAPI.Controllers
         /// <returns code="404"></returns>
         [HttpPost]
         [Route("")]
-        public ActionResult<CardItem> CreateAsync([FromBody] CardCreationInfo cardCreationInfo,
+        public async Task<ActionResult<CardItem>> CreateAsync([FromBody] CardCreationInfo cardCreationInfo,
             CancellationToken cancellationToken)
         {
-            Guid.TryParse(HttpContext.User.Identity.Name, out var uId);
-
-            var card = cardsService.CreateCard(cardCreationInfo, uId);
-            if (cardsService.AddCardAsync(card, cancellationToken).Result)
+            try
             {
+                Guid.TryParse(HttpContext.User.Identity.Name, out var userId);
+
+                var card = cardsService.CreateCard(cardCreationInfo, userId);
+                await cardsService.AddCardAsync(card, cancellationToken);
                 return Ok(card);
             }
-
-            return BadRequest(card);
+            catch (AppException ex)
+            {
+                return BadRequest(new {message = ex.Message});
+            }
         }
 
         /// <summary>
-        /// Post Card
+        /// Get All Cards For User
         /// </summary>
         /// <param name="cancellationToken"></param>
         /// <returns code="200"></returns>
@@ -60,92 +61,96 @@ namespace MemoryCardsAPI.Controllers
         [Route("userAllCards")]
         public IActionResult GetCardsForUser(CancellationToken cancellationToken)
         {
-            Guid.TryParse(HttpContext.User.Identity.Name, out var uId);
-            var result = cardsService.GetAllUserCards(uId, cancellationToken);
-            return Ok(result);
+            try
+            {
+                Guid.TryParse(HttpContext.User.Identity.Name, out var userId);
+                var result = cardsService.GetAllUserCards(userId, cancellationToken);
+                return Ok(result);
+            }
+            catch (AppException ex)
+            {
+                return BadRequest(new {message = ex.Message});
+            }
         }
 
         /// <summary>
         /// Get Card By Id
         /// </summary>
+        /// <param name="id">Идентификатор карты</param>
         /// <param name="cancellationToken"></param>
         /// <returns code="200"></returns>
         [HttpGet]
         [Route("{id}")]
         public async Task<IActionResult> GetCardByIdAsync(string id, CancellationToken cancellationToken)
         {
-            Guid.TryParse(HttpContext.User.Identity.Name, out var uId);
-            Guid.TryParse(id, out var cardGuid);
-            var result = await cardsService.GetCardByIdAsync(cardGuid, cancellationToken);
-            cardsService.CheckOwnership(result, uId);
-            return Ok(result);
-        }
-
-        /// <summary>
-        /// Get Card Training
-        /// </summary>
-        /// <param name="cancellationToken"></param>
-        /// <returns code="200"></returns>
-        [HttpGet]
-        [Route("{id}/training")]
-        public async Task<IActionResult> GetCardTraining(string id, CancellationToken cancellationToken)
-        {
             try
             {
-                Guid.TryParse(HttpContext.User.Identity.Name, out var uId);
+                Guid.TryParse(HttpContext.User.Identity.Name, out var userId);
                 Guid.TryParse(id, out var cardGuid);
-                var card = await cardsService.GetCardByIdAsync(cardGuid, cancellationToken);
-                cardsService.CheckOwnership(card, uId);
-
-                var training = trainingService.GetTrainingAsync(card, uId);
-                return Ok(training);
+                var result = await cardsService.GetCardByIdAsync(cardGuid, cancellationToken);
+                cardsService.CheckOwnership(result, userId);
+                return Ok(result);
             }
             catch (AppException ex)
             {
-                return BadRequest(new { message = ex.Message });
+                return BadRequest(new {message = ex.Message});
             }
         }
 
         /// <summary>
-        /// Get Card Training
+        /// Update Card By Id
         /// </summary>
+        /// <param name="id">Идентификатор карты</param>
+        /// <param name="cardToUpdate">Информация о карте для редактирования</param>
         /// <param name="cancellationToken"></param>
         /// <returns code="200"></returns>
-        [HttpGet]
-        [Route("{id}/training/create")]
-        public async Task<IActionResult> CreateCardTraining(string id, CancellationToken cancellationToken)
+        [HttpPut]
+        [Route("{id}")]
+        public async Task<IActionResult> UpdateCardByIdAsync(string id, [FromBody] View.CardPatchInfo cardToUpdate,
+            CancellationToken cancellationToken)
         {
             try
             {
-                Guid.TryParse(HttpContext.User.Identity.Name, out var uId);
-                Guid.TryParse(id, out var cardGuid);
-                var training = trainingService.CreateTraining(uId, cardGuid);
-                await trainingService.AddToRepositoryAsync(training);
-                return Ok(training);
+                Guid.TryParse(HttpContext.User.Identity.Name, out var userId);
+                Guid.TryParse(id, out var cardId);
+                var card = CardItemConverter.ConvertPatchInfo(cardToUpdate);
+                card.Id = cardId;
+
+                var result = await cardsService.GetCardByIdAsync(cardId, cancellationToken);
+                cardsService.CheckOwnership(result, userId);
+                
+                cardsService.UpdateCardByIdAsync(card, cancellationToken);
+                return Ok();
             }
             catch (AppException ex)
             {
-                return BadRequest(new { message = ex.Message });
+                return BadRequest(new {message = ex.Message});
             }
         }
-
+        
         /// <summary>
-        /// Get Card Training
+        /// Delete Card By Id
         /// </summary>
-        /// <param name="cancellationToken"></param>
+        /// <param name="id">Идентификатор карты</param>
         /// <returns code="200"></returns>
-        [HttpGet]
-        [Route("{id}/training/train")]
-        public async Task<IActionResult> TrainWithCard(string id, [FromQuery]MemorizationLevels level, CancellationToken cancellationToken)
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(string id)
         {
-            Guid.TryParse(HttpContext.User.Identity.Name, out var uId);
-            Guid.TryParse(id, out var cardGuid);
-            var card = await cardsService.GetCardByIdAsync(cardGuid, cancellationToken);
-            cardsService.CheckOwnership(card, uId);
+            try
+            {
+                var guidId = Guid.Parse(id);
 
-            var training = await trainingService.GetTrainingAsync(card, uId);
-            training = trainingService.CompleteTraining(training, level);
-            return Ok(training);
+                if (await cardsService.Delete(guidId))
+                {
+                    return Ok();
+                }
+
+                throw new AppException("Couldn't delete user");
+            }
+            catch (AppException ex)
+            {
+                return BadRequest(new {message = ex.Message});
+            }
         }
     }
 }

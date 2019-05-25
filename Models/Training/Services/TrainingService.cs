@@ -11,8 +11,6 @@ namespace Models.Training.Services
     public class TrainingService : ITrainingService
     {
         private readonly ITrainingRepository repository;
-        private const int MinimumTextLength = 4;
-        private const int MaximumTextLength = 500;
 
         public TrainingService(ITrainingRepository repository)
         {
@@ -28,7 +26,9 @@ namespace Models.Training.Services
             {
                 CardId = cardId,
                 UserId = userId,
-                Level = MemorizationLevels.Hard
+                Level = MemorizationLevels.Hard,
+                CompletedAt = DateTime.Now
+                
             };
 
             return training;
@@ -36,17 +36,11 @@ namespace Models.Training.Services
 
         public async Task<Training> AddToRepositoryAsync(Training training)
         {
-            ValidateTraining(training);         //TODO
+            ValidateTraining(training);
             return await repository.AddAsync(training);
         }
 
-
-        private void ValidateTraining(Training training)
-        {
-            if (training == null) throw new NullReferenceException();
-        }
-
-        public Training CompleteTraining(Training training, MemorizationLevels level)
+        public Training UpdateTraining(Training training, MemorizationLevels level)
         {
             training.CompletedAt = DateTime.Now;
             training.Level = level;
@@ -55,7 +49,22 @@ namespace Models.Training.Services
 
         public async Task<Training> GetTrainingAsync(CardItem.CardItem card, Guid userId)
         {
-            return await repository.GetCardTrainingAsync(card.Id, userId);
+            var found = await repository.GetCardTrainingAsync(card.Id);
+            if (found.UserId != userId)
+                throw new AppException("Not allowed for this user");
+            return found;
         }
+
+        #region private helper methods
+
+        private void ValidateTraining(Training training)
+        {
+            if (training.CompletedAt == null)
+                throw new AppException(nameof(training) + "data is not filled");
+            if (training.CardId == null)
+                throw new AppException(nameof(training) + "card id is not filled");
+        }
+
+        #endregion
     }
 }

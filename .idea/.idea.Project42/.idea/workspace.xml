@@ -2,75 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8666427f-6cb7-4473-aeea-3b9208586060" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Project42/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project42/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Project42/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project42/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Project42/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project42/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client.Models/bin/Debug/netcoreapp2.1/Client.Models.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Client.Models/bin/Debug/netcoreapp2.1/Client.Models.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client.Models/bin/Debug/netcoreapp2.1/Client.Models.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Client.Models/bin/Debug/netcoreapp2.1/Client.Models.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client.Models/obj/Debug/netcoreapp2.1/Client.Models.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Client.Models/obj/Debug/netcoreapp2.1/Client.Models.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client.Models/obj/Debug/netcoreapp2.1/Client.Models.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Client.Models/obj/Debug/netcoreapp2.1/Client.Models.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client.Models/obj/Debug/netcoreapp2.1/Client.Models.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Client.Models/obj/Debug/netcoreapp2.1/Client.Models.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client.Models/obj/Debug/netcoreapp2.1/Client.Models.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Client.Models/obj/Debug/netcoreapp2.1/Client.Models.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Converters/bin/Debug/netcoreapp2.1/Client.Models.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Converters/bin/Debug/netcoreapp2.1/Client.Models.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Converters/bin/Debug/netcoreapp2.1/Client.Models.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Converters/bin/Debug/netcoreapp2.1/Client.Models.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Converters/bin/Debug/netcoreapp2.1/Converters.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/Converters/bin/Debug/netcoreapp2.1/Converters.deps.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Converters/bin/Debug/netcoreapp2.1/Converters.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Converters/bin/Debug/netcoreapp2.1/Converters.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Converters/bin/Debug/netcoreapp2.1/Converters.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Converters/bin/Debug/netcoreapp2.1/Converters.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Converters/bin/Debug/netcoreapp2.1/Models.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Converters/bin/Debug/netcoreapp2.1/Models.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Converters/bin/Debug/netcoreapp2.1/Models.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Converters/bin/Debug/netcoreapp2.1/Models.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Converters/obj/Converters.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Converters/obj/Converters.csproj.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Converters/obj/Converters.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/Converters/obj/Converters.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Converters/obj/Debug/netcoreapp2.1/Converters.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Converters/obj/Debug/netcoreapp2.1/Converters.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Converters/obj/Debug/netcoreapp2.1/Converters.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Converters/obj/Debug/netcoreapp2.1/Converters.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Converters/obj/Debug/netcoreapp2.1/Converters.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Converters/obj/Debug/netcoreapp2.1/Converters.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Converters/obj/Debug/netcoreapp2.1/Converters.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Converters/obj/Debug/netcoreapp2.1/Converters.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Converters/obj/Debug/netcoreapp2.1/Converters.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Converters/obj/Debug/netcoreapp2.1/Converters.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Converters/obj/Debug/netcoreapp2.1/Converters.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Converters/obj/Debug/netcoreapp2.1/Converters.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Converters/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Converters/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryCardsAPI/Controllers/CardsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryCardsAPI/Controllers/CardsController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MemoryCardsAPI/Controllers/CollectionsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryCardsAPI/Controllers/CollectionsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryCardsAPI/Controllers/UsersController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryCardsAPI/Controllers/UsersController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryCardsAPI/Helpers/AutoMapperProfile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryCardsAPI/Helpers/AutoMapperProfile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryCardsAPI/MemoryCardsAPI.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryCardsAPI/MemoryCardsAPI.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryCardsAPI/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryCardsAPI/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryCardsAPI/bin/Debug/netcoreapp2.1/Client.Models.dll" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryCardsAPI/bin/Debug/netcoreapp2.1/Client.Models.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryCardsAPI/bin/Debug/netcoreapp2.1/Client.Models.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryCardsAPI/bin/Debug/netcoreapp2.1/Client.Models.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryCardsAPI/bin/Debug/netcoreapp2.1/Converters.dll" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryCardsAPI/bin/Debug/netcoreapp2.1/Converters.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryCardsAPI/bin/Debug/netcoreapp2.1/Converters.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryCardsAPI/bin/Debug/netcoreapp2.1/Converters.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryCardsAPI/bin/Debug/netcoreapp2.1/MemoryCardsAPI.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryCardsAPI/bin/Debug/netcoreapp2.1/MemoryCardsAPI.deps.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryCardsAPI/bin/Debug/netcoreapp2.1/MemoryCardsAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryCardsAPI/bin/Debug/netcoreapp2.1/MemoryCardsAPI.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryCardsAPI/bin/Debug/netcoreapp2.1/MemoryCardsAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryCardsAPI/bin/Debug/netcoreapp2.1/MemoryCardsAPI.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryCardsAPI/bin/Debug/netcoreapp2.1/MemoryCardsAPI.runtimeconfig.dev.json" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryCardsAPI/bin/Debug/netcoreapp2.1/MemoryCardsAPI.runtimeconfig.dev.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryCardsAPI/bin/Debug/netcoreapp2.1/Models.dll" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryCardsAPI/bin/Debug/netcoreapp2.1/Models.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryCardsAPI/bin/Debug/netcoreapp2.1/Models.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryCardsAPI/bin/Debug/netcoreapp2.1/Models.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryCardsAPI/obj/Debug/netcoreapp2.1/MemoryCardsAPI.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryCardsAPI/obj/Debug/netcoreapp2.1/MemoryCardsAPI.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryCardsAPI/obj/Debug/netcoreapp2.1/MemoryCardsAPI.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryCardsAPI/obj/Debug/netcoreapp2.1/MemoryCardsAPI.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryCardsAPI/obj/Debug/netcoreapp2.1/MemoryCardsAPI.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryCardsAPI/obj/Debug/netcoreapp2.1/MemoryCardsAPI.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryCardsAPI/obj/Debug/netcoreapp2.1/MemoryCardsAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryCardsAPI/obj/Debug/netcoreapp2.1/MemoryCardsAPI.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryCardsAPI/obj/Debug/netcoreapp2.1/MemoryCardsAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryCardsAPI/obj/Debug/netcoreapp2.1/MemoryCardsAPI.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryCardsAPI/obj/MemoryCardsAPI.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryCardsAPI/obj/MemoryCardsAPI.csproj.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryCardsAPI/obj/MemoryCardsAPI.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryCardsAPI/obj/MemoryCardsAPI.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryCardsAPI/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryCardsAPI/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryCardsAPI/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryCardsAPI/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/CardItem/CardCreationInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/CardItem/CardCreationInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/CardItem/CardItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/CardItem/CardItem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/CardItem/Repositories/ICardsRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/CardItem/Repositories/ICardsRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/CardItem/Repositories/PostgreCardsRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/CardItem/Repositories/PostgreCardsRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/CardsCollection/CardsCollection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/CardsCollection/CardsCollection.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Models.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Models.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/bin/Debug/netcoreapp2.1/Models.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/Models/bin/Debug/netcoreapp2.1/Models.deps.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/bin/Debug/netcoreapp2.1/Models.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Models/bin/Debug/netcoreapp2.1/Models.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/bin/Debug/netcoreapp2.1/Models.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Models/bin/Debug/netcoreapp2.1/Models.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/obj/Debug/netcoreapp2.1/Models.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Models/obj/Debug/netcoreapp2.1/Models.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/obj/Debug/netcoreapp2.1/Models.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Models/obj/Debug/netcoreapp2.1/Models.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/obj/Debug/netcoreapp2.1/Models.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Models/obj/Debug/netcoreapp2.1/Models.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/obj/Debug/netcoreapp2.1/Models.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Models/obj/Debug/netcoreapp2.1/Models.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/obj/Debug/netcoreapp2.1/Models.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Models/obj/Debug/netcoreapp2.1/Models.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/obj/Debug/netcoreapp2.1/Models.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Models/obj/Debug/netcoreapp2.1/Models.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/obj/Models.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Models/obj/Models.csproj.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/obj/Models.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/Models/obj/Models.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Models/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Models/obj/project.packagespec.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -83,72 +15,84 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Models/User/Services/UserService.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="149" column="13" lean-forward="true" selection-start-line="149" selection-start-column="13" selection-end-line="149" selection-end-column="13" />
+            <state relative-caret-position="116">
+              <caret line="106" column="25" lean-forward="true" selection-start-line="106" selection-start-column="25" selection-end-line="106" selection-end-column="25" />
               <folding>
-                <marker date="1558252199953" expanded="false" signature="6:154" ph="..." />
-                <marker date="1558252199953" expanded="true" signature="186:8328" ph="{...}" />
-                <marker date="1558252199953" expanded="true" signature="232:8326" ph="{...}" />
-                <marker date="1558252199953" expanded="true" signature="550:612" ph="{...}" />
-                <marker date="1558252199953" expanded="true" signature="681:1120" ph="{...}" />
-                <marker date="1558252199953" expanded="true" signature="1195:1491" ph="{...}" />
-                <marker date="1558252199953" expanded="true" signature="1291:1454" ph="{...}" />
-                <marker date="1558252199953" expanded="true" signature="1607:2110" ph="{...}" />
-                <marker date="1558252199953" expanded="true" signature="1894:1998" ph="{...}" />
-                <marker date="1558252199953" expanded="true" signature="2029:2074" ph="{...}" />
-                <marker date="1558252199953" expanded="true" signature="2195:2548" ph="{...}" />
-                <marker date="1558252199953" expanded="true" signature="2598:2764" ph="{...}" />
-                <marker date="1558252199953" expanded="true" signature="2642:2699" ph="{...}" />
-                <marker date="1558252199953" expanded="true" signature="2813:3029" ph="{...}" />
-                <marker date="1558252199953" expanded="true" signature="2857:2961" ph="{...}" />
-                <marker date="1558252199953" expanded="true" signature="3106:3891" ph="{...}" />
-                <marker date="1558252199953" expanded="true" signature="3528:3818" ph="{...}" />
-                <marker date="1558252199953" expanded="true" signature="3909:8319" ph="private helper methods" />
-                <marker date="1558252199953" expanded="false" signature="4011:4552" ph="{...}" />
-                <marker date="1558252199953" expanded="true" signature="4624:4933" ph="{...}" />
-                <marker date="1558252199953" expanded="true" signature="4739:4897" ph="{...}" />
-                <marker date="1558252199953" expanded="true" signature="4813:4883" ph="{...}" />
-                <marker date="1558252199953" expanded="true" signature="5021:5209" ph="{...}" />
-                <marker date="1558252199953" expanded="true" signature="5115:5173" ph="{...}" />
-                <marker date="1558252199953" expanded="true" signature="5265:5472" ph="{...}" />
-                <marker date="1558252199953" expanded="true" signature="5587:6106" ph="{...}" />
-                <marker date="1558252199953" expanded="true" signature="5932:6096" ph="{...}" />
-                <marker date="1558252199953" expanded="true" signature="6209:7295" ph="{...}" />
-                <marker date="1558252199953" expanded="true" signature="6962:7259" ph="{...}" />
-                <marker date="1558252199953" expanded="true" signature="7137:7245" ph="{...}" />
-                <marker date="1558252199953" expanded="true" signature="7376:7928" ph="{...}" />
-                <marker date="1558252199953" expanded="true" signature="7441:7632" ph="{...}" />
-                <marker date="1558252199953" expanded="true" signature="7712:7918" ph="{...}" />
-                <marker date="1558252199953" expanded="true" signature="8009:8291" ph="{...}" />
+                <marker date="1558636548403" expanded="false" signature="6:154" ph="..." />
+                <marker date="1558636548403" expanded="true" signature="186:9803" ph="{...}" />
+                <marker date="1558636548403" expanded="true" signature="232:9801" ph="{...}" />
+                <marker date="1558636548403" expanded="true" signature="550:612" ph="{...}" />
+                <marker date="1558636548403" expanded="true" signature="681:1120" ph="{...}" />
+                <marker date="1558636548403" expanded="true" signature="1195:1491" ph="{...}" />
+                <marker date="1558636548403" expanded="true" signature="1291:1454" ph="{...}" />
+                <marker date="1558636548403" expanded="true" signature="1607:2110" ph="{...}" />
+                <marker date="1558636548403" expanded="true" signature="1894:1998" ph="{...}" />
+                <marker date="1558636548403" expanded="true" signature="2029:2074" ph="{...}" />
+                <marker date="1558636548403" expanded="true" signature="2195:2548" ph="{...}" />
+                <marker date="1558636548403" expanded="true" signature="2598:2850" ph="{...}" />
+                <marker date="1558636548403" expanded="true" signature="2642:2785" ph="{...}" />
+                <marker date="1558636548403" expanded="true" signature="2899:3115" ph="{...}" />
+                <marker date="1558636548403" expanded="true" signature="2943:3047" ph="{...}" />
+                <marker date="1558636548403" expanded="true" signature="3201:3986" ph="{...}" />
+                <marker date="1558636548403" expanded="true" signature="3623:3913" ph="{...}" />
+                <marker date="1558636548403" expanded="true" signature="4004:9794" ph="private helper methods" />
+                <marker date="1558636548403" expanded="true" signature="4106:4647" ph="{...}" />
+                <marker date="1558636548403" expanded="true" signature="4720:5627" ph="{...}" />
+                <marker date="1558636548403" expanded="true" signature="5700:6009" ph="{...}" />
+                <marker date="1558636548403" expanded="true" signature="5815:5973" ph="{...}" />
+                <marker date="1558636548403" expanded="true" signature="5889:5959" ph="{...}" />
+                <marker date="1558636548403" expanded="true" signature="6081:6390" ph="{...}" />
+                <marker date="1558636548403" expanded="true" signature="6196:6354" ph="{...}" />
+                <marker date="1558636548403" expanded="true" signature="6270:6340" ph="{...}" />
+                <marker date="1558636548403" expanded="true" signature="6478:6666" ph="{...}" />
+                <marker date="1558636548403" expanded="true" signature="6572:6630" ph="{...}" />
+                <marker date="1558636548403" expanded="true" signature="6722:6929" ph="{...}" />
+                <marker date="1558636548403" expanded="true" signature="7044:7563" ph="{...}" />
+                <marker date="1558636548403" expanded="true" signature="7389:7553" ph="{...}" />
+                <marker date="1558636548403" expanded="true" signature="7666:8752" ph="{...}" />
+                <marker date="1558636548403" expanded="true" signature="8419:8716" ph="{...}" />
+                <marker date="1558636548403" expanded="true" signature="8594:8702" ph="{...}" />
+                <marker date="1558636548403" expanded="true" signature="8842:9394" ph="{...}" />
+                <marker date="1558636548403" expanded="true" signature="8907:9098" ph="{...}" />
+                <marker date="1558636548403" expanded="true" signature="9178:9384" ph="{...}" />
+                <marker date="1558636548403" expanded="true" signature="9484:9766" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MemoryCardsAPI/Controllers/UsersController.cs">
+        <entry file="file://$PROJECT_DIR$/MemoryCardsAPI/Controllers/CardsController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1170">
-              <caret line="93" column="13" lean-forward="true" selection-start-line="85" selection-start-column="12" selection-end-line="93" selection-end-column="13" />
+            <state relative-caret-position="-1509">
+              <caret line="29" column="18" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
               <folding>
-                <marker date="1558124618056" expanded="false" signature="6:458" ph="..." />
-                <marker date="1558124618056" expanded="true" signature="496:4519" ph="{...}" />
-                <marker date="1558124618056" expanded="true" signature="606:4517" ph="{...}" />
-                <marker date="1558124618056" expanded="true" signature="863:1011" ph="{...}" />
-                <marker date="1558124618056" expanded="true" signature="1152:1775" ph="{...}" />
-                <marker date="1558124618056" expanded="true" signature="1563:1763" ph="{...}" />
-                <marker date="1558124618056" expanded="true" signature="1825:2630" ph="{...}" />
-                <marker date="1558124618056" expanded="true" signature="2092:2458" ph="{...}" />
-                <marker date="1558124618056" expanded="true" signature="2167:2237" ph="{...}" />
-                <marker date="1558124618056" expanded="true" signature="2827:3251" ph="{...}" />
-                <marker date="1558124618056" expanded="true" signature="2966:3114" ph="{...}" />
-                <marker date="1558124618056" expanded="true" signature="3150:3241" ph="{...}" />
-                <marker date="1558124618056" expanded="true" signature="3338:3686" ph="{...}" />
-                <marker date="1558124618056" expanded="true" signature="3800:4205" ph="{...}" />
-                <marker date="1558124618056" expanded="true" signature="3949:4066" ph="{...}" />
-                <marker date="1558124618056" expanded="true" signature="4102:4195" ph="{...}" />
-                <marker date="1558124618056" expanded="true" signature="4294:4511" ph="{...}" />
-                <marker date="1558124618056" expanded="true" signature="4408:4465" ph="{...}" />
+                <marker date="1558767150511" expanded="false" signature="6:272" ph="..." />
+                <marker date="1558767150511" expanded="true" signature="310:5099" ph="{...}" />
+                <marker date="1558767150511" expanded="true" signature="317:363" ph="/// Cards ... " />
+                <marker date="1558767150511" expanded="true" signature="480:5097" ph="{...}" />
+                <marker date="1558767150511" expanded="true" signature="597:663" ph="{...}" />
+                <marker date="1558767150511" expanded="true" signature="673:924" ph="/// Create Card ... " />
+                <marker date="1558767150511" expanded="true" signature="1120:1576" ph="{...}" />
+                <marker date="1558767150511" expanded="true" signature="1146:1439" ph="{...}" />
+                <marker date="1558767150511" expanded="true" signature="1475:1566" ph="{...}" />
+                <marker date="1558767150511" expanded="true" signature="1586:1753" ph="/// Get All Cards For User ... " />
+                <marker date="1558767150511" expanded="true" signature="1885:2276" ph="{...}" />
+                <marker date="1558767150511" expanded="true" signature="1911:2139" ph="{...}" />
+                <marker date="1558767150511" expanded="true" signature="2175:2266" ph="{...}" />
+                <marker date="1558767150511" expanded="true" signature="2286:2502" ph="/// Get Card By Id ... " />
+                <marker date="1558767150511" expanded="true" signature="2650:3164" ph="{...}" />
+                <marker date="1558767150511" expanded="true" signature="2676:3027" ph="{...}" />
+                <marker date="1558767150511" expanded="true" signature="3063:3154" ph="{...}" />
+                <marker date="1558767150511" expanded="true" signature="3174:3478" ph="/// Update Card By Id ... " />
+                <marker date="1558767150511" expanded="true" signature="3685:4393" ph="{...}" />
+                <marker date="1558767150511" expanded="true" signature="3711:4256" ph="{...}" />
+                <marker date="1558767150511" expanded="true" signature="4292:4383" ph="{...}" />
+                <marker date="1558767150511" expanded="true" signature="4411:4577" ph="/// Delete Card By Id ... " />
+                <marker date="1558767150511" expanded="true" signature="4665:5091" ph="{...}" />
+                <marker date="1558767150511" expanded="true" signature="4691:4954" ph="{...}" />
+                <marker date="1558767150511" expanded="true" signature="4806:4875" ph="{...}" />
+                <marker date="1558767150511" expanded="true" signature="4990:5081" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -157,82 +101,38 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MemoryCardsAPI/Controllers/CollectionsController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="128" column="20" selection-start-line="128" selection-start-column="20" selection-end-line="128" selection-end-column="20" />
+            <state relative-caret-position="102">
+              <caret line="92" column="31" lean-forward="true" selection-start-line="92" selection-start-column="31" selection-end-line="92" selection-end-column="31" />
               <folding>
-                <marker date="1558256603562" expanded="true" signature="6:265" ph="..." />
-                <marker date="1558256603562" expanded="true" signature="303:5065" ph="{...}" />
-                <marker date="1558256603562" expanded="true" signature="310:362" ph="/// Collections ... " />
-                <marker date="1558256603562" expanded="true" signature="465:5063" ph="{...}" />
-                <marker date="1558256603562" expanded="true" signature="658:734" ph="{...}" />
-                <marker date="1558256603562" expanded="true" signature="744:914" ph="/// Create Global Collection ... " />
-                <marker date="1558256603562" expanded="true" signature="1072:1756" ph="{...}" />
-                <marker date="1558256603562" expanded="true" signature="1241:1357" ph="{...}" />
-                <marker date="1558256603562" expanded="true" signature="1472:1619" ph="{...}" />
-                <marker date="1558256603562" expanded="true" signature="1655:1746" ph="{...}" />
-                <marker date="1558256603562" expanded="true" signature="1766:1990" ph="/// Create collection with name from query ... " />
-                <marker date="1558256603562" expanded="true" signature="2172:2636" ph="{...}" />
-                <marker date="1558256603562" expanded="true" signature="2352:2499" ph="{...}" />
-                <marker date="1558256603562" expanded="true" signature="2535:2626" ph="{...}" />
-                <marker date="1558256603562" expanded="true" signature="2646:2904" ph="/// Adds card to a target collection ... " />
-                <marker date="1558256603562" expanded="true" signature="3124:3759" ph="{...}" />
-                <marker date="1558256603562" expanded="true" signature="3287:3420" ph="{...}" />
-                <marker date="1558256603562" expanded="true" signature="3516:3648" ph="{...}" />
-                <marker date="1558256603562" expanded="true" signature="3770:3977" ph="/// Shows target collection ... " />
-                <marker date="1558256603562" expanded="true" signature="4146:4587" ph="{...}" />
-                <marker date="1558256603562" expanded="true" signature="4309:4442" ph="{...}" />
-                <marker date="1558256603562" expanded="true" signature="4597:4761" ph="/// Shows all existing collections ... " />
-                <marker date="1558256603562" expanded="true" signature="4903:5057" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Models/CardsCollection/Services/ICollectionService.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="87" selection-start-line="12" selection-start-column="87" selection-end-line="12" selection-end-column="87" />
-              <folding>
-                <marker date="1558256603552" expanded="true" signature="6:77" ph="..." />
-                <marker date="1558256603552" expanded="true" signature="120:647" ph="{...}" />
-                <marker date="1558256603552" expanded="true" signature="162:645" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Models/CardsCollection/Services/CollectionService.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="82" column="37" lean-forward="true" selection-start-line="82" selection-start-column="37" selection-end-line="82" selection-end-column="37" />
-              <folding>
-                <marker date="1558256603547" expanded="true" signature="6:141" ph="..." />
-                <marker date="1558256603547" expanded="true" signature="184:4926" ph="{...}" />
-                <marker date="1558256603547" expanded="true" signature="242:4924" ph="{...}" />
-                <marker date="1558256603547" expanded="true" signature="477:539" ph="{...}" />
-                <marker date="1558256603547" expanded="true" signature="632:1005" ph="{...}" />
-                <marker date="1558256603547" expanded="true" signature="762:958" ph="{...}" />
-                <marker date="1558256603547" expanded="true" signature="1090:1381" ph="{...}" />
-                <marker date="1558256603547" expanded="true" signature="1178:1269" ph="{...}" />
-                <marker date="1558256603547" expanded="true" signature="1300:1345" ph="{...}" />
-                <marker date="1558256603547" expanded="true" signature="1496:2199" ph="{...}" />
-                <marker date="1558256603547" expanded="true" signature="1841:1899" ph="{...}" />
-                <marker date="1558256603547" expanded="true" signature="1982:2075" ph="{...}" />
-                <marker date="1558256603547" expanded="true" signature="2106:2151" ph="{...}" />
-                <marker date="1558256603547" expanded="true" signature="2300:2463" ph="{...}" />
-                <marker date="1558256603547" expanded="true" signature="2549:2756" ph="{...}" />
-                <marker date="1558256603547" expanded="true" signature="2837:3036" ph="{...}" />
-                <marker date="1558256603547" expanded="false" signature="3046:4918" ph="private helper methods" />
-                <marker date="1558256603547" expanded="true" signature="3158:3422" ph="{...}" />
-                <marker date="1558256603547" expanded="true" signature="3509:4021" ph="{...}" />
-                <marker date="1558256603547" expanded="true" signature="4075:4179" ph="{...}" />
-                <marker date="1558256603547" expanded="true" signature="4275:4463" ph="{...}" />
-                <marker date="1558256603547" expanded="true" signature="4369:4427" ph="{...}" />
-                <marker date="1558256603547" expanded="true" signature="4544:4890" ph="{...}" />
-                <marker date="1558256603547" expanded="true" signature="4665:4854" ph="{...}" />
-                <marker date="1558256603547" expanded="true" signature="4770:4840" ph="{...}" />
+                <marker date="1558768243420" expanded="false" signature="6:265" ph="..." />
+                <marker date="1558768243420" expanded="true" signature="303:6128" ph="{...}" />
+                <marker date="1558768243420" expanded="true" signature="310:362" ph="/// Collections ... " />
+                <marker date="1558768243420" expanded="true" signature="465:6126" ph="{...}" />
+                <marker date="1558768243420" expanded="true" signature="668:744" ph="{...}" />
+                <marker date="1558768243420" expanded="true" signature="754:935" ph="/// Create Collection With Default Name ... " />
+                <marker date="1558768243420" expanded="true" signature="1094:1878" ph="{...}" />
+                <marker date="1558768243420" expanded="true" signature="1120:1741" ph="{...}" />
+                <marker date="1558768243420" expanded="true" signature="1300:1428" ph="{...}" />
+                <marker date="1558768243420" expanded="true" signature="1777:1868" ph="{...}" />
+                <marker date="1558768243420" expanded="true" signature="1888:2112" ph="/// Create Collection By Name ... " />
+                <marker date="1558768243420" expanded="true" signature="2294:3068" ph="{...}" />
+                <marker date="1558768243420" expanded="true" signature="2320:2931" ph="{...}" />
+                <marker date="1558768243420" expanded="true" signature="2483:2611" ph="{...}" />
+                <marker date="1558768243420" expanded="true" signature="2967:3058" ph="{...}" />
+                <marker date="1558768243420" expanded="true" signature="3078:3395" ph="/// Add Card To A Collection By Name ... " />
+                <marker date="1558768243420" expanded="true" signature="3602:4393" ph="{...}" />
+                <marker date="1558768243420" expanded="true" signature="3628:4256" ph="{...}" />
+                <marker date="1558768243420" expanded="true" signature="3865:4010" ph="{...}" />
+                <marker date="1558768243420" expanded="true" signature="4292:4383" ph="{...}" />
+                <marker date="1558768243420" expanded="true" signature="4404:4628" ph="/// Get Collection By Name ... " />
+                <marker date="1558768243420" expanded="true" signature="4797:5435" ph="{...}" />
+                <marker date="1558768243420" expanded="true" signature="4823:5298" ph="{...}" />
+                <marker date="1558768243420" expanded="true" signature="4997:5142" ph="{...}" />
+                <marker date="1558768243420" expanded="true" signature="5334:5425" ph="{...}" />
+                <marker date="1558768243420" expanded="true" signature="5445:5618" ph="/// Shows all existing collections For User ... " />
+                <marker date="1558768243420" expanded="true" signature="5737:6120" ph="{...}" />
+                <marker date="1558768243420" expanded="true" signature="5763:5983" ph="{...}" />
+                <marker date="1558768243420" expanded="true" signature="6019:6110" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -241,92 +141,39 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Models/CardItem/Services/CardService.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="130" column="24" selection-start-line="130" selection-start-column="24" selection-end-line="130" selection-end-column="24" />
+            <state relative-caret-position="114">
+              <caret line="101" lean-forward="true" selection-start-line="101" selection-end-line="101" />
               <folding>
-                <marker date="1558252129879" expanded="false" signature="6:137" ph="..." />
-                <marker date="1558252129879" expanded="true" signature="173:3693" ph="{...}" />
-                <marker date="1558252129879" expanded="true" signature="219:3691" ph="{...}" />
-                <marker date="1558252129879" expanded="true" signature="436:498" ph="{...}" />
-                <marker date="1558252129879" expanded="true" signature="575:928" ph="{...}" />
-                <marker date="1558252129879" expanded="true" signature="709:891" ph="{...}" />
-                <marker date="1558252129879" expanded="true" signature="1037:1364" ph="{...}" />
-                <marker date="1558252129879" expanded="true" signature="1142:1252" ph="{...}" />
-                <marker date="1558252129879" expanded="true" signature="1283:1328" ph="{...}" />
-                <marker date="1558252129879" expanded="true" signature="1477:1683" ph="{...}" />
-                <marker date="1558252129879" expanded="true" signature="1522:1595" ph="{...}" />
-                <marker date="1558252129879" expanded="true" signature="1693:3685" ph="private helper methods" />
-                <marker date="1558252129879" expanded="true" signature="1791:2385" ph="{...}" />
-                <marker date="1558252129879" expanded="true" signature="2445:2789" ph="{...}" />
-                <marker date="1558252129879" expanded="true" signature="2508:2566" ph="{...}" />
-                <marker date="1558252129879" expanded="true" signature="2624:2738" ph="{...}" />
-                <marker date="1558252129879" expanded="true" signature="2852:3302" ph="{...}" />
-                <marker date="1558252129879" expanded="true" signature="2996:3151" ph="{...}" />
-                <marker date="1558252129879" expanded="true" signature="3070:3137" ph="{...}" />
-                <marker date="1558252129879" expanded="true" signature="3208:3266" ph="{...}" />
-                <marker date="1558252129879" expanded="true" signature="3362:3665" ph="{...}" />
-                <marker date="1558252129879" expanded="true" signature="3411:3468" ph="{...}" />
-                <marker date="1558252129879" expanded="true" signature="3571:3629" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Models/CardsCollection/Repositories/ICollectionsRepository.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="66" selection-start-line="12" selection-start-column="66" selection-end-line="12" selection-end-column="66" />
-              <folding>
-                <marker date="1558256150306" expanded="true" signature="6:77" ph="..." />
-                <marker date="1558256150306" expanded="true" signature="124:531" ph="{...}" />
-                <marker date="1558256150306" expanded="true" signature="170:529" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Models/CardsCollection/Repositories/InMemoryCollectionsRepository.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="410">
-              <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
-              <folding>
-                <marker date="1558256150323" expanded="true" signature="6:152" ph="..." />
-                <marker date="1558256150323" expanded="true" signature="199:1717" ph="{...}" />
-                <marker date="1558256150323" expanded="true" signature="273:1715" ph="{...}" />
-                <marker date="1558256150323" expanded="true" signature="391:447" ph="{...}" />
-                <marker date="1558256150323" expanded="true" signature="527:695" ph="{...}" />
-                <marker date="1558256150323" expanded="true" signature="792:1065" ph="{...}" />
-                <marker date="1558256150323" expanded="true" signature="1169:1351" ph="{...}" />
-                <marker date="1558256150323" expanded="true" signature="1426:1544" ph="{...}" />
-                <marker date="1558256150323" expanded="true" signature="1618:1709" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Models/User/Repositories/InMemoryUsersRepository.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="42" column="27" selection-start-line="42" selection-start-column="27" selection-end-line="42" selection-end-column="27" />
-              <folding>
-                <marker date="1558120568953" expanded="false" signature="6:220" ph="..." />
-                <marker date="1558120568953" expanded="true" signature="256:2517" ph="{...}" />
-                <marker date="1558120568953" expanded="true" signature="318:2515" ph="{...}" />
-                <marker date="1558120568953" expanded="true" signature="430:486" ph="{...}" />
-                <marker date="1558120568953" expanded="true" signature="588:825" ph="{...}" />
-                <marker date="1558120568953" expanded="true" signature="891:998" ph="{...}" />
-                <marker date="1558120568953" expanded="true" signature="1053:1127" ph="{...}" />
-                <marker date="1558120568953" expanded="true" signature="1197:1289" ph="{...}" />
-                <marker date="1558120568953" expanded="true" signature="1356:1460" ph="{...}" />
-                <marker date="1558120568953" expanded="true" signature="1518:1793" ph="{...}" />
-                <marker date="1558120568953" expanded="true" signature="1616:1756" ph="{...}" />
-                <marker date="1558120568953" expanded="true" signature="1913:1982" ph="{...}" />
-                <marker date="1558120568953" expanded="true" signature="2072:2141" ph="{...}" />
-                <marker date="1558120568953" expanded="true" signature="2203:2358" ph="{...}" />
-                <marker date="1558120568953" expanded="true" signature="2440:2509" ph="{...}" />
+                <marker date="1558767150494" expanded="false" signature="6:158" ph="..." />
+                <marker date="1558767150494" expanded="true" signature="194:5608" ph="{...}" />
+                <marker date="1558767150494" expanded="true" signature="240:5606" ph="{...}" />
+                <marker date="1558767150494" expanded="true" signature="457:519" ph="{...}" />
+                <marker date="1558767150494" expanded="true" signature="596:949" ph="{...}" />
+                <marker date="1558767150494" expanded="true" signature="730:912" ph="{...}" />
+                <marker date="1558767150494" expanded="true" signature="1052:1448" ph="{...}" />
+                <marker date="1558767150494" expanded="true" signature="1221:1331" ph="{...}" />
+                <marker date="1558767150494" expanded="true" signature="1362:1438" ph="{...}" />
+                <marker date="1558767150494" expanded="true" signature="1561:1767" ph="{...}" />
+                <marker date="1558767150494" expanded="true" signature="1606:1679" ph="{...}" />
+                <marker date="1558767150494" expanded="true" signature="1867:2071" ph="{...}" />
+                <marker date="1558767150494" expanded="true" signature="1911:1991" ph="{...}" />
+                <marker date="1558767150494" expanded="true" signature="2183:2682" ph="{...}" />
+                <marker date="1558767150494" expanded="true" signature="2760:3078" ph="{...}" />
+                <marker date="1558767150494" expanded="true" signature="3127:3343" ph="{...}" />
+                <marker date="1558767150494" expanded="true" signature="3171:3275" ph="{...}" />
+                <marker date="1558767150494" expanded="true" signature="3361:5600" ph="private helper methods" />
+                <marker date="1558767150494" expanded="true" signature="3459:4053" ph="{...}" />
+                <marker date="1558767150494" expanded="true" signature="4112:4456" ph="{...}" />
+                <marker date="1558767150494" expanded="true" signature="4175:4233" ph="{...}" />
+                <marker date="1558767150494" expanded="true" signature="4291:4405" ph="{...}" />
+                <marker date="1558767150494" expanded="true" signature="4519:4969" ph="{...}" />
+                <marker date="1558767150494" expanded="true" signature="4663:4818" ph="{...}" />
+                <marker date="1558767150494" expanded="true" signature="4737:4804" ph="{...}" />
+                <marker date="1558767150494" expanded="true" signature="4875:4933" ph="{...}" />
+                <marker date="1558767150494" expanded="true" signature="5029:5332" ph="{...}" />
+                <marker date="1558767150494" expanded="true" signature="5078:5135" ph="{...}" />
+                <marker date="1558767150494" expanded="true" signature="5238:5296" ph="{...}" />
+                <marker date="1558767150494" expanded="true" signature="5434:5580" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -337,6 +184,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>Expires</find>
+      <find>already ta</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -348,109 +196,122 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Models/CardItem/CardItemInfo.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Models/CardItem/CardSearchInfo.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Models/User/Services/IUserService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/MemoryCardsAPI/Controllers/UsersController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Models/CardItem/CardCreationInfo.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Models/User/Services/UserService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/MemoryCardsAPI/Controllers/CardsController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Models/CardItem/CardPatchInfo.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Models/User/Repositories/InMemoryUsersRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/MemoryCardsAPI/Controllers/CollectionsController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Models/CardItem/Repositories/PostgreCardsRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Models/Errors/AppException.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Models/CardItem/Repositories/ICardsRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Models/CardsCollection/CardsCollection.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Converters/UserConverter.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Converters/CardItemConverter.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Models/CardsCollection/Services/ICollectionService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Models/CardsCollection/Services/CollectionService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/CB5BE0C7-4433-425A-AE2A-B70ED6C7054C/97/8d17fae1/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Models/CardsCollection/Repositories/ICollectionsRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Models/CardsCollection/Repositories/InMemoryCollectionsRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Client.Models/User/User.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Client.Models/CardItem/CardItem.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/CB5BE0C7-4433-425A-AE2A-B70ED6C7054C/4b/3fe63b8c/ExecutionContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Client.Models/User/UserPatchInfo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Client.Models/CardItem/CardItemInfo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MemoryCardsAPI/Startup.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Models/User/Repositories/IUsersRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Models/User/UserSearchInfo.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Models/User/UserPatchInfo.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Models/CardItem/Services/ICardService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MemoryCardsAPI/Program.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Models/CardItem/Services/CardService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Models/CardsCollection/Repositories/PostgreCollectionsRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Models/CardItem/CardContent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A4C40EB2-420A-4C66-A15E-4E3DB1AE0928/7b/ec3ea6c5/IMapper.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Models/User/Repositories/PostgreUsersRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Models/CardItem/Repositories/InMemoryCardsRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Models/User/UserRegistrationInfo.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Models/User/UserLoginInfo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Models/Data/InMemoryContext.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Models/Data/PostgreContext.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/MemoryCardsAPI/Auth/SessionState.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/MemoryCardsAPI/Auth/IAuthenicator.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/MemoryCardsAPI/Auth/AuthorizationHeaderParameterOperationFilter.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/MemoryCardsAPI/Helpers/AppSettings.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Models/User/UserSearchInfo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Models/User/User.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Models/User/UserLoginInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Models/User/UserRegistrationInfo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Models/User/UserInfo.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/MemoryCardsAPI/Helpers/AutoMapperProfile.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Models/User/UserPatchInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Models/User/Services/UserService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Models/User/Services/IUserService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Models/User/Repositories/PostgreUsersRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Models/User/Repositories/IUsersRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Models/User/Repositories/InMemoryUsersRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Models/Errors/AppException.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Models/CardItem/CardItem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Models/CardItem/CardItemInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Models/CardItem/CardSearchInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Models/CardItem/CardPatchInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Models/CardItem/CardContent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MemoryCardsAPI/Auth/SessionState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Models/CardItem/Services/ICardService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MemoryCardsAPI/Auth/IAuthenicator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Models/CardItem/Services/CardService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MemoryCardsAPI/Auth/AuthorizationHeaderParameterOperationFilter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Client.Models/Training/TrainingPatchInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Models/CardItem/Repositories/PostgreCardsRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MemoryCardsAPI/Helpers/AppSettings.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Client.Models/Training/MemorizationLevels.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/CB5BE0C7-4433-425A-AE2A-B70ED6C7054C/97/8d17fae1/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Models/CardItem/Repositories/InMemoryCardsRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MemoryCardsAPI/Helpers/AutoMapperProfile.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Converters/TrainingConverter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MemoryCardsAPI/Controllers/UsersController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Models/CardItem/Repositories/ICardsRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MemoryCardsAPI/Controllers/CardsController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MemoryCardsAPI/Controllers/CollectionsController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Models/Training/Training.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Models/Training/MemorizationLevels.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Models/Training/Services/TrainingService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Models/Training/Services/ITrainingService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/CB5BE0C7-4433-425A-AE2A-B70ED6C7054C/4b/3fe63b8c/ExecutionContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Models/Training/Repositories/InMemoryTrainingRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Models/Training/Repositories/ITrainingRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Models/CardItem/CardCreationInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Models/CardsCollection/CardsCollection.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Models/CardsCollection/Services/ICollectionService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Models/CardsCollection/Services/CollectionService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Models/CardsCollection/Repositories/InMemoryCollectionsRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Models/CardsCollection/Repositories/PostgreCollectionsRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Models/CardsCollection/Repositories/ICollectionsRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Converters/UserConverter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Converters/CardItemConverter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A4C40EB2-420A-4C66-A15E-4E3DB1AE0928/7b/ec3ea6c5/IMapper.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MemoryCardsAPI/Controllers/TrainingsController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Client.Models/CardItem/CardPatchInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Client.Models/CardItem/CardContent.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/MemoryCardsAPI/appsettings.json" />
-        <option value="$PROJECT_DIR$/MemoryCardsAPI/Program.cs" />
-        <option value="$PROJECT_DIR$/MemoryCardsAPI/AuthorizationHeaderParameterOperationFilter.cs" />
-        <option value="$PROJECT_DIR$/MemoryCardsAPI/Services/ICardService.cs" />
-        <option value="$PROJECT_DIR$/MemoryCardsAPI/Services/IUserService.cs" />
-        <option value="$PROJECT_DIR$/MemoryCardsAPI/Auth/AuthorizationHeaderParameterOperationFilter.cs" />
-        <option value="$PROJECT_DIR$/MemoryCardsAPI/Auth/IAuthenicator.cs" />
-        <option value="$PROJECT_DIR$/MemoryCardsAPI/Auth/SessionState.cs" />
-        <option value="$PROJECT_DIR$/MemoryCardsAPI/Services/ICollectionService.cs" />
-        <option value="$PROJECT_DIR$/MemoryCardsAPI/Helpers/AppSettings.cs" />
-        <option value="$PROJECT_DIR$/Models/User/UserSearchInfo.cs" />
-        <option value="$PROJECT_DIR$/Models/User/UserCreationInfo.cs" />
-        <option value="$PROJECT_DIR$/Models/User/UserPatchInfo.cs" />
-        <option value="$PROJECT_DIR$/MemoryCardsAPI/Services/UserService.cs" />
-        <option value="$PROJECT_DIR$/Models/CardItem/CardItem.cs" />
-        <option value="$PROJECT_DIR$/Models/CardItem/CardCreationInfo.cs" />
-        <option value="$PROJECT_DIR$/MemoryCardsAPI/Services/CardService.cs" />
-        <option value="$PROJECT_DIR$/MemoryCardsAPI/MemoryCardsAPI.csproj" />
-        <option value="$PROJECT_DIR$/MemoryCardsAPI/Data/DataContext.cs" />
-        <option value="$PROJECT_DIR$/Models/Data/InMemoryContext.cs" />
-        <option value="$PROJECT_DIR$/Models/Data/PostgreContext.cs" />
-        <option value="$PROJECT_DIR$/Models/CardItem/Services/ICardService.cs" />
-        <option value="$PROJECT_DIR$/Models/User/UserRegistrationInfo.cs" />
-        <option value="$PROJECT_DIR$/Models/User/UserLoginInfo.cs" />
-        <option value="$PROJECT_DIR$/MemoryCardsAPI/Services/CollectionService.cs" />
-        <option value="$PROJECT_DIR$/Models/CardItem/Repositories/PostgreCardsRepository.cs" />
-        <option value="$PROJECT_DIR$/MemoryCardsAPI/Helpers/AutoMapperProfile.cs" />
-        <option value="$PROJECT_DIR$/Models/Models.csproj" />
-        <option value="$PROJECT_DIR$/MemoryCardsAPI/Helpers/AppException.cs" />
-        <option value="$PROJECT_DIR$/Models/Errors/AppException.cs" />
-        <option value="$PROJECT_DIR$/Models/User/Repositories/IUserRepository.cs" />
-        <option value="$PROJECT_DIR$/Models/CardItem/Repositories/ICardsRepository.cs" />
-        <option value="$PROJECT_DIR$/Models/CardItem/Repositories/InMemoryCardsRepository.cs" />
-        <option value="$PROJECT_DIR$/MemoryCardsAPI/Controllers/CardsController.cs" />
-        <option value="$PROJECT_DIR$/Models/User/Services/IUserService.cs" />
-        <option value="$PROJECT_DIR$/Models/User/Repositories/IUsersRepository.cs" />
         <option value="$PROJECT_DIR$/Models/User/Repositories/InMemoryUsersRepository.cs" />
-        <option value="$PROJECT_DIR$/MemoryCardsAPI/Controllers/UsersController.cs" />
-        <option value="$PROJECT_DIR$/Models/User/UserInfo.cs" />
-        <option value="$PROJECT_DIR$/Models/CardItem/CardContent.cs" />
-        <option value="$PROJECT_DIR$/MemoryCardsAPI/Startup.cs" />
+        <option value="$PROJECT_DIR$/Models/User/Repositories/IUsersRepository.cs" />
         <option value="$PROJECT_DIR$/Models/User/Repositories/PostgreUsersRepository.cs" />
-        <option value="$PROJECT_DIR$/Models/CardsCollection/Repositories/PostgreCollectionsRepository.cs" />
-        <option value="$PROJECT_DIR$/Models/CardsCollection/CardsCollection.cs" />
+        <option value="$PROJECT_DIR$/Models/Training/Repositories/ITrainingRepository.cs" />
+        <option value="$PROJECT_DIR$/Models/Training/Repositories/InMemoryTrainingRepository.cs" />
+        <option value="$PROJECT_DIR$/Client.Models/Client.Models.csproj" />
+        <option value="$PROJECT_DIR$/Client.Models/Training/MemrorizationLevels.cs" />
+        <option value="$PROJECT_DIR$/Converters/MemorizationLevelConverter.cs" />
+        <option value="$PROJECT_DIR$/Converters/TrainingConverter.cs" />
         <option value="$PROJECT_DIR$/Models/User/Services/UserService.cs" />
-        <option value="$PROJECT_DIR$/Models/CardItem/Services/CardService.cs" />
+        <option value="$PROJECT_DIR$/Converters/UserConverter.cs" />
         <option value="$PROJECT_DIR$/Models/CardsCollection/Repositories/ICollectionsRepository.cs" />
-        <option value="$PROJECT_DIR$/Models/CardsCollection/Repositories/InMemoryCollectionsRepository.cs" />
+        <option value="$PROJECT_DIR$/Models/CardsCollection/Repositories/PostgreCollectionsRepository.cs" />
         <option value="$PROJECT_DIR$/Models/CardsCollection/Services/CollectionService.cs" />
         <option value="$PROJECT_DIR$/Models/CardsCollection/Services/ICollectionService.cs" />
+        <option value="$PROJECT_DIR$/Models/Training/Services/TrainingService.cs" />
+        <option value="$PROJECT_DIR$/Models/CardItem/CardSearchInfo.cs" />
+        <option value="$PROJECT_DIR$/Models/User/User.cs" />
+        <option value="$PROJECT_DIR$/Models/User/UserRegistrationInfo.cs" />
+        <option value="$PROJECT_DIR$/Models/User/UserInfo.cs" />
+        <option value="$PROJECT_DIR$/Models/User/UserPatchInfo.cs" />
+        <option value="$PROJECT_DIR$/Models/Training/Training.cs" />
+        <option value="$PROJECT_DIR$/Models/Training/MemorizationLevels.cs" />
+        <option value="$PROJECT_DIR$/Models/CardsCollection/CardsCollection.cs" />
+        <option value="$PROJECT_DIR$/Models/CardItem/CardCreationInfo.cs" />
+        <option value="$PROJECT_DIR$/Models/CardItem/CardItem.cs" />
+        <option value="$PROJECT_DIR$/Models/CardItem/CardItemInfo.cs" />
+        <option value="$PROJECT_DIR$/Models/CardItem/CardPatchInfo.cs" />
+        <option value="$PROJECT_DIR$/Client.Models/User/User.cs" />
+        <option value="$PROJECT_DIR$/Client.Models/User/UserPatchInfo.cs" />
+        <option value="$PROJECT_DIR$/Client.Models/Training/MemorizationLevels.cs" />
+        <option value="$PROJECT_DIR$/Client.Models/Training/TrainingPatchInfo.cs" />
+        <option value="$PROJECT_DIR$/Client.Models/CardItem/CardPatchInfo.cs" />
+        <option value="$PROJECT_DIR$/Client.Models/CardItem/CardItemInfo.cs" />
+        <option value="$PROJECT_DIR$/MemoryCardsAPI/MemoryCardsAPI.csproj" />
+        <option value="$PROJECT_DIR$/Client.Models/CardItem/CardItem.cs" />
+        <option value="$PROJECT_DIR$/Models/CardItem/CardContent.cs" />
+        <option value="$PROJECT_DIR$/Client.Models/CardItem/CardContent.cs" />
+        <option value="$PROJECT_DIR$/MemoryCardsAPI/Startup.cs" />
+        <option value="$PROJECT_DIR$/Converters/CardItemConverter.cs" />
+        <option value="$PROJECT_DIR$/MemoryCardsAPI/Controllers/UsersController.cs" />
+        <option value="$PROJECT_DIR$/MemoryCardsAPI/Controllers/TrainingsController.cs" />
+        <option value="$PROJECT_DIR$/MemoryCardsAPI/Controllers/CardsController.cs" />
+        <option value="$PROJECT_DIR$/Models/User/Services/IUserService.cs" />
+        <option value="$PROJECT_DIR$/Models/CardItem/Services/ICardService.cs" />
+        <option value="$PROJECT_DIR$/Models/CardsCollection/Repositories/InMemoryCollectionsRepository.cs" />
+        <option value="$PROJECT_DIR$/Models/CardItem/Services/CardService.cs" />
+        <option value="$PROJECT_DIR$/Models/CardItem/Repositories/ICardsRepository.cs" />
+        <option value="$PROJECT_DIR$/Models/CardItem/Repositories/PostgreCardsRepository.cs" />
+        <option value="$PROJECT_DIR$/Models/CardItem/Repositories/InMemoryCardsRepository.cs" />
         <option value="$PROJECT_DIR$/MemoryCardsAPI/Controllers/CollectionsController.cs" />
       </list>
     </option>
@@ -468,34 +329,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AssemblyExplorer" />
-      <pane id="FileSystemExplorer">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Project" type="161ac34:FileSystemExplorerRootNode" />
-              <item name="Project42" type="34e6ba20:FileSystemExplorerNode" />
-            </path>
-            <path>
-              <item name="Project" type="161ac34:FileSystemExplorerRootNode" />
-              <item name="Project42" type="34e6ba20:FileSystemExplorerNode" />
-              <item name="Client.Models" type="34e6ba20:FileSystemExplorerNode" />
-            </path>
-            <path>
-              <item name="Project" type="161ac34:FileSystemExplorerRootNode" />
-              <item name="Project42" type="34e6ba20:FileSystemExplorerNode" />
-              <item name="Client.Models" type="34e6ba20:FileSystemExplorerNode" />
-              <item name="User" type="34e6ba20:FileSystemExplorerNode" />
-            </path>
-            <path>
-              <item name="Project" type="161ac34:FileSystemExplorerRootNode" />
-              <item name="Project42" type="34e6ba20:FileSystemExplorerNode" />
-              <item name="Converters" type="34e6ba20:FileSystemExplorerNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="SolutionExplorer">
         <subPane>
           <expand>
@@ -511,25 +344,36 @@
             <path>
               <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
               <item name="Project42" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="MemoryCardsAPI" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Client.Models" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="CardItem" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="Project42" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Client.Models" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Training" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="Project42" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Client.Models" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="User" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="Project42" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Converters" type="24d0babc:SolutionExplorerModelNode" />
             </path>
             <path>
               <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
               <item name="Project42" type="24d0babc:SolutionExplorerModelNode" />
               <item name="MemoryCardsAPI" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Auth" type="24d0babc:SolutionExplorerModelNode" />
             </path>
             <path>
               <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
               <item name="Project42" type="24d0babc:SolutionExplorerModelNode" />
               <item name="MemoryCardsAPI" type="24d0babc:SolutionExplorerModelNode" />
               <item name="Controllers" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="Project42" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="MemoryCardsAPI" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Helpers" type="24d0babc:SolutionExplorerModelNode" />
             </path>
             <path>
               <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
@@ -601,6 +445,34 @@
         </subPane>
         <option name="show-all-files" value="false" />
       </pane>
+      <pane id="AssemblyExplorer" />
+      <pane id="FileSystemExplorer">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Project" type="161ac34:FileSystemExplorerRootNode" />
+              <item name="Project42" type="34e6ba20:FileSystemExplorerNode" />
+            </path>
+            <path>
+              <item name="Project" type="161ac34:FileSystemExplorerRootNode" />
+              <item name="Project42" type="34e6ba20:FileSystemExplorerNode" />
+              <item name="Client.Models" type="34e6ba20:FileSystemExplorerNode" />
+            </path>
+            <path>
+              <item name="Project" type="161ac34:FileSystemExplorerRootNode" />
+              <item name="Project42" type="34e6ba20:FileSystemExplorerNode" />
+              <item name="Client.Models" type="34e6ba20:FileSystemExplorerNode" />
+              <item name="User" type="34e6ba20:FileSystemExplorerNode" />
+            </path>
+            <path>
+              <item name="Project" type="161ac34:FileSystemExplorerRootNode" />
+              <item name="Project42" type="34e6ba20:FileSystemExplorerNode" />
+              <item name="Converters" type="34e6ba20:FileSystemExplorerNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -609,6 +481,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/Client.Models/User/User.cs" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="CodeLensConfigurable" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -661,11 +534,12 @@
       <workItem from="1555937854191" duration="405000" />
       <workItem from="1556526153503" duration="4689000" />
       <workItem from="1557312073497" duration="57128000" />
+      <workItem from="1558426013313" duration="38690000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77375000" />
+    <option name="totallyTimeSpent" value="116065000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -680,14 +554,14 @@
     <frame x="0" y="23" width="1280" height="710" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.26009694" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26009694" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32847896" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32847896" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39967638" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -752,774 +626,936 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Converters/Converters.csproj">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MemoryCardsAPI/MemoryCardsAPI.csproj">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Models/Data/PostgreContext.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <marker date="1557702949660" expanded="false" signature="6:78" ph="..." />
-            <marker date="1557702949660" expanded="true" signature="101:868" ph="{...}" />
-            <marker date="1557702949660" expanded="true" signature="147:866" ph="{...}" />
-            <marker date="1557702949660" expanded="true" signature="239:474" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Models/CardItem/CardCreationInfo.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-          <folding>
-            <marker date="1557568758426" expanded="true" signature="25:330" ph="{...}" />
-            <marker date="1557568758426" expanded="true" signature="61:328" ph="{...}" />
-            <marker date="1557568758426" expanded="true" signature="76:144" ph="/// Вопрос/задача карты ... " />
-            <marker date="1557568758426" expanded="true" signature="204:274" ph="/// Ответ на вопрос карты ... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Models/CardItem/CardSearchInfo.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-          <folding>
-            <marker date="1557311958749" expanded="true" signature="25:82" ph="{...}" />
-            <marker date="1557311958749" expanded="true" signature="59:80" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Models/Data/InMemoryContext.cs">
+    <entry file="file://$PROJECT_DIR$/Models/Training/Services/ITrainingService.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
-          <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
+          <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
           <folding>
-            <marker date="1557702950819" expanded="true" signature="59:430" ph="{...}" />
-            <marker date="1557702950819" expanded="true" signature="106:428" ph="{...}" />
-            <marker date="1557702950819" expanded="true" signature="202:222" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A4C40EB2-420A-4C66-A15E-4E3DB1AE0928/7b/ec3ea6c5/IMapper.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MemoryCardsAPI/Services/IUserService.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MemoryCardsAPI/Services/UserService.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="19" column="58" selection-start-line="19" selection-start-column="58" selection-end-line="19" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MemoryCardsAPI/Data/DataContext.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Client.Models/User/UserLoginInfo.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="26" column="44" selection-start-line="10" selection-start-column="8" selection-end-line="26" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Client.Models/User/UserRegistrationInfo.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="23" selection-end-line="28" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Models/User/UserLoginInfo.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
-          <folding>
-            <marker date="1557714678026" expanded="true" signature="58:703" ph="{...}" />
-            <marker date="1557714678026" expanded="true" signature="65:140" ph="/// Информация для логина пользователя ... " />
-            <marker date="1557714678026" expanded="true" signature="190:701" ph="{...}" />
-            <marker date="1557714678026" expanded="true" signature="205:272" ph="/// Логин пользователя ... " />
-            <marker date="1557714678026" expanded="true" signature="364:432" ph="/// Пароль пользователя ... " />
-            <marker date="1557714678026" expanded="true" signature="535:610" ph="/// Запоминать ли пользователя ... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Models/User/UserCreationInfo.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MemoryCardsAPI/Program.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <marker date="1557311958413" expanded="false" signature="6:94" ph="..." />
-            <marker date="1557311958413" expanded="true" signature="120:1104" ph="{...}" />
-            <marker date="1557311958413" expanded="true" signature="140:1102" ph="{...}" />
-            <marker date="1557311958413" expanded="true" signature="186:1096" ph="{...}" />
-            <marker date="1557311958413" expanded="true" signature="390:483" ph="/* .AddEnvironmentVariables(prefix: &quot;ASPNETCORE_&quot;) ... */" />
-            <marker date="1557311958413" expanded="true" signature="726:821" ph="/* .UseContentRoot(Directory.GetCurrentDirectory()) ... */" />
-            <marker date="1557311958413" expanded="true" signature="925:1086" ph="/* WebHost ... */" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MemoryCardsAPI/Auth/SessionState.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
-          <folding>
-            <marker date="1557336248862" expanded="true" signature="44:454" ph="{...}" />
-            <marker date="1557336248862" expanded="true" signature="76:452" ph="{...}" />
-            <marker date="1557336248862" expanded="true" signature="141:367" ph="{...}" />
-            <marker date="1557336248862" expanded="true" signature="186:282" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MemoryCardsAPI/Helpers/AutoMapperProfile.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="10" column="54" selection-start-line="10" selection-start-column="54" selection-end-line="10" selection-end-column="54" />
-          <folding>
-            <marker date="1557942717126" expanded="false" signature="6:44" ph="..." />
-            <marker date="1557942717126" expanded="true" signature="78:324" ph="{...}" />
-            <marker date="1557942717126" expanded="true" signature="125:322" ph="{...}" />
-            <marker date="1557942717126" expanded="true" signature="166:316" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Models/Errors/AppException.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="1" lean-forward="true" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
-          <folding>
-            <marker date="1557943465736" expanded="true" signature="6:41" ph="..." />
-            <marker date="1557943465736" expanded="true" signature="66:587" ph="{...}" />
-            <marker date="1557943465736" expanded="true" signature="73:227" ph="/* Custom exception class for throwing application specific exceptions (e.g. for validation) ... */" />
-            <marker date="1557943465736" expanded="true" signature="269:585" ph="{...}" />
-            <marker date="1557943465736" expanded="true" signature="314:334" ph="{...}" />
-            <marker date="1557943465736" expanded="true" signature="395:415" ph="{...}" />
-            <marker date="1557943465736" expanded="true" signature="559:579" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MemoryCardsAPI/Helpers/AppException.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="1" lean-forward="true" selection-end-line="18" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MemoryCardsAPI/Helpers/AppSettings.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="25" lean-forward="true" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
-          <folding>
-            <marker date="1557384093756" expanded="true" signature="32:120" ph="{...}" />
-            <marker date="1557384093756" expanded="true" signature="63:118" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Models/Models.csproj">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Models/CardItem/Repositories/ICardsRepository.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="13" column="31" lean-forward="true" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
-          <folding>
-            <marker date="1558033273686" expanded="false" signature="6:101" ph="..." />
-            <marker date="1558033273686" expanded="true" signature="141:2961" ph="{...}" />
-            <marker date="1558033273686" expanded="true" signature="148:213" ph="/// Интерфейс хранилища карт ... " />
-            <marker date="1558033273686" expanded="true" signature="251:2959" ph="{...}" />
-            <marker date="1558033273686" expanded="true" signature="266:640" ph="/// Создать новую карту ... " />
-            <marker date="1558033273686" expanded="true" signature="750:1142" ph="/// Выдать все карты, соответствующие пользователю ... " />
-            <marker date="1558033273686" expanded="true" signature="1260:1586" ph="/// Найти карты ... " />
-            <marker date="1558033273686" expanded="true" signature="1709:2028" ph="/// Запросить карту ... " />
-            <marker date="1558033273686" expanded="true" signature="2125:2485" ph="/// Изменить карту ... " />
-            <marker date="1558033273686" expanded="true" signature="2591:2878" ph="/// Удалить карту ... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Models/CardItem/Services/ICardService.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="7" column="33" lean-forward="true" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
-          <folding>
-            <marker date="1557712971194" expanded="false" signature="6:101" ph="..." />
-            <marker date="1557712971194" expanded="true" signature="137:453" ph="{...}" />
-            <marker date="1557712971194" expanded="true" signature="173:451" ph="{...}" />
+            <marker date="1558720771452" expanded="false" signature="6:119" ph="..." />
+            <marker date="1558720771452" expanded="true" signature="155:488" ph="{...}" />
+            <marker date="1558720771452" expanded="true" signature="195:486" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Models/User/Repositories/IUsersRepository.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="71" column="22" lean-forward="true" selection-start-line="71" selection-start-column="22" selection-end-line="71" selection-end-column="22" />
+        <state relative-caret-position="705">
+          <caret line="51" selection-start-line="51" selection-end-line="51" />
           <folding>
-            <marker date="1558120568957" expanded="false" signature="6:124" ph="..." />
-            <marker date="1558120568957" expanded="true" signature="160:3503" ph="{...}" />
-            <marker date="1558120568957" expanded="true" signature="200:3501" ph="{...}" />
-            <marker date="1558120568957" expanded="true" signature="215:618" ph="/// Создать нового пользователя ... " />
-            <marker date="1558120568957" expanded="true" signature="720:1014" ph="/// Найти пользователя по логину ... " />
-            <marker date="1558120568957" expanded="true" signature="1077:1381" ph="/// Найти пользователя по идентификатору ... " />
-            <marker date="1558120568957" expanded="true" signature="1441:1742" ph="/// Удалить пользователя по идентификатору ... " />
-            <marker date="1558120568957" expanded="true" signature="1805:2147" ph="/// Найти карты ... " />
-            <marker date="1558120568957" expanded="true" signature="2270:2589" ph="/// Запросить карту ... " />
-            <marker date="1558120568957" expanded="true" signature="2682:2970" ph="/// Изменить карту ... " />
-            <marker date="1558120568957" expanded="true" signature="3029:3316" ph="/// Удалить карту ... " />
+            <marker date="1558428667743" expanded="false" signature="6:124" ph="..." />
+            <marker date="1558428667743" expanded="true" signature="160:2719" ph="{...}" />
+            <marker date="1558428667743" expanded="true" signature="200:2717" ph="{...}" />
+            <marker date="1558428667743" expanded="true" signature="215:618" ph="/// Создать нового пользователя ... " />
+            <marker date="1558428667743" expanded="true" signature="720:1014" ph="/// Найти пользователя по логину ... " />
+            <marker date="1558428667743" expanded="true" signature="1077:1381" ph="/// Найти пользователя по идентификатору ... " />
+            <marker date="1558428667743" expanded="true" signature="1441:1742" ph="/// Удалить пользователя по идентификатору ... " />
+            <marker date="1558428667743" expanded="true" signature="1805:2147" ph="/// Найти карты ... " />
+            <marker date="1558428667743" expanded="true" signature="2270:2558" ph="/// Изменить карту ... " />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MemoryCardsAPI/Services/ICollectionService.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="17" column="1" lean-forward="true" selection-end-line="17" selection-end-column="1" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/Client.Models/Client.Models.csproj">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/MemoryCardsAPI/Services/CollectionService.cs">
+    <entry file="file://$PROJECT_DIR$/Models/CardsCollection/Repositories/ICollectionsRepository.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="21" column="9" lean-forward="true" selection-end-line="77" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Models/CardItem/Repositories/InMemoryCardsRepository.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="24" column="14" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
+        <state relative-caret-position="180">
+          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
           <folding>
-            <marker date="1558033894714" expanded="false" signature="6:139" ph="..." />
-            <marker date="1558033894714" expanded="true" signature="179:1741" ph="{...}" />
-            <marker date="1558033894714" expanded="true" signature="241:1739" ph="{...}" />
-            <marker date="1558033894714" expanded="true" signature="352:408" ph="{...}" />
-            <marker date="1558033894714" expanded="true" signature="529:775" ph="{...}" />
-            <marker date="1558033894714" expanded="true" signature="890:1058" ph="{...}" />
-            <marker date="1558033894714" expanded="true" signature="1178:1247" ph="{...}" />
-            <marker date="1558033894714" expanded="true" signature="1341:1410" ph="{...}" />
-            <marker date="1558033894714" expanded="true" signature="1513:1582" ph="{...}" />
-            <marker date="1558033894714" expanded="true" signature="1664:1733" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/CB5BE0C7-4433-425A-AE2A-B70ED6C7054C/4b/3fe63b8c/ExecutionContext.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="155" column="6" selection-start-line="155" selection-start-column="6" selection-end-line="155" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Models/User/Services/IUserService.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
-          <folding>
-            <marker date="1558119246565" expanded="false" signature="6:101" ph="..." />
-            <marker date="1558119246565" expanded="true" signature="133:603" ph="{...}" />
-            <marker date="1558119246565" expanded="true" signature="169:601" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Models/User/UserRegistrationInfo.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-18">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-          <folding>
-            <marker date="1557714622611" expanded="true" signature="58:702" ph="{...}" />
-            <marker date="1557714622611" expanded="true" signature="65:145" ph="/// Информация для регистрации пользователя ... " />
-            <marker date="1557714622611" expanded="true" signature="202:700" ph="{...}" />
-            <marker date="1557714622611" expanded="true" signature="217:284" ph="/// Логин пользователя ... " />
-            <marker date="1557714622611" expanded="true" signature="376:443" ph="/// Почта пользователя ... " />
-            <marker date="1557714622611" expanded="true" signature="541:609" ph="/// Пароль пользователя ... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Models/User/User.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
-          <folding>
-            <marker date="1557311958755" expanded="false" signature="6:110" ph="..." />
-            <marker date="1557311958755" expanded="true" signature="133:1135" ph="{...}" />
-            <marker date="1557311958755" expanded="true" signature="140:193" ph="/// Пользователь ... " />
-            <marker date="1557311958755" expanded="true" signature="247:1133" ph="{...}" />
-            <marker date="1557311958755" expanded="true" signature="262:327" ph="/// Имя пользователя ... " />
-            <marker date="1557311958755" expanded="true" signature="410:479" ph="/// Фамилия пользователя ... " />
-            <marker date="1557311958755" expanded="true" signature="561:628" ph="/// Логин пользователя ... " />
-            <marker date="1557311958755" expanded="true" signature="737:813" ph="/// Почтовый адрес пользователя ... " />
-            <marker date="1557311958755" expanded="true" signature="822:965" ph="[...]" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Models/CardItem/CardItemInfo.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-          <folding>
-            <marker date="1557311958748" expanded="false" signature="6:110" ph="..." />
-            <marker date="1557311958748" expanded="true" signature="137:779" ph="{...}" />
-            <marker date="1557311958748" expanded="true" signature="144:203" ph="/// Информация о карте ... " />
-            <marker date="1557311958748" expanded="true" signature="258:777" ph="{...}" />
-            <marker date="1557311958748" expanded="true" signature="273:352" ph="/// Уникальный идентификатор карты ... " />
-            <marker date="1557311958748" expanded="true" signature="447:524" ph="/// Пользователь создавший карту ... " />
-            <marker date="1557311958748" expanded="true" signature="611:679" ph="/// Дата создания карты ... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Models/CardItem/Repositories/PostgreCardsRepository.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-273">
-          <caret line="13" column="9" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
-          <folding>
-            <marker date="1557942602631" expanded="false" signature="6:120" ph="..." />
-            <marker date="1557942602631" expanded="true" signature="160:1433" ph="{...}" />
-            <marker date="1557942602631" expanded="true" signature="221:1431" ph="{...}" />
-            <marker date="1557942602631" expanded="true" signature="407:574" ph="{...}" />
-            <marker date="1557942602631" expanded="true" signature="681:750" ph="{...}" />
-            <marker date="1557942602631" expanded="true" signature="870:939" ph="{...}" />
-            <marker date="1557942602631" expanded="true" signature="1033:1102" ph="{...}" />
-            <marker date="1557942602631" expanded="true" signature="1205:1274" ph="{...}" />
-            <marker date="1557942602631" expanded="true" signature="1356:1425" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Models/User/Repositories/PostgreUsersRepository.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-423">
-          <caret line="12" column="48" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="48" />
-          <folding>
-            <marker date="1558183889640" expanded="true" signature="6:124" ph="..." />
-            <marker date="1558183889640" expanded="true" signature="160:1649" ph="{...}" />
-            <marker date="1558183889640" expanded="true" signature="221:1647" ph="{...}" />
-            <marker date="1558183889640" expanded="true" signature="325:394" ph="{...}" />
-            <marker date="1558183889640" expanded="true" signature="454:523" ph="{...}" />
-            <marker date="1558183889640" expanded="true" signature="572:641" ph="{...}" />
-            <marker date="1558183889640" expanded="true" signature="693:762" ph="{...}" />
-            <marker date="1558183889640" expanded="true" signature="882:951" ph="{...}" />
-            <marker date="1558183889640" expanded="true" signature="1041:1110" ph="{...}" />
-            <marker date="1558183889640" expanded="true" signature="1166:1235" ph="{...}" />
-            <marker date="1558183889640" expanded="true" signature="1317:1386" ph="{...}" />
-            <marker date="1558183889640" expanded="true" signature="1442:1511" ph="{...}" />
-            <marker date="1558183889640" expanded="true" signature="1572:1641" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MemoryCardsAPI/Startup.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="591">
-          <caret line="44" column="12" selection-start-line="44" selection-start-column="12" selection-end-line="44" selection-end-column="12" />
-          <folding>
-            <marker date="1558183794604" expanded="true" signature="6:652" ph="..." />
-            <marker date="1558183794604" expanded="true" signature="678:5360" ph="{...}" />
-            <marker date="1558183794604" expanded="true" signature="705:5358" ph="{...}" />
-            <marker date="1558183794604" expanded="true" signature="764:827" ph="{...}" />
-            <marker date="1558183794604" expanded="true" signature="949:3776" ph="{...}" />
-            <marker date="1558183794604" expanded="true" signature="1477:1740" ph="{...}" />
-            <marker date="1558183794604" expanded="true" signature="2168:2381" ph="{...}" />
-            <marker date="1558183794604" expanded="true" signature="2417:3764" ph="{...}" />
-            <marker date="1558183794604" expanded="true" signature="2507:3300" ph="{...}" />
-            <marker date="1558183794604" expanded="true" signature="2562:3278" ph="{...}" />
-            <marker date="1558183794604" expanded="true" signature="2994:3196" ph="{...}" />
-            <marker date="1558183794604" expanded="true" signature="3494:3745" ph="{...}" />
-            <marker date="1558183794604" expanded="true" signature="3832:4426" ph="{...}" />
-            <marker date="1558183794604" expanded="true" signature="3966:4083" ph="/* Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.), ... */" />
-            <marker date="1558183794604" expanded="true" signature="4499:4861" ph="{...}" />
-            <marker date="1558183794604" expanded="true" signature="4933:5352" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Models/User/UserInfo.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="15" column="10" lean-forward="true" selection-start-line="15" selection-end-line="16" />
-          <folding>
-            <marker date="1558125125667" expanded="false" signature="6:110" ph="..." />
-            <marker date="1558125125667" expanded="true" signature="133:959" ph="{...}" />
-            <marker date="1558125125667" expanded="true" signature="140:193" ph="/// Пользователь ... " />
-            <marker date="1558125125667" expanded="true" signature="244:957" ph="{...}" />
-            <marker date="1558125125667" expanded="true" signature="259:345" ph="/// Уникальный идентификатор пользователя ... " />
-            <marker date="1558125125667" expanded="true" signature="414:486" ph="/// Хэш пароля пользователя ... " />
-            <marker date="1558125125667" expanded="true" signature="553:626" ph="/// Соль пароля пользователя ... " />
-            <marker date="1558125125667" expanded="true" signature="693:771" ph="/// Дата регистрации пользователя ... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/CB5BE0C7-4433-425A-AE2A-B70ED6C7054C/97/8d17fae1/ExceptionDispatchInfo.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="91" column="6" selection-start-line="91" selection-start-column="6" selection-end-line="91" selection-end-column="6" />
-          <folding>
-            <marker date="1554924342916" expanded="true" signature="0:360" ph="/* Decompiled with JetBrains decompiler ... */" />
-            <marker date="1554924342916" expanded="true" signature="431:2426" ph="{...}" />
-            <marker date="1554924342916" expanded="true" signature="477:2424" ph="{...}" />
-            <marker date="1554924342916" expanded="true" signature="759:1239" ph="{...}" />
-            <marker date="1554924342916" expanded="true" signature="1280:1360" ph="{...}" />
-            <marker date="1554924342916" expanded="true" signature="1296:1354" ph="{...}" />
-            <marker date="1554924342916" expanded="true" signature="1395:1470" ph="{...}" />
-            <marker date="1554924342916" expanded="true" signature="1411:1464" ph="{...}" />
-            <marker date="1554924342916" expanded="true" signature="1513:1585" ph="{...}" />
-            <marker date="1554924342916" expanded="true" signature="1529:1579" ph="{...}" />
-            <marker date="1554924342916" expanded="true" signature="1625:1701" ph="{...}" />
-            <marker date="1554924342916" expanded="true" signature="1641:1695" ph="{...}" />
-            <marker date="1554924342916" expanded="true" signature="1739:1817" ph="{...}" />
-            <marker date="1554924342916" expanded="true" signature="1755:1811" ph="{...}" />
-            <marker date="1554924342916" expanded="true" signature="1884:2049" ph="{...}" />
-            <marker date="1554924342916" expanded="true" signature="2087:2158" ph="{...}" />
-            <marker date="1554924342916" expanded="true" signature="2103:2152" ph="{...}" />
-            <marker date="1554924342916" expanded="true" signature="2206:2307" ph="{...}" />
-            <marker date="1554924342916" expanded="true" signature="2355:2420" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Models/CardItem/CardItem.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="20" lean-forward="true" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
-          <folding>
-            <marker date="1557558359050" expanded="true" signature="78:534" ph="{...}" />
-            <marker date="1557558359050" expanded="true" signature="85:131" ph="/// Карта ... " />
-            <marker date="1557558359050" expanded="true" signature="193:532" ph="{...}" />
-            <marker date="1557558359050" expanded="true" signature="216:284" ph="/// Вопрос/задача карты ... " />
-            <marker date="1557558359050" expanded="true" signature="381:451" ph="/// Ответ на вопрос карты ... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Models/CardItem/CardContent.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="10" column="28" lean-forward="true" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
-          <folding>
-            <marker date="1558125310808" expanded="true" signature="6:151" ph="..." />
-            <marker date="1558125310808" expanded="true" signature="178:601" ph="{...}" />
-            <marker date="1558125310808" expanded="true" signature="185:242" ph="/// Содержимое карты ... " />
-            <marker date="1558125310808" expanded="true" signature="299:599" ph="{...}" />
-            <marker date="1558125310808" expanded="true" signature="314:377" ph="/// Текст на карте ... " />
-            <marker date="1558125310808" expanded="true" signature="466:527" ph="/// Код на карте ... " />
+            <marker date="1558642741551" expanded="false" signature="6:77" ph="..." />
+            <marker date="1558642741551" expanded="true" signature="124:537" ph="{...}" />
+            <marker date="1558642741551" expanded="true" signature="170:535" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Models/CardsCollection/Repositories/PostgreCollectionsRepository.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="55" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="55" />
+        <state relative-caret-position="613">
+          <caret line="46" column="9" selection-start-line="46" selection-start-column="9" selection-end-line="46" selection-end-column="9" />
           <folding>
-            <marker date="1558250185721" expanded="true" signature="76:293" ph="{...}" />
-            <marker date="1558250185721" expanded="true" signature="149:291" ph="{...}" />
-            <marker date="1558250185721" expanded="true" signature="209:285" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MemoryCardsAPI/Controllers/CardsController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="40" column="21" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="21" />
-          <folding>
-            <marker date="1558033894707" expanded="false" signature="6:196" ph="..." />
-            <marker date="1558033894707" expanded="true" signature="234:1874" ph="{...}" />
-            <marker date="1558033894707" expanded="true" signature="241:287" ph="/// Cards ... " />
-            <marker date="1558033894707" expanded="true" signature="404:1872" ph="{...}" />
-            <marker date="1558033894707" expanded="true" signature="521:587" ph="{...}" />
-            <marker date="1558033894707" expanded="true" signature="597:846" ph="/// Post Card ... " />
-            <marker date="1558033894707" expanded="true" signature="1030:1368" ph="{...}" />
-            <marker date="1558033894707" expanded="true" signature="1259:1320" ph="{...}" />
-            <marker date="1558033894707" expanded="true" signature="1378:1532" ph="/// Post Card ... " />
-            <marker date="1558033894707" expanded="true" signature="1664:1866" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Models/User/Services/UserService.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="149" column="13" lean-forward="true" selection-start-line="149" selection-start-column="13" selection-end-line="149" selection-end-column="13" />
-          <folding>
-            <marker date="1558252199953" expanded="false" signature="6:154" ph="..." />
-            <marker date="1558252199953" expanded="true" signature="186:8328" ph="{...}" />
-            <marker date="1558252199953" expanded="true" signature="232:8326" ph="{...}" />
-            <marker date="1558252199953" expanded="true" signature="550:612" ph="{...}" />
-            <marker date="1558252199953" expanded="true" signature="681:1120" ph="{...}" />
-            <marker date="1558252199953" expanded="true" signature="1195:1491" ph="{...}" />
-            <marker date="1558252199953" expanded="true" signature="1291:1454" ph="{...}" />
-            <marker date="1558252199953" expanded="true" signature="1607:2110" ph="{...}" />
-            <marker date="1558252199953" expanded="true" signature="1894:1998" ph="{...}" />
-            <marker date="1558252199953" expanded="true" signature="2029:2074" ph="{...}" />
-            <marker date="1558252199953" expanded="true" signature="2195:2548" ph="{...}" />
-            <marker date="1558252199953" expanded="true" signature="2598:2764" ph="{...}" />
-            <marker date="1558252199953" expanded="true" signature="2642:2699" ph="{...}" />
-            <marker date="1558252199953" expanded="true" signature="2813:3029" ph="{...}" />
-            <marker date="1558252199953" expanded="true" signature="2857:2961" ph="{...}" />
-            <marker date="1558252199953" expanded="true" signature="3106:3891" ph="{...}" />
-            <marker date="1558252199953" expanded="true" signature="3528:3818" ph="{...}" />
-            <marker date="1558252199953" expanded="true" signature="3909:8319" ph="private helper methods" />
-            <marker date="1558252199953" expanded="false" signature="4011:4552" ph="{...}" />
-            <marker date="1558252199953" expanded="true" signature="4624:4933" ph="{...}" />
-            <marker date="1558252199953" expanded="true" signature="4739:4897" ph="{...}" />
-            <marker date="1558252199953" expanded="true" signature="4813:4883" ph="{...}" />
-            <marker date="1558252199953" expanded="true" signature="5021:5209" ph="{...}" />
-            <marker date="1558252199953" expanded="true" signature="5115:5173" ph="{...}" />
-            <marker date="1558252199953" expanded="true" signature="5265:5472" ph="{...}" />
-            <marker date="1558252199953" expanded="true" signature="5587:6106" ph="{...}" />
-            <marker date="1558252199953" expanded="true" signature="5932:6096" ph="{...}" />
-            <marker date="1558252199953" expanded="true" signature="6209:7295" ph="{...}" />
-            <marker date="1558252199953" expanded="true" signature="6962:7259" ph="{...}" />
-            <marker date="1558252199953" expanded="true" signature="7137:7245" ph="{...}" />
-            <marker date="1558252199953" expanded="true" signature="7376:7928" ph="{...}" />
-            <marker date="1558252199953" expanded="true" signature="7441:7632" ph="{...}" />
-            <marker date="1558252199953" expanded="true" signature="7712:7918" ph="{...}" />
-            <marker date="1558252199953" expanded="true" signature="8009:8291" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MemoryCardsAPI/Controllers/UsersController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1170">
-          <caret line="93" column="13" lean-forward="true" selection-start-line="85" selection-start-column="12" selection-end-line="93" selection-end-column="13" />
-          <folding>
-            <marker date="1558124618056" expanded="false" signature="6:458" ph="..." />
-            <marker date="1558124618056" expanded="true" signature="496:4519" ph="{...}" />
-            <marker date="1558124618056" expanded="true" signature="606:4517" ph="{...}" />
-            <marker date="1558124618056" expanded="true" signature="863:1011" ph="{...}" />
-            <marker date="1558124618056" expanded="true" signature="1152:1775" ph="{...}" />
-            <marker date="1558124618056" expanded="true" signature="1563:1763" ph="{...}" />
-            <marker date="1558124618056" expanded="true" signature="1825:2630" ph="{...}" />
-            <marker date="1558124618056" expanded="true" signature="2092:2458" ph="{...}" />
-            <marker date="1558124618056" expanded="true" signature="2167:2237" ph="{...}" />
-            <marker date="1558124618056" expanded="true" signature="2827:3251" ph="{...}" />
-            <marker date="1558124618056" expanded="true" signature="2966:3114" ph="{...}" />
-            <marker date="1558124618056" expanded="true" signature="3150:3241" ph="{...}" />
-            <marker date="1558124618056" expanded="true" signature="3338:3686" ph="{...}" />
-            <marker date="1558124618056" expanded="true" signature="3800:4205" ph="{...}" />
-            <marker date="1558124618056" expanded="true" signature="3949:4066" ph="{...}" />
-            <marker date="1558124618056" expanded="true" signature="4102:4195" ph="{...}" />
-            <marker date="1558124618056" expanded="true" signature="4294:4511" ph="{...}" />
-            <marker date="1558124618056" expanded="true" signature="4408:4465" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Models/CardsCollection/CardsCollection.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="33" column="38" selection-start-line="33" selection-start-column="38" selection-end-line="33" selection-end-column="38" />
-          <folding>
-            <marker date="1558252199942" expanded="false" signature="6:144" ph="..." />
-            <marker date="1558252199942" expanded="true" signature="178:1241" ph="{...}" />
-            <marker date="1558252199942" expanded="true" signature="185:240" ph="/// Коллекция карт ... " />
-            <marker date="1558252199942" expanded="true" signature="299:1239" ph="{...}" />
-            <marker date="1558252199942" expanded="true" signature="395:478" ph="/// Уникальный идентификатор коллекции ... " />
-            <marker date="1558252199942" expanded="true" signature="573:640" ph="/// Название коллекции ... " />
-            <marker date="1558252199942" expanded="true" signature="754:817" ph="/// Множество карт ... " />
-            <marker date="1558252199942" expanded="true" signature="906:987" ph="/// Пользователь создавший коллекцию ... " />
-            <marker date="1558252199942" expanded="true" signature="1074:1146" ph="/// Дата создания коллекции ... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Models/User/Repositories/InMemoryUsersRepository.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="42" column="27" selection-start-line="42" selection-start-column="27" selection-end-line="42" selection-end-column="27" />
-          <folding>
-            <marker date="1558120568953" expanded="false" signature="6:220" ph="..." />
-            <marker date="1558120568953" expanded="true" signature="256:2517" ph="{...}" />
-            <marker date="1558120568953" expanded="true" signature="318:2515" ph="{...}" />
-            <marker date="1558120568953" expanded="true" signature="430:486" ph="{...}" />
-            <marker date="1558120568953" expanded="true" signature="588:825" ph="{...}" />
-            <marker date="1558120568953" expanded="true" signature="891:998" ph="{...}" />
-            <marker date="1558120568953" expanded="true" signature="1053:1127" ph="{...}" />
-            <marker date="1558120568953" expanded="true" signature="1197:1289" ph="{...}" />
-            <marker date="1558120568953" expanded="true" signature="1356:1460" ph="{...}" />
-            <marker date="1558120568953" expanded="true" signature="1518:1793" ph="{...}" />
-            <marker date="1558120568953" expanded="true" signature="1616:1756" ph="{...}" />
-            <marker date="1558120568953" expanded="true" signature="1913:1982" ph="{...}" />
-            <marker date="1558120568953" expanded="true" signature="2072:2141" ph="{...}" />
-            <marker date="1558120568953" expanded="true" signature="2203:2358" ph="{...}" />
-            <marker date="1558120568953" expanded="true" signature="2440:2509" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Models/CardsCollection/Repositories/ICollectionsRepository.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="66" selection-start-line="12" selection-start-column="66" selection-end-line="12" selection-end-column="66" />
-          <folding>
-            <marker date="1558256150306" expanded="true" signature="6:77" ph="..." />
-            <marker date="1558256150306" expanded="true" signature="124:531" ph="{...}" />
-            <marker date="1558256150306" expanded="true" signature="170:529" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Models/CardItem/Services/CardService.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="130" column="24" selection-start-line="130" selection-start-column="24" selection-end-line="130" selection-end-column="24" />
-          <folding>
-            <marker date="1558252129879" expanded="false" signature="6:137" ph="..." />
-            <marker date="1558252129879" expanded="true" signature="173:3693" ph="{...}" />
-            <marker date="1558252129879" expanded="true" signature="219:3691" ph="{...}" />
-            <marker date="1558252129879" expanded="true" signature="436:498" ph="{...}" />
-            <marker date="1558252129879" expanded="true" signature="575:928" ph="{...}" />
-            <marker date="1558252129879" expanded="true" signature="709:891" ph="{...}" />
-            <marker date="1558252129879" expanded="true" signature="1037:1364" ph="{...}" />
-            <marker date="1558252129879" expanded="true" signature="1142:1252" ph="{...}" />
-            <marker date="1558252129879" expanded="true" signature="1283:1328" ph="{...}" />
-            <marker date="1558252129879" expanded="true" signature="1477:1683" ph="{...}" />
-            <marker date="1558252129879" expanded="true" signature="1522:1595" ph="{...}" />
-            <marker date="1558252129879" expanded="true" signature="1693:3685" ph="private helper methods" />
-            <marker date="1558252129879" expanded="true" signature="1791:2385" ph="{...}" />
-            <marker date="1558252129879" expanded="true" signature="2445:2789" ph="{...}" />
-            <marker date="1558252129879" expanded="true" signature="2508:2566" ph="{...}" />
-            <marker date="1558252129879" expanded="true" signature="2624:2738" ph="{...}" />
-            <marker date="1558252129879" expanded="true" signature="2852:3302" ph="{...}" />
-            <marker date="1558252129879" expanded="true" signature="2996:3151" ph="{...}" />
-            <marker date="1558252129879" expanded="true" signature="3070:3137" ph="{...}" />
-            <marker date="1558252129879" expanded="true" signature="3208:3266" ph="{...}" />
-            <marker date="1558252129879" expanded="true" signature="3362:3665" ph="{...}" />
-            <marker date="1558252129879" expanded="true" signature="3411:3468" ph="{...}" />
-            <marker date="1558252129879" expanded="true" signature="3571:3629" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Models/CardsCollection/Repositories/InMemoryCollectionsRepository.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
-          <folding>
-            <marker date="1558256150323" expanded="true" signature="6:152" ph="..." />
-            <marker date="1558256150323" expanded="true" signature="199:1717" ph="{...}" />
-            <marker date="1558256150323" expanded="true" signature="273:1715" ph="{...}" />
-            <marker date="1558256150323" expanded="true" signature="391:447" ph="{...}" />
-            <marker date="1558256150323" expanded="true" signature="527:695" ph="{...}" />
-            <marker date="1558256150323" expanded="true" signature="792:1065" ph="{...}" />
-            <marker date="1558256150323" expanded="true" signature="1169:1351" ph="{...}" />
-            <marker date="1558256150323" expanded="true" signature="1426:1544" ph="{...}" />
-            <marker date="1558256150323" expanded="true" signature="1618:1709" ph="{...}" />
+            <marker date="1558642690482" expanded="false" signature="6:152" ph="..." />
+            <marker date="1558642690482" expanded="true" signature="199:1653" ph="{...}" />
+            <marker date="1558642690482" expanded="true" signature="272:1651" ph="{...}" />
+            <marker date="1558642690482" expanded="true" signature="387:443" ph="{...}" />
+            <marker date="1558642690482" expanded="true" signature="523:691" ph="{...}" />
+            <marker date="1558642690482" expanded="true" signature="780:947" ph="{...}" />
+            <marker date="1558642690482" expanded="true" signature="1043:1225" ph="{...}" />
+            <marker date="1558642690482" expanded="true" signature="1292:1410" ph="{...}" />
+            <marker date="1558642690482" expanded="true" signature="1490:1645" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Models/CardsCollection/Services/ICollectionService.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="87" selection-start-line="12" selection-start-column="87" selection-end-line="12" selection-end-column="87" />
+        <state relative-caret-position="162">
+          <caret line="13" column="67" lean-forward="true" selection-start-line="13" selection-start-column="67" selection-end-line="13" selection-end-column="67" />
           <folding>
-            <marker date="1558256603552" expanded="true" signature="6:77" ph="..." />
-            <marker date="1558256603552" expanded="true" signature="120:647" ph="{...}" />
-            <marker date="1558256603552" expanded="true" signature="162:645" ph="{...}" />
+            <marker date="1558642724542" expanded="false" signature="6:77" ph="..." />
+            <marker date="1558642724542" expanded="true" signature="120:656" ph="{...}" />
+            <marker date="1558642724542" expanded="true" signature="162:654" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Models/CardsCollection/Services/CollectionService.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="82" column="37" lean-forward="true" selection-start-line="82" selection-start-column="37" selection-end-line="82" selection-end-column="37" />
+        <state relative-caret-position="46">
+          <caret line="88" column="49" lean-forward="true" selection-start-line="88" selection-start-column="49" selection-end-line="88" selection-end-column="49" />
           <folding>
-            <marker date="1558256603547" expanded="true" signature="6:141" ph="..." />
-            <marker date="1558256603547" expanded="true" signature="184:4926" ph="{...}" />
-            <marker date="1558256603547" expanded="true" signature="242:4924" ph="{...}" />
-            <marker date="1558256603547" expanded="true" signature="477:539" ph="{...}" />
-            <marker date="1558256603547" expanded="true" signature="632:1005" ph="{...}" />
-            <marker date="1558256603547" expanded="true" signature="762:958" ph="{...}" />
-            <marker date="1558256603547" expanded="true" signature="1090:1381" ph="{...}" />
-            <marker date="1558256603547" expanded="true" signature="1178:1269" ph="{...}" />
-            <marker date="1558256603547" expanded="true" signature="1300:1345" ph="{...}" />
-            <marker date="1558256603547" expanded="true" signature="1496:2199" ph="{...}" />
-            <marker date="1558256603547" expanded="true" signature="1841:1899" ph="{...}" />
-            <marker date="1558256603547" expanded="true" signature="1982:2075" ph="{...}" />
-            <marker date="1558256603547" expanded="true" signature="2106:2151" ph="{...}" />
-            <marker date="1558256603547" expanded="true" signature="2300:2463" ph="{...}" />
-            <marker date="1558256603547" expanded="true" signature="2549:2756" ph="{...}" />
-            <marker date="1558256603547" expanded="true" signature="2837:3036" ph="{...}" />
-            <marker date="1558256603547" expanded="false" signature="3046:4918" ph="private helper methods" />
-            <marker date="1558256603547" expanded="true" signature="3158:3422" ph="{...}" />
-            <marker date="1558256603547" expanded="true" signature="3509:4021" ph="{...}" />
-            <marker date="1558256603547" expanded="true" signature="4075:4179" ph="{...}" />
-            <marker date="1558256603547" expanded="true" signature="4275:4463" ph="{...}" />
-            <marker date="1558256603547" expanded="true" signature="4369:4427" ph="{...}" />
-            <marker date="1558256603547" expanded="true" signature="4544:4890" ph="{...}" />
-            <marker date="1558256603547" expanded="true" signature="4665:4854" ph="{...}" />
-            <marker date="1558256603547" expanded="true" signature="4770:4840" ph="{...}" />
+            <marker date="1558642741547" expanded="false" signature="6:141" ph="..." />
+            <marker date="1558642741547" expanded="true" signature="184:4997" ph="{...}" />
+            <marker date="1558642741547" expanded="true" signature="242:4995" ph="{...}" />
+            <marker date="1558642741547" expanded="true" signature="477:539" ph="{...}" />
+            <marker date="1558642741547" expanded="true" signature="632:1005" ph="{...}" />
+            <marker date="1558642741547" expanded="true" signature="762:958" ph="{...}" />
+            <marker date="1558642741547" expanded="true" signature="1090:1381" ph="{...}" />
+            <marker date="1558642741547" expanded="true" signature="1178:1269" ph="{...}" />
+            <marker date="1558642741547" expanded="true" signature="1300:1345" ph="{...}" />
+            <marker date="1558642741547" expanded="true" signature="1496:2249" ph="{...}" />
+            <marker date="1558642741547" expanded="true" signature="1841:1949" ph="{...}" />
+            <marker date="1558642741547" expanded="true" signature="2032:2125" ph="{...}" />
+            <marker date="1558642741547" expanded="true" signature="2156:2201" ph="{...}" />
+            <marker date="1558642741547" expanded="true" signature="2350:2513" ph="{...}" />
+            <marker date="1558642741547" expanded="true" signature="2599:2806" ph="{...}" />
+            <marker date="1558642741547" expanded="true" signature="2902:3107" ph="{...}" />
+            <marker date="1558642741547" expanded="false" signature="3117:4989" ph="private helper methods" />
+            <marker date="1558642741547" expanded="true" signature="3229:3493" ph="{...}" />
+            <marker date="1558642741547" expanded="true" signature="3580:4092" ph="{...}" />
+            <marker date="1558642741547" expanded="true" signature="4146:4250" ph="{...}" />
+            <marker date="1558642741547" expanded="true" signature="4346:4534" ph="{...}" />
+            <marker date="1558642741547" expanded="true" signature="4440:4498" ph="{...}" />
+            <marker date="1558642741547" expanded="true" signature="4615:4961" ph="{...}" />
+            <marker date="1558642741547" expanded="true" signature="4736:4925" ph="{...}" />
+            <marker date="1558642741547" expanded="true" signature="4841:4911" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Models/Training/Services/TrainingService.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="33" column="28" lean-forward="true" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
+          <folding>
+            <marker date="1558720771458" expanded="false" signature="6:176" ph="..." />
+            <marker date="1558720771458" expanded="true" signature="212:2061" ph="{...}" />
+            <marker date="1558720771458" expanded="true" signature="266:2059" ph="{...}" />
+            <marker date="1558720771458" expanded="true" signature="393:455" ph="{...}" />
+            <marker date="1558720771458" expanded="true" signature="521:933" ph="{...}" />
+            <marker date="1558720771458" expanded="true" signature="702:892" ph="{...}" />
+            <marker date="1558720771458" expanded="true" signature="1010:1126" ph="{...}" />
+            <marker date="1558720771458" expanded="true" signature="1211:1345" ph="{...}" />
+            <marker date="1558720771458" expanded="true" signature="1436:1663" ph="{...}" />
+            <marker date="1558720771458" expanded="false" signature="1673:2053" ph="private helper methods" />
+            <marker date="1558720771458" expanded="true" signature="1761:2033" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Models/Training/Repositories/InMemoryTrainingRepository.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="28" column="20" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
+          <folding>
+            <marker date="1558557585503" expanded="false" signature="6:197" ph="..." />
+            <marker date="1558557585503" expanded="true" signature="237:1019" ph="{...}" />
+            <marker date="1558557585503" expanded="true" signature="305:1017" ph="{...}" />
+            <marker date="1558557585503" expanded="true" signature="419:475" ph="{...}" />
+            <marker date="1558557585503" expanded="true" signature="553:827" ph="{...}" />
+            <marker date="1558557585503" expanded="true" signature="894:1011" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Converters/UserConverter.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="2" selection-end-column="26" />
+          <folding>
+            <marker date="1558638299473" expanded="true" signature="6:73" ph="..." />
+            <marker date="1558638299473" expanded="true" signature="95:1293" ph="{...}" />
+            <marker date="1558638299473" expanded="true" signature="106:242" ph="/// Предоставляет методы конвертирования пользователя между серверной и клиентской моделями ... " />
+            <marker date="1558638299473" expanded="true" signature="284:1291" ph="{...}" />
+            <marker date="1558638299473" expanded="true" signature="307:596" ph="/// Переводит информацию для редактирования пользователя из клиентской модели в серверную ... " />
+            <marker date="1558638299473" expanded="true" signature="688:1281" ph="{...}" />
+            <marker date="1558638299473" expanded="true" signature="740:847" ph="{...}" />
+            <marker date="1558638299473" expanded="true" signature="924:1230" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Models/User/UserInfo.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="39" column="8" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="8" />
+          <folding>
+            <marker date="1558724528655" expanded="false" signature="6:146" ph="..." />
+            <marker date="1558724528655" expanded="true" signature="169:1174" ph="{...}" />
+            <marker date="1558724528655" expanded="true" signature="176:229" ph="/// Пользователь ... " />
+            <marker date="1558724528655" expanded="true" signature="299:1172" ph="{...}" />
+            <marker date="1558724528655" expanded="true" signature="314:400" ph="/// Уникальный идентификатор пользователя ... " />
+            <marker date="1558724528655" expanded="true" signature="509:581" ph="/// Хэш пароля пользователя ... " />
+            <marker date="1558724528655" expanded="true" signature="688:761" ph="/// Соль пароля пользователя ... " />
+            <marker date="1558724528655" expanded="true" signature="868:946" ph="/// Дата регистрации пользователя ... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Models/User/UserRegistrationInfo.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="59">
+          <caret line="13" column="22" selection-start-line="13" selection-end-line="14" />
+          <folding>
+            <marker date="1558425978072" expanded="true" signature="58:702" ph="{...}" />
+            <marker date="1558425978072" expanded="true" signature="65:145" ph="/// Информация для регистрации пользователя ... " />
+            <marker date="1558425978072" expanded="true" signature="202:700" ph="{...}" />
+            <marker date="1558425978072" expanded="true" signature="217:284" ph="/// Логин пользователя ... " />
+            <marker date="1558425978072" expanded="true" signature="376:443" ph="/// Почта пользователя ... " />
+            <marker date="1558425978072" expanded="true" signature="541:609" ph="/// Пароль пользователя ... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Models/User/UserSearchInfo.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+          <folding>
+            <marker date="1558425978073" expanded="true" signature="21:78" ph="{...}" />
+            <marker date="1558425978073" expanded="true" signature="55:76" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Models/User/UserPatchInfo.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-153">
+          <caret line="18" column="30" lean-forward="true" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
+          <folding>
+            <marker date="1558636688673" expanded="false" signature="6:49" ph="..." />
+            <marker date="1558636688673" expanded="true" signature="72:1204" ph="{...}" />
+            <marker date="1558636688673" expanded="true" signature="79:162" ph="/// Информация для редактирования пользователя ... " />
+            <marker date="1558636688673" expanded="true" signature="212:1202" ph="{...}" />
+            <marker date="1558636688673" expanded="true" signature="227:302" ph="/// Идентификатор пользователя ... " />
+            <marker date="1558636688673" expanded="true" signature="378:445" ph="/// Логин пользователя ... " />
+            <marker date="1558636688673" expanded="true" signature="537:604" ph="/// Почта пользователя ... " />
+            <marker date="1558636688673" expanded="true" signature="702:770" ph="/// Пароль пользователя ... " />
+            <marker date="1558636688673" expanded="true" signature="873:938" ph="/// Имя пользователя ... " />
+            <marker date="1558636688673" expanded="true" signature="1042:1111" ph="/// Фамилия пользователя ... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Models/User/UserLoginInfo.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+          <folding>
+            <marker date="1558425978070" expanded="true" signature="58:703" ph="{...}" />
+            <marker date="1558425978070" expanded="true" signature="65:140" ph="/// Информация для логина пользователя ... " />
+            <marker date="1558425978070" expanded="true" signature="190:701" ph="{...}" />
+            <marker date="1558425978070" expanded="true" signature="205:272" ph="/// Логин пользователя ... " />
+            <marker date="1558425978070" expanded="true" signature="364:432" ph="/// Пароль пользователя ... " />
+            <marker date="1558425978070" expanded="true" signature="535:610" ph="/// Запоминать ли пользователя ... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Models/Training/MemorizationLevels.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <marker date="1558724590735" expanded="true" signature="62:457" ph="{...}" />
+            <marker date="1558724590735" expanded="true" signature="69:138" ph="/// Уровни сложности запоминания ... " />
+            <marker date="1558724590735" expanded="true" signature="192:455" ph="{...}" />
+            <marker date="1558724590735" expanded="true" signature="207:261" ph="/// Легко ... " />
+            <marker date="1558724590735" expanded="true" signature="289:347" ph="/// Нормально ... " />
+            <marker date="1558724590735" expanded="true" signature="377:432" ph="/// Сложно ... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Models/Training/Training.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
+          <folding>
+            <marker date="1558724599263" expanded="false" signature="6:180" ph="..." />
+            <marker date="1558724599263" expanded="true" signature="207:1420" ph="{...}" />
+            <marker date="1558724599263" expanded="true" signature="214:278" ph="/// Тренировка пользователя ... " />
+            <marker date="1558724599263" expanded="true" signature="347:1418" ph="{...}" />
+            <marker date="1558724599263" expanded="true" signature="362:448" ph="/// Уникальный идентификатор пользователя ... " />
+            <marker date="1558724599263" expanded="true" signature="557:637" ph="/// К какому пользователю относится ... " />
+            <marker date="1558724599263" expanded="true" signature="764:836" ph="/// К какой карте относится ... " />
+            <marker date="1558724599263" expanded="true" signature="963:1039" ph="/// Дата решения задачи с карты ... " />
+            <marker date="1558724599263" expanded="true" signature="1185:1269" ph="/// Уровень сложности запоминания карты ... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Models/CardsCollection/CardsCollection.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="52" column="8" selection-start-line="52" selection-start-column="8" selection-end-line="52" selection-end-column="8" />
+          <folding>
+            <marker date="1558724627798" expanded="false" signature="6:180" ph="..." />
+            <marker date="1558724627798" expanded="true" signature="214:1483" ph="{...}" />
+            <marker date="1558724627798" expanded="true" signature="221:276" ph="/// Коллекция карт ... " />
+            <marker date="1558724627798" expanded="true" signature="354:1481" ph="{...}" />
+            <marker date="1558724627798" expanded="true" signature="437:520" ph="/// Уникальный идентификатор коллекции ... " />
+            <marker date="1558724627798" expanded="true" signature="655:722" ph="/// Название коллекции ... " />
+            <marker date="1558724627798" expanded="true" signature="876:939" ph="/// Множество карт ... " />
+            <marker date="1558724627798" expanded="true" signature="1068:1149" ph="/// Пользователь создавший коллекцию ... " />
+            <marker date="1558724627798" expanded="true" signature="1276:1348" ph="/// Дата создания коллекции ... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Models/CardItem/CardCreationInfo.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+          <folding>
+            <marker date="1558724666672" expanded="true" signature="62:466" ph="{...}" />
+            <marker date="1558724666672" expanded="true" signature="117:464" ph="{...}" />
+            <marker date="1558724666672" expanded="true" signature="132:200" ph="/// Вопрос/задача карты ... " />
+            <marker date="1558724666672" expanded="true" signature="300:370" ph="/// Ответ на вопрос карты ... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Models/CardItem/CardSearchInfo.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+          <folding>
+            <marker date="1558722072343" expanded="true" signature="25:82" ph="{...}" />
+            <marker date="1558722072343" expanded="true" signature="59:80" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Models/CardItem/CardItem.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="24" column="8" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
+          <folding>
+            <marker date="1558724703687" expanded="true" signature="6:87" ph="..." />
+            <marker date="1558724703687" expanded="true" signature="114:669" ph="{...}" />
+            <marker date="1558724703687" expanded="true" signature="121:167" ph="/// Карта ... " />
+            <marker date="1558724703687" expanded="true" signature="248:667" ph="{...}" />
+            <marker date="1558724703687" expanded="true" signature="271:339" ph="/// Вопрос/задача карты ... " />
+            <marker date="1558724703687" expanded="true" signature="476:546" ph="/// Ответ на вопрос карты ... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Models/CardItem/CardItemInfo.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="34" column="8" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="8" />
+          <folding>
+            <marker date="1558724737617" expanded="false" signature="6:146" ph="..." />
+            <marker date="1558724737617" expanded="true" signature="173:954" ph="{...}" />
+            <marker date="1558724737617" expanded="true" signature="180:239" ph="/// Информация о карте ... " />
+            <marker date="1558724737617" expanded="true" signature="313:952" ph="{...}" />
+            <marker date="1558724737617" expanded="true" signature="328:407" ph="/// Уникальный идентификатор карты ... " />
+            <marker date="1558724737617" expanded="true" signature="542:619" ph="/// Пользователь создавший карту ... " />
+            <marker date="1558724737617" expanded="true" signature="746:814" ph="/// Дата создания карты ... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Models/CardItem/CardPatchInfo.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="367">
+          <caret line="27" column="8" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
+          <folding>
+            <marker date="1558724738335" expanded="true" signature="6:49" ph="..." />
+            <marker date="1558724738335" expanded="true" signature="76:728" ph="{...}" />
+            <marker date="1558724738335" expanded="true" signature="83:159" ph="/// Информация для редактирования карты ... " />
+            <marker date="1558724738335" expanded="true" signature="209:726" ph="{...}" />
+            <marker date="1558724738335" expanded="true" signature="224:299" ph="/// Идентификатор пользователя ... " />
+            <marker date="1558724738335" expanded="true" signature="394:462" ph="/// Вопрос/задача карты ... " />
+            <marker date="1558724738335" expanded="true" signature="562:632" ph="/// Ответ на вопрос карты ... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Client.Models/User/UserPatchInfo.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+          <folding>
+            <marker date="1558724760951" expanded="true" signature="65:1046" ph="{...}" />
+            <marker date="1558724760951" expanded="true" signature="72:155" ph="/// Информация для редактирования пользователя ... " />
+            <marker date="1558724760951" expanded="true" signature="205:1044" ph="{...}" />
+            <marker date="1558724760951" expanded="true" signature="220:287" ph="/// Логин пользователя ... " />
+            <marker date="1558724760951" expanded="true" signature="379:446" ph="/// Почта пользователя ... " />
+            <marker date="1558724760951" expanded="true" signature="544:612" ph="/// Пароль пользователя ... " />
+            <marker date="1558724760951" expanded="true" signature="715:780" ph="/// Имя пользователя ... " />
+            <marker date="1558724760951" expanded="true" signature="884:953" ph="/// Фамилия пользователя ... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Client.Models/User/User.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+          <folding>
+            <marker date="1558724763838" expanded="true" signature="65:837" ph="{...}" />
+            <marker date="1558724763838" expanded="true" signature="72:125" ph="/// Пользователь ... " />
+            <marker date="1558724763838" expanded="true" signature="166:835" ph="{...}" />
+            <marker date="1558724763838" expanded="true" signature="181:246" ph="/// Имя пользователя ... " />
+            <marker date="1558724763838" expanded="true" signature="342:411" ph="/// Фамилия пользователя ... " />
+            <marker date="1558724763838" expanded="true" signature="506:573" ph="/// Логин пользователя ... " />
+            <marker date="1558724763838" expanded="true" signature="665:741" ph="/// Почтовый адрес пользователя ... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Client.Models/Training/MemorizationLevels.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="6" column="18" lean-forward="true" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
+          <folding>
+            <marker date="1558724775330" expanded="true" signature="69:464" ph="{...}" />
+            <marker date="1558724775330" expanded="true" signature="76:145" ph="/// Уровни сложности запоминания ... " />
+            <marker date="1558724775330" expanded="true" signature="199:462" ph="{...}" />
+            <marker date="1558724775330" expanded="true" signature="214:268" ph="/// Легко ... " />
+            <marker date="1558724775330" expanded="true" signature="296:354" ph="/// Нормально ... " />
+            <marker date="1558724775330" expanded="true" signature="384:439" ph="/// Сложно ... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Client.Models/CardItem/CardPatchInfo.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <marker date="1558724836000" expanded="true" signature="6:49" ph="..." />
+            <marker date="1558724836000" expanded="true" signature="83:735" ph="{...}" />
+            <marker date="1558724836000" expanded="true" signature="90:166" ph="/// Информация для редактирования карты ... " />
+            <marker date="1558724836000" expanded="true" signature="216:733" ph="{...}" />
+            <marker date="1558724836000" expanded="true" signature="231:306" ph="/// Идентификатор пользователя ... " />
+            <marker date="1558724836000" expanded="true" signature="401:469" ph="/// Вопрос/задача карты ... " />
+            <marker date="1558724836000" expanded="true" signature="569:639" ph="/// Ответ на вопрос карты ... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Models/User/User.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="15" column="39" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
+          <folding>
+            <marker date="1558724411674" expanded="false" signature="6:87" ph="..." />
+            <marker date="1558724411674" expanded="true" signature="110:914" ph="{...}" />
+            <marker date="1558724411674" expanded="true" signature="117:170" ph="/// Пользователь ... " />
+            <marker date="1558724411674" expanded="true" signature="243:912" ph="{...}" />
+            <marker date="1558724411674" expanded="true" signature="258:323" ph="/// Имя пользователя ... " />
+            <marker date="1558724411674" expanded="true" signature="419:488" ph="/// Фамилия пользователя ... " />
+            <marker date="1558724411674" expanded="true" signature="583:650" ph="/// Логин пользователя ... " />
+            <marker date="1558724411674" expanded="true" signature="742:818" ph="/// Почтовый адрес пользователя ... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Mono.framework/Versions/5.18.1/lib/mono/msbuild/15.0/bin/Microsoft.Common.CurrentVersion.targets">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-72">
+          <caret line="2129" column="4" selection-start-line="2129" selection-start-column="4" selection-end-line="2129" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MemoryCardsAPI/MemoryCardsAPI.csproj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="39" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Client.Models/CardItem/CardItemInfo.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+          <folding>
+            <marker date="1558724841861" expanded="true" signature="6:49" ph="..." />
+            <marker date="1558724841861" expanded="true" signature="83:750" ph="{...}" />
+            <marker date="1558724841861" expanded="true" signature="90:149" ph="/// Информация о карте ... " />
+            <marker date="1558724841861" expanded="true" signature="198:748" ph="{...}" />
+            <marker date="1558724841861" expanded="true" signature="213:292" ph="/// Уникальный идентификатор карты ... " />
+            <marker date="1558724841861" expanded="true" signature="389:457" ph="/// Дата создания карты ... " />
+            <marker date="1558724841861" expanded="true" signature="563:648" ph="/// Дата последнего решения задачи карты ... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Converters/TrainingConverter.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="16" column="64" selection-start-line="16" selection-start-column="64" selection-end-line="16" selection-end-column="64" />
+          <folding>
+            <marker date="1558559675174" expanded="false" signature="6:79" ph="..." />
+            <marker date="1558559675174" expanded="true" signature="101:738" ph="{...}" />
+            <marker date="1558559675174" expanded="true" signature="108:234" ph="/// Предоставляет методы конвертирования тренировок между серверной и клиентской моделями ... " />
+            <marker date="1558559675174" expanded="true" signature="269:736" ph="{...}" />
+            <marker date="1558559675174" expanded="true" signature="284:542" ph="/// Переводит уровень сложности запоминания из клиентской модели в серверную ... " />
+            <marker date="1558559675174" expanded="true" signature="643:730" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Client.Models/CardItem/CardContent.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="24" lean-forward="true" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+          <folding>
+            <marker date="1558729322321" expanded="true" signature="69:462" ph="{...}" />
+            <marker date="1558729322321" expanded="true" signature="76:133" ph="/// Содержимое карты ... " />
+            <marker date="1558729322321" expanded="true" signature="181:460" ph="{...}" />
+            <marker date="1558729322321" expanded="true" signature="196:259" ph="/// Текст на карте ... " />
+            <marker date="1558729322321" expanded="true" signature="331:392" ph="/// Код на карте ... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Models/CardItem/CardContent.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+          <folding>
+            <marker date="1558729322317" expanded="true" signature="6:132" ph="..." />
+            <marker date="1558729322317" expanded="true" signature="159:681" ph="{...}" />
+            <marker date="1558729322317" expanded="true" signature="166:223" ph="/// Содержимое карты ... " />
+            <marker date="1558729322317" expanded="true" signature="299:679" ph="{...}" />
+            <marker date="1558729322317" expanded="true" signature="314:377" ph="/// Текст на карте ... " />
+            <marker date="1558729322317" expanded="true" signature="506:567" ph="/// Код на карте ... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MemoryCardsAPI/Startup.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="62" column="71" selection-start-line="62" selection-start-column="71" selection-end-line="62" selection-end-column="71" />
+          <folding>
+            <marker date="1558729510778" expanded="false" signature="6:762" ph="..." />
+            <marker date="1558729510778" expanded="true" signature="788:6139" ph="{...}" />
+            <marker date="1558729510778" expanded="true" signature="815:6137" ph="{...}" />
+            <marker date="1558729510778" expanded="true" signature="874:937" ph="{...}" />
+            <marker date="1558729510778" expanded="true" signature="1059:4411" ph="{...}" />
+            <marker date="1558729510778" expanded="true" signature="1659:2375" ph="{...}" />
+            <marker date="1558729510778" expanded="true" signature="2803:3016" ph="{...}" />
+            <marker date="1558729510778" expanded="true" signature="3052:4399" ph="{...}" />
+            <marker date="1558729510778" expanded="true" signature="3142:3935" ph="{...}" />
+            <marker date="1558729510778" expanded="true" signature="3197:3913" ph="{...}" />
+            <marker date="1558729510778" expanded="true" signature="3629:3831" ph="{...}" />
+            <marker date="1558729510778" expanded="true" signature="4129:4380" ph="{...}" />
+            <marker date="1558729510778" expanded="true" signature="4467:5119" ph="{...}" />
+            <marker date="1558729510778" expanded="true" signature="4647:4764" ph="/* Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.), ... */" />
+            <marker date="1558729510778" expanded="true" signature="5192:5640" ph="{...}" />
+            <marker date="1558729510778" expanded="true" signature="5712:6131" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Client.Models/CardItem/CardItem.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="25" lean-forward="true" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+          <folding>
+            <marker date="1558729177478" expanded="true" signature="69:516" ph="{...}" />
+            <marker date="1558729177478" expanded="true" signature="76:122" ph="/// Карта ... " />
+            <marker date="1558729177478" expanded="true" signature="167:514" ph="{...}" />
+            <marker date="1558729177478" expanded="true" signature="182:250" ph="/// Вопрос/задача карты ... " />
+            <marker date="1558729177478" expanded="true" signature="350:420" ph="/// Ответ на вопрос карты ... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MemoryCardsAPI/Controllers/UsersController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7">
+          <caret line="122" column="8" selection-start-line="122" selection-start-column="8" selection-end-line="127" selection-end-column="42" />
+          <folding>
+            <marker date="1558766558901" expanded="false" signature="6:536" ph="..." />
+            <marker date="1558766558901" expanded="true" signature="574:6348" ph="{...}" />
+            <marker date="1558766558901" expanded="true" signature="684:6346" ph="{...}" />
+            <marker date="1558766558901" expanded="true" signature="941:1089" ph="{...}" />
+            <marker date="1558766558901" expanded="true" signature="1099:1291" ph="/// Update Card ... " />
+            <marker date="1558766558901" expanded="true" signature="1431:2192" ph="{...}" />
+            <marker date="1558766558901" expanded="true" signature="1457:2055" ph="{...}" />
+            <marker date="1558766558901" expanded="true" signature="1815:2039" ph="{...}" />
+            <marker date="1558766558901" expanded="true" signature="2091:2182" ph="{...}" />
+            <marker date="1558766558901" expanded="true" signature="2202:2444" ph="/// Update Card ... " />
+            <marker date="1558766558901" expanded="true" signature="2640:3175" ph="{...}" />
+            <marker date="1558766558901" expanded="true" signature="2666:3038" ph="{...}" />
+            <marker date="1558766558901" expanded="true" signature="2927:3022" ph="{...}" />
+            <marker date="1558766558901" expanded="true" signature="3074:3165" ph="{...}" />
+            <marker date="1558766558901" expanded="true" signature="3185:3355" ph="/// Update Card ... " />
+            <marker date="1558766558901" expanded="true" signature="3441:3949" ph="{...}" />
+            <marker date="1558766558901" expanded="true" signature="3467:3812" ph="{...}" />
+            <marker date="1558766558901" expanded="true" signature="3848:3939" ph="{...}" />
+            <marker date="1558766558901" expanded="true" signature="3959:4224" ph="/// Update Card ... " />
+            <marker date="1558766558901" expanded="true" signature="4341:4779" ph="{...}" />
+            <marker date="1558766558901" expanded="true" signature="4520:4642" ph="{...}" />
+            <marker date="1558766558901" expanded="true" signature="4678:4769" ph="{...}" />
+            <marker date="1558766558901" expanded="true" signature="4789:4962" ph="/// Update Card ... " />
+            <marker date="1558766558901" expanded="true" signature="5050:5475" ph="{...}" />
+            <marker date="1558766558901" expanded="true" signature="5076:5338" ph="{...}" />
+            <marker date="1558766558901" expanded="true" signature="5190:5259" ph="{...}" />
+            <marker date="1558766558901" expanded="true" signature="5374:5465" ph="{...}" />
+            <marker date="1558766558901" expanded="true" signature="5535:6340" ph="{...}" />
+            <marker date="1558766558901" expanded="true" signature="5802:6168" ph="{...}" />
+            <marker date="1558766558901" expanded="true" signature="5877:5947" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Client.Models/Training/TrainingPatchInfo.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+          <folding>
+            <marker date="1558724784939" expanded="true" signature="69:571" ph="{...}" />
+            <marker date="1558724784939" expanded="true" signature="76:157" ph="/// Информация для редактирования тренировки ... " />
+            <marker date="1558724784939" expanded="true" signature="211:569" ph="{...}" />
+            <marker date="1558724784939" expanded="true" signature="226:294" ph="/// Идентификатор карты ... " />
+            <marker date="1558724784939" expanded="true" signature="387:457" ph="/// Сложность запоминания ... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MemoryCardsAPI/Controllers/TrainingsController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="35" column="44" lean-forward="true" selection-start-line="35" selection-start-column="44" selection-end-line="35" selection-end-column="44" />
+          <folding>
+            <marker date="1558766619311" expanded="false" signature="6:295" ph="..." />
+            <marker date="1558766619311" expanded="true" signature="333:4043" ph="{...}" />
+            <marker date="1558766619311" expanded="true" signature="340:386" ph="/// Cards ... " />
+            <marker date="1558766619311" expanded="true" signature="507:4041" ph="{...}" />
+            <marker date="1558766619311" expanded="true" signature="729:847" ph="{...}" />
+            <marker date="1558766619311" expanded="true" signature="857:1112" ph="/// Create Card Training ... " />
+            <marker date="1558766619311" expanded="true" signature="1263:1770" ph="{...}" />
+            <marker date="1558766619311" expanded="true" signature="1289:1631" ph="{...}" />
+            <marker date="1558766619311" expanded="true" signature="1667:1760" ph="{...}" />
+            <marker date="1558766619311" expanded="true" signature="1788:2051" ph="/// Get Card Training ... " />
+            <marker date="1558766619311" expanded="true" signature="2198:2783" ph="{...}" />
+            <marker date="1558766619311" expanded="true" signature="2224:2644" ph="{...}" />
+            <marker date="1558766619311" expanded="true" signature="2680:2773" ph="{...}" />
+            <marker date="1558766619311" expanded="true" signature="2793:3049" ph="/// Update Card Training ... " />
+            <marker date="1558766619311" expanded="true" signature="3249:4035" ph="{...}" />
+            <marker date="1558766619311" expanded="true" signature="3275:3896" ph="{...}" />
+            <marker date="1558766619311" expanded="true" signature="3932:4025" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Models/User/Services/IUserService.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <marker date="1558636513593" expanded="false" signature="6:101" ph="..." />
+            <marker date="1558636513593" expanded="true" signature="133:612" ph="{...}" />
+            <marker date="1558636513593" expanded="true" signature="169:610" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Models/CardItem/Services/ICardService.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+          <folding>
+            <marker date="1558766923787" expanded="false" signature="6:101" ph="..." />
+            <marker date="1558766923787" expanded="true" signature="137:726" ph="{...}" />
+            <marker date="1558766923787" expanded="true" signature="173:724" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Models/User/Repositories/InMemoryUsersRepository.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-18">
+          <caret line="52" column="8" lean-forward="true" selection-start-line="52" selection-start-column="8" selection-end-line="63" selection-end-column="9" />
+          <folding>
+            <marker date="1558428667740" expanded="false" signature="6:220" ph="..." />
+            <marker date="1558428667740" expanded="true" signature="256:2207" ph="{...}" />
+            <marker date="1558428667740" expanded="true" signature="318:2205" ph="{...}" />
+            <marker date="1558428667740" expanded="true" signature="430:486" ph="{...}" />
+            <marker date="1558428667740" expanded="true" signature="588:825" ph="{...}" />
+            <marker date="1558428667740" expanded="true" signature="891:998" ph="{...}" />
+            <marker date="1558428667740" expanded="true" signature="1053:1127" ph="{...}" />
+            <marker date="1558428667740" expanded="true" signature="1197:1289" ph="{...}" />
+            <marker date="1558428667740" expanded="true" signature="1356:1460" ph="{...}" />
+            <marker date="1558428667740" expanded="true" signature="1518:1793" ph="{...}" />
+            <marker date="1558428667740" expanded="true" signature="1616:1756" ph="{...}" />
+            <marker date="1558428667740" expanded="true" signature="1913:1982" ph="{...}" />
+            <marker date="1558428667740" expanded="true" signature="2044:2199" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Converters/CardItemConverter.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+          <folding>
+            <marker date="1558766184722" expanded="false" signature="6:81" ph="..." />
+            <marker date="1558766184722" expanded="true" signature="103:1525" ph="{...}" />
+            <marker date="1558766184722" expanded="true" signature="110:231" ph="/// Предоставляет методы конвертирования карты между серверной и клиентской моделями ... " />
+            <marker date="1558766184722" expanded="true" signature="266:1523" ph="{...}" />
+            <marker date="1558766184722" expanded="true" signature="281:533" ph="/// Переводит информацию для редактирования карты из клиентской модели в серверную ... " />
+            <marker date="1558766184722" expanded="true" signature="621:1043" ph="{...}" />
+            <marker date="1558766184722" expanded="true" signature="665:760" ph="{...}" />
+            <marker date="1558766184722" expanded="true" signature="826:1001" ph="{...}" />
+            <marker date="1558766184722" expanded="true" signature="1138:1517" ph="{...}" />
+            <marker date="1558766184722" expanded="true" signature="1189:1291" ph="{...}" />
+            <marker date="1558766184722" expanded="true" signature="1364:1468" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Models/CardsCollection/Repositories/InMemoryCollectionsRepository.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="53" column="9" lean-forward="true" selection-start-line="53" selection-start-column="9" selection-end-line="53" selection-end-column="9" />
+          <folding>
+            <marker date="1558642692735" expanded="false" signature="6:152" ph="..." />
+            <marker date="1558642692735" expanded="true" signature="199:1787" ph="{...}" />
+            <marker date="1558642692735" expanded="true" signature="273:1785" ph="{...}" />
+            <marker date="1558642692735" expanded="true" signature="391:447" ph="{...}" />
+            <marker date="1558642692735" expanded="true" signature="527:695" ph="{...}" />
+            <marker date="1558642692735" expanded="true" signature="792:1065" ph="{...}" />
+            <marker date="1558642692735" expanded="true" signature="1169:1351" ph="{...}" />
+            <marker date="1558642692735" expanded="true" signature="1426:1544" ph="{...}" />
+            <marker date="1558642692735" expanded="true" signature="1624:1779" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Models/CardItem/Repositories/PostgreCardsRepository.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="43" column="48" lean-forward="true" selection-start-line="43" selection-start-column="48" selection-end-line="43" selection-end-column="48" />
+          <folding>
+            <marker date="1558767092055" expanded="false" signature="6:176" ph="..." />
+            <marker date="1558767092055" expanded="true" signature="216:1674" ph="{...}" />
+            <marker date="1558767092055" expanded="true" signature="277:1672" ph="{...}" />
+            <marker date="1558767092055" expanded="true" signature="389:445" ph="{...}" />
+            <marker date="1558767092055" expanded="true" signature="558:713" ph="{...}" />
+            <marker date="1558767092055" expanded="true" signature="820:988" ph="{...}" />
+            <marker date="1558767092055" expanded="true" signature="1108:1177" ph="{...}" />
+            <marker date="1558767092055" expanded="true" signature="1273:1374" ph="{...}" />
+            <marker date="1558767092055" expanded="true" signature="1472:1541" ph="{...}" />
+            <marker date="1558767092055" expanded="true" signature="1597:1666" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Models/CardItem/Repositories/InMemoryCardsRepository.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
+          <folding>
+            <marker date="1558767127983" expanded="false" signature="6:176" ph="..." />
+            <marker date="1558767127983" expanded="true" signature="216:2071" ph="{...}" />
+            <marker date="1558767127983" expanded="true" signature="278:2069" ph="{...}" />
+            <marker date="1558767127983" expanded="true" signature="390:446" ph="{...}" />
+            <marker date="1558767127983" expanded="true" signature="559:799" ph="{...}" />
+            <marker date="1558767127983" expanded="true" signature="906:1074" ph="{...}" />
+            <marker date="1558767127983" expanded="true" signature="1194:1263" ph="{...}" />
+            <marker date="1558767127983" expanded="true" signature="1359:1460" ph="{...}" />
+            <marker date="1558767127983" expanded="true" signature="1564:1718" ph="{...}" />
+            <marker date="1558767127983" expanded="true" signature="1776:2063" ph="{...}" />
+            <marker date="1558767127983" expanded="true" signature="1882:2026" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Models/CardItem/Repositories/ICardsRepository.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="91">
+          <caret line="57" column="21" lean-forward="true" selection-start-line="57" selection-start-column="21" selection-end-line="57" selection-end-column="21" />
+          <folding>
+            <marker date="1558767129305" expanded="false" signature="6:101" ph="..." />
+            <marker date="1558767129305" expanded="true" signature="141:2853" ph="{...}" />
+            <marker date="1558767129305" expanded="true" signature="148:213" ph="/// Интерфейс хранилища карт ... " />
+            <marker date="1558767129305" expanded="true" signature="251:2851" ph="{...}" />
+            <marker date="1558767129305" expanded="true" signature="266:640" ph="/// Создать новую карту ... " />
+            <marker date="1558767129305" expanded="true" signature="750:1142" ph="/// Выдать все карты, соответствующие пользователю ... " />
+            <marker date="1558767129305" expanded="true" signature="1260:1586" ph="/// Найти карты ... " />
+            <marker date="1558767129305" expanded="true" signature="1709:2028" ph="/// Запросить карту ... " />
+            <marker date="1558767129305" expanded="true" signature="2121:2481" ph="/// Изменить карту ... " />
+            <marker date="1558767129305" expanded="true" signature="2582:2796" ph="/// Удалить карту ... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Models/CardItem/Services/CardService.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="101" lean-forward="true" selection-start-line="101" selection-end-line="101" />
+          <folding>
+            <marker date="1558767150494" expanded="false" signature="6:158" ph="..." />
+            <marker date="1558767150494" expanded="true" signature="194:5608" ph="{...}" />
+            <marker date="1558767150494" expanded="true" signature="240:5606" ph="{...}" />
+            <marker date="1558767150494" expanded="true" signature="457:519" ph="{...}" />
+            <marker date="1558767150494" expanded="true" signature="596:949" ph="{...}" />
+            <marker date="1558767150494" expanded="true" signature="730:912" ph="{...}" />
+            <marker date="1558767150494" expanded="true" signature="1052:1448" ph="{...}" />
+            <marker date="1558767150494" expanded="true" signature="1221:1331" ph="{...}" />
+            <marker date="1558767150494" expanded="true" signature="1362:1438" ph="{...}" />
+            <marker date="1558767150494" expanded="true" signature="1561:1767" ph="{...}" />
+            <marker date="1558767150494" expanded="true" signature="1606:1679" ph="{...}" />
+            <marker date="1558767150494" expanded="true" signature="1867:2071" ph="{...}" />
+            <marker date="1558767150494" expanded="true" signature="1911:1991" ph="{...}" />
+            <marker date="1558767150494" expanded="true" signature="2183:2682" ph="{...}" />
+            <marker date="1558767150494" expanded="true" signature="2760:3078" ph="{...}" />
+            <marker date="1558767150494" expanded="true" signature="3127:3343" ph="{...}" />
+            <marker date="1558767150494" expanded="true" signature="3171:3275" ph="{...}" />
+            <marker date="1558767150494" expanded="true" signature="3361:5600" ph="private helper methods" />
+            <marker date="1558767150494" expanded="true" signature="3459:4053" ph="{...}" />
+            <marker date="1558767150494" expanded="true" signature="4112:4456" ph="{...}" />
+            <marker date="1558767150494" expanded="true" signature="4175:4233" ph="{...}" />
+            <marker date="1558767150494" expanded="true" signature="4291:4405" ph="{...}" />
+            <marker date="1558767150494" expanded="true" signature="4519:4969" ph="{...}" />
+            <marker date="1558767150494" expanded="true" signature="4663:4818" ph="{...}" />
+            <marker date="1558767150494" expanded="true" signature="4737:4804" ph="{...}" />
+            <marker date="1558767150494" expanded="true" signature="4875:4933" ph="{...}" />
+            <marker date="1558767150494" expanded="true" signature="5029:5332" ph="{...}" />
+            <marker date="1558767150494" expanded="true" signature="5078:5135" ph="{...}" />
+            <marker date="1558767150494" expanded="true" signature="5238:5296" ph="{...}" />
+            <marker date="1558767150494" expanded="true" signature="5434:5580" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Models/User/Services/UserService.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="106" column="25" lean-forward="true" selection-start-line="106" selection-start-column="25" selection-end-line="106" selection-end-column="25" />
+          <folding>
+            <marker date="1558636548403" expanded="false" signature="6:154" ph="..." />
+            <marker date="1558636548403" expanded="true" signature="186:9803" ph="{...}" />
+            <marker date="1558636548403" expanded="true" signature="232:9801" ph="{...}" />
+            <marker date="1558636548403" expanded="true" signature="550:612" ph="{...}" />
+            <marker date="1558636548403" expanded="true" signature="681:1120" ph="{...}" />
+            <marker date="1558636548403" expanded="true" signature="1195:1491" ph="{...}" />
+            <marker date="1558636548403" expanded="true" signature="1291:1454" ph="{...}" />
+            <marker date="1558636548403" expanded="true" signature="1607:2110" ph="{...}" />
+            <marker date="1558636548403" expanded="true" signature="1894:1998" ph="{...}" />
+            <marker date="1558636548403" expanded="true" signature="2029:2074" ph="{...}" />
+            <marker date="1558636548403" expanded="true" signature="2195:2548" ph="{...}" />
+            <marker date="1558636548403" expanded="true" signature="2598:2850" ph="{...}" />
+            <marker date="1558636548403" expanded="true" signature="2642:2785" ph="{...}" />
+            <marker date="1558636548403" expanded="true" signature="2899:3115" ph="{...}" />
+            <marker date="1558636548403" expanded="true" signature="2943:3047" ph="{...}" />
+            <marker date="1558636548403" expanded="true" signature="3201:3986" ph="{...}" />
+            <marker date="1558636548403" expanded="true" signature="3623:3913" ph="{...}" />
+            <marker date="1558636548403" expanded="true" signature="4004:9794" ph="private helper methods" />
+            <marker date="1558636548403" expanded="true" signature="4106:4647" ph="{...}" />
+            <marker date="1558636548403" expanded="true" signature="4720:5627" ph="{...}" />
+            <marker date="1558636548403" expanded="true" signature="5700:6009" ph="{...}" />
+            <marker date="1558636548403" expanded="true" signature="5815:5973" ph="{...}" />
+            <marker date="1558636548403" expanded="true" signature="5889:5959" ph="{...}" />
+            <marker date="1558636548403" expanded="true" signature="6081:6390" ph="{...}" />
+            <marker date="1558636548403" expanded="true" signature="6196:6354" ph="{...}" />
+            <marker date="1558636548403" expanded="true" signature="6270:6340" ph="{...}" />
+            <marker date="1558636548403" expanded="true" signature="6478:6666" ph="{...}" />
+            <marker date="1558636548403" expanded="true" signature="6572:6630" ph="{...}" />
+            <marker date="1558636548403" expanded="true" signature="6722:6929" ph="{...}" />
+            <marker date="1558636548403" expanded="true" signature="7044:7563" ph="{...}" />
+            <marker date="1558636548403" expanded="true" signature="7389:7553" ph="{...}" />
+            <marker date="1558636548403" expanded="true" signature="7666:8752" ph="{...}" />
+            <marker date="1558636548403" expanded="true" signature="8419:8716" ph="{...}" />
+            <marker date="1558636548403" expanded="true" signature="8594:8702" ph="{...}" />
+            <marker date="1558636548403" expanded="true" signature="8842:9394" ph="{...}" />
+            <marker date="1558636548403" expanded="true" signature="8907:9098" ph="{...}" />
+            <marker date="1558636548403" expanded="true" signature="9178:9384" ph="{...}" />
+            <marker date="1558636548403" expanded="true" signature="9484:9766" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MemoryCardsAPI/Controllers/CardsController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1509">
+          <caret line="29" column="18" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
+          <folding>
+            <marker date="1558767150511" expanded="false" signature="6:272" ph="..." />
+            <marker date="1558767150511" expanded="true" signature="310:5099" ph="{...}" />
+            <marker date="1558767150511" expanded="true" signature="317:363" ph="/// Cards ... " />
+            <marker date="1558767150511" expanded="true" signature="480:5097" ph="{...}" />
+            <marker date="1558767150511" expanded="true" signature="597:663" ph="{...}" />
+            <marker date="1558767150511" expanded="true" signature="673:924" ph="/// Create Card ... " />
+            <marker date="1558767150511" expanded="true" signature="1120:1576" ph="{...}" />
+            <marker date="1558767150511" expanded="true" signature="1146:1439" ph="{...}" />
+            <marker date="1558767150511" expanded="true" signature="1475:1566" ph="{...}" />
+            <marker date="1558767150511" expanded="true" signature="1586:1753" ph="/// Get All Cards For User ... " />
+            <marker date="1558767150511" expanded="true" signature="1885:2276" ph="{...}" />
+            <marker date="1558767150511" expanded="true" signature="1911:2139" ph="{...}" />
+            <marker date="1558767150511" expanded="true" signature="2175:2266" ph="{...}" />
+            <marker date="1558767150511" expanded="true" signature="2286:2502" ph="/// Get Card By Id ... " />
+            <marker date="1558767150511" expanded="true" signature="2650:3164" ph="{...}" />
+            <marker date="1558767150511" expanded="true" signature="2676:3027" ph="{...}" />
+            <marker date="1558767150511" expanded="true" signature="3063:3154" ph="{...}" />
+            <marker date="1558767150511" expanded="true" signature="3174:3478" ph="/// Update Card By Id ... " />
+            <marker date="1558767150511" expanded="true" signature="3685:4393" ph="{...}" />
+            <marker date="1558767150511" expanded="true" signature="3711:4256" ph="{...}" />
+            <marker date="1558767150511" expanded="true" signature="4292:4383" ph="{...}" />
+            <marker date="1558767150511" expanded="true" signature="4411:4577" ph="/// Delete Card By Id ... " />
+            <marker date="1558767150511" expanded="true" signature="4665:5091" ph="{...}" />
+            <marker date="1558767150511" expanded="true" signature="4691:4954" ph="{...}" />
+            <marker date="1558767150511" expanded="true" signature="4806:4875" ph="{...}" />
+            <marker date="1558767150511" expanded="true" signature="4990:5081" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MemoryCardsAPI/Controllers/CollectionsController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="128" column="20" selection-start-line="128" selection-start-column="20" selection-end-line="128" selection-end-column="20" />
+        <state relative-caret-position="102">
+          <caret line="92" column="31" lean-forward="true" selection-start-line="92" selection-start-column="31" selection-end-line="92" selection-end-column="31" />
           <folding>
-            <marker date="1558256603562" expanded="true" signature="6:265" ph="..." />
-            <marker date="1558256603562" expanded="true" signature="303:5065" ph="{...}" />
-            <marker date="1558256603562" expanded="true" signature="310:362" ph="/// Collections ... " />
-            <marker date="1558256603562" expanded="true" signature="465:5063" ph="{...}" />
-            <marker date="1558256603562" expanded="true" signature="658:734" ph="{...}" />
-            <marker date="1558256603562" expanded="true" signature="744:914" ph="/// Create Global Collection ... " />
-            <marker date="1558256603562" expanded="true" signature="1072:1756" ph="{...}" />
-            <marker date="1558256603562" expanded="true" signature="1241:1357" ph="{...}" />
-            <marker date="1558256603562" expanded="true" signature="1472:1619" ph="{...}" />
-            <marker date="1558256603562" expanded="true" signature="1655:1746" ph="{...}" />
-            <marker date="1558256603562" expanded="true" signature="1766:1990" ph="/// Create collection with name from query ... " />
-            <marker date="1558256603562" expanded="true" signature="2172:2636" ph="{...}" />
-            <marker date="1558256603562" expanded="true" signature="2352:2499" ph="{...}" />
-            <marker date="1558256603562" expanded="true" signature="2535:2626" ph="{...}" />
-            <marker date="1558256603562" expanded="true" signature="2646:2904" ph="/// Adds card to a target collection ... " />
-            <marker date="1558256603562" expanded="true" signature="3124:3759" ph="{...}" />
-            <marker date="1558256603562" expanded="true" signature="3287:3420" ph="{...}" />
-            <marker date="1558256603562" expanded="true" signature="3516:3648" ph="{...}" />
-            <marker date="1558256603562" expanded="true" signature="3770:3977" ph="/// Shows target collection ... " />
-            <marker date="1558256603562" expanded="true" signature="4146:4587" ph="{...}" />
-            <marker date="1558256603562" expanded="true" signature="4309:4442" ph="{...}" />
-            <marker date="1558256603562" expanded="true" signature="4597:4761" ph="/// Shows all existing collections ... " />
-            <marker date="1558256603562" expanded="true" signature="4903:5057" ph="{...}" />
+            <marker date="1558768243420" expanded="false" signature="6:265" ph="..." />
+            <marker date="1558768243420" expanded="true" signature="303:6128" ph="{...}" />
+            <marker date="1558768243420" expanded="true" signature="310:362" ph="/// Collections ... " />
+            <marker date="1558768243420" expanded="true" signature="465:6126" ph="{...}" />
+            <marker date="1558768243420" expanded="true" signature="668:744" ph="{...}" />
+            <marker date="1558768243420" expanded="true" signature="754:935" ph="/// Create Collection With Default Name ... " />
+            <marker date="1558768243420" expanded="true" signature="1094:1878" ph="{...}" />
+            <marker date="1558768243420" expanded="true" signature="1120:1741" ph="{...}" />
+            <marker date="1558768243420" expanded="true" signature="1300:1428" ph="{...}" />
+            <marker date="1558768243420" expanded="true" signature="1777:1868" ph="{...}" />
+            <marker date="1558768243420" expanded="true" signature="1888:2112" ph="/// Create Collection By Name ... " />
+            <marker date="1558768243420" expanded="true" signature="2294:3068" ph="{...}" />
+            <marker date="1558768243420" expanded="true" signature="2320:2931" ph="{...}" />
+            <marker date="1558768243420" expanded="true" signature="2483:2611" ph="{...}" />
+            <marker date="1558768243420" expanded="true" signature="2967:3058" ph="{...}" />
+            <marker date="1558768243420" expanded="true" signature="3078:3395" ph="/// Add Card To A Collection By Name ... " />
+            <marker date="1558768243420" expanded="true" signature="3602:4393" ph="{...}" />
+            <marker date="1558768243420" expanded="true" signature="3628:4256" ph="{...}" />
+            <marker date="1558768243420" expanded="true" signature="3865:4010" ph="{...}" />
+            <marker date="1558768243420" expanded="true" signature="4292:4383" ph="{...}" />
+            <marker date="1558768243420" expanded="true" signature="4404:4628" ph="/// Get Collection By Name ... " />
+            <marker date="1558768243420" expanded="true" signature="4797:5435" ph="{...}" />
+            <marker date="1558768243420" expanded="true" signature="4823:5298" ph="{...}" />
+            <marker date="1558768243420" expanded="true" signature="4997:5142" ph="{...}" />
+            <marker date="1558768243420" expanded="true" signature="5334:5425" ph="{...}" />
+            <marker date="1558768243420" expanded="true" signature="5445:5618" ph="/// Shows all existing collections For User ... " />
+            <marker date="1558768243420" expanded="true" signature="5737:6120" ph="{...}" />
+            <marker date="1558768243420" expanded="true" signature="5763:5983" ph="{...}" />
+            <marker date="1558768243420" expanded="true" signature="6019:6110" ph="{...}" />
           </folding>
         </state>
       </provider>

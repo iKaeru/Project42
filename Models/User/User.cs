@@ -1,6 +1,5 @@
-using System;
-using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Runtime.Serialization;
 
 namespace Models.User
 {
@@ -8,34 +7,31 @@ namespace Models.User
     /// Пользователь
     /// </summary>
     [Table("Users")]
+    [DataContract]
     public class User : UserInfo
     {
         /// <summary>
         /// Имя пользователя
         /// </summary>
-        [StringLength(20)]
+        [DataMember(IsRequired = true)]
         public string FirstName { get; set; }
 
         /// <summary>
         /// Фамилия пользователя
         /// </summary>
-        [StringLength(20)]
+        [DataMember(IsRequired = true)]
         public string LastName { get; set; }
 
         /// <summary>
         /// Логин пользователя
         /// </summary>
-        [MinLength(5), MaxLength(20)]
-        [Required]
+        [DataMember(IsRequired = true)]
         public string Login { get; set; }
 
         /// <summary>
         /// Почтовый адрес пользователя
         /// </summary>
-        [RegularExpression( "^([A-Za-z0-9_\\-\\.])+\\@([A-Za-z0-9_\\-\\.])+\\.([A-Za-z]{2,4})$", 
-            ErrorMessage = "Invalid email format." )] 
-        [Required(ErrorMessage = "Please enter your e-mail address."), StringLength(50)] 
-        [EmailAddress]
+        [DataMember(IsRequired = true)]
         public string EmailAdress { get; set; }
     }
 }

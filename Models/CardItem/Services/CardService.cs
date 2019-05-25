@@ -34,21 +34,19 @@ namespace Models.CardItem.Services
             return card;
         }
 
-        public async Task<bool> AddCardAsync(CardItem cardToAddToRepo, CancellationToken cancellationToken)
+        public async Task AddCardAsync(CardItem cardToAddToRepo, CancellationToken cancellationToken)
         {
-            if (!ValidateCard(cardToAddToRepo))
-                return false;
-
+            if (!IsCardValid(cardToAddToRepo))
+                throw new AppException(nameof(cardToAddToRepo) + " is incorrect");
+            
             try
             {
                 await repository.CreateAsync(cardToAddToRepo, cancellationToken);
             }
             catch
             {
-                return false;
+                throw new AppException("Couldn't add card");
             }
-
-            return true;
         }
 
         public async Task<IEnumerable<CardItem>> GetAllUserCards(Guid uId, CancellationToken cancellationToken)
@@ -71,12 +69,40 @@ namespace Models.CardItem.Services
             return await repository.GetAsync(id, cancellationToken);
         }
 
-        public void CheckOwnership(CardItem card, Guid userId)
+        public async void UpdateCardByIdAsync(CardPatchInfo cardToUpdate, CancellationToken cancellationToken)
         {
-            if (!ValidateCard(card) || userId == Guid.Empty)
+            var cardFromRepository = await repository.GetAsync(cardToUpdate.Id, cancellationToken);
+
+            if (cardFromRepository == null)
+                throw new AppException("Card not found");
+            
+            UpdateCardInfo(cardToUpdate, cardFromRepository);
+
+            if (!IsCardValid(cardFromRepository))
+                throw new AppException("Bad card info");
+            
+            await repository.PatchAsync(cardFromRepository, cancellationToken);
+        }
+        
+        public async void CheckOwnership(CardItem card, Guid userId)
+        {
+            if (!IsCardValid(card) || userId == Guid.Empty)
                 throw new AppException("Bad info");
+            var cardInRepo = await repository.GetAsync(card.Id, CancellationToken.None);
+            if(cardInRepo.UserId != userId)
+                throw new AppException("No access");
         }
 
+        public async Task<bool> Delete(Guid id)
+        {
+            if (id == Guid.Empty)
+            {
+                throw new ArgumentException("Incorrect value", nameof(id));
+            }
+
+            return await repository.DeleteCardAsync(id);
+        }
+        
         #region private helper methods
 
         private bool ValidateCard(CardCreationInfo cardToValidate)
@@ -97,7 +123,7 @@ namespace Models.CardItem.Services
             return true;
         }
 
-        private bool ValidateCard(CardItem cardToValidate)
+        private bool IsCardValid(CardItem cardToValidate)
         {
             if (cardToValidate.UserId == Guid.Empty)
             {
@@ -146,6 +172,12 @@ namespace Models.CardItem.Services
             }
 
             return true;
+        }
+        
+        private void UpdateCardInfo(CardPatchInfo cardToUpdate, CardItem cardFromRepository)
+        {
+            cardFromRepository.Answer = cardToUpdate.Answer;
+            cardFromRepository.Question = cardToUpdate.Question;
         }
 
         #endregion
