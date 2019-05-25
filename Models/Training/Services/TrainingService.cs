@@ -28,7 +28,6 @@ namespace Models.Training.Services
                 UserId = userId,
                 Level = MemorizationLevels.Hard,
                 CompletedAt = DateTime.Now
-                
             };
 
             return training;
@@ -53,6 +52,26 @@ namespace Models.Training.Services
             if (found.UserId != userId)
                 throw new AppException("Not allowed for this user");
             return found;
+        }
+
+        public async Task<Training> GetTrainingByIdAsync(Guid trainId, Guid userId)
+        {
+            var found = await repository.GetCardTrainingByIdAsync(trainId);
+            if (found == null)
+                throw new AppException("Training not found");
+            if (found.UserId != userId)
+                throw new AppException("Not allowed for this user");
+            return found;
+        }
+
+        public async Task<bool> Delete(Guid id)
+        {
+            if (id == Guid.Empty)
+            {
+                throw new ArgumentException("Incorrect value", nameof(id));
+            }
+
+            return await repository.DeleteTrainAsync(id);
         }
 
         #region private helper methods
