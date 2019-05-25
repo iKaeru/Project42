@@ -73,8 +73,17 @@ namespace Models.Training.Services
             return cardList;
         }
 
-        #region private helper methods
+        public async Task<int> GetCardsFromBoxAsync(MemorizationBoxes box, Guid uId)
+        {
+            return await Task.Run(() => repository.GetTrainingsFromBox(box)
+               .Where(u => u.UserId == uId)
+               .Select(t => t.CardId)
+               .Count());
+        }
 
+
+
+        #region private helper methods
         private void ValidateTraining(Training training)
         {
             if (training.CompletedAt == null)
@@ -82,8 +91,9 @@ namespace Models.Training.Services
             if (training.CardId == null)
                 throw new AppException(nameof(training) + "card id is not filled");
         }
-
-
         #endregion
+
+
+
     }
 }

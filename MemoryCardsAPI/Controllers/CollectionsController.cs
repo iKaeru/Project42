@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Models.CardsCollection;
 using Models.CardsCollection.Services;
 using Models.Errors;
+using System.Linq;
 
 namespace MemoryCardsAPI.Controllers
 {
@@ -135,7 +136,7 @@ namespace MemoryCardsAPI.Controllers
                     return BadRequest(new {message = "No collection with name \"" + collectionName + "\""});
                 }
 
-                var cardCollection = collectionService.FindCollectionByName(collectionName, uId);
+                var cardCollection = collectionService.FindCollectionByNameAsync(collectionName, uId);
                 return Ok(cardCollection);
             }
             catch (AppException ex)
@@ -156,12 +157,33 @@ namespace MemoryCardsAPI.Controllers
             try
             {
                 Guid.TryParse(HttpContext.User.Identity.Name, out var uId);
-                var collections = collectionService.GetAllCollections(uId);
+                var collections = collectionService.GetAllCollectionsAsync(uId);
                 return Ok(collections);
             }
             catch (AppException ex)
             {
                 return BadRequest(new {message = ex.Message});
+            }
+        }
+
+        /// <summary>
+        /// Shows all existing collections For User
+        /// </summary>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("learned")]
+        public async Task<IActionResult> LearnedCollectionsAsync(CancellationToken cancellationToken)
+        {
+            try
+            {
+                Guid.TryParse(HttpContext.User.Identity.Name, out var uId);
+                var collections = await collectionService.GetLearnedCollectionsAsync(uId);
+                return Ok(collections.Count());
+            }
+            catch (AppException ex)
+            {
+                return BadRequest(new { message = ex.Message });
             }
         }
     }

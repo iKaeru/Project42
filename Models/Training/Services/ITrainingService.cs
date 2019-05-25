@@ -13,5 +13,6 @@ namespace Models.Training.Services
         Task<Training> AddToRepositoryAsync(Training training);
         Task<Training> GetTrainingAsync(CardItem.CardItem card, Guid userId);
         Task<List<Guid>> GetDateTrainingAsync(DateTime date, Guid uId);
+        Task<int> GetCardsFromBoxAsync(MemorizationBoxes box, Guid uId);
     }
 }

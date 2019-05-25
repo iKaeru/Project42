@@ -114,7 +114,7 @@ namespace MemoryCardsAPI.Controllers
         /// <param name="cancellationToken"></param>
         /// <returns code="200"></returns>
         [HttpGet]
-        [Route("{id}")]
+        [Route("today")]
         public async Task<IActionResult> GetTodaysTraining(DateTime date, CancellationToken cancellationToken)
         {
             try
@@ -122,6 +122,28 @@ namespace MemoryCardsAPI.Controllers
                 Guid.TryParse(HttpContext.User.Identity.Name, out var uId);
                 var cardList = await trainingService.GetDateTrainingAsync(date, uId);
                 return Ok(cardList);
+            }
+            catch (AppException ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
+        }
+
+        /// <summary>
+        /// Get count of cards in the box
+        /// </summary>
+        /// <param name="box"> box where to count cards </param>
+        /// <param name="cancellationToken"></param>
+        /// <returns code="200"></returns>
+        [HttpGet]
+        [Route("countLearnedCards")]
+        public async Task<IActionResult> GetNumberOfCardsInBox(MemorizationBoxes box, CancellationToken cancellationToken)
+        {
+            try
+            {
+                Guid.TryParse(HttpContext.User.Identity.Name, out var uId);
+                var cardNumber = await trainingService.GetCardsFromBoxAsync(box, uId);
+                return Ok(cardNumber);
             }
             catch (AppException ex)
             {
