@@ -54,7 +54,7 @@ namespace MemoryCardsAPI.Controllers
         }
         
         /// <summary>
-        /// Get Card Training
+        /// Get Card Training By Card Id
         /// </summary>
         /// <param name="id">Идентификатор карты, с которой происходит тренировка</param>
         /// <param name="cancellationToken"></param>
@@ -80,7 +80,7 @@ namespace MemoryCardsAPI.Controllers
         }
 
         /// <summary>
-        /// Update Card Training
+        /// Update Card Training By Card Id
         /// </summary>
         /// <param name="training">Информация для обновления тренировки</param>
         /// <param name="cancellationToken"></param>

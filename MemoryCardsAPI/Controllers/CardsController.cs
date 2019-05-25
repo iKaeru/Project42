@@ -27,7 +27,7 @@ namespace MemoryCardsAPI.Controllers
         }
 
         /// <summary>
-        /// Post Card
+        /// Create Card
         /// </summary>
         /// <param name="cardCreationInfo"></param>
         /// <param name="cancellationToken"></param>
@@ -53,7 +53,7 @@ namespace MemoryCardsAPI.Controllers
         }
 
         /// <summary>
-        /// Post Card
+        /// Get All Cards For User
         /// </summary>
         /// <param name="cancellationToken"></param>
         /// <returns code="200"></returns>
@@ -98,7 +98,7 @@ namespace MemoryCardsAPI.Controllers
         }
 
         /// <summary>
-        /// Update Card
+        /// Update Card By Id
         /// </summary>
         /// <param name="id">Идентификатор карты</param>
         /// <param name="cardToUpdate">Информация о карте для редактирования</param>
@@ -121,6 +121,31 @@ namespace MemoryCardsAPI.Controllers
                 
                 cardsService.UpdateCardByIdAsync(card, cancellationToken);
                 return Ok();
+            }
+            catch (AppException ex)
+            {
+                return BadRequest(new {message = ex.Message});
+            }
+        }
+        
+        /// <summary>
+        /// Delete Card By Id
+        /// </summary>
+        /// <param name="id">Идентификатор карты</param>
+        /// <returns code="200"></returns>
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(string id)
+        {
+            try
+            {
+                var guidId = Guid.Parse(id);
+
+                if (await cardsService.Delete(guidId))
+                {
+                    return Ok();
+                }
+
+                throw new AppException("Couldn't delete user");
             }
             catch (AppException ex)
             {

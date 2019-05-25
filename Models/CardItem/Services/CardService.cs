@@ -93,6 +93,16 @@ namespace Models.CardItem.Services
                 throw new AppException("No access");
         }
 
+        public async Task<bool> Delete(Guid id)
+        {
+            if (id == Guid.Empty)
+            {
+                throw new ArgumentException("Incorrect value", nameof(id));
+            }
+
+            return await repository.DeleteCardAsync(id);
+        }
+        
         #region private helper methods
 
         private bool ValidateCard(CardCreationInfo cardToValidate)
@@ -167,7 +177,7 @@ namespace Models.CardItem.Services
         private void UpdateCardInfo(CardPatchInfo cardToUpdate, CardItem cardFromRepository)
         {
             cardFromRepository.Answer = cardToUpdate.Answer;
-            cardFromRepository.Question = cardToUpdate.Answer;
+            cardFromRepository.Question = cardToUpdate.Question;
         }
 
         #endregion

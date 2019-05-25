@@ -36,6 +36,11 @@ namespace MemoryCardsAPI.Controllers
             this.appSettings = appSettings.Value;
         }
 
+        /// <summary>
+        /// Authorizatе User
+        /// </summary>
+        /// <param name="userDto">Информация о пользователе для авторизации</param>
+        /// <returns code="200"></returns>
         [AllowAnonymous]
         [HttpPost("auth")]
         public async Task<IActionResult> Authenticate([FromBody] UserLoginInfo userDto)
@@ -61,6 +66,12 @@ namespace MemoryCardsAPI.Controllers
             }
         }
 
+        /// <summary>
+        /// Register User
+        /// </summary>
+        /// <param name="userDto">Информация о пользователе для регистрации</param>
+        /// <param name="cancellationToken"></param>
+        /// <returns code="200"></returns>
         [AllowAnonymous]
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody] UserRegistrationInfo userDto,
@@ -84,6 +95,11 @@ namespace MemoryCardsAPI.Controllers
             }
         }
 
+        /// <summary>
+        /// Get User By Id
+        /// </summary>
+        /// <param name="id">Идентификатор пользователя</param>
+        /// <returns code="200"></returns>
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(string id)
         {
@@ -104,6 +120,12 @@ namespace MemoryCardsAPI.Controllers
             }
         }
 
+        /// <summary>
+        /// Update User By Id
+        /// </summary>
+        /// <param name="id">Идентификатор пользователя</param>
+        /// <param name="userToUpdate">Информация о пользователе для редактирования</param>
+        /// <returns code="200"></returns>
         [HttpPut("{id}")]
         public IActionResult Update(string id, [FromBody] View.UserPatchInfo userToUpdate)
         {
@@ -122,6 +144,11 @@ namespace MemoryCardsAPI.Controllers
             }
         }
 
+        /// <summary>
+        /// Delete User By Id
+        /// </summary>
+        /// <param name="id">Идентификатор пользователя</param>
+        /// <returns code="200"></returns>
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(string id)
         {

@@ -44,7 +44,7 @@ namespace Models.CardItem.Repositories
             throw new NotImplementedException();
         }
 
-        public Task RemoveAsync(Guid cardId, CancellationToken cancelltionToken)
+        public Task<bool> DeleteCardAsync(Guid cardId)
         {
             throw new NotImplementedException();
         }

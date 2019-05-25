@@ -13,5 +13,6 @@ namespace Models.CardItem.Services
         Task<CardItem> GetCardByIdAsync(Guid id, CancellationToken cancellationToken);
         void CheckOwnership(CardItem card, Guid userId);
         void UpdateCardByIdAsync(CardPatchInfo cardToUpdate, CancellationToken cancellationToken);
+        Task<bool> Delete(Guid id);
     }
 }
