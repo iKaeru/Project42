@@ -69,7 +69,7 @@
             <param name="name">Имя коллекции</param>
             <returns code="200"></returns> 
         </member>
-        <member name="M:MemoryCardsAPI.Controllers.CollectionsController.AddCardToCollection(System.String,System.Guid,System.Threading.CancellationToken)">
+        <member name="M:MemoryCardsAPI.Controllers.CollectionsController.AddCardToCollection(System.String,System.String,System.Threading.CancellationToken)">
             <summary>
             Add Card To A Collection By Name
             </summary>
