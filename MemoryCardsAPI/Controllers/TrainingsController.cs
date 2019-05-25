@@ -84,7 +84,7 @@ namespace MemoryCardsAPI.Controllers
         /// <param name="cancellationToken"></param>
         /// <returns code="200"></returns>
         [HttpGet]
-        [Route("{id}")]
+        [Route("card/{id}")]
         public async Task<IActionResult> GetCardTraining(string id, CancellationToken cancellationToken)
         {
             try
