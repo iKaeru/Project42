@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using Converters;
@@ -8,6 +9,7 @@ using Models.CardItem.Services;
 using Models.Errors;
 using Models.Training;
 using Models.Training.Services;
+using Swashbuckle.AspNetCore.Annotations;
 using View = Client.Models;
 
 namespace MemoryCardsAPI.Controllers
@@ -36,6 +38,7 @@ namespace MemoryCardsAPI.Controllers
         /// <param name="cancellationToken"></param>
         /// <returns code="200"></returns>
         [HttpPost]
+        [SwaggerResponse(200, Type=typeof(Training))]
         [Route("{id}")]
         public async Task<IActionResult> CreateCardTraining(string id, CancellationToken cancellationToken)
         {
@@ -60,6 +63,7 @@ namespace MemoryCardsAPI.Controllers
         /// <param name="cancellationToken"></param>
         /// <returns code="200"></returns>
         [HttpGet]
+        [SwaggerResponse(200, Type=typeof(Training))]
         [Route("{id}")]
         public async Task<IActionResult> GetCardTrainingById(string id, CancellationToken cancellationToken)
         {
@@ -84,6 +88,7 @@ namespace MemoryCardsAPI.Controllers
         /// <param name="cancellationToken"></param>
         /// <returns code="200"></returns>
         [HttpGet]
+        [SwaggerResponse(200, Type=typeof(Training))]
         [Route("card/{id}")]
         public async Task<IActionResult> GetCardTraining(string id, CancellationToken cancellationToken)
         {
@@ -94,7 +99,7 @@ namespace MemoryCardsAPI.Controllers
                 var card = await cardsService.GetCardByIdAsync(cardGuid, cancellationToken);
                 cardsService.CheckOwnership(card, uId);
 
-                var training = trainingService.GetTrainingAsync(card, uId);
+                var training = await trainingService.GetTrainingAsync(card, uId);
                 return Ok(training);
             }
             catch (AppException ex)
@@ -110,6 +115,7 @@ namespace MemoryCardsAPI.Controllers
         /// <param name="cancellationToken"></param>
         /// <returns code="200"></returns>
         [HttpPut]
+        [SwaggerResponse(200, Type=typeof(Training))]
         [Route("train")]
         public async Task<IActionResult> TrainWithCard([FromBody]View.Training.TrainingPatchInfo training, 
             CancellationToken cancellationToken)
@@ -163,6 +169,7 @@ namespace MemoryCardsAPI.Controllers
         /// <param name="cancellationToken"></param>
         /// <returns code="200"></returns>
         [HttpGet]
+        [SwaggerResponse(200, Type=typeof(List<Guid>))]
         [Route("today")]
         public async Task<IActionResult> GetTodaysTraining(DateTime date, CancellationToken cancellationToken)
         {
@@ -185,6 +192,7 @@ namespace MemoryCardsAPI.Controllers
         /// <param name="cancellationToken"></param>
         /// <returns code="200"></returns>
         [HttpGet]
+        [SwaggerResponse(200, Type=typeof(int))]
         [Route("countLearnedCards")]
         public async Task<IActionResult> GetNumberOfCardsInBox(MemorizationBoxes box, CancellationToken cancellationToken)
         {

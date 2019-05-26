@@ -10,6 +10,7 @@ using Models.CardsCollection.Services;
 using Models.Errors;
 using View = Client.Models.CardsCollection;
 using System.Linq;
+using Swashbuckle.AspNetCore.Annotations;
 
 namespace MemoryCardsAPI.Controllers
 {
@@ -34,6 +35,7 @@ namespace MemoryCardsAPI.Controllers
         /// <param name="cancellationToken"></param>
         /// <returns code="200"></returns> 
         [HttpPost]
+        [SwaggerResponse(200, Type=typeof(CardsCollection))]
         [Route("default")]
         public async Task<ActionResult<CardsCollection>> CreateDefaultAsync(CancellationToken cancellationToken)
         {
@@ -63,6 +65,7 @@ namespace MemoryCardsAPI.Controllers
         /// <param name="name">Имя коллекции</param>
         /// <returns code="200"></returns> 
         [HttpPost]
+        [SwaggerResponse(200, Type=typeof(CardsCollection))]
         [Route("")]
         public async Task<ActionResult<CardsCollection>> CreateAsync(CancellationToken cancellationToken,
             [FromQuery] string name)
@@ -127,6 +130,7 @@ namespace MemoryCardsAPI.Controllers
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
         [HttpGet]
+        [SwaggerResponse(200, Type=typeof(CardsCollection))]
         [Route("{collectionName}")]
         public async Task<ActionResult> ShowCollection(string collectionName, CancellationToken cancellationToken)
         {
@@ -138,7 +142,7 @@ namespace MemoryCardsAPI.Controllers
                     return BadRequest(new {message = "No collection with name \"" + collectionName + "\""});
                 }
 
-                var cardCollection = collectionService.FindCollectionByNameAsync(collectionName, uId);
+                var cardCollection = await collectionService.FindCollectionByNameAsync(collectionName, uId);
                 return Ok(cardCollection);
             }
             catch (AppException ex)
@@ -153,13 +157,14 @@ namespace MemoryCardsAPI.Controllers
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
         [HttpGet]
+        [SwaggerResponse(200, Type=typeof(IEnumerable<CardsCollection>))]
         [Route("")]
-        public ActionResult ListCollections(CancellationToken cancellationToken)
+        public async Task<ActionResult> ListCollections(CancellationToken cancellationToken)
         {
             try
             {
                 Guid.TryParse(HttpContext.User.Identity.Name, out var uId);
-                var collections = collectionService.GetAllCollectionsAsync(uId);
+                var collections = await collectionService.GetAllCollectionsAsync(uId);
                 return Ok(collections);
             }
             catch (AppException ex)
@@ -174,6 +179,7 @@ namespace MemoryCardsAPI.Controllers
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
         [HttpGet]
+        [SwaggerResponse(200, Type=typeof(int))]
         [Route("learned")]
         public async Task<IActionResult> LearnedCollectionsAsync(CancellationToken cancellationToken)
         {

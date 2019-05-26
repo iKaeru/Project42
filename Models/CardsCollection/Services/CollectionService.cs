@@ -15,9 +15,10 @@ namespace Models.CardsCollection.Services
         private readonly ICollectionsRepository repository;
         private readonly ITrainingRepository trainingRepository;
 
-        public CollectionService(ICollectionsRepository repository)
+        public CollectionService(ICollectionsRepository repository, ITrainingRepository trainingRepository)
         {
             this.repository = repository;
+            this.trainingRepository = trainingRepository;
         }
         
         public CardsCollection CreateCollection(Guid userId, string collectionName)

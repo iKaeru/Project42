@@ -18,6 +18,8 @@ using Models.User.Services;
 using View = Client.Models.User;
 using Model = Models.User;
 using Microsoft.AspNetCore.Http;
+using Models.Training;
+using Swashbuckle.AspNetCore.Annotations;
 
 namespace MemoryCardsAPI.Controllers
 {
@@ -43,6 +45,7 @@ namespace MemoryCardsAPI.Controllers
         /// <param name="userDto">Информация о пользователе для авторизации</param>
         /// <returns code="200"></returns>
         [AllowAnonymous]
+        [SwaggerResponse(200, Type=typeof(View.UserAuthorizedInfo))]
         [HttpPost("auth")]
         public async Task<IActionResult> Authenticate([FromBody] UserLoginInfo userDto)
         {
@@ -61,14 +64,14 @@ namespace MemoryCardsAPI.Controllers
 
                 Guid.TryParse(HttpContext.User.Identity.Name, out var uId);
 
-                return Ok(new
+                var resultUser = new View.UserAuthorizedInfo
                 {
                     Id = user.Id,
                     Username = user.Login,
                     FirstName = user.FirstName,
                     LastName = user.LastName
-                //    Token = token
-                });
+                };
+                return Ok(resultUser);
             }
             catch (AppException ex)
             {
@@ -83,6 +86,7 @@ namespace MemoryCardsAPI.Controllers
         /// <param name="cancellationToken"></param>
         /// <returns code="200"></returns>
         [AllowAnonymous]
+        [SwaggerResponse(200, Type=typeof(View.UserRegistredInfo))]
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody] UserRegistrationInfo userDto,
             CancellationToken cancellationToken)
@@ -93,11 +97,13 @@ namespace MemoryCardsAPI.Controllers
                 await userService.ValidateUserAsync(user);
 
                 await userService.AddUserAsync(user, userDto.Password, cancellationToken);
-                return Ok(new
+                
+                var resultUser = new View.UserRegistredInfo
                 {
                     Id = user.Id,
                     Username = user.Login
-                });
+                };
+                return Ok(resultUser);
             }
             catch (AppException ex)
             {
@@ -108,9 +114,9 @@ namespace MemoryCardsAPI.Controllers
         /// <summary>
         /// Get User Info
         /// </summary>
-        /// <param name="id">Идентификатор пользователя</param>
         /// <returns code="200"></returns>
         [HttpGet("info")]
+        [SwaggerResponse(200, Type=typeof(View.UserRegistredInfo))]
         public async Task<IActionResult> GetById()
         {
             try
@@ -122,11 +128,12 @@ namespace MemoryCardsAPI.Controllers
                     return BadRequest(new {message = "User id is incorrect"});
 
                 var userDto = mapper.Map<View.User>(user);
-                return Ok(new
+                var resultUser = new View.UserRegistredInfo
                 {
                     Id = user.Id,
                     Username = user.Login
-                });
+                };
+                return Ok(resultUser);
             }
             catch (AppException ex)
             {

@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using Converters;
@@ -6,7 +7,9 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Models.CardItem;
 using Models.CardItem.Services;
+using Models.CardsCollection;
 using Models.Errors;
+using Swashbuckle.AspNetCore.Annotations;
 using View = Client.Models.CardItem;
 
 namespace MemoryCardsAPI.Controllers
@@ -34,6 +37,7 @@ namespace MemoryCardsAPI.Controllers
         /// <returns code="200"></returns>
         /// <returns code="404"></returns>
         [HttpPost]
+        [SwaggerResponse(200, Type=typeof(CardItem))]
         [Route("")]
         public async Task<ActionResult<CardItem>> CreateAsync([FromBody] CardCreationInfo cardCreationInfo,
             CancellationToken cancellationToken)
@@ -58,13 +62,14 @@ namespace MemoryCardsAPI.Controllers
         /// <param name="cancellationToken"></param>
         /// <returns code="200"></returns>
         [HttpGet]
+        [SwaggerResponse(200, Type=typeof(IEnumerable<CardItem>))]
         [Route("userAllCards")]
-        public IActionResult GetCardsForUser(CancellationToken cancellationToken)
+        public async Task<IActionResult> GetCardsForUser(CancellationToken cancellationToken)
         {
             try
             {
                 Guid.TryParse(HttpContext.User.Identity.Name, out var userId);
-                var result = cardsService.GetAllUserCards(userId, cancellationToken);
+                var result =  await cardsService.GetAllUserCards(userId, cancellationToken);
                 return Ok(result);
             }
             catch (AppException ex)
@@ -80,6 +85,7 @@ namespace MemoryCardsAPI.Controllers
         /// <param name="cancellationToken"></param>
         /// <returns code="200"></returns>
         [HttpGet]
+        [SwaggerResponse(200, Type=typeof(CardItem))]
         [Route("{id}")]
         public async Task<IActionResult> GetCardByIdAsync(string id, CancellationToken cancellationToken)
         {
