@@ -196,7 +196,6 @@
             <summary>
             Get User Info
             </summary>
-            <param name="id">Идентификатор пользователя</param>
             <returns code="200"></returns>
         </member>
         <member name="M:MemoryCardsAPI.Controllers.UsersController.Update(System.String,Client.Models.User.UserPatchInfo)">
