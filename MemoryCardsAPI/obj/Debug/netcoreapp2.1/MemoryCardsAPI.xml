@@ -192,9 +192,9 @@
             <param name="cancellationToken"></param>
             <returns code="200"></returns>
         </member>
-        <member name="M:MemoryCardsAPI.Controllers.UsersController.GetById(System.String)">
+        <member name="M:MemoryCardsAPI.Controllers.UsersController.GetById">
             <summary>
-            Get User By Id
+            Get User Info
             </summary>
             <param name="id">Идентификатор пользователя</param>
             <returns code="200"></returns>
