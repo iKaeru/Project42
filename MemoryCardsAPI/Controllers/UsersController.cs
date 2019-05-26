@@ -106,23 +106,27 @@ namespace MemoryCardsAPI.Controllers
         }
 
         /// <summary>
-        /// Get User By Id
+        /// Get User Info
         /// </summary>
         /// <param name="id">Идентификатор пользователя</param>
         /// <returns code="200"></returns>
-        [HttpGet("{id}")]
-        public async Task<IActionResult> GetById(string id)
+        [HttpGet("info")]
+        public async Task<IActionResult> GetById()
         {
             try
             {
-                var guidId = Guid.Parse(id);
-                var user = await userService.GetById(guidId);
+                Guid.TryParse(HttpContext.User.Identity.Name, out var uId);
+                var user = await userService.GetById(uId);
 
                 if (user == null)
                     return BadRequest(new {message = "User id is incorrect"});
 
                 var userDto = mapper.Map<View.User>(user);
-                return Ok(userDto);
+                return Ok(new
+                {
+                    Id = user.Id,
+                    Username = user.Login
+                });
             }
             catch (AppException ex)
             {
