@@ -17,6 +17,7 @@ using Models.User;
 using Models.User.Services;
 using View = Client.Models.User;
 using Model = Models.User;
+using Microsoft.AspNetCore.Http;
 
 namespace MemoryCardsAPI.Controllers
 {
@@ -51,13 +52,22 @@ namespace MemoryCardsAPI.Controllers
                 if (user == null)
                     return BadRequest(new {message = "Username or password is incorrect"});
                 var token = TokenHmacSha256Generator(user.Id.ToString());
+
+                CookieOptions option = new CookieOptions();
+                option.HttpOnly = true;
+
+                HttpContext.Response.Cookies.Append("token", token, option);
+
+
+                Guid.TryParse(HttpContext.User.Identity.Name, out var uId);
+
                 return Ok(new
                 {
                     Id = user.Id,
                     Username = user.Login,
                     FirstName = user.FirstName,
-                    LastName = user.LastName,
-                    Token = token
+                    LastName = user.LastName
+                //    Token = token
                 });
             }
             catch (AppException ex)
