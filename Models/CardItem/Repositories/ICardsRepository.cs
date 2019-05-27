@@ -29,6 +29,15 @@ namespace Models.CardItem.Repositories
         Task<IEnumerable<CardItem>> GetAllUserCards(Guid uId, CancellationToken cancellationToken);
 
         /// <summary>
+        /// Выдать все идентификаторы карт, соответствующие пользователю
+        /// </summary>
+        /// <param name="uId">Информация об Id пользователя</param>
+        /// <param name="cancellationToken">Токен отмены операции</param>
+        /// <returns>Задача, представляющая асинхронный поиск карт.
+        /// Результат выполнения операции - список найденных карт</returns>
+        Task<IEnumerable<Guid>> GetAllUserCardsId(Guid uId, CancellationToken cancellationToken);
+        
+        /// <summary>
         /// Выдать все карты, соответствующие списку идентификаторов
         /// </summary>
         /// <param name="cardsList">Список Id карт для поиска</param>
