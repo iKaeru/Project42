@@ -61,5 +61,12 @@ namespace Models.CardItem.Repositories
         /// <param name="cardId">Идентификатор карты</param>
         /// <returns>Задача, представляющая асинхронный запрос на удаление карты</returns>
         Task<bool> DeleteCardAsync(Guid cardId);
+
+        /// <summary>
+        /// Удалить все карты из списка
+        /// </summary>
+        /// <param name="cardsList">Список идентификаторов карт для удаления</param>
+        /// <returns>Задача, представляющая асинхронный запрос на удаление карты</returns>
+        Task<bool> DeleteCardsFromListAsync(ICollection<Guid> cardsList);
     }
 }

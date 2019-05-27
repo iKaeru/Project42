@@ -48,5 +48,10 @@ namespace Models.CardItem.Repositories
         {
             throw new NotImplementedException();
         }
+
+        public Task<bool> DeleteCardsFromListAsync(ICollection<Guid> cardsList)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

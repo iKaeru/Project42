@@ -108,9 +108,7 @@
           </e>
           <e p="Services" t="Include">
             <e p="CollectionService.cs" t="Include" />
-            <e p="CollectionService.cs.orig" t="Include" />
             <e p="ICollectionService.cs" t="Include" />
-            <e p="ICollectionService.cs.orig" t="Include" />
           </e>
         </e>
         <e p="Data" t="Include">
@@ -129,7 +127,7 @@
           </e>
         </e>
         <e p="Training" t="Include">
-          <e p="MemorizationLevels.cs" t="Include" />
+          <e p="MemorizationBoxes.cs" t="Include" />
           <e p="Repositories" t="Include">
             <e p="InMemoryTrainingRepository.cs" t="Include" />
             <e p="InMemoryTrainingRepository.cs.orig" t="Include" />

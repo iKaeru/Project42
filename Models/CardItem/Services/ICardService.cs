@@ -14,5 +14,6 @@ namespace Models.CardItem.Services
         void CheckOwnership(CardItem card, Guid userId);
         void UpdateCardByIdAsync(CardPatchInfo cardToUpdate, CancellationToken cancellationToken);
         Task<bool> Delete(Guid id);
+        Task<bool> DeleteCardsFromList(ICollection<Guid> cardsList);
     }
 }

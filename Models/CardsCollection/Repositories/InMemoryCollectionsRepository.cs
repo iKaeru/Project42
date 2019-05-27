@@ -23,6 +23,13 @@ namespace Models.CardsCollection.Repositories
                 .AnyAsync(x => x.Name == collectionName);
         }
         
+        public async Task<bool> FindIdAsync(Guid collectionId, Guid uId)
+        {
+            return await context.Collections
+                .Where(x => x.UserId == uId)
+                .AnyAsync(x => x.Id == collectionId);
+        }
+        
         public async Task<CardsCollection> CreateAsync(CardsCollection collectionToAdd)
         {
             var id = Guid.NewGuid();
@@ -39,6 +46,13 @@ namespace Models.CardsCollection.Repositories
             return await context.Collections
                 .Where(x => x.UserId == userId)
                 .FirstOrDefaultAsync(x => x.Name == collectionName);
+        }
+        
+        public async Task<CardsCollection> FindByIdAsync(Guid collectionId, Guid userId)
+        {
+            return await context.Collections
+                .Where(x => x.UserId == userId)
+                .FirstOrDefaultAsync(x => x.Id == collectionId);
         }
         
         public async Task UpdateAsync(CardsCollection collection)
@@ -60,11 +74,11 @@ namespace Models.CardsCollection.Repositories
             return card.Entity;
         }
 
-        public async Task<bool> DeleteCollectionAsync(Guid userId, string collectionName)
+        public async Task<bool> DeleteCollectionAsync(Guid userId, Guid collectionId)
         {
             var collection = await context.Collections
                 .Where(x => x.UserId == userId)
-                .FirstOrDefaultAsync(x => x.Name == collectionName);
+                .FirstOrDefaultAsync(x => x.Id == collectionId);
             
             if (collection != null)
             {

@@ -12,13 +12,6 @@ namespace Models.CardItem
     [DataContract]
     public class CardContent
     {
-//        /// <summary>
-//        /// Текст на карте
-//        /// </summary>
-//        [Key, Column("Id")]
-//        [DataMember(IsRequired = true)]
-//        public Guid Id { get; set; }
-
         /// <summary>
         /// Текст на карте
         /// </summary>

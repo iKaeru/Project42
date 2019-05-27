@@ -5,6 +5,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Models.Data;
+using Models.Errors;
 
 namespace Models.CardItem.Repositories
 {
@@ -63,5 +64,24 @@ namespace Models.CardItem.Repositories
 
             return false;
         }
+        
+        public async Task<bool> DeleteCardsFromListAsync(ICollection<Guid> cardsList)
+        {
+            foreach (var cardId in cardsList)
+            {
+                var cardItem = await context.Cards.FindAsync(cardId);
+                if (cardItem != null)
+                {
+                    context.Cards.Remove(cardItem);
+                    context.SaveChanges();
+                    continue;
+                }
+
+                throw new AppException($"Card with id {cardId} not found");
+            }
+
+            return true;
+        }
+
     }
 }
