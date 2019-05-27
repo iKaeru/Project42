@@ -9,7 +9,7 @@ namespace Models.CardsCollection
     /// <summary>
     /// Коллекция карт
     /// </summary>
-    [Table("Collectons")]
+    [Table("CardsCollections")]
     [DataContract]
     public class CardsCollection
     {
@@ -34,7 +34,7 @@ namespace Models.CardsCollection
         /// <summary>
         /// Множество карт
         /// </summary>
-        [Column("Id", Order = 3)] 
+        [Column("CardsId", Order = 3)] 
         [DataMember(IsRequired = true)]
         public ICollection<Guid> CardItems;
 
