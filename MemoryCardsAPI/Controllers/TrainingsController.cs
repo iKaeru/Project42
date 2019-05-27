@@ -185,7 +185,7 @@ namespace MemoryCardsAPI.Controllers
         }
 
         /// <summary>
-        /// Get count of cards in the box
+        /// Get amount of cards in the box
         /// </summary>
         /// <param name="box"> box where to count cards </param>
         /// <param name="cancellationToken"></param>
@@ -198,7 +198,7 @@ namespace MemoryCardsAPI.Controllers
             try
             {
                 Guid.TryParse(HttpContext.User.Identity.Name, out var uId);
-                var cardNumber = await trainingService.GetCardsFromBoxAsync(box, uId);
+                var cardNumber = await trainingService.GetCardsCountFromBoxAsync(box, uId);
                 return Ok(cardNumber);
             }
             catch (AppException ex)

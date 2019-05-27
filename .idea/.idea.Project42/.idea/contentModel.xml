@@ -130,15 +130,11 @@
           <e p="MemorizationBoxes.cs" t="Include" />
           <e p="Repositories" t="Include">
             <e p="InMemoryTrainingRepository.cs" t="Include" />
-            <e p="InMemoryTrainingRepository.cs.orig" t="Include" />
             <e p="ITrainingRepository.cs" t="Include" />
-            <e p="ITrainingRepository.cs.orig" t="Include" />
           </e>
           <e p="Services" t="Include">
             <e p="ITrainingService.cs" t="Include" />
-            <e p="ITrainingService.cs.orig" t="Include" />
             <e p="TrainingService.cs" t="Include" />
-            <e p="TrainingService.cs.orig" t="Include" />
           </e>
           <e p="Training.cs" t="Include" />
         </e>

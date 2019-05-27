@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
@@ -83,5 +84,16 @@ namespace Models.CardItem.Repositories
             return true;
         }
 
+        public async Task<IEnumerable<CardItem>> GetCardsFromListAsync(IEnumerable<Guid> cardsList)
+        {
+            var result = new List<CardItem>();
+            foreach (var cardId in cardsList)
+            {
+                var cardItem = await context.Cards.FirstOrDefaultAsync(x => x.Id == cardId);
+                result.Add(cardItem);
+            }
+
+            return result;
+        }
     }
 }

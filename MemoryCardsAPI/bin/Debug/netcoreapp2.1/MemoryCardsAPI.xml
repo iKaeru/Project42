@@ -93,6 +93,22 @@
             <param name="cancellationToken"></param>
             <returns></returns>
         </member>
+        <member name="M:MemoryCardsAPI.Controllers.CollectionsController.CollectionLearnedCards(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Shows all learned cards in Collection For User
+            </summary>
+            <param name="id">Идентификатор коллекции</param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MemoryCardsAPI.Controllers.CollectionsController.CollectionUnlearnedCards(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Shows all unlearned cards in Collection For User
+            </summary>
+            <param name="id">Идентификатор коллекции</param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
         <member name="M:MemoryCardsAPI.Controllers.CollectionsController.LearnedCollectionsAsync(System.Threading.CancellationToken)">
             <summary>
             Shows number of learned collections For User

@@ -29,6 +29,11 @@ namespace Models.CardItem.Repositories
                 (context.Cards.Where(x => x.UserId == uId || x.UserId == default(Guid)));
         }
 
+        public Task<IEnumerable<CardItem>> GetCardsFromListAsync(IEnumerable<Guid> cardsList)
+        {
+            throw new NotImplementedException();
+        }
+
         public Task<IReadOnlyList<CardItemInfo>> SearchAsync(CardSearchInfo query, CancellationToken cancelltionToken)
         {
             throw new NotImplementedException();
