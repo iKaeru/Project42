@@ -10,6 +10,7 @@ using Models.CardsCollection.Services;
 using Models.Errors;
 using View = Client.Models.CardsCollection;
 using System.Linq;
+using Models.CardItem;
 using Models.CardItem.Services;
 using Swashbuckle.AspNetCore.Annotations;
 
@@ -38,7 +39,7 @@ namespace MemoryCardsAPI.Controllers
         /// <param name="cancellationToken"></param>
         /// <returns code="200"></returns> 
         [HttpPost]
-        [SwaggerResponse(200, Type=typeof(CardsCollection))]
+        [SwaggerResponse(200, Type = typeof(CardsCollection))]
         [Route("default")]
         public async Task<ActionResult<CardsCollection>> CreateDefaultAsync(CancellationToken cancellationToken)
         {
@@ -68,9 +69,10 @@ namespace MemoryCardsAPI.Controllers
         /// <param name="cancellationToken"></param>
         /// <returns code="200"></returns> 
         [HttpPost]
-        [SwaggerResponse(200, Type=typeof(CardsCollection))]
+        [SwaggerResponse(200, Type = typeof(CardsCollection))]
         [Route("")]
-        public async Task<ActionResult<CardsCollection>> CreateAsync([FromBody] string name, CancellationToken cancellationToken)
+        public async Task<ActionResult<CardsCollection>> CreateAsync([FromBody] string name,
+            CancellationToken cancellationToken)
         {
             try
             {
@@ -79,7 +81,7 @@ namespace MemoryCardsAPI.Controllers
                 {
                     return BadRequest(new {message = $"Collection {name} already exists"});
                 }
-                
+
                 var cardCollection = collectionService.CreateCollection(uId, name);
                 if (await collectionService.AddCollectionAsync(cardCollection))
                     return Ok(cardCollection);
@@ -109,7 +111,7 @@ namespace MemoryCardsAPI.Controllers
                 Guid.TryParse(HttpContext.User.Identity.Name, out var userId);
                 Guid.TryParse(cardId, out var cardGuid);
                 Guid.TryParse(id, out var collectionId);
-                
+
                 if (!await collectionService.IsIdExistAsync(collectionId, userId))
                 {
                     return BadRequest(new {message = "No collection with such id"});
@@ -117,7 +119,7 @@ namespace MemoryCardsAPI.Controllers
 
                 if (await collectionService.AddCardToCollectionAsync(collectionId, cardGuid, userId))
                     return Ok();
-                
+
                 throw new AppException("Couldn't add card to a collection");
             }
             catch (AppException ex)
@@ -133,7 +135,7 @@ namespace MemoryCardsAPI.Controllers
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
         [HttpGet]
-        [SwaggerResponse(200, Type=typeof(CardsCollection))]
+        [SwaggerResponse(200, Type = typeof(CardsCollection))]
         [Route("{id}")]
         public async Task<ActionResult> ShowCollection(string id, CancellationToken cancellationToken)
         {
@@ -162,7 +164,7 @@ namespace MemoryCardsAPI.Controllers
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
         [HttpGet]
-        [SwaggerResponse(200, Type=typeof(IEnumerable<CardsCollection>))]
+        [SwaggerResponse(200, Type = typeof(IEnumerable<CardsCollection>))]
         [Route("")]
         public async Task<ActionResult> ListCollections(CancellationToken cancellationToken)
         {
@@ -179,24 +181,86 @@ namespace MemoryCardsAPI.Controllers
         }
 
         /// <summary>
+        /// Shows all learned cards in Collection For User
+        /// </summary>
+        /// <param name="id">Идентификатор коллекции</param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        [HttpGet]
+        [SwaggerResponse(200, Type = typeof(IEnumerable<CardItem>))]
+        [Route("{id}/learnedCards")]
+        public async Task<ActionResult> CollectionLearnedCards(string id, CancellationToken cancellationToken)
+        {
+            try
+            {
+                Guid.TryParse(HttpContext.User.Identity.Name, out var userId);
+                Guid.TryParse(id, out var collectionId);
+
+                if (!await collectionService.IsIdExistAsync(collectionId, userId))
+                {
+                    return BadRequest(new {message = "No collection with id \"" + collectionId + "\""});
+                }
+
+                var collections = await collectionService.GetAllLearnedCardsAsync(userId, 
+                    collectionId);
+                return Ok(collections);
+            }
+            catch (AppException ex)
+            {
+                return BadRequest(new {message = ex.Message});
+            }
+        }
+
+        /// <summary>
+        /// Shows all unlearned cards in Collection For User
+        /// </summary>
+        /// <param name="id">Идентификатор коллекции</param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        [HttpGet] 
+        [SwaggerResponse(200, Type = typeof(IEnumerable<CardItem>))] 
+        [Route("{id}/unlearnedCards")]
+        public async Task<ActionResult> CollectionUnlearnedCards(string id, CancellationToken cancellationToken)
+        {
+            try
+            {
+                Guid.TryParse(HttpContext.User.Identity.Name, out var userId);
+                Guid.TryParse(id, out var collectionId);
+
+                if (!await collectionService.IsIdExistAsync(collectionId, userId))
+                {
+                    return BadRequest(new {message = "No collection with id \"" + collectionId + "\""});
+                }
+
+                var collections = await collectionService.GetAllUnlearnedCardsAsync(userId, 
+                    collectionId);
+                return Ok(collections);
+            }
+            catch (AppException ex)
+            {
+                return BadRequest(new {message = ex.Message});
+            }
+        }
+        
+        /// <summary>
         /// Shows number of learned collections For User
         /// </summary>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
         [HttpGet]
-        [SwaggerResponse(200, Type=typeof(int))]
-        [Route("learned")]
+        [SwaggerResponse(200, Type = typeof(int))]
+        [Route("learnedAmount")]
         public async Task<IActionResult> LearnedCollectionsAsync(CancellationToken cancellationToken)
         {
             try
             {
-                Guid.TryParse(HttpContext.User.Identity.Name, out var uId);
-                var collections = await collectionService.GetLearnedCollectionsAsync(uId);
+                Guid.TryParse(HttpContext.User.Identity.Name, out var userId);
+                var collections = await collectionService.GetLearnedCollectionsAsync(userId);
                 return Ok(collections.Count());
             }
             catch (AppException ex)
             {
-                return BadRequest(new { message = ex.Message });
+                return BadRequest(new {message = ex.Message});
             }
         }
 
@@ -209,19 +273,19 @@ namespace MemoryCardsAPI.Controllers
         /// <returns code="200"></returns>
         [HttpPut]
         [Route("{id}")]
-        public async Task<IActionResult> UpdateCardByIdAsync(string id, 
+        public async Task<IActionResult> UpdateCardByIdAsync(string id,
             [FromBody] View.CardsCollectionPatchInfo updateInfo, CancellationToken cancellationToken)
         {
             try
             {
                 Guid.TryParse(HttpContext.User.Identity.Name, out var userId);
                 Guid.TryParse(id, out var collectionId);
-                
+
                 if (!await collectionService.IsIdExistAsync(collectionId, userId))
                 {
                     return BadRequest(new {message = "No collection with such id"});
                 }
-                
+
                 var collection = CardsCollectionConverter.ConvertPatchInfo(updateInfo);
                 collectionService.UpdateByIdAsync(collection, collectionId, userId);
                 return Ok();
@@ -255,7 +319,7 @@ namespace MemoryCardsAPI.Controllers
                         return Ok();
                     }
                 }
-                
+
                 throw new AppException("Couldn't delete collection");
             }
             catch (AppException ex)

@@ -84,14 +84,13 @@ namespace Models.Training.Services
             return cardList;
         }
 
-        public async Task<int> GetCardsFromBoxAsync(MemorizationBoxes box, Guid uId)
+        public async Task<int> GetCardsCountFromBoxAsync(MemorizationBoxes box, Guid uId)
         {
             return await Task.Run(() => repository.GetTrainingsFromBox(box)
                .Where(u => u.UserId == uId)
                .Select(t => t.CardId)
                .Count());
         }
-
 
         public async Task<bool> Delete(Guid id)
         {
@@ -102,9 +101,6 @@ namespace Models.Training.Services
 
             return await repository.DeleteTrainAsync(id);
         }
-
-
-
 
         #region private helper methods
 

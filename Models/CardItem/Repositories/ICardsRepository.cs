@@ -24,9 +24,17 @@ namespace Models.CardItem.Repositories
         /// </summary>
         /// <param name="uId">Информация об Id пользователя</param>
         /// <param name="cancellationToken">Токен отмены операции</param>
-        /// <returns>Задача, представляющая асинхронное создание карты.
-        /// Результат выполнения операции - информация о созданной карте</returns>
+        /// <returns>Задача, представляющая асинхронный поиск карт.
+        /// Результат выполнения операции - список найденных карт</returns>
         Task<IEnumerable<CardItem>> GetAllUserCards(Guid uId, CancellationToken cancellationToken);
+
+        /// <summary>
+        /// Выдать все карты, соответствующие списку идентификаторов
+        /// </summary>
+        /// <param name="cardsList">Список Id карт для поиска</param>
+        /// <returns>Задача, представляющая асинхронное создание карты.
+        /// Результат выполнения операции - список найденных карт</returns>
+        Task<IEnumerable<CardItem>> GetCardsFromListAsync(IEnumerable<Guid> cardsList);
         
         /// <summary>
         /// Найти карты
@@ -45,7 +53,7 @@ namespace Models.CardItem.Repositories
         /// <returns>Задача, представлящая асинхронный запрос карты.
         /// Результат выполнения - карта</returns>
         Task<CardItem> GetAsync(Guid cardId, CancellationToken cancellationToken);
-
+        
         /// <summary>
         /// Изменить карту
         /// </summary>

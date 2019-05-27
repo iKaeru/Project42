@@ -63,6 +63,14 @@ namespace Models.Training.Repositories
 
             return false;
         }
+        
+        public async Task<IEnumerable<Guid>> GetCardsIdFromBoxAsync(MemorizationBoxes box, Guid uId)
+        {
+            return await Task.Run( () => context.Trainings
+                .Where(x => x.Box == box)
+                .Where(u => u.UserId == uId)
+                .Select(t => t.CardId));
+        }
 
         private DateTime GetNextTrainingDay(Training x)
         {

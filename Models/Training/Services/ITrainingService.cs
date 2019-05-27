@@ -15,7 +15,7 @@ namespace Models.Training.Services
         Task<Training> GetTrainingAsync(CardItem.CardItem card, Guid userId);
         Task<Training> GetTrainingByIdAsync(Guid trainId, Guid userId);
         Task<List<Guid>> GetDateTrainingAsync(DateTime date, Guid uId);
-        Task<int> GetCardsFromBoxAsync(MemorizationBoxes box, Guid uId);
+        Task<int> GetCardsCountFromBoxAsync(MemorizationBoxes box, Guid uId);
         Task<bool> Delete(Guid id);
     }
 }
