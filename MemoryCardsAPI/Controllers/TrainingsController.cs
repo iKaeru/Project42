@@ -165,18 +165,17 @@ namespace MemoryCardsAPI.Controllers
         /// <summary>
         /// Get Cards That Require Training For Selected Day
         /// </summary>
-        /// <param name="date">Дата к которой получить тренировку (обычно надо указывать ту дату, которая сегодня) </param>
         /// <param name="cancellationToken"></param>
         /// <returns code="200"></returns>
         [HttpGet]
         [SwaggerResponse(200, Type=typeof(List<Guid>))]
         [Route("today")]
-        public async Task<IActionResult> GetTodaysTraining(DateTime date, CancellationToken cancellationToken)
+        public async Task<IActionResult> GetTodaysTraining(CancellationToken cancellationToken)
         {
             try
             {
                 Guid.TryParse(HttpContext.User.Identity.Name, out var uId);
-                var cardList = await trainingService.GetDateTrainingAsync(date, uId);
+                var cardList = await trainingService.GetDateTrainingAsync(DateTime.Now, uId);
                 return Ok(cardList);
             }
             catch (AppException ex)

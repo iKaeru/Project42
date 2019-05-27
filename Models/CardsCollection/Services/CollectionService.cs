@@ -52,14 +52,18 @@ namespace Models.CardsCollection.Services
             return true;
         }
         
-        public async Task<bool> AddCardToCollectionAsync(string collectionName, Guid cardId, Guid userId)
+        public async Task<bool> AddCardToCollectionAsync(Guid collectionId, Guid cardId, Guid userId)
         {
-            FieldsAreFilled(userId, collectionName);
-
+            if (collectionId == Guid.Empty)
+                throw new AppException(nameof(collectionId) + " is required");
+            
             if (cardId == Guid.Empty)
+                throw new AppException(nameof(cardId) + " is required");
+            
+            if (userId == Guid.Empty)
                 throw new AppException(nameof(userId) + " is required");
             
-            var desiredCollection = await repository.FindByNameAsync(collectionName, userId);
+            var desiredCollection = await repository.FindByIdAsync(collectionId, userId);
 
             if (desiredCollection.CardItems.Contains(cardId))
             {
@@ -80,9 +84,9 @@ namespace Models.CardsCollection.Services
             return true;
         }
 
-        public async void UpdateByIdAsync(CardsCollectionPatchInfo collection, string collectionName, Guid userId)
+        public async void UpdateByIdAsync(CardsCollectionPatchInfo collection, Guid collectionId, Guid userId)
         {
-            var collectionFromRepository = await repository.FindByNameAsync(collectionName, userId);
+            var collectionFromRepository = await repository.FindByIdAsync(collectionId, userId);
 
             if (collectionFromRepository == null)
                 throw new AppException("Collection not found");
@@ -93,14 +97,19 @@ namespace Models.CardsCollection.Services
             await repository.PatchAsync(collectionFromRepository);
         }
         
-        public async Task<bool> Delete(Guid userId, string collectionName)
+        public async Task<bool> Delete(Guid userId, Guid collectionId)
         {
             if (userId == Guid.Empty)
             {
                 throw new ArgumentException("Incorrect value", nameof(userId));
             }
+            
+            if (collectionId== Guid.Empty)
+            {
+                throw new ArgumentException("Incorrect value", nameof(collectionId));
+            }
 
-            return await repository.DeleteCollectionAsync(userId, collectionName);
+            return await repository.DeleteCollectionAsync(userId, collectionId);
         }
         
         public async Task<CardsCollection> FindCollectionByNameAsync(string collectionName, Guid userId)
@@ -110,12 +119,38 @@ namespace Models.CardsCollection.Services
             return await repository.FindByNameAsync(collectionName, userId);
         }
 
+        public async Task<CardsCollection> FindCollectionByIdAsync(Guid collectionId, Guid userId)
+        {
+            if (userId == Guid.Empty)
+            {
+                throw new ArgumentException("Incorrect value", nameof(userId));
+            }
+            
+            if (collectionId== Guid.Empty)
+            {
+                throw new ArgumentException("Incorrect value", nameof(collectionId));
+            }
+            
+            return await repository.FindByIdAsync(collectionId, userId);
+        }
+        
         public async Task<bool> IsNameExistAsync(string collectionName, Guid userId)
         {
             if (userId == Guid.Empty)
                 throw new AppException(nameof(userId) + " is required");
 
             return await repository.FindNameAsync(collectionName, userId);
+        }
+        
+        public async Task<bool> IsIdExistAsync(Guid collectionId, Guid userId)
+        {
+            if (userId == Guid.Empty)
+                throw new AppException(nameof(userId) + " is required");
+            
+            if (collectionId == Guid.Empty)
+                throw new AppException(nameof(userId) + " is required");
+
+            return await repository.FindIdAsync(collectionId, userId);
         }
         
         public async Task<IEnumerable<CardsCollection>> GetAllCollectionsAsync(Guid userId)

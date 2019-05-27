@@ -105,7 +105,17 @@ namespace Models.CardItem.Services
 
             return await repository.DeleteCardAsync(id);
         }
-        
+
+        public async Task<bool> DeleteCardsFromList(ICollection<Guid> cardsList)
+        {
+            if (cardsList == null)
+            {
+                throw new ArgumentException("No cards in list", nameof(cardsList));
+            }
+            
+            return await repository.DeleteCardsFromListAsync(cardsList);
+        }
+            
         #region private helper methods
 
         private bool ValidateCard(CardCreationInfo cardToValidate)

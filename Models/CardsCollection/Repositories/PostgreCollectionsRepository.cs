@@ -23,6 +23,11 @@ namespace Models.CardsCollection.Repositories
                 .AnyAsync(x => x.Name == collectionName);
         }
 
+        public Task<bool> FindIdAsync(Guid collectionId, Guid uId)
+        {
+            throw new NotImplementedException();
+        }
+
         public async Task<CardsCollection> CreateAsync(CardsCollection collectionToAdd)
         {
             await context.Collections.AddAsync(collectionToAdd);
@@ -35,6 +40,11 @@ namespace Models.CardsCollection.Repositories
             return await context.Collections
                 .Where(x => x.UserId == userId)
                 .FirstOrDefaultAsync(x => x.Name == collectionName);
+        }
+
+        public Task<CardsCollection> FindByIdAsync(Guid collectionId, Guid userId)
+        {
+            throw new NotImplementedException();
         }
 
         public async Task UpdateAsync(CardsCollection collection)
@@ -54,7 +64,7 @@ namespace Models.CardsCollection.Repositories
             throw new NotImplementedException();
         }
 
-        public Task<bool> DeleteCollectionAsync(Guid userId, string collectionName)
+        public Task<bool> DeleteCollectionAsync(Guid userId, Guid collectionId)
         {
             throw new NotImplementedException();
         }

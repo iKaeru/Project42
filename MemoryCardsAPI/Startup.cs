@@ -58,7 +58,7 @@ namespace MemoryCardsAPI
                 var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
                 swagger.IncludeXmlComments(xmlPath);
                 
-           //     swagger.OperationFilter<AuthorizationHeaderParameterOperationFilter>();
+//                swagger.OperationFilter<AuthorizationHeaderParameterOperationFilter>();
                 
                 // UseFullTypeNameInSchemaIds replacement for .NET Core
                 swagger.CustomSchemaIds(x => x.FullName);

@@ -61,28 +61,28 @@
             <param name="cancellationToken"></param>
             <returns code="200"></returns> 
         </member>
-        <member name="M:MemoryCardsAPI.Controllers.CollectionsController.CreateAsync(System.Threading.CancellationToken,System.String)">
+        <member name="M:MemoryCardsAPI.Controllers.CollectionsController.CreateAsync(System.String,System.Threading.CancellationToken)">
             <summary>
             Create Collection By Name
             </summary>
-            <param name="cancellationToken"></param>
             <param name="name">Имя коллекции</param>
+            <param name="cancellationToken"></param>
             <returns code="200"></returns> 
         </member>
         <member name="M:MemoryCardsAPI.Controllers.CollectionsController.AddCardToCollection(System.String,System.String,System.Threading.CancellationToken)">
             <summary>
-            Add Card To A Collection By Name
+            Add Card To A Collection By Id
             </summary>
-            <param name="collectionName">Имя коллекции</param>
+            <param name="id">Идентификатор коллекции</param>
             <param name="cardId">Идентификатор карты для добавления в коллекцию</param>
             <param name="cancellationToken"></param>
             <returns></returns>
         </member>
         <member name="M:MemoryCardsAPI.Controllers.CollectionsController.ShowCollection(System.String,System.Threading.CancellationToken)">
             <summary>
-            Get Collection By Name
+            Get Collection By Id
             </summary>
-            <param name="collectionName">Название коллекции</param>
+            <param name="id">Идентификатор коллекции</param>
             <param name="cancellationToken"></param>
             <returns></returns>
         </member>
@@ -102,18 +102,18 @@
         </member>
         <member name="M:MemoryCardsAPI.Controllers.CollectionsController.UpdateCardByIdAsync(System.String,Client.Models.CardsCollection.CardsCollectionPatchInfo,System.Threading.CancellationToken)">
             <summary>
-            Update Collection By Name
+            Update Collection By Id
             </summary>
-            <param name="collectionName">Название коллекции</param>
+            <param name="id">Идентификатор коллекции</param>
             <param name="updateInfo">Информация о коллекции для редактирования</param>
             <param name="cancellationToken"></param>
             <returns code="200"></returns>
         </member>
         <member name="M:MemoryCardsAPI.Controllers.CollectionsController.Delete(System.String,System.Threading.CancellationToken)">
             <summary>
-            Delete Collection By Name
+            Delete Collection By Id And All Cards In It
             </summary>
-            <param name="collectionName">Название коллекции</param>
+            <param name="id">Идентификатор коллекции</param>
             <param name="cancellationToken"></param>
             <returns code="200"></returns>
         </member>
@@ -161,11 +161,10 @@
             <param name="id">Идентификатор тренировки</param>
             <returns code="200"></returns>
         </member>
-        <member name="M:MemoryCardsAPI.Controllers.TrainingsController.GetTodaysTraining(System.DateTime,System.Threading.CancellationToken)">
+        <member name="M:MemoryCardsAPI.Controllers.TrainingsController.GetTodaysTraining(System.Threading.CancellationToken)">
             <summary>
             Get Cards That Require Training For Selected Day
             </summary>
-            <param name="date">Дата к которой получить тренировку (обычно надо указывать ту дату, которая сегодня) </param>
             <param name="cancellationToken"></param>
             <returns code="200"></returns>
         </member>
