@@ -23,9 +23,11 @@ namespace Models.CardsCollection.Repositories
                 .AnyAsync(x => x.Name == collectionName);
         }
 
-        public Task<bool> FindIdAsync(Guid collectionId, Guid uId)
+        public async Task<bool> FindIdAsync(Guid collectionId, Guid uId)
         {
-            throw new NotImplementedException();
+            return await context.Collections
+                .Where(x => x.UserId == uId)
+                .AnyAsync(x => x.Id == collectionId);
         }
 
         public async Task<CardsCollection> CreateAsync(CardsCollection collectionToAdd)
@@ -42,9 +44,11 @@ namespace Models.CardsCollection.Repositories
                 .FirstOrDefaultAsync(x => x.Name == collectionName);
         }
 
-        public Task<CardsCollection> FindByIdAsync(Guid collectionId, Guid userId)
+        public async Task<CardsCollection> FindByIdAsync(Guid collectionId, Guid userId)
         {
-            throw new NotImplementedException();
+            return await context.Collections
+                .Where(x => x.UserId == userId)
+                .FirstOrDefaultAsync(x => x.Id == collectionId);
         }
 
         public async Task UpdateAsync(CardsCollection collection)
@@ -59,14 +63,27 @@ namespace Models.CardsCollection.Repositories
                 (context.Collections.Where(x => x.UserId == userId));
         }
 
-        public Task<CardsCollection> PatchAsync(CardsCollection patchInfo)
+        public async Task<CardsCollection> PatchAsync(CardsCollection patchInfo)
         {
-            throw new NotImplementedException();
+            var card = context.Collections.Update(patchInfo);
+            await context.SaveChangesAsync();
+            return card.Entity;
         }
 
-        public Task<bool> DeleteCollectionAsync(Guid userId, Guid collectionId)
+        public async Task<bool> DeleteCollectionAsync(Guid userId, Guid collectionId)
         {
-            throw new NotImplementedException();
+            var collection = await context.Collections
+                .Where(x => x.UserId == userId)
+                .FirstOrDefaultAsync(x => x.Id == collectionId);
+            
+            if (collection != null)
+            {
+                context.Collections.Remove(collection);
+                context.SaveChanges();
+                return true;
+            }
+
+            return false;
         }
     }
 }

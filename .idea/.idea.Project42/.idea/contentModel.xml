@@ -118,6 +118,11 @@
         <e p="Errors" t="Include">
           <e p="AppException.cs" t="Include" />
         </e>
+        <e p="Migrations" t="Include">
+          <e p="20190527174002_Trainings2.cs" t="Include" />
+          <e p="20190527174002_Trainings2.Designer.cs" t="Include" />
+          <e p="PostgreContextModelSnapshot.cs" t="Include" />
+        </e>
         <e p="Models.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
@@ -131,6 +136,7 @@
           <e p="Repositories" t="Include">
             <e p="InMemoryTrainingRepository.cs" t="Include" />
             <e p="ITrainingRepository.cs" t="Include" />
+            <e p="PostgreTrainingRepository.cs" t="Include" />
           </e>
           <e p="Services" t="Include">
             <e p="ITrainingService.cs" t="Include" />

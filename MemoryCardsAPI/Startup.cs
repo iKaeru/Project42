@@ -138,6 +138,7 @@ namespace MemoryCardsAPI
             services.AddSingleton<ICardsRepository, InMemoryCardsRepository>();
             services.AddSingleton<ICollectionsRepository, InMemoryCollectionsRepository>();
             services.AddSingleton<ITrainingRepository, InMemoryTrainingRepository>();
+            
             services.AddDbContext<InMemoryContext>(x => x.UseInMemoryDatabase("TestDb"));
         }
 
@@ -146,7 +147,8 @@ namespace MemoryCardsAPI
             services.AddSingleton<IUsersRepository, PostgreUsersRepository>();
             services.AddSingleton<ICardsRepository, PostgreCardsRepository>();
             services.AddSingleton<ICollectionsRepository, PostgreCollectionsRepository>();
-            
+            services.AddSingleton<ITrainingRepository, PostgreTrainingRepository>();
+
             services.AddEntityFrameworkNpgsql()
                 .AddDbContext<PostgreContext>()
                 .BuildServiceProvider();

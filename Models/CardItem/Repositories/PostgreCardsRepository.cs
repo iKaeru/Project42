@@ -5,6 +5,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Models.Data;
+using Models.Errors;
 
 namespace Models.CardItem.Repositories
 {
@@ -31,12 +32,21 @@ namespace Models.CardItem.Repositories
 
         public Task<IEnumerable<Guid>> GetAllUserCardsId(Guid uId, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            return Task.FromResult<IEnumerable<Guid>>(context.Cards
+                .Where(x => x.UserId == uId || x.UserId == default(Guid))
+                .Select(u => u.Id));
         }
 
-        public Task<IEnumerable<CardItem>> GetCardsFromListAsync(IEnumerable<Guid> cardsList)
+        public async Task<IEnumerable<CardItem>> GetCardsFromListAsync(IEnumerable<Guid> cardsList)
         {
-            throw new NotImplementedException();
+            var result = new List<CardItem>();
+            foreach (var cardId in cardsList)
+            {
+                var cardItem = await context.Cards.FirstOrDefaultAsync(x => x.Id == cardId);
+                result.Add(cardItem);
+            }
+
+            return result;
         }
 
         public Task<IReadOnlyList<CardItemInfo>> SearchAsync(CardSearchInfo query, CancellationToken cancelltionToken)
@@ -49,19 +59,41 @@ namespace Models.CardItem.Repositories
             return await context.Cards.FirstOrDefaultAsync(x => x.Id == cardId);
         }
 
-        public Task<CardItem> PatchAsync(CardItem patchInfo, CancellationToken cancelltionToken)
+        public async Task<CardItem> PatchAsync(CardItem patchInfo, CancellationToken cancelltionToken)
         {
-            throw new NotImplementedException();
+            var card = context.Cards.Update(patchInfo);
+            await context.SaveChangesAsync();
+            return card.Entity;        }
+
+        public async Task<bool> DeleteCardAsync(Guid id)
+        {
+            var cardItem = await context.Cards.FindAsync(id);
+            if (cardItem != null)
+            {
+                context.Cards.Remove(cardItem);
+                context.SaveChanges();
+                return true;
+            }
+
+            return false;
         }
 
-        public Task<bool> DeleteCardAsync(Guid cardId)
+        public async Task<bool> DeleteCardsFromListAsync(ICollection<Guid> cardsList)
         {
-            throw new NotImplementedException();
-        }
+            foreach (var cardId in cardsList)
+            {
+                var cardItem = await context.Cards.FindAsync(cardId);
+                if (cardItem != null)
+                {
+                    context.Cards.Remove(cardItem);
+                    context.SaveChanges();
+                    continue;
+                }
 
-        public Task<bool> DeleteCardsFromListAsync(ICollection<Guid> cardsList)
-        {
-            throw new NotImplementedException();
+                throw new AppException($"Card with id {cardId} not found");
+            }
+
+            return true;        
         }
     }
 }
