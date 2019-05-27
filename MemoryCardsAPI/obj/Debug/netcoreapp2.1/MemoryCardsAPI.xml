@@ -25,6 +25,13 @@
             <param name="cancellationToken"></param>
             <returns code="200"></returns>
         </member>
+        <member name="M:MemoryCardsAPI.Controllers.CardsController.GetCardsAmountForUser(System.Threading.CancellationToken)">
+            <summary>
+            Get All Cards Amount For User
+            </summary>
+            <param name="cancellationToken"></param>
+            <returns code="200"></returns>
+        </member>
         <member name="M:MemoryCardsAPI.Controllers.CardsController.GetCardByIdAsync(System.String,System.Threading.CancellationToken)">
             <summary>
             Get Card By Id
@@ -32,6 +39,27 @@
             <param name="id">Идентификатор карты</param>
             <param name="cancellationToken"></param>
             <returns code="200"></returns>
+        </member>
+        <member name="M:MemoryCardsAPI.Controllers.CardsController.CollectionLearnedCards(System.Threading.CancellationToken)">
+            <summary>
+            Shows All Learned Cards Amount For User
+            </summary>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MemoryCardsAPI.Controllers.CardsController.CollectionUnlearnedCards(System.Threading.CancellationToken)">
+            <summary>
+            Shows All Unlearned Cards Amount For User
+            </summary>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MemoryCardsAPI.Controllers.CardsController.CollectionRepeatCards(System.Threading.CancellationToken)">
+            <summary>
+            Shows All Need To Repeat Cards Amount For User
+            </summary>
+            <param name="cancellationToken"></param>
+            <returns></returns>
         </member>
         <member name="M:MemoryCardsAPI.Controllers.CardsController.UpdateCardByIdAsync(System.String,Client.Models.CardItem.CardPatchInfo,System.Threading.CancellationToken)">
             <summary>
@@ -95,7 +123,7 @@
         </member>
         <member name="M:MemoryCardsAPI.Controllers.CollectionsController.CollectionLearnedCards(System.String,System.Threading.CancellationToken)">
             <summary>
-            Shows all learned cards in Collection For User
+            Shows All Learned Cards in Collection For User
             </summary>
             <param name="id">Идентификатор коллекции</param>
             <param name="cancellationToken"></param>
@@ -103,7 +131,7 @@
         </member>
         <member name="M:MemoryCardsAPI.Controllers.CollectionsController.CollectionUnlearnedCards(System.String,System.Threading.CancellationToken)">
             <summary>
-            Shows all unlearned cards in Collection For User
+            Shows All Unlearned Cards in Collection For User
             </summary>
             <param name="id">Идентификатор коллекции</param>
             <param name="cancellationToken"></param>
@@ -184,9 +212,16 @@
             <param name="cancellationToken"></param>
             <returns code="200"></returns>
         </member>
+        <member name="M:MemoryCardsAPI.Controllers.TrainingsController.GetTodaysTrainingAmount(System.Threading.CancellationToken)">
+            <summary>
+            Get Cards That Require Training For Selected Day
+            </summary>
+            <param name="cancellationToken"></param>
+            <returns code="200"></returns>
+        </member>
         <member name="M:MemoryCardsAPI.Controllers.TrainingsController.GetNumberOfCardsInBox(Models.Training.MemorizationBoxes,System.Threading.CancellationToken)">
             <summary>
-            Get count of cards in the box
+            Get amount of cards in the box
             </summary>
             <param name="box"> box where to count cards </param>
             <param name="cancellationToken"></param>

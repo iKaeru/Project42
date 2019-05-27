@@ -36,6 +36,13 @@ namespace Models.CardItem.Repositories
                 (context.Cards.Where(x => x.UserId == uId || x.UserId == default(Guid)));
         }
 
+        public Task<IEnumerable<Guid>> GetAllUserCardsId(Guid uId, CancellationToken cancellationToken)
+        {
+            return Task.FromResult<IEnumerable<Guid>>(context.Cards
+                .Where(x => x.UserId == uId || x.UserId == default(Guid))
+                .Select(u => u.Id));
+        }
+
         public Task<IReadOnlyList<CardItemInfo>> SearchAsync(CardSearchInfo query, CancellationToken cancelltionToken)
         {
             throw new NotImplementedException();
@@ -65,7 +72,7 @@ namespace Models.CardItem.Repositories
 
             return false;
         }
-        
+
         public async Task<bool> DeleteCardsFromListAsync(ICollection<Guid> cardsList)
         {
             foreach (var cardId in cardsList)

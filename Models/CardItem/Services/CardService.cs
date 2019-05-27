@@ -38,7 +38,7 @@ namespace Models.CardItem.Services
         {
             if (!IsCardValid(cardToAddToRepo))
                 throw new AppException(nameof(cardToAddToRepo) + " is incorrect");
-            
+
             try
             {
                 await repository.CreateAsync(cardToAddToRepo, cancellationToken);
@@ -49,21 +49,31 @@ namespace Models.CardItem.Services
             }
         }
 
-        public async Task<IEnumerable<CardItem>> GetAllUserCards(Guid uId, CancellationToken cancellationToken)
+        public async Task<IEnumerable<CardItem>> GetAllUserCards(Guid userId, CancellationToken cancellationToken)
         {
-            if (uId == Guid.Empty)
+            if (userId == Guid.Empty)
             {
-                return new List<CardItem>();
+                throw new AppException($"Incorrect value for {nameof(userId)}");
             }
 
-            return await repository.GetAllUserCards(uId, cancellationToken);
+            return await repository.GetAllUserCards(userId, cancellationToken);
+        }
+
+        public async Task<IEnumerable<Guid>> GetAllUserCardsId(Guid userId, CancellationToken cancellationToken)
+        {
+            if (userId == Guid.Empty)
+            {
+                throw new AppException($"Incorrect value for {nameof(userId)}");
+            }
+
+            return await repository.GetAllUserCardsId(userId, cancellationToken);
         }
 
         public async Task<CardItem> GetCardByIdAsync(Guid id, CancellationToken cancellationToken)
         {
             if (id == Guid.Empty)
             {
-                throw new NullReferenceException();
+                throw new AppException($"{nameof(id)} is Empty");
             }
 
             return await repository.GetAsync(id, cancellationToken);
@@ -75,15 +85,15 @@ namespace Models.CardItem.Services
 
             if (cardFromRepository == null)
                 throw new AppException("Card not found");
-            
+
             UpdateCardInfo(cardToUpdate, cardFromRepository);
 
             if (!IsCardValid(cardFromRepository))
                 throw new AppException("Bad card info");
-            
+
             await repository.PatchAsync(cardFromRepository, cancellationToken);
         }
-        
+
         public async void CheckOwnership(CardItem card, Guid userId)
         {
             if (card == null)
@@ -92,7 +102,7 @@ namespace Models.CardItem.Services
             if (!IsCardValid(card) || userId == Guid.Empty)
                 throw new AppException("Bad info");
             var cardInRepo = await repository.GetAsync(card.Id, CancellationToken.None);
-            if(cardInRepo.UserId != userId)
+            if (cardInRepo.UserId != userId)
                 throw new AppException("No access");
         }
 
@@ -106,16 +116,32 @@ namespace Models.CardItem.Services
             return await repository.DeleteCardAsync(id);
         }
 
+        public async Task<IEnumerable<CardItem>> GetAllCardsFromList(IEnumerable<Guid> cardsList)
+        {
+            var result = new List<CardItem>();
+            foreach (var cardId in cardsList)
+            {
+                if (cardId == Guid.Empty)
+                {
+                    throw new NullReferenceException();
+                }
+
+                result.Add(await repository.GetAsync(cardId, CancellationToken.None));
+            }
+
+            return result;
+        }
+
         public async Task<bool> DeleteCardsFromList(ICollection<Guid> cardsList)
         {
             if (cardsList == null)
             {
                 throw new ArgumentException("No cards in list", nameof(cardsList));
             }
-            
+
             return await repository.DeleteCardsFromListAsync(cardsList);
         }
-            
+
         #region private helper methods
 
         private bool ValidateCard(CardCreationInfo cardToValidate)
@@ -186,7 +212,7 @@ namespace Models.CardItem.Services
 
             return true;
         }
-        
+
         private void UpdateCardInfo(CardPatchInfo cardToUpdate, CardItem cardFromRepository)
         {
             cardFromRepository.Answer = cardToUpdate.Answer;

@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Converters;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Models.CardItem;
 using Models.CardItem.Services;
 using Models.Errors;
 using Models.Training;
@@ -168,15 +169,16 @@ namespace MemoryCardsAPI.Controllers
         /// <param name="cancellationToken"></param>
         /// <returns code="200"></returns>
         [HttpGet]
-        [SwaggerResponse(200, Type=typeof(List<Guid>))]
+        [SwaggerResponse(200, Type=typeof(List<CardItem>))]
         [Route("today")]
         public async Task<IActionResult> GetTodaysTraining(CancellationToken cancellationToken)
         {
             try
             {
-                Guid.TryParse(HttpContext.User.Identity.Name, out var uId);
-                var cardList = await trainingService.GetDateTrainingAsync(DateTime.Now, uId);
-                return Ok(cardList);
+                Guid.TryParse(HttpContext.User.Identity.Name, out var userId);
+                var cardsId = await trainingService.GetDateTrainingAsync(DateTime.Now, userId);
+                var cardsList = await cardsService.GetAllCardsFromList(cardsId);
+                return Ok(cardsList);
             }
             catch (AppException ex)
             {
@@ -184,6 +186,28 @@ namespace MemoryCardsAPI.Controllers
             }
         }
 
+        /// <summary>
+        /// Get Cards That Require Training For Selected Day
+        /// </summary>
+        /// <param name="cancellationToken"></param>
+        /// <returns code="200"></returns>
+        [HttpGet]
+        [SwaggerResponse(200, Type=typeof(int))]
+        [Route("todayAmount")]
+        public async Task<IActionResult> GetTodaysTrainingAmount(CancellationToken cancellationToken)
+        {
+            try
+            {
+                Guid.TryParse(HttpContext.User.Identity.Name, out var uId);
+                var cardList = await trainingService.GetDateTrainingAsync(DateTime.Now, uId);
+                return Ok(cardList.Count);
+            }
+            catch (AppException ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
+        }
+        
         /// <summary>
         /// Get amount of cards in the box
         /// </summary>

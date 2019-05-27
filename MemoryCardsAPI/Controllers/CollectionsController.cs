@@ -181,7 +181,7 @@ namespace MemoryCardsAPI.Controllers
         }
 
         /// <summary>
-        /// Shows all learned cards in Collection For User
+        /// Shows All Learned Cards in Collection For User
         /// </summary>
         /// <param name="id">Идентификатор коллекции</param>
         /// <param name="cancellationToken"></param>
@@ -212,7 +212,7 @@ namespace MemoryCardsAPI.Controllers
         }
 
         /// <summary>
-        /// Shows all unlearned cards in Collection For User
+        /// Shows All Unlearned Cards in Collection For User
         /// </summary>
         /// <param name="id">Идентификатор коллекции</param>
         /// <param name="cancellationToken"></param>
