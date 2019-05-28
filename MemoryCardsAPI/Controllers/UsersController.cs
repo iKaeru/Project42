@@ -58,6 +58,7 @@ namespace MemoryCardsAPI.Controllers
 
                 CookieOptions option = new CookieOptions();
                 option.HttpOnly = true;
+                option.SameSite = SameSiteMode.None;
 
                 HttpContext.Response.Cookies.Append("token", token, option);
 
