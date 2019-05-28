@@ -59,6 +59,10 @@ namespace MemoryCardsAPI.Controllers
                 CookieOptions option = new CookieOptions();
                 option.HttpOnly = true;
                 option.SameSite = SameSiteMode.None;
+                if (userDto.RememberMe == true)
+                {
+                    option.Expires = DateTimeOffset.Now.AddDays(5);
+                }
 
                 HttpContext.Response.Cookies.Append("token", token, option);
 
