@@ -73,25 +73,42 @@ namespace Models.Training.Services
         /// Gets id's of cards for specified user for the date
         /// </summary>
         /// <param name="date"> Date of training </param>
-        /// <param name="uId"> User who is training </param>
+        /// <param name="userId"> User who is training </param>
         /// <returns> GUIDs of cards that require training </returns>
-        public async Task<List<Guid>> GetDateTrainingAsync(DateTime date, Guid uId)
+        public async Task<List<Guid>> GetDateTrainingAsync(DateTime date, Guid userId)
         {
+            if (userId == Guid.Empty)
+                throw new AppException(nameof(userId) + " is required");
+            
             var cardList = await Task.Run( () => repository.GetDateTrainingCards(date)
-                .Where(u => u.UserId == uId)
+                .Where(u => u.UserId == userId)
                 .Select(t => t.CardId)
                 .ToList());
             return cardList;
         }
 
-        public async Task<int> GetCardsFromBoxAsync(MemorizationBoxes box, Guid uId)
+        public async Task<int> GetCardsCountFromBoxAsync(MemorizationBoxes box, Guid userId)
         {
+            if (userId == Guid.Empty)
+                throw new AppException(nameof(userId) + " is required");
+            
             return await Task.Run(() => repository.GetTrainingsFromBox(box)
-               .Where(u => u.UserId == uId)
+               .Where(u => u.UserId == userId)
                .Select(t => t.CardId)
                .Count());
         }
-
+        
+        public async Task<IEnumerable<Guid>> GetCardsIdFromBoxAsync(MemorizationBoxes box, Guid userId)
+        {
+            if (userId == Guid.Empty)
+                throw new AppException(nameof(userId) + " is required");
+            
+            return await Task.Run(() => repository.GetTrainingsFromBox(box)
+                .Where(u => u.UserId == userId)
+                .Select(u => u.CardId));
+        }
+        
+        
 
         public async Task<bool> Delete(Guid id)
         {
@@ -102,9 +119,6 @@ namespace Models.Training.Services
 
             return await repository.DeleteTrainAsync(id);
         }
-
-
-
 
         #region private helper methods
 

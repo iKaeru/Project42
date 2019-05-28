@@ -1,10 +1,12 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Models.Data;
+using Models.Errors;
 
 namespace Models.CardItem.Repositories
 {
@@ -32,6 +34,13 @@ namespace Models.CardItem.Repositories
         {
             return Task.FromResult<IEnumerable<CardItem>>
                 (context.Cards.Where(x => x.UserId == uId || x.UserId == default(Guid)));
+        }
+
+        public Task<IEnumerable<Guid>> GetAllUserCardsId(Guid uId, CancellationToken cancellationToken)
+        {
+            return Task.FromResult<IEnumerable<Guid>>(context.Cards
+                .Where(x => x.UserId == uId || x.UserId == default(Guid))
+                .Select(u => u.Id));
         }
 
         public Task<IReadOnlyList<CardItemInfo>> SearchAsync(CardSearchInfo query, CancellationToken cancelltionToken)
@@ -62,6 +71,36 @@ namespace Models.CardItem.Repositories
             }
 
             return false;
+        }
+
+        public async Task<bool> DeleteCardsFromListAsync(ICollection<Guid> cardsList)
+        {
+            foreach (var cardId in cardsList)
+            {
+                var cardItem = await context.Cards.FindAsync(cardId);
+                if (cardItem != null)
+                {
+                    context.Cards.Remove(cardItem);
+                    context.SaveChanges();
+                    continue;
+                }
+
+                throw new AppException($"Card with id {cardId} not found");
+            }
+
+            return true;
+        }
+
+        public async Task<IEnumerable<CardItem>> GetCardsFromListAsync(IEnumerable<Guid> cardsList)
+        {
+            var result = new List<CardItem>();
+            foreach (var cardId in cardsList)
+            {
+                var cardItem = await context.Cards.FirstOrDefaultAsync(x => x.Id == cardId);
+                result.Add(cardItem);
+            }
+
+            return result;
         }
     }
 }

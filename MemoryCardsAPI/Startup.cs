@@ -58,7 +58,7 @@ namespace MemoryCardsAPI
                 var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
                 swagger.IncludeXmlComments(xmlPath);
                 
-                swagger.OperationFilter<AuthorizationHeaderParameterOperationFilter>();
+//                swagger.OperationFilter<AuthorizationHeaderParameterOperationFilter>();
                 
                 // UseFullTypeNameInSchemaIds replacement for .NET Core
                 swagger.CustomSchemaIds(x => x.FullName);
@@ -85,7 +85,7 @@ namespace MemoryCardsAPI
                             var userService = context.HttpContext.RequestServices.GetRequiredService<IUserService>();
                             // var userId = int.Parse(context.Principal.Identity.Name);
                             var userId = Guid.Parse(context.Principal.Identity.Name);
-                            var user = userService.GetById(userId);
+                            var user = userService.GetById(userId).Result;
                             if (user == null)
                             {
                                 // return unauthorized if user no longer exists
@@ -124,6 +124,9 @@ namespace MemoryCardsAPI
                 .AllowAnyMethod()
                 .AllowAnyHeader());
 
+
+            app.UseMiddleware<AuthorizationHeader>();
+
             app.UseAuthentication();
 
             app.UseMvc();
@@ -135,6 +138,7 @@ namespace MemoryCardsAPI
             services.AddSingleton<ICardsRepository, InMemoryCardsRepository>();
             services.AddSingleton<ICollectionsRepository, InMemoryCollectionsRepository>();
             services.AddSingleton<ITrainingRepository, InMemoryTrainingRepository>();
+            
             services.AddDbContext<InMemoryContext>(x => x.UseInMemoryDatabase("TestDb"));
         }
 
@@ -143,7 +147,8 @@ namespace MemoryCardsAPI
             services.AddSingleton<IUsersRepository, PostgreUsersRepository>();
             services.AddSingleton<ICardsRepository, PostgreCardsRepository>();
             services.AddSingleton<ICollectionsRepository, PostgreCollectionsRepository>();
-            
+            services.AddSingleton<ITrainingRepository, PostgreTrainingRepository>();
+
             services.AddEntityFrameworkNpgsql()
                 .AddDbContext<PostgreContext>()
                 .BuildServiceProvider();

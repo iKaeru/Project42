@@ -25,6 +25,13 @@
             <param name="cancellationToken"></param>
             <returns code="200"></returns>
         </member>
+        <member name="M:MemoryCardsAPI.Controllers.CardsController.GetCardsAmountForUser(System.Threading.CancellationToken)">
+            <summary>
+            Get All Cards Amount For User
+            </summary>
+            <param name="cancellationToken"></param>
+            <returns code="200"></returns>
+        </member>
         <member name="M:MemoryCardsAPI.Controllers.CardsController.GetCardByIdAsync(System.String,System.Threading.CancellationToken)">
             <summary>
             Get Card By Id
@@ -32,6 +39,27 @@
             <param name="id">Идентификатор карты</param>
             <param name="cancellationToken"></param>
             <returns code="200"></returns>
+        </member>
+        <member name="M:MemoryCardsAPI.Controllers.CardsController.CollectionLearnedCards(System.Threading.CancellationToken)">
+            <summary>
+            Shows All Learned Cards Amount For User
+            </summary>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MemoryCardsAPI.Controllers.CardsController.CollectionUnlearnedCards(System.Threading.CancellationToken)">
+            <summary>
+            Shows All Unlearned Cards Amount For User
+            </summary>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MemoryCardsAPI.Controllers.CardsController.CollectionRepeatCards(System.Threading.CancellationToken)">
+            <summary>
+            Shows All Need To Repeat Cards Amount For User
+            </summary>
+            <param name="cancellationToken"></param>
+            <returns></returns>
         </member>
         <member name="M:MemoryCardsAPI.Controllers.CardsController.UpdateCardByIdAsync(System.String,Client.Models.CardItem.CardPatchInfo,System.Threading.CancellationToken)">
             <summary>
@@ -61,28 +89,28 @@
             <param name="cancellationToken"></param>
             <returns code="200"></returns> 
         </member>
-        <member name="M:MemoryCardsAPI.Controllers.CollectionsController.CreateAsync(System.Threading.CancellationToken,System.String)">
+        <member name="M:MemoryCardsAPI.Controllers.CollectionsController.CreateAsync(System.String,System.Threading.CancellationToken)">
             <summary>
             Create Collection By Name
             </summary>
-            <param name="cancellationToken"></param>
             <param name="name">Имя коллекции</param>
+            <param name="cancellationToken"></param>
             <returns code="200"></returns> 
         </member>
         <member name="M:MemoryCardsAPI.Controllers.CollectionsController.AddCardToCollection(System.String,System.String,System.Threading.CancellationToken)">
             <summary>
-            Add Card To A Collection By Name
+            Add Card To A Collection By Id
             </summary>
-            <param name="collectionName">Имя коллекции</param>
+            <param name="id">Идентификатор коллекции</param>
             <param name="cardId">Идентификатор карты для добавления в коллекцию</param>
             <param name="cancellationToken"></param>
             <returns></returns>
         </member>
         <member name="M:MemoryCardsAPI.Controllers.CollectionsController.ShowCollection(System.String,System.Threading.CancellationToken)">
             <summary>
-            Get Collection By Name
+            Get Collection By Id
             </summary>
-            <param name="collectionName">Название коллекции</param>
+            <param name="id">Идентификатор коллекции</param>
             <param name="cancellationToken"></param>
             <returns></returns>
         </member>
@@ -90,6 +118,22 @@
             <summary>
             Shows all existing collections For User
             </summary>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MemoryCardsAPI.Controllers.CollectionsController.CollectionLearnedCards(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Shows All Learned Cards in Collection For User
+            </summary>
+            <param name="id">Идентификатор коллекции</param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MemoryCardsAPI.Controllers.CollectionsController.CollectionUnlearnedCards(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Shows All Unlearned Cards in Collection For User
+            </summary>
+            <param name="id">Идентификатор коллекции</param>
             <param name="cancellationToken"></param>
             <returns></returns>
         </member>
@@ -102,18 +146,18 @@
         </member>
         <member name="M:MemoryCardsAPI.Controllers.CollectionsController.UpdateCardByIdAsync(System.String,Client.Models.CardsCollection.CardsCollectionPatchInfo,System.Threading.CancellationToken)">
             <summary>
-            Update Collection By Name
+            Update Collection By Id
             </summary>
-            <param name="collectionName">Название коллекции</param>
+            <param name="id">Идентификатор коллекции</param>
             <param name="updateInfo">Информация о коллекции для редактирования</param>
             <param name="cancellationToken"></param>
             <returns code="200"></returns>
         </member>
         <member name="M:MemoryCardsAPI.Controllers.CollectionsController.Delete(System.String,System.Threading.CancellationToken)">
             <summary>
-            Delete Collection By Name
+            Delete Collection By Id And All Cards In It
             </summary>
-            <param name="collectionName">Название коллекции</param>
+            <param name="id">Идентификатор коллекции</param>
             <param name="cancellationToken"></param>
             <returns code="200"></returns>
         </member>
@@ -161,17 +205,23 @@
             <param name="id">Идентификатор тренировки</param>
             <returns code="200"></returns>
         </member>
-        <member name="M:MemoryCardsAPI.Controllers.TrainingsController.GetTodaysTraining(System.DateTime,System.Threading.CancellationToken)">
+        <member name="M:MemoryCardsAPI.Controllers.TrainingsController.GetTodaysTraining(System.Threading.CancellationToken)">
             <summary>
             Get Cards That Require Training For Selected Day
             </summary>
-            <param name="date">Дата к которой получить тренировку (обычно надо указывать ту дату, которая сегодня) </param>
+            <param name="cancellationToken"></param>
+            <returns code="200"></returns>
+        </member>
+        <member name="M:MemoryCardsAPI.Controllers.TrainingsController.GetTodaysTrainingAmount(System.Threading.CancellationToken)">
+            <summary>
+            Get Cards That Require Training For Selected Day
+            </summary>
             <param name="cancellationToken"></param>
             <returns code="200"></returns>
         </member>
         <member name="M:MemoryCardsAPI.Controllers.TrainingsController.GetNumberOfCardsInBox(Models.Training.MemorizationBoxes,System.Threading.CancellationToken)">
             <summary>
-            Get count of cards in the box
+            Get amount of cards in the box
             </summary>
             <param name="box"> box where to count cards </param>
             <param name="cancellationToken"></param>
@@ -192,11 +242,10 @@
             <param name="cancellationToken"></param>
             <returns code="200"></returns>
         </member>
-        <member name="M:MemoryCardsAPI.Controllers.UsersController.GetById(System.String)">
+        <member name="M:MemoryCardsAPI.Controllers.UsersController.GetById">
             <summary>
-            Get User By Id
+            Get User Info
             </summary>
-            <param name="id">Идентификатор пользователя</param>
             <returns code="200"></returns>
         </member>
         <member name="M:MemoryCardsAPI.Controllers.UsersController.Update(System.String,Client.Models.User.UserPatchInfo)">
