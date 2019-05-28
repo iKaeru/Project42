@@ -4,6 +4,8 @@ using System.Threading.Tasks;
 using Models.CardsCollection.Repositories;
 using Models.Errors;
 using System.Linq;
+using Models.CardItem.Repositories;
+using Models.Training;
 using Models.Training.Repositories;
 
 namespace Models.CardsCollection.Services
@@ -14,10 +16,15 @@ namespace Models.CardsCollection.Services
         private const int MaximumNameLength = 120;
         private readonly ICollectionsRepository repository;
         private readonly ITrainingRepository trainingRepository;
+        private readonly ICardsRepository cardsRepository;
 
-        public CollectionService(ICollectionsRepository repository)
+
+        public CollectionService(ICollectionsRepository repository, ITrainingRepository trainingRepository,
+            ICardsRepository cardsRepository)
         {
             this.repository = repository;
+            this.trainingRepository = trainingRepository;
+            this.cardsRepository = cardsRepository;
         }
         
         public CardsCollection CreateCollection(Guid userId, string collectionName)
@@ -51,14 +58,18 @@ namespace Models.CardsCollection.Services
             return true;
         }
         
-        public async Task<bool> AddCardToCollectionAsync(string collectionName, Guid cardId, Guid userId)
+        public async Task<bool> AddCardToCollectionAsync(Guid collectionId, Guid cardId, Guid userId)
         {
-            FieldsAreFilled(userId, collectionName);
-
+            if (collectionId == Guid.Empty)
+                throw new AppException(nameof(collectionId) + " is required");
+            
             if (cardId == Guid.Empty)
+                throw new AppException(nameof(cardId) + " is required");
+            
+            if (userId == Guid.Empty)
                 throw new AppException(nameof(userId) + " is required");
             
-            var desiredCollection = await repository.FindByNameAsync(collectionName, userId);
+            var desiredCollection = await repository.FindByIdAsync(collectionId, userId);
 
             if (desiredCollection.CardItems.Contains(cardId))
             {
@@ -79,9 +90,9 @@ namespace Models.CardsCollection.Services
             return true;
         }
 
-        public async void UpdateByIdAsync(CardsCollectionPatchInfo collection, string collectionName, Guid userId)
+        public async void UpdateByIdAsync(CardsCollectionPatchInfo collection, Guid collectionId, Guid userId)
         {
-            var collectionFromRepository = await repository.FindByNameAsync(collectionName, userId);
+            var collectionFromRepository = await repository.FindByIdAsync(collectionId, userId);
 
             if (collectionFromRepository == null)
                 throw new AppException("Collection not found");
@@ -92,14 +103,19 @@ namespace Models.CardsCollection.Services
             await repository.PatchAsync(collectionFromRepository);
         }
         
-        public async Task<bool> Delete(Guid userId, string collectionName)
+        public async Task<bool> Delete(Guid userId, Guid collectionId)
         {
             if (userId == Guid.Empty)
             {
                 throw new ArgumentException("Incorrect value", nameof(userId));
             }
+            
+            if (collectionId== Guid.Empty)
+            {
+                throw new ArgumentException("Incorrect value", nameof(collectionId));
+            }
 
-            return await repository.DeleteCollectionAsync(userId, collectionName);
+            return await repository.DeleteCollectionAsync(userId, collectionId);
         }
         
         public async Task<CardsCollection> FindCollectionByNameAsync(string collectionName, Guid userId)
@@ -109,12 +125,38 @@ namespace Models.CardsCollection.Services
             return await repository.FindByNameAsync(collectionName, userId);
         }
 
+        public async Task<CardsCollection> FindCollectionByIdAsync(Guid collectionId, Guid userId)
+        {
+            if (userId == Guid.Empty)
+            {
+                throw new ArgumentException("Incorrect value", nameof(userId));
+            }
+            
+            if (collectionId== Guid.Empty)
+            {
+                throw new ArgumentException("Incorrect value", nameof(collectionId));
+            }
+            
+            return await repository.FindByIdAsync(collectionId, userId);
+        }
+        
         public async Task<bool> IsNameExistAsync(string collectionName, Guid userId)
         {
             if (userId == Guid.Empty)
                 throw new AppException(nameof(userId) + " is required");
 
             return await repository.FindNameAsync(collectionName, userId);
+        }
+        
+        public async Task<bool> IsIdExistAsync(Guid collectionId, Guid userId)
+        {
+            if (userId == Guid.Empty)
+                throw new AppException(nameof(userId) + " is required");
+            
+            if (collectionId == Guid.Empty)
+                throw new AppException(nameof(userId) + " is required");
+
+            return await repository.FindIdAsync(collectionId, userId);
         }
         
         public async Task<IEnumerable<CardsCollection>> GetAllCollectionsAsync(Guid userId)
@@ -125,6 +167,38 @@ namespace Models.CardsCollection.Services
             return await repository.FindCollections(userId);
         }
 
+        public async Task<IEnumerable<CardItem.CardItem>> GetAllLearnedCardsAsync(Guid collectionId, Guid userId)
+        {
+            if (userId == Guid.Empty)
+                throw new AppException(nameof(userId) + " is required");
+            
+            if (collectionId== Guid.Empty)
+                throw new AppException(nameof(collectionId) + " is required");
+            
+            var cardsInCollectionIdList = (await repository.FindByIdAsync(collectionId, userId)).CardItems;
+            var cardsLearned = await trainingRepository.GetCardsIdFromBoxAsync(MemorizationBoxes.FullyLearned,
+                userId);
+            var resultIds = cardsInCollectionIdList.Intersect(cardsLearned).ToList();
+            var cardsList = await cardsRepository.GetCardsFromListAsync(resultIds);
+            return cardsList;
+        }
+        
+        public async Task<IEnumerable<CardItem.CardItem>> GetAllUnlearnedCardsAsync(Guid collectionId, Guid userId)
+        {
+            if (userId == Guid.Empty)
+                throw new AppException(nameof(userId) + " is required");
+            
+            if (collectionId== Guid.Empty)
+                throw new AppException(nameof(collectionId) + " is required");
+            
+            var cardsInCollectionIdList = (await repository.FindByIdAsync(collectionId, userId)).CardItems;
+            var cardsUnlearned = await trainingRepository.GetCardsIdFromBoxAsync(MemorizationBoxes.NotLearned,
+                userId);
+            var resultIds = cardsInCollectionIdList.Intersect(cardsUnlearned).ToList();
+            var cardsList = await cardsRepository.GetCardsFromListAsync(resultIds);
+            return cardsList;
+        }
+        
         public async Task<IEnumerable<CardsCollection>> GetLearnedCollectionsAsync(Guid uId)
         {
             if (uId == Guid.Empty)
@@ -142,8 +216,8 @@ namespace Models.CardsCollection.Services
 
             if (box == Training.MemorizationBoxes.FullyLearned)
                 return true;
-            else
-                return false;
+            
+            return false;
         }
 
 

@@ -27,7 +27,9 @@
         </e>
         <e p="User" t="Include">
           <e p="User.cs" t="Include" />
+          <e p="UserAuthorizedInfo.cs" t="Include" />
           <e p="UserPatchInfo.cs" t="Include" />
+          <e p="UserRegistredInfo.cs" t="Include" />
         </e>
       </e>
       <e p="Converters" t="IncludeRecursive">
@@ -43,11 +45,13 @@
           </e>
         </e>
         <e p="TrainingConverter.cs" t="Include" />
+        <e p="TrainingConverter.cs.orig" t="Include" />
         <e p="UserConverter.cs" t="Include" />
       </e>
       <e p="MemoryCardsAPI" t="IncludeRecursive">
         <e p="appsettings.json" t="Include" />
         <e p="Auth" t="Include">
+          <e p="AuthorizationHeader.cs" t="Include" />
           <e p="AuthorizationHeaderParameterOperationFilter.cs" t="Include" />
           <e p="IAuthenicator.cs" t="Include" />
           <e p="SessionState.cs" t="Include" />
@@ -114,6 +118,11 @@
         <e p="Errors" t="Include">
           <e p="AppException.cs" t="Include" />
         </e>
+        <e p="Migrations" t="Include">
+          <e p="20190527174002_Trainings2.cs" t="Include" />
+          <e p="20190527174002_Trainings2.Designer.cs" t="Include" />
+          <e p="PostgreContextModelSnapshot.cs" t="Include" />
+        </e>
         <e p="Models.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
@@ -123,10 +132,11 @@
           </e>
         </e>
         <e p="Training" t="Include">
-          <e p="MemorizationLevels.cs" t="Include" />
+          <e p="MemorizationBoxes.cs" t="Include" />
           <e p="Repositories" t="Include">
             <e p="InMemoryTrainingRepository.cs" t="Include" />
             <e p="ITrainingRepository.cs" t="Include" />
+            <e p="PostgreTrainingRepository.cs" t="Include" />
           </e>
           <e p="Services" t="Include">
             <e p="ITrainingService.cs" t="Include" />
@@ -156,7 +166,7 @@
       <e p="Project42.sln" t="IncludeFlat" />
     </e>
     <e p="$USER_HOME$/Library/Caches/Rider2018.3/extResources" t="IncludeRecursive" />
-    <e p="$USER_HOME$/Library/Caches/Rider2018.3/resharper-host/local/Transient/ReSharperHost/v183/SolutionCaches/_Project42.1506134978.00" t="ExcludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/Rider2018.3/resharper-host/local/Transient/ReSharperHost/v183/SolutionCaches/_Project42.-989294079.00" t="ExcludeRecursive" />
     <e p="$APPLICATION_CONFIG_DIR$/consoles/db" t="IncludeRecursive" />
     <e p="$APPLICATION_CONFIG_DIR$/extensions" t="IncludeRecursive" />
   </component>
