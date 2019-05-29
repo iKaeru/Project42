@@ -120,7 +120,7 @@ namespace MemoryCardsAPI
 
             // global cors policy
             app.UseCors(x => x
-                .AllowAnyOrigin()
+            .WithOrigins("http://localhost:5000", "http://localhost:3000", "http://84.201.143.41:5000")
                 .AllowAnyMethod()
                 .AllowAnyHeader()
                 .AllowCredentials());
