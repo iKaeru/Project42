@@ -117,12 +117,13 @@ namespace MemoryCardsAPI
             // Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.), 
             // specifying the Swagger JSON endpoint.
             app.UseSwaggerUI(c => { c.SwaggerEndpoint("./v1/swagger.json", "MemoryCardsAPI"); });
-            
+
             // global cors policy
             app.UseCors(x => x
                 .AllowAnyOrigin()
                 .AllowAnyMethod()
-                .AllowAnyHeader());
+                .AllowAnyHeader()
+                .AllowCredentials());
 
 
             app.UseMiddleware<AuthorizationHeader>();
