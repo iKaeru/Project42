@@ -68,3 +68,4 @@ T:\KonturProj\Project42\Client.Models\obj\Debug\netcoreapp2.1\Client.Models.Asse
 T:\KonturProj\Project42\Client.Models\obj\Debug\netcoreapp2.1\Client.Models.AssemblyInfo.cs
 T:\KonturProj\Project42\Client.Models\obj\Debug\netcoreapp2.1\Client.Models.dll
 T:\KonturProj\Project42\Client.Models\obj\Debug\netcoreapp2.1\Client.Models.pdb
+T:\KonturProj\Project42\Client.Models\obj\Debug\netcoreapp2.1\Client.Models.csprojAssemblyReference.cache
