@@ -8,6 +8,7 @@ namespace MemoryCardsAPI
     {
         static void Main(string[] args)
         {
+
             var config = new ConfigurationBuilder()
              //   .SetBasePath(Directory.GetCurrentDirectory())
                 .AddJsonFile("appsettings.json", optional: true)
@@ -16,7 +17,7 @@ namespace MemoryCardsAPI
                 .Build();
 
             var host = new WebHostBuilder()
-                .UseUrls("http://*:5000")
+                .UseUrls("http://*:5000", "https://*:5000")
                 .UseEnvironment("Development")
                 .UseConfiguration(config)
                 .UseKestrel()
