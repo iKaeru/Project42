@@ -212,6 +212,13 @@
             <param name="cancellationToken"></param>
             <returns code="200"></returns>
         </member>
+        <member name="M:MemoryCardsAPI.Controllers.TrainingsController.GetLastTraining(System.Threading.CancellationToken)">
+            <summary>
+            Gets last training date for current user
+            </summary>
+            <param name="cancellationToken"></param>
+            <returns code="200"></returns>
+        </member>
         <member name="M:MemoryCardsAPI.Controllers.TrainingsController.GetTodaysTrainingAmount(System.Threading.CancellationToken)">
             <summary>
             Get Cards That Require Training For Selected Day

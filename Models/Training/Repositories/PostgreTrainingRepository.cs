@@ -88,5 +88,10 @@ namespace Models.Training.Repositories
 
             throw new AppException("Unknown card box");
         }
+
+        public Training getLastTraining(Guid userId)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
