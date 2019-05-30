@@ -18,5 +18,6 @@ namespace Models.Training.Services
         Task<IEnumerable<Guid>> GetCardsIdFromBoxAsync(MemorizationBoxes box, Guid userId);
         Task<int> GetCardsCountFromBoxAsync(MemorizationBoxes box, Guid userId);
         Task<bool> Delete(Guid id);
+        Task<Training> GetLastTrainingAsync(Guid userId);
     }
 }
