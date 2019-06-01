@@ -104,7 +104,7 @@ namespace Models.User.Services
             return await repository.DeleteUserAsync(id);
         }
 
-        public async void Update(UserPatchInfo userToUpdate, string password = null)
+        public async Task UpdateAsync(UserPatchInfo userToUpdate, string password = null)
         {
             ValidateUser(userToUpdate);
             var userFromRepository = await repository.GetUserAsync(userToUpdate.Id);

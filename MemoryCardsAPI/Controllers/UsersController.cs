@@ -161,7 +161,7 @@ namespace MemoryCardsAPI.Controllers
         /// <param name="userToUpdate">Информация о пользователе для редактирования</param>
         /// <returns code="200"></returns>
         [HttpPut("{id}")]
-        public IActionResult Update(string id, [FromBody] View.UserPatchInfo userToUpdate)
+        public async Task<IActionResult> Update(string id, [FromBody] View.UserPatchInfo userToUpdate)
         {
             var user = UserConverter.ConvertPatchInfo(userToUpdate);
             var guidId = Guid.Parse(id);
@@ -169,7 +169,7 @@ namespace MemoryCardsAPI.Controllers
             
             try
             {
-                userService.Update(user, userToUpdate.Password);
+                await userService.UpdateAsync(user, userToUpdate.Password);
                 return Ok();
             }
             catch (AppException ex)
