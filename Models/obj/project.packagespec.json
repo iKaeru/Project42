@@ -1,10 +1,10 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "/Users/kaeru/Downloads/kontur/27.05/Project42/Models/Models.csproj",
+    "projectUniqueName": "/Users/kaeru/Downloads/kontur/Project42/Models/Models.csproj",
     "projectName": "Models",
-    "projectPath": "/Users/kaeru/Downloads/kontur/27.05/Project42/Models/Models.csproj",
-    "outputPath": "/Users/kaeru/Downloads/kontur/27.05/Project42/Models/obj/",
+    "projectPath": "/Users/kaeru/Downloads/kontur/Project42/Models/Models.csproj",
+    "outputPath": "/Users/kaeru/Downloads/kontur/Project42/Models/obj/",
     "projectStyle": "PackageReference",
     "fallbackFolders": [
       "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
@@ -15,8 +15,8 @@
     "frameworks": {
       "netcoreapp2.1": {
         "projectReferences": {
-          "/Users/kaeru/Downloads/kontur/27.05/Project42/Client.Models/Client.Models.csproj": {
-            "projectPath": "/Users/kaeru/Downloads/kontur/27.05/Project42/Client.Models/Client.Models.csproj"
+          "/Users/kaeru/Downloads/kontur/Project42/Client.Models/Client.Models.csproj": {
+            "projectPath": "/Users/kaeru/Downloads/kontur/Project42/Client.Models/Client.Models.csproj"
           }
         }
       }
