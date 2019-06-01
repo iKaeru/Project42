@@ -192,7 +192,7 @@ namespace MemoryCardsAPI.Controllers
         /// <param name="cancellationToken"></param>
         /// <returns code="200"></returns>
         [HttpGet]
-        [SwaggerResponse(200, Type = typeof(List<CardItem>))]
+        [SwaggerResponse(200, Type = typeof(DateTime))]
         [Route("last")]
         public async Task<IActionResult> GetLastTraining(CancellationToken cancellationToken)
         {

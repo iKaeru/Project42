@@ -181,6 +181,28 @@ namespace MemoryCardsAPI.Controllers
         }
 
         /// <summary>
+        /// Shows all existing collections For User
+        /// </summary>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        [HttpGet]
+        [SwaggerResponse(200, Type = typeof(int))]
+        [Route("count")]
+        public async Task<ActionResult> AmountOfCollections(CancellationToken cancellationToken)
+        {
+            try
+            {
+                Guid.TryParse(HttpContext.User.Identity.Name, out var uId);
+                var collections = await collectionService.GetAllCollectionsAsync(uId);
+                return Ok(collections.Count());
+            }
+            catch (AppException ex)
+            {
+                return BadRequest(new {message = ex.Message});
+            }
+        }
+        
+        /// <summary>
         /// Shows All Learned Cards in Collection For User
         /// </summary>
         /// <param name="id">Идентификатор коллекции</param>
