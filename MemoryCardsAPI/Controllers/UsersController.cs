@@ -76,6 +76,9 @@ namespace MemoryCardsAPI.Controllers
                     FirstName = user.FirstName,
                     LastName = user.LastName
                 };
+
+
+
                 return Ok(resultUser);
             }
             catch (AppException ex)
@@ -108,6 +111,11 @@ namespace MemoryCardsAPI.Controllers
                     Id = user.Id,
                     Username = user.Login
                 };
+
+                MailingService emailService = new MailingService();
+                await emailService.SendEmailAsync(userDto.EmailAdress,
+                    "Успешная регистрация", "Поздравляем, " + user.Login + ", вы зарегистрировались и можете зайти в профиль на https://pr42.ru/login ! \n P.S. Подтверждения почты пока нет, но скоро будет! \n С уважением, администрация pr42.ru");
+                Console.WriteLine("Email to {0} was sent", userDto.EmailAdress);
                 return Ok(resultUser);
             }
             catch (AppException ex)
