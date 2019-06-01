@@ -151,6 +151,13 @@
             <param name="cancellationToken"></param>
             <returns></returns>
         </member>
+        <member name="M:MemoryCardsAPI.Controllers.CollectionsController.NotLearnedCollectionsAsync(System.Threading.CancellationToken)">
+            <summary>
+            Shows number of learned collections For User
+            </summary>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
         <member name="M:MemoryCardsAPI.Controllers.CollectionsController.UpdateCardByIdAsync(System.String,Client.Models.CardsCollection.CardsCollectionPatchInfo,System.Threading.CancellationToken)">
             <summary>
             Update Collection By Id

@@ -287,6 +287,28 @@ namespace MemoryCardsAPI.Controllers
         }
 
         /// <summary>
+        /// Shows number of learned collections For User
+        /// </summary>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        [HttpGet]
+        [SwaggerResponse(200, Type = typeof(int))]
+        [Route("notlearnedAmount")]
+        public async Task<IActionResult> NotLearnedCollectionsAsync(CancellationToken cancellationToken)
+        {
+            try
+            {
+                Guid.TryParse(HttpContext.User.Identity.Name, out var userId);
+                var collections = await collectionService.GetNotLearnedCollectionsAsync(userId);
+                return Ok(collections.Count());
+            }
+            catch (AppException ex)
+            {
+                return BadRequest(new {message = ex.Message});
+            }
+        }
+        
+        /// <summary>
         /// Update Collection By Id
         /// </summary>
         /// <param name="id">Идентификатор коллекции</param>
