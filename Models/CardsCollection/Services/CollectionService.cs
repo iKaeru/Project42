@@ -199,6 +199,34 @@ namespace Models.CardsCollection.Services
             return cardsList;
         }
 
+        public async Task<IEnumerable<CardsCollection>> GetNotLearnedCollectionsAsync(Guid userId)
+        {
+            if (userId == Guid.Empty)
+                throw new AppException(nameof(userId) + " is required");
+
+            var allCollections = await repository.FindCollections(userId);
+
+            var notLearnedList =  allCollections.Where(collection =>
+            {
+                if (IsEmpty(collection.CardItems))
+                    return false;
+
+                return collection.CardItems.All(card => 
+                    CardLearnedAsync(card, MemorizationBoxes.NotLearned).Result);
+            });
+            
+            var partlyLearnedList =  allCollections.Where(collection =>
+            {
+                if (IsEmpty(collection.CardItems))
+                    return false;
+
+                return collection.CardItems.All(card => 
+                    CardLearnedAsync(card, MemorizationBoxes.PartlyLearned).Result);
+            });
+
+            return notLearnedList.Concat(partlyLearnedList);
+        }
+        
         public async Task<IEnumerable<CardsCollection>> GetLearnedCollectionsAsync(Guid userId)
         {
             if (userId == Guid.Empty)
@@ -211,16 +239,17 @@ namespace Models.CardsCollection.Services
                 if (IsEmpty(collection.CardItems))
                     return false;
 
-                return collection.CardItems.All(card => CardLearnedAsync(card).Result);
+                return collection.CardItems.All(card => 
+                    CardLearnedAsync(card, MemorizationBoxes.FullyLearned).Result);
             });
         }
 
-        private async Task<bool> CardLearnedAsync(Guid cardId)
+        private async Task<bool> CardLearnedAsync(Guid cardId, MemorizationBoxes level)
         {
             var cardTraining = await trainingRepository.GetCardTrainingAsync(cardId);
             var box = cardTraining.Box;
 
-            if (box == MemorizationBoxes.FullyLearned)
+            if (box == level)
                 return true;
 
             return false;
