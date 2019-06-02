@@ -28,7 +28,7 @@ namespace Models.CardItem.Services
                 Question = cardToCreate.Question,
                 Answer = cardToCreate.Answer,
                 CreatedAt = DateTime.Now,
-                UserId = userId
+                UserId = userId,
             };
 
             return card;
@@ -147,18 +147,22 @@ namespace Models.CardItem.Services
         private bool ValidateCard(CardCreationInfo cardToValidate)
         {
             if (!FieldsAreFilled(cardToValidate.Question))
-                return false;
+                throw new ArgumentException($"Не заполнены поля в \"Вопросе\" карты");
             if (!FieldsAreFilled(cardToValidate.Answer))
-                return false;
+                throw new ArgumentException($"Не заполнены поля в \"Вопросе\" карты");
             if (!LengthIsCorrect(cardToValidate.Question.Text))
-                return false;
+                throw new ArgumentException($"Не корректная длина в \"Вопросе\" карты в поле \"Текст\"" +
+                                            $"должна быть от {MinimumTextLength} до {MaximumTextLength}");
             if (!LengthIsCorrect(cardToValidate.Question.Code))
-                return false;
+                throw new ArgumentException($"Не корректная длина в \"Вопросе\" карты в поле \"Код\"" +
+                                            $"должна быть от {MinimumTextLength} до {MaximumTextLength}");
             if (!LengthIsCorrect(cardToValidate.Answer.Text))
-                return false;
+                if (!LengthIsCorrect(cardToValidate.Answer.Code))
+                    throw new ArgumentException($"Не корректная длина в \"Ответе\" карты в поле \"Текст\"" +
+                                                $"должна быть от {MinimumTextLength} до {MaximumTextLength}");
             if (!LengthIsCorrect(cardToValidate.Answer.Code))
-                return false;
-
+                throw new ArgumentException($"Не корректная длина в \"Ответе\" карты в поле \"Код\"" +
+                                            $"должна быть от {MinimumTextLength} до {MaximumTextLength}");
             return true;
         }
 
