@@ -91,13 +91,12 @@ namespace Models.Training.Repositories
 
         public Training getLastTraining(Guid userId)
         {
-            if (context.Trainings.Count() == 0)
+            if (context.Trainings.Count() < 2)
             {
-                return null;
+                return context.Trainings.FirstOrDefault();
             }
-            return context.Trainings
-                          .Where(u => u.UserId == userId)
-                          .Aggregate((i1, i2) => i1.CompletedAt > i2.CompletedAt ? i1 : i2);
+
+            return new Training() { CompletedAt = context.Trainings.Max(x => x.CompletedAt) };
         }
     }
 }
