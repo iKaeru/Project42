@@ -201,7 +201,7 @@ namespace MemoryCardsAPI.Controllers
                 Guid.TryParse(HttpContext.User.Identity.Name, out var userId);
                 Training lastTraining = await trainingService.GetLastTrainingAsync(userId);
 
-                if (lastTraining == null)
+                if (lastTraining == null || lastTraining.CompletedAt == null)
                 {
                     return Ok("none");
                 }

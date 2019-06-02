@@ -17,7 +17,7 @@ namespace MemoryCardsAPI
                 .Build();
 
             var host = new WebHostBuilder()
-                .UseUrls("http://*:5001")
+                .UseUrls("http://*:5000")
                 .UseEnvironment("Development")
                 .UseConfiguration(config)
                 .UseKestrel()
