@@ -41,8 +41,8 @@ namespace MemoryCardsAPI
             services.AddSingleton<ICollectionService, CollectionService>();
             services.AddSingleton<ITrainingService, TrainingService>();
 
-            SetUpInMemoryDataBase(services);
-//            SetUpPostgreDataBase(services);
+        //    SetUpInMemoryDataBase(services);
+            SetUpPostgreDataBase(services);
 
             services.AddCors();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
