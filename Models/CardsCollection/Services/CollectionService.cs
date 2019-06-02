@@ -231,14 +231,11 @@ namespace Models.CardsCollection.Services
                 if (IsEmpty(collection.CardItems))
                     return false;
 
-                return collection.CardItems.All(card =>
-                {
-                    return CardLearnedAsync(card, MemorizationBoxes.FullyLearned);
-                });
+                return collection.CardItems.All(card => CardLearnedAsync(card, MemorizationBoxes.FullyLearned));
             });
         }
 
-        private  bool CardLearnedAsync(Guid cardId, MemorizationBoxes level)
+        private bool CardLearnedAsync(Guid cardId, MemorizationBoxes level)
         {
             var cardTraining = trainingRepository.GetCardTrainingAsync(cardId).Result;
 
