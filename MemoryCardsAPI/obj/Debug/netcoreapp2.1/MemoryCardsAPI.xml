@@ -121,6 +121,13 @@
             <param name="cancellationToken"></param>
             <returns></returns>
         </member>
+        <member name="M:MemoryCardsAPI.Controllers.CollectionsController.AmountOfCollections(System.Threading.CancellationToken)">
+            <summary>
+            Shows all existing collections For User
+            </summary>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
         <member name="M:MemoryCardsAPI.Controllers.CollectionsController.CollectionLearnedCards(System.String,System.Threading.CancellationToken)">
             <summary>
             Shows All Learned Cards in Collection For User
@@ -138,6 +145,13 @@
             <returns></returns>
         </member>
         <member name="M:MemoryCardsAPI.Controllers.CollectionsController.LearnedCollectionsAsync(System.Threading.CancellationToken)">
+            <summary>
+            Shows number of learned collections For User
+            </summary>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MemoryCardsAPI.Controllers.CollectionsController.NotLearnedCollectionsAsync(System.Threading.CancellationToken)">
             <summary>
             Shows number of learned collections For User
             </summary>
@@ -208,6 +222,13 @@
         <member name="M:MemoryCardsAPI.Controllers.TrainingsController.GetTodaysTraining(System.Threading.CancellationToken)">
             <summary>
             Get Cards That Require Training For Selected Day
+            </summary>
+            <param name="cancellationToken"></param>
+            <returns code="200"></returns>
+        </member>
+        <member name="M:MemoryCardsAPI.Controllers.TrainingsController.GetLastTraining(System.Threading.CancellationToken)">
+            <summary>
+            Gets last training date for current user
             </summary>
             <param name="cancellationToken"></param>
             <returns code="200"></returns>

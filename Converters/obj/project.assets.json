@@ -1468,6 +1468,7 @@
       "sha512": "J0GPkscGtAWsUYuDJqSDKpyzWE8tu7RDD/fZYPpFL9s4d6mkuj0M88vDqcFemZF60MhGA7lxO/gAo2pfwl3z0g==",
       "type": "package",
       "path": "microsoft.entityframeworkcore.tools/2.1.1",
+      "hasTools": true,
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1491,6 +1492,7 @@
       "sha512": "FrXR1KeAi5CTQttz2Dxz8twCQE0JR9mAXw48wJ0D8oaE9Ik8IbTp8T2esPpmzJ12mOXV5g37wpQcZiQMwQ5Luw==",
       "type": "package",
       "path": "microsoft.entityframeworkcore.tools.dotnet/2.1.0-preview1-final",
+      "hasTools": true,
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2127,6 +2129,7 @@
       "sha512": "MOUhQfeI43upq9QiEv+7YYTDQPtEZEj9xB50MgplO1XF/aumP0f+TCYIHpZEmfsiahJJaXt/gdRFYLFEoF2VyQ==",
       "type": "package",
       "path": "newtonsoft.json/10.0.1",
+      "hasTools": true,
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -4751,7 +4754,7 @@
       ]
     },
     "System.ValueTuple/4.5.0": {
-      "sha512": "+gDrtQRdEsUSdPZEEcVRmBvs6xJmqGBqRzEGMQm5XqHxWTkZe/PSuomdth5ZPcOb/Oh2kIu6NChoI1JQk649jg==",
+      "sha512": "okurQJO6NRE/apDIP23ajJ0hpiNmJ+f0BwOlB/cSqTLQlw5upkf+5+96+iG2Jw40G1fCVCyPz/FhIABUjMR+RQ==",
       "type": "package",
       "path": "system.valuetuple/4.5.0",
       "files": [
@@ -5000,17 +5003,17 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/kaeru/Downloads/kontur/27.05/Project42/Converters/Converters.csproj",
+      "projectUniqueName": "/Users/kaeru/Downloads/kontur/Project42/Converters/Converters.csproj",
       "projectName": "Converters",
-      "projectPath": "/Users/kaeru/Downloads/kontur/27.05/Project42/Converters/Converters.csproj",
+      "projectPath": "/Users/kaeru/Downloads/kontur/Project42/Converters/Converters.csproj",
       "packagesPath": "/Users/kaeru/.nuget/packages/",
-      "outputPath": "/Users/kaeru/Downloads/kontur/27.05/Project42/Converters/obj/",
+      "outputPath": "/Users/kaeru/Downloads/kontur/Project42/Converters/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/kaeru/.nuget/NuGet/NuGet.Config"
+        "/Users/kaeru/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.1"
@@ -5021,11 +5024,11 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "/Users/kaeru/Downloads/kontur/27.05/Project42/Client.Models/Client.Models.csproj": {
-              "projectPath": "/Users/kaeru/Downloads/kontur/27.05/Project42/Client.Models/Client.Models.csproj"
+            "/Users/kaeru/Downloads/kontur/Project42/Client.Models/Client.Models.csproj": {
+              "projectPath": "/Users/kaeru/Downloads/kontur/Project42/Client.Models/Client.Models.csproj"
             },
-            "/Users/kaeru/Downloads/kontur/27.05/Project42/Models/Models.csproj": {
-              "projectPath": "/Users/kaeru/Downloads/kontur/27.05/Project42/Models/Models.csproj"
+            "/Users/kaeru/Downloads/kontur/Project42/Models/Models.csproj": {
+              "projectPath": "/Users/kaeru/Downloads/kontur/Project42/Models/Models.csproj"
             }
           }
         }

@@ -695,17 +695,17 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/kaeru/Downloads/kontur/27.05/Project42/Client.Models/Client.Models.csproj",
+      "projectUniqueName": "/Users/kaeru/Downloads/kontur/Project42/Client.Models/Client.Models.csproj",
       "projectName": "Client.Models",
-      "projectPath": "/Users/kaeru/Downloads/kontur/27.05/Project42/Client.Models/Client.Models.csproj",
+      "projectPath": "/Users/kaeru/Downloads/kontur/Project42/Client.Models/Client.Models.csproj",
       "packagesPath": "/Users/kaeru/.nuget/packages/",
-      "outputPath": "/Users/kaeru/Downloads/kontur/27.05/Project42/Client.Models/obj/",
+      "outputPath": "/Users/kaeru/Downloads/kontur/Project42/Client.Models/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/kaeru/.nuget/NuGet/NuGet.Config"
+        "/Users/kaeru/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.1"

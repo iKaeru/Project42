@@ -176,9 +176,32 @@ namespace MemoryCardsAPI.Controllers
             try
             {
                 Guid.TryParse(HttpContext.User.Identity.Name, out var userId);
-                var cardsId = await trainingService.GetDateTrainingAsync(DateTime.Now, userId);
+                var cardsId = await trainingService.GetDateTrainingAsync(DateTime.Now.Date, userId);
                 var cardsList = await cardsService.GetAllCardsFromList(cardsId);
                 return Ok(cardsList);
+            }
+            catch (AppException ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
+        }
+
+        /// <summary>
+        /// Gets last training date for current user
+        /// </summary>
+        /// <param name="cancellationToken"></param>
+        /// <returns code="200"></returns>
+        [HttpGet]
+        [SwaggerResponse(200, Type = typeof(DateTime))]
+        [Route("last")]
+        public async Task<IActionResult> GetLastTraining(CancellationToken cancellationToken)
+        {
+            try
+            {
+                Guid.TryParse(HttpContext.User.Identity.Name, out var userId);
+                Training lastTraining = await trainingService.GetLastTrainingAsync(userId);
+
+                return Ok(lastTraining.CompletedAt);
             }
             catch (AppException ex)
             {
@@ -199,7 +222,7 @@ namespace MemoryCardsAPI.Controllers
             try
             {
                 Guid.TryParse(HttpContext.User.Identity.Name, out var uId);
-                var cardList = await trainingService.GetDateTrainingAsync(DateTime.Now, uId);
+                var cardList = await trainingService.GetDateTrainingAsync(DateTime.Now.Date, uId);
                 return Ok(cardList.Count);
             }
             catch (AppException ex)
@@ -216,7 +239,7 @@ namespace MemoryCardsAPI.Controllers
         /// <returns code="200"></returns>
         [HttpGet]
         [SwaggerResponse(200, Type=typeof(int))]
-        [Route("countLearnedCards")]
+        [Route("countCardsInBox")]
         public async Task<IActionResult> GetNumberOfCardsInBox(MemorizationBoxes box, CancellationToken cancellationToken)
         {
             try

@@ -13,14 +13,16 @@ public class AuthorizationHeader
 
     public async Task InvokeAsync(HttpContext context)
     {
-        var authenticationCookieName = "token";
-        var cookie = context.Request.Cookies[authenticationCookieName];
-        if (cookie != null)
+        if (!context.Request.Headers.ContainsKey("Authorization"))
         {
-            context.Request.Headers.Remove("Authorization");
-            context.Request.Headers.Append("Authorization", "Bearer " + cookie);
+            var authenticationCookieName = "token";
+            var cookie = context.Request.Cookies[authenticationCookieName];
+            if (cookie != null)
+            {
+                context.Request.Headers.Remove("Authorization");
+                context.Request.Headers.Append("Authorization", "Bearer " + cookie);
+            }
         }
-
         await _next.Invoke(context);
     }
 }

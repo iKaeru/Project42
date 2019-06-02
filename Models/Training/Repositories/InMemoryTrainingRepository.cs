@@ -42,7 +42,7 @@ namespace Models.Training.Repositories
         public List<Training> GetDateTrainingCards(DateTime date)
         {
             return context.Trainings
-                .Where(x => GetNextTrainingDay(x) == date).ToList();
+                .Where(x => GetNextTrainingDay(x) == date.Date).ToList();
         }
 
         public List<Training> GetTrainingsFromBox(MemorizationBoxes box)
@@ -75,7 +75,7 @@ namespace Models.Training.Repositories
         private DateTime GetNextTrainingDay(Training x)
         {
             var daysToAdd = GetDaysCountFromBox(x.Box);
-            return x.CompletedAt.AddDays(daysToAdd);
+            return x.CompletedAt.Date.AddDays(daysToAdd);
         }
 
         private int GetDaysCountFromBox(MemorizationBoxes box)
@@ -91,6 +91,13 @@ namespace Models.Training.Repositories
             }
 
             throw new AppException("Unknown card box");
+        }
+
+        public Training getLastTraining(Guid userId)
+        {
+            return context.Trainings
+                .Where(u => u.UserId == userId)
+                .Aggregate((i1, i2) => i1.CompletedAt > i2.CompletedAt ? i1 : i2);
         }
     }
 }

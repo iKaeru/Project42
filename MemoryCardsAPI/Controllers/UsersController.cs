@@ -58,6 +58,11 @@ namespace MemoryCardsAPI.Controllers
 
                 CookieOptions option = new CookieOptions();
                 option.HttpOnly = true;
+                option.SameSite = SameSiteMode.None;
+                if (userDto.RememberMe == true)
+                {
+                    option.Expires = DateTimeOffset.Now.AddDays(5);
+                }
 
                 HttpContext.Response.Cookies.Append("token", token, option);
 
@@ -71,6 +76,9 @@ namespace MemoryCardsAPI.Controllers
                     FirstName = user.FirstName,
                     LastName = user.LastName
                 };
+
+
+
                 return Ok(resultUser);
             }
             catch (AppException ex)
@@ -103,6 +111,11 @@ namespace MemoryCardsAPI.Controllers
                     Id = user.Id,
                     Username = user.Login
                 };
+
+                MailingService emailService = new MailingService();
+                await emailService.SendEmailAsync(userDto.EmailAdress,
+                    "Успешная регистрация", "Поздравляем, " + user.Login + ", вы зарегистрировались и можете зайти в профиль на https://pr42.ru/login ! \n P.S. Подтверждения почты пока нет, но скоро будет! \n С уважением, администрация pr42.ru");
+                Console.WriteLine("Email to {0} was sent", userDto.EmailAdress);
                 return Ok(resultUser);
             }
             catch (AppException ex)
@@ -148,7 +161,7 @@ namespace MemoryCardsAPI.Controllers
         /// <param name="userToUpdate">Информация о пользователе для редактирования</param>
         /// <returns code="200"></returns>
         [HttpPut("{id}")]
-        public IActionResult Update(string id, [FromBody] View.UserPatchInfo userToUpdate)
+        public async Task<IActionResult> Update(string id, [FromBody] View.UserPatchInfo userToUpdate)
         {
             var user = UserConverter.ConvertPatchInfo(userToUpdate);
             var guidId = Guid.Parse(id);
@@ -156,7 +169,7 @@ namespace MemoryCardsAPI.Controllers
             
             try
             {
-                userService.Update(user, userToUpdate.Password);
+                await userService.UpdateAsync(user, userToUpdate.Password);
                 return Ok();
             }
             catch (AppException ex)
