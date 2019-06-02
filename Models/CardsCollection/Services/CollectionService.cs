@@ -240,7 +240,8 @@ namespace Models.CardsCollection.Services
             var cardTraining = trainingRepository.GetCardTrainingAsync(cardId).Result;
 
             if (cardTraining == null)
-                throw new AppException($"Не существует тренировки для карты с id {cardId}");
+                return false;
+//                throw new AppException($"Не существует тренировки для карты с id {cardId}");
 
             var box = cardTraining.Box;
 

@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8666427f-6cb7-4473-aeea-3b9208586060" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Models/CardsCollection/Services/CollectionService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/CardsCollection/Services/CollectionService.cs" afterDir="false" />
-    </list>
+    <list default="true" id="8666427f-6cb7-4473-aeea-3b9208586060" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,8 +128,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Models/CardsCollection/Services/CollectionService.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3">
-              <caret line="235" column="9" lean-forward="true" selection-start-line="235" selection-start-column="9" selection-end-line="235" selection-end-column="9" />
+            <state relative-caret-position="-29">
+              <caret line="237" column="33" selection-start-line="237" selection-start-column="33" selection-end-line="237" selection-end-column="33" />
               <folding>
                 <marker date="1559501028394" expanded="false" signature="6:255" ph="..." />
                 <marker date="1559501028394" expanded="true" signature="298:11187" ph="{...}" />
@@ -614,12 +612,12 @@
       <workItem from="1558892813885" duration="4021000" />
       <workItem from="1558940610849" duration="17868000" />
       <workItem from="1559402705838" duration="8401000" />
-      <workItem from="1559487224936" duration="8873000" />
+      <workItem from="1559487224936" duration="9237000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="165081000" />
+    <option name="totallyTimeSpent" value="165445000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1511,8 +1509,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Models/CardsCollection/Services/CollectionService.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3">
-          <caret line="235" column="9" lean-forward="true" selection-start-line="235" selection-start-column="9" selection-end-line="235" selection-end-column="9" />
+        <state relative-caret-position="-29">
+          <caret line="237" column="33" selection-start-line="237" selection-start-column="33" selection-end-line="237" selection-end-column="33" />
           <folding>
             <marker date="1559501028394" expanded="false" signature="6:255" ph="..." />
             <marker date="1559501028394" expanded="true" signature="298:11187" ph="{...}" />
