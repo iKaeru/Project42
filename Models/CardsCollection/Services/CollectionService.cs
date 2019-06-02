@@ -206,19 +206,19 @@ namespace Models.CardsCollection.Services
 
             var allCollections = await repository.FindCollections(userId);
 
-            var notLearnedList =  allCollections.Where(collection =>
+            var notLearnedList = allCollections.Where(collection =>
             {
                 if (IsEmpty(collection.CardItems))
                     return false;
 
                 return collection.CardItems.Any(card =>
-                 CardLearnedAsync(card, MemorizationBoxes.NotLearned).Result ||
-                           CardLearnedAsync(card, MemorizationBoxes.PartlyLearned).Result);
+                    CardLearnedAsync(card, MemorizationBoxes.NotLearned) ||
+                    CardLearnedAsync(card, MemorizationBoxes.PartlyLearned));
             });
 
             return notLearnedList;
         }
-        
+
         public async Task<IEnumerable<CardsCollection>> GetLearnedCollectionsAsync(Guid userId)
         {
             if (userId == Guid.Empty)
@@ -231,17 +231,20 @@ namespace Models.CardsCollection.Services
                 if (IsEmpty(collection.CardItems))
                     return false;
 
-                return collection.CardItems.All(card => 
-                    CardLearnedAsync(card, MemorizationBoxes.FullyLearned).Result);
+                return collection.CardItems.All(card =>
+                {
+                    return CardLearnedAsync(card, MemorizationBoxes.FullyLearned);
+                });
             });
         }
 
-        private async Task<bool> CardLearnedAsync(Guid cardId, MemorizationBoxes level)
+        private  bool CardLearnedAsync(Guid cardId, MemorizationBoxes level)
         {
-            var cardTraining = await trainingRepository.GetCardTrainingAsync(cardId);
+            var cardTraining = trainingRepository.GetCardTrainingAsync(cardId).Result;
+
             if (cardTraining == null)
                 throw new AppException($"Не существует тренировки для карты с id {cardId}");
-            
+
             var box = cardTraining.Box;
 
             if (box == level)
