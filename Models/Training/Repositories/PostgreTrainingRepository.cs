@@ -11,12 +11,12 @@ namespace Models.Training.Repositories
     public class PostgreTrainingRepository : ITrainingRepository
     {
         private PostgreContext context;
-        
+
         public PostgreTrainingRepository(PostgreContext context)
         {
             this.context = context;
         }
-        
+
         public async Task<Training> AddAsync(Training training)
         {
             await context.Trainings.AddAsync(training);
@@ -27,7 +27,7 @@ namespace Models.Training.Repositories
 
         public async Task<Training> GetCardTrainingAsync(Guid id)
         {
-            return await context.Trainings.FirstOrDefaultAsync(x => x.CardId == id);            
+            return await context.Trainings.FirstOrDefaultAsync(x => x.CardId == id);
         }
 
         public async Task<Training> GetCardTrainingByTrainIdAsync(Guid trainingId)
@@ -49,10 +49,10 @@ namespace Models.Training.Repositories
 
         public async Task<IEnumerable<Guid>> GetCardsIdFromBoxAsync(MemorizationBoxes box, Guid uId)
         {
-            return await Task.Run( () => context.Trainings
-                .Where(x => x.Box == box)
-                .Where(u => u.UserId == uId)
-                .Select(t => t.CardId));
+            return await Task.Run(() => context.Trainings
+               .Where(x => x.Box == box)
+               .Where(u => u.UserId == uId)
+               .Select(t => t.CardId));
         }
 
         public async Task<bool> DeleteTrainAsync(Guid id)
@@ -67,7 +67,7 @@ namespace Models.Training.Repositories
 
             return false;
         }
-        
+
         private DateTime GetNextTrainingDay(Training x)
         {
             var daysToAdd = GetDaysCountFromBox(x.Box);
@@ -87,6 +87,16 @@ namespace Models.Training.Repositories
             }
 
             throw new AppException("Unknown card box");
+        }
+
+        public Training getLastTraining(Guid userId)
+        {
+            if (context.Trainings.Count() < 2)
+            {
+                return context.Trainings.FirstOrDefault();
+            }
+
+            return new Training() { CompletedAt = context.Trainings.Max(x => x.CompletedAt) };
         }
     }
 }

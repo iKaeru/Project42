@@ -41,7 +41,8 @@ namespace MemoryCardsAPI
             services.AddSingleton<ICollectionService, CollectionService>();
             services.AddSingleton<ITrainingService, TrainingService>();
 
-            SetUpInMemoryDataBase(services);
+         //   SetUpInMemoryDataBase(services);
+            SetUpPostgreDataBase(services);
 
             services.AddCors();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
@@ -110,7 +111,6 @@ namespace MemoryCardsAPI
         public void Configure(IApplicationBuilder app)
         {
             app.UseDeveloperExceptionPage();
-
             // Enable middleware to serve generated Swagger as a JSON endpoint.
             app.UseSwagger();
 
@@ -121,7 +121,7 @@ namespace MemoryCardsAPI
             // global cors policy
             app.UseCors(x => x
             .WithOrigins("http://localhost:5000", "http://localhost:3000", "http://84.201.143.41:5000", "http://84.201.143.41"
-            , "https://pr42.ru")
+            , "https://pr42.ru", "https://localhost:443", "https://pr42.ru:443")
                 .AllowAnyMethod()
                 .AllowAnyHeader()
                 .AllowCredentials());
@@ -152,7 +152,8 @@ namespace MemoryCardsAPI
             services.AddSingleton<ITrainingRepository, PostgreTrainingRepository>();
 
             services.AddEntityFrameworkNpgsql()
-                .AddDbContext<PostgreContext>()
+                .AddDbContext<PostgreContext>( opt => opt.UseNpgsql(Configuration.GetConnectionString("postgreConnection")))
+              //  .AddDbContext<PostgreContext>()
                 .BuildServiceProvider();
         }
     }

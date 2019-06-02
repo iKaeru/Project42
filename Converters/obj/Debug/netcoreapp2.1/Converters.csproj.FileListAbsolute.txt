@@ -109,3 +109,4 @@ T:\KonturProj\Project42\Converters\bin\Debug\netcoreapp2.1\Models.dll
 T:\KonturProj\Project42\Converters\bin\Debug\netcoreapp2.1\Client.Models.pdb
 T:\KonturProj\Project42\Converters\bin\Debug\netcoreapp2.1\Models.pdb
 T:\KonturProj\Project42\Converters\obj\Debug\netcoreapp2.1\Converters.csproj.CopyComplete
+T:\KonturProj\Project42\Converters\obj\Debug\netcoreapp2.1\Converters.csprojAssemblyReference.cache

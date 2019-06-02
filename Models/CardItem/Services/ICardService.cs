@@ -7,7 +7,7 @@ namespace Models.CardItem.Services
 {
     public interface ICardService
     {
-        CardItem CreateCard(CardCreationInfo cardToCreate, Guid uId);
+        CardItem CreateCard(CardCreationInfo cardToCreate, Guid userId);
         Task AddCardAsync(CardItem cardToAddToRepo, CancellationToken cancellationToken);
         Task<IEnumerable<CardItem>> GetAllUserCards(Guid userId, CancellationToken cancellationToken);
         Task<IEnumerable<Guid>> GetAllUserCardsId(Guid userId, CancellationToken cancellationToken);

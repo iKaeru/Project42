@@ -120,6 +120,11 @@ namespace Models.Training.Services
             return await repository.DeleteTrainAsync(id);
         }
 
+        public async Task<Training> GetLastTrainingAsync(Guid userId)
+        {
+            return await Task.Run(() => repository.getLastTraining(userId));
+        }
+
         #region private helper methods
 
         private void ValidateTraining(Training training)
