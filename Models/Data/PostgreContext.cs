@@ -24,6 +24,7 @@ namespace Models.Data
                     "Port=6432;" +
                     "Database=db1;" +
                     "SSL Mode = Prefer;" +
+                    "Trust Server Certificate = true;" +
                     "Username=user1;" +
                     "Password=1q2w3e4r");
 
