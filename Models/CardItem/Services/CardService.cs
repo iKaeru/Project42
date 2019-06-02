@@ -20,8 +20,7 @@ namespace Models.CardItem.Services
 
         public CardItem CreateCard(CardCreationInfo cardToCreate, Guid userId)
         {
-            if (!ValidateCard(cardToCreate))
-                return null;
+            ValidateCard(cardToCreate);
 
             var card = new CardItem
             {
@@ -43,9 +42,10 @@ namespace Models.CardItem.Services
             {
                 await repository.CreateAsync(cardToAddToRepo, cancellationToken);
             }
-            catch
+            catch (Exception ex)
             {
-                throw new AppException("Couldn't add card");
+                while (ex.InnerException != null) ex = ex.InnerException;
+                throw new AppException("Couldn't add card" + ex.Message);
             }
         }
 
@@ -147,22 +147,21 @@ namespace Models.CardItem.Services
         private bool ValidateCard(CardCreationInfo cardToValidate)
         {
             if (!FieldsAreFilled(cardToValidate.Question))
-                throw new ArgumentException($"Не заполнены поля в \"Вопросе\" карты");
+                throw new AppException($"Не заполнены поля в \"Вопросе\" карты");
             if (!FieldsAreFilled(cardToValidate.Answer))
-                throw new ArgumentException($"Не заполнены поля в \"Вопросе\" карты");
+                throw new AppException($"Не заполнены поля в \"Вопросе\" карты");
             if (!LengthIsCorrect(cardToValidate.Question.Text))
-                throw new ArgumentException($"Не корректная длина в \"Вопросе\" карты в поле \"Текст\"" +
-                                            $"должна быть от {MinimumTextLength} до {MaximumTextLength}");
+                throw new AppException($"Не корректная длина в \"Вопросе\" карты в поле \"Текст\"" +
+                                       $"должна быть от {MinimumTextLength} до {MaximumTextLength}");
             if (!LengthIsCorrect(cardToValidate.Question.Code))
-                throw new ArgumentException($"Не корректная длина в \"Вопросе\" карты в поле \"Код\"" +
-                                            $"должна быть от {MinimumTextLength} до {MaximumTextLength}");
+                throw new AppException($"Не корректная длина в \"Вопросе\" карты в поле \"Код\"" +
+                                       $"должна быть от {MinimumTextLength} до {MaximumTextLength}");
             if (!LengthIsCorrect(cardToValidate.Answer.Text))
-                if (!LengthIsCorrect(cardToValidate.Answer.Code))
-                    throw new ArgumentException($"Не корректная длина в \"Ответе\" карты в поле \"Текст\"" +
-                                                $"должна быть от {MinimumTextLength} до {MaximumTextLength}");
+                throw new AppException($"Не корректная длина в \"Ответе\" карты в поле \"Текст\"" +
+                                       $"должна быть от {MinimumTextLength} до {MaximumTextLength}");
             if (!LengthIsCorrect(cardToValidate.Answer.Code))
-                throw new ArgumentException($"Не корректная длина в \"Ответе\" карты в поле \"Код\"" +
-                                            $"должна быть от {MinimumTextLength} до {MaximumTextLength}");
+                throw new AppException($"Не корректная длина в \"Ответе\" карты в поле \"Код\"" +
+                                       $"должна быть от {MinimumTextLength} до {MaximumTextLength}");
             return true;
         }
 
