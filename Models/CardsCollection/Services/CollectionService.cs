@@ -239,6 +239,9 @@ namespace Models.CardsCollection.Services
         private async Task<bool> CardLearnedAsync(Guid cardId, MemorizationBoxes level)
         {
             var cardTraining = await trainingRepository.GetCardTrainingAsync(cardId);
+            if (cardTraining == null)
+                throw new AppException($"Не существует тренировки для карты с id {cardId}");
+            
             var box = cardTraining.Box;
 
             if (box == level)
