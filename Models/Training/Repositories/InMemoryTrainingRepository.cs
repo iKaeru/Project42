@@ -95,9 +95,13 @@ namespace Models.Training.Repositories
 
         public Training getLastTraining(Guid userId)
         {
+            if (context.Trainings.Count() == 0)
+            {
+                return null;
+            }
             return context.Trainings
-                .Where(u => u.UserId == userId)
-                .Aggregate((i1, i2) => i1.CompletedAt > i2.CompletedAt ? i1 : i2);
+                          .Where(u => u.UserId == userId)
+                          .Aggregate((i1, i2) => i1.CompletedAt > i2.CompletedAt ? i1 : i2);
         }
     }
 }

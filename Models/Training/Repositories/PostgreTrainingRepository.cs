@@ -11,12 +11,12 @@ namespace Models.Training.Repositories
     public class PostgreTrainingRepository : ITrainingRepository
     {
         private PostgreContext context;
-        
+
         public PostgreTrainingRepository(PostgreContext context)
         {
             this.context = context;
         }
-        
+
         public async Task<Training> AddAsync(Training training)
         {
             await context.Trainings.AddAsync(training);
@@ -27,7 +27,7 @@ namespace Models.Training.Repositories
 
         public async Task<Training> GetCardTrainingAsync(Guid id)
         {
-            return await context.Trainings.FirstOrDefaultAsync(x => x.CardId == id);            
+            return await context.Trainings.FirstOrDefaultAsync(x => x.CardId == id);
         }
 
         public async Task<Training> GetCardTrainingByTrainIdAsync(Guid trainingId)
@@ -49,10 +49,10 @@ namespace Models.Training.Repositories
 
         public async Task<IEnumerable<Guid>> GetCardsIdFromBoxAsync(MemorizationBoxes box, Guid uId)
         {
-            return await Task.Run( () => context.Trainings
-                .Where(x => x.Box == box)
-                .Where(u => u.UserId == uId)
-                .Select(t => t.CardId));
+            return await Task.Run(() => context.Trainings
+               .Where(x => x.Box == box)
+               .Where(u => u.UserId == uId)
+               .Select(t => t.CardId));
         }
 
         public async Task<bool> DeleteTrainAsync(Guid id)
@@ -67,7 +67,7 @@ namespace Models.Training.Repositories
 
             return false;
         }
-        
+
         private DateTime GetNextTrainingDay(Training x)
         {
             var daysToAdd = GetDaysCountFromBox(x.Box);
@@ -91,7 +91,13 @@ namespace Models.Training.Repositories
 
         public Training getLastTraining(Guid userId)
         {
-            throw new NotImplementedException();
+            if (context.Trainings.Count() == 0)
+            {
+                return null;
+            }
+            return context.Trainings
+                          .Where(u => u.UserId == userId)
+                          .Aggregate((i1, i2) => i1.CompletedAt > i2.CompletedAt ? i1 : i2);
         }
     }
 }
