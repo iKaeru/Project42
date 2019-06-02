@@ -152,8 +152,8 @@ namespace MemoryCardsAPI
             services.AddSingleton<ITrainingRepository, PostgreTrainingRepository>();
 
             services.AddEntityFrameworkNpgsql()
-               // .AddDbContext<PostgreContext>( opt => opt.UseNpgsql(Configuration.GetConnectionString("postgreConnection")))
-                .AddDbContext<PostgreContext>()
+                .AddDbContext<PostgreContext>( opt => opt.UseNpgsql(Configuration.GetConnectionString("postgreConnection")))
+              //  .AddDbContext<PostgreContext>()
                 .BuildServiceProvider();
         }
     }
