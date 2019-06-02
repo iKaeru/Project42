@@ -14,7 +14,8 @@ namespace Models.CardsCollection.Services
         Task<CardsCollection> FindCollectionByIdAsync(Guid collectionId, Guid userId);
         Task<bool> IsIdExistAsync(Guid collectionId, Guid userId);
         Task<bool> IsNameExistAsync(string collectionName, Guid userId);
-        Task<IEnumerable<CardsCollection>> GetLearnedCollectionsAsync(Guid uId);
+        Task<IEnumerable<CardsCollection>> GetLearnedCollectionsAsync(Guid userId);
+        Task<IEnumerable<CardsCollection>> GetNotLearnedCollectionsAsync(Guid userId);
         Task<IEnumerable<CardItem.CardItem>> GetAllLearnedCardsAsync(Guid collectionId, Guid userId);
         Task<IEnumerable<CardItem.CardItem>> GetAllUnlearnedCardsAsync(Guid collectionId, Guid userId);
         void UpdateByIdAsync(CardsCollectionPatchInfo collection, Guid collectionId, Guid userId);

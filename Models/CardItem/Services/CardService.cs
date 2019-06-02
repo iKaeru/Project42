@@ -18,7 +18,7 @@ namespace Models.CardItem.Services
             this.repository = repository;
         }
 
-        public CardItem CreateCard(CardCreationInfo cardToCreate, Guid uId)
+        public CardItem CreateCard(CardCreationInfo cardToCreate, Guid userId)
         {
             if (!ValidateCard(cardToCreate))
                 return null;
@@ -28,7 +28,7 @@ namespace Models.CardItem.Services
                 Question = cardToCreate.Question,
                 Answer = cardToCreate.Answer,
                 CreatedAt = DateTime.Now,
-                UserId = uId
+                UserId = userId
             };
 
             return card;
@@ -184,7 +184,8 @@ namespace Models.CardItem.Services
             var counter = 0;
             foreach (var property in type.GetProperties())
             {
-                if (property.GetValue(cardToCheck) == null)
+                if (string.IsNullOrWhiteSpace((string) property.GetValue(cardToCheck)) ||
+                    string.IsNullOrEmpty((string) property.GetValue(cardToCheck)))
                 {
                     counter++;
                 }
@@ -200,7 +201,7 @@ namespace Models.CardItem.Services
 
         private bool LengthIsCorrect(string stringToCheck)
         {
-            if (stringToCheck == null)
+            if (string.IsNullOrWhiteSpace(stringToCheck) || string.IsNullOrEmpty(stringToCheck))
             {
                 return true;
             }

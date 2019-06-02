@@ -49,7 +49,6 @@ namespace MemoryCardsAPI.Controllers
             try
             {
                 Guid.TryParse(HttpContext.User.Identity.Name, out var userId);
-
                 var card = cardsService.CreateCard(cardCreationInfo, userId);
                 await cardsService.AddCardAsync(card, cancellationToken);
                 return Ok(card);

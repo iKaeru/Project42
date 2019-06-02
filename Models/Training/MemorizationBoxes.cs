@@ -9,17 +9,17 @@ namespace Models.Training
     public enum MemorizationBoxes
     {
         /// <summary>
-        /// Легко
+        /// Не выученные карты
         /// </summary>
         NotLearned = 0,
 
         /// <summary>
-        /// Нормально
+        /// Частично выученные карты
         /// </summary>
         PartlyLearned = 1,
 
         /// <summary>
-        /// Сложно
+        /// Выученные карты
         /// </summary>
         FullyLearned = 2
     }

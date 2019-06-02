@@ -14,6 +14,7 @@ namespace Models.Training.Repositories
         List<Training> GetTrainingsFromBox(MemorizationBoxes box);
         Task<IEnumerable<Guid>> GetCardsIdFromBoxAsync(MemorizationBoxes box, Guid uId);
         Task<bool> DeleteTrainAsync(Guid id);
+        Training getLastTraining(Guid userId);
     }
 }
 
