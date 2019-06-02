@@ -211,20 +211,12 @@ namespace Models.CardsCollection.Services
                 if (IsEmpty(collection.CardItems))
                     return false;
 
-                return collection.CardItems.All(card => 
-                    CardLearnedAsync(card, MemorizationBoxes.NotLearned).Result);
-            });
-            
-            var partlyLearnedList =  allCollections.Where(collection =>
-            {
-                if (IsEmpty(collection.CardItems))
-                    return false;
-
-                return collection.CardItems.All(card => 
-                    CardLearnedAsync(card, MemorizationBoxes.PartlyLearned).Result);
+                return collection.CardItems.Any(card =>
+                 CardLearnedAsync(card, MemorizationBoxes.NotLearned).Result ||
+                           CardLearnedAsync(card, MemorizationBoxes.PartlyLearned).Result);
             });
 
-            return notLearnedList.Concat(partlyLearnedList);
+            return notLearnedList;
         }
         
         public async Task<IEnumerable<CardsCollection>> GetLearnedCollectionsAsync(Guid userId)
