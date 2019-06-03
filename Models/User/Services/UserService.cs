@@ -157,13 +157,13 @@ namespace Models.User.Services
                 throw new AppException("Недостаточно информации про пользователя");
             if (!LengthIsCorrect(userToValidate.Login, MinimumLoginLength, MaximumLoginLength))
                 throw new AppException($"Длина логина не правильная, должна быть от {MinimumLoginLength}" +
-                                       $"и до {MaximumLoginLength}");
+                                       $" и до {MaximumLoginLength}");
             if (!LengthIsCorrect(userToValidate.Password, MinimumPassLength, MaximumPassLength))
                 throw new AppException($"Длина пароля не правильная, должна быть от {MinimumPassLength}" +
-                                       $"и до {MaximumPassLength}");
+                                       $" и до {MaximumPassLength}");
             if (!LengthIsCorrect(userToValidate.EmailAdress, MinimumEmailLength, MaximumEmailLength))
                 throw new AppException($"Длина почты не правильная, должна быть от {MinimumEmailLength}" +
-                                       $"и до {MaximumEmailLength}");
+                                       $" и до {MaximumEmailLength}");
             if (!IsEmailValid(userToValidate.EmailAdress))
                 throw new AppException($"Почтовый адрес указан в неправильном формате");
         }
@@ -174,21 +174,21 @@ namespace Models.User.Services
                 throw new AppException("Недостаточно информации про пользователя");
             if (!LengthIsCorrect(userToValidate.Login, MinimumLoginLength, MaximumLoginLength))
                 throw new AppException($"Длина логина не правильная, должна быть от {MinimumLoginLength}" +
-                                       $"и до {MaximumLoginLength}");
+                                       $" и до {MaximumLoginLength}");
             if (!LengthIsCorrect(userToValidate.Password, MinimumPassLength, MaximumPassLength))
                 throw new AppException($"Длина пароля не правильная, должна быть от {MinimumPassLength}" +
-                                       $"и до {MaximumPassLength}");
+                                       $" и до {MaximumPassLength}");
             if (!LengthIsCorrect(userToValidate.EmailAdress, MinimumEmailLength, MaximumEmailLength))
                 throw new AppException($"Длина почты не правильная, должна быть от {MinimumEmailLength}" +
-                                       $"и до {MaximumEmailLength}");
+                                       $" и до {MaximumEmailLength}");
             if (!IsEmailValid(userToValidate.EmailAdress))
                 throw new AppException($"Почтовый адрес указан в неправильном формате");
             if (!LengthIsCorrect(userToValidate.FirstName, MinimumFirstNameLength, MaximumFirstNameLength))
                 throw new AppException($"Длина имени не правильная, должна быть от {MinimumFirstNameLength}" +
-                                       $"и до {MaximumFirstNameLength}");
+                                       $" и до {MaximumFirstNameLength}");
             if (!LengthIsCorrect(userToValidate.LastName, MinimumLastNameLength, MaximumLastNameLength))
                 throw new AppException($"Длина имени не правильная, должна быть от {MinimumLastNameLength}" +
-                                       $"и до {MaximumLastNameLength}");
+                                       $" и до {MaximumLastNameLength}");
         }
 
         private bool FieldsAreFilled(UserPatchInfo userToCheck)
