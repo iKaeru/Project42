@@ -53,7 +53,7 @@ namespace MemoryCardsAPI.Controllers
             {
                 var user = await userService.AuthenticateAsync(userDto.Login, userDto.Password);
                 if (user == null)
-                    return BadRequest(new {message = "Username or password is incorrect"});
+                    return BadRequest(new {message = "Пользователь или пароль указан не верно"});
                 var token = TokenHmacSha256Generator(user.Id.ToString());
 
                 CookieOptions option = new CookieOptions();
@@ -138,7 +138,7 @@ namespace MemoryCardsAPI.Controllers
                 var user = await userService.GetById(uId);
 
                 if (user == null)
-                    return BadRequest(new {message = "User id is incorrect"});
+                    return BadRequest(new {message = "Идентификатор пользователя указан не верно"});
 
                 var userDto = mapper.Map<View.User>(user);
                 var resultUser = new View.UserRegistredInfo
@@ -209,7 +209,7 @@ namespace MemoryCardsAPI.Controllers
                     return Ok();
                 }
 
-                throw new AppException("Couldn't delete user");
+                throw new AppException("Не получилось удалить пользователя");
             }
             catch (AppException ex)
             {

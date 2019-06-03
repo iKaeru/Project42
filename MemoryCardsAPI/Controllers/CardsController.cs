@@ -260,7 +260,7 @@ namespace MemoryCardsAPI.Controllers
                     return Ok();
                 }
 
-                throw new AppException("Couldn't delete user");
+                throw new AppException("Не получилось удалить карту");
             }
             catch (AppException ex)
             {

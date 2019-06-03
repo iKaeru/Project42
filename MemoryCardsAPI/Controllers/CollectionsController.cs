@@ -48,17 +48,17 @@ namespace MemoryCardsAPI.Controllers
                 Guid.TryParse(HttpContext.User.Identity.Name, out var uId);
                 if (await collectionService.IsNameExistAsync(defaultCollectionName, uId))
                 {
-                    return BadRequest(new { message = "Default collection already exists" });
+                    return BadRequest(new {message = $"Коллекция с именем \"{defaultCollectionName}\" уже существует"});
                 }
 
                 var cardCollection = collectionService.CreateCollection(uId, defaultCollectionName);
                 if (await collectionService.AddCollectionAsync(cardCollection))
                     return Ok(cardCollection);
-                throw new AppException("Couldn't create collection");
+                throw new AppException("Не получилось создать коллекцию");
             }
             catch (AppException ex)
             {
-                return BadRequest(new { message = ex.Message });
+                return BadRequest(new {message = ex.Message});
             }
         }
 
@@ -79,18 +79,18 @@ namespace MemoryCardsAPI.Controllers
                 Guid.TryParse(HttpContext.User.Identity.Name, out var uId);
                 if (await collectionService.IsNameExistAsync(name, uId))
                 {
-                    return BadRequest(new { message = $"Collection {name} already exists" });
+                    return BadRequest(new {message = $"Коллекция с именем \"{name}\" уже существует"});
                 }
 
                 var cardCollection = collectionService.CreateCollection(uId, name);
                 if (await collectionService.AddCollectionAsync(cardCollection))
                     return Ok(cardCollection);
 
-                throw new AppException("Couldn't add card to a collection");
+                throw new AppException("Не получилось создать коллекцию");
             }
             catch (AppException ex)
             {
-                return BadRequest(new { message = ex.Message });
+                return BadRequest(new {message = ex.Message});
             }
         }
 
@@ -114,17 +114,17 @@ namespace MemoryCardsAPI.Controllers
 
                 if (!await collectionService.IsIdExistAsync(collectionId, userId))
                 {
-                    return BadRequest(new { message = "No collection with such id" });
+                    return BadRequest(new {message = $"Нет коллекции с указанным идентификатором: \"{collectionId}\""});
                 }
 
                 if (await collectionService.AddCardToCollectionAsync(collectionId, cardGuid, userId))
                     return Ok();
 
-                throw new AppException("Couldn't add card to a collection");
+                throw new AppException("Не получилось добавить карту в коллекцию");
             }
             catch (AppException ex)
             {
-                return BadRequest(new { message = ex.Message });
+                return BadRequest(new {message = ex.Message});
             }
         }
 
@@ -146,7 +146,7 @@ namespace MemoryCardsAPI.Controllers
 
                 if (!await collectionService.IsIdExistAsync(collectionId, userId))
                 {
-                    return BadRequest(new { message = "No collection with id \"" + collectionId + "\"" });
+                    return BadRequest(new {message = $"Нет коллекции с указанным идентификатором: \"{collectionId}\""});
                 }
 
                 var cardCollection = await collectionService.FindCollectionByIdAsync(collectionId, userId);
@@ -154,7 +154,7 @@ namespace MemoryCardsAPI.Controllers
             }
             catch (AppException ex)
             {
-                return BadRequest(new { message = ex.Message });
+                return BadRequest(new {message = ex.Message});
             }
         }
 
@@ -176,12 +176,13 @@ namespace MemoryCardsAPI.Controllers
 
                 if (!await collectionService.IsIdExistAsync(collectionId, userId))
                 {
-                    return BadRequest(new { message = "No collection with id \"" + collectionId + "\"" });
+                    return BadRequest(new {message = $"Нет коллекции с указанным идентификатором: \"{collectionId}\""});
                 }
 
                 var cardCollection = await collectionService.FindCollectionByIdAsync(collectionId, userId);
-                
-                var collectionCards = cardCollection.CardItems.Select(cardId => cardService.GetCardByIdAsync(cardId, cancellationToken));
+
+                var collectionCards =
+                    cardCollection.CardItems.Select(cardId => cardService.GetCardByIdAsync(cardId, cancellationToken));
 
                 return Ok(new
                 {
@@ -190,14 +191,14 @@ namespace MemoryCardsAPI.Controllers
                     cardCollection.CreationDate,
                     cardCollection.UserId,
                     collectionCards
-                });                
+                });
             }
             catch (AppException ex)
             {
-                return BadRequest(new { message = ex.Message });
+                return BadRequest(new {message = ex.Message});
             }
         }
-        
+
         /// <summary>
         /// Shows all existing collections For User
         /// </summary>
@@ -216,7 +217,7 @@ namespace MemoryCardsAPI.Controllers
             }
             catch (AppException ex)
             {
-                return BadRequest(new { message = ex.Message });
+                return BadRequest(new {message = ex.Message});
             }
         }
 
@@ -261,7 +262,7 @@ namespace MemoryCardsAPI.Controllers
             }
             catch (AppException ex)
             {
-                return BadRequest(new { message = ex.Message });
+                return BadRequest(new {message = ex.Message});
             }
         }
 
@@ -284,7 +285,7 @@ namespace MemoryCardsAPI.Controllers
             }
             catch (AppException ex)
             {
-                return BadRequest(new { message = ex.Message });
+                return BadRequest(new {message = ex.Message});
             }
         }
 
@@ -306,7 +307,7 @@ namespace MemoryCardsAPI.Controllers
 
                 if (!await collectionService.IsIdExistAsync(collectionId, userId))
                 {
-                    return BadRequest(new { message = "No collection with id \"" + collectionId + "\"" });
+                    return BadRequest(new {message = $"Нет коллекции с указанным идентификатором: \"{collectionId}\""});
                 }
 
                 var collections = await collectionService.GetAllLearnedCardsAsync(userId,
@@ -315,7 +316,7 @@ namespace MemoryCardsAPI.Controllers
             }
             catch (AppException ex)
             {
-                return BadRequest(new { message = ex.Message });
+                return BadRequest(new {message = ex.Message});
             }
         }
 
@@ -337,7 +338,7 @@ namespace MemoryCardsAPI.Controllers
 
                 if (!await collectionService.IsIdExistAsync(collectionId, userId))
                 {
-                    return BadRequest(new { message = "No collection with id \"" + collectionId + "\"" });
+                    return BadRequest(new {message = $"Нет коллекции с указанным идентификатором: \"{collectionId}\""});
                 }
 
                 var collections = await collectionService.GetAllUnlearnedCardsAsync(userId,
@@ -346,7 +347,7 @@ namespace MemoryCardsAPI.Controllers
             }
             catch (AppException ex)
             {
-                return BadRequest(new { message = ex.Message });
+                return BadRequest(new {message = ex.Message});
             }
         }
 
@@ -364,13 +365,13 @@ namespace MemoryCardsAPI.Controllers
             {
                 Guid.TryParse(HttpContext.User.Identity.Name, out var userId);
                 var collections = await collectionService.GetLearnedCollectionsAsync(userId);
-                if (collections == null) 
+                if (collections == null)
                     return Ok(0);
                 return Ok(collections.Count());
             }
             catch (AppException ex)
             {
-                return BadRequest(new { message = ex.Message });
+                return BadRequest(new {message = ex.Message});
             }
         }
 
@@ -392,7 +393,7 @@ namespace MemoryCardsAPI.Controllers
             }
             catch (AppException ex)
             {
-                return BadRequest(new { message = ex.Message });
+                return BadRequest(new {message = ex.Message});
             }
         }
 
@@ -415,7 +416,7 @@ namespace MemoryCardsAPI.Controllers
 
                 if (!await collectionService.IsIdExistAsync(collectionId, userId))
                 {
-                    return BadRequest(new { message = "No collection with such id" });
+                    return BadRequest(new {message = "Нет коллекции с указанным идентификатором"});
                 }
 
                 var collection = CardsCollectionConverter.ConvertPatchInfo(updateInfo);
@@ -424,7 +425,7 @@ namespace MemoryCardsAPI.Controllers
             }
             catch (AppException ex)
             {
-                return BadRequest(new { message = ex.Message });
+                return BadRequest(new {message = ex.Message});
             }
         }
 
@@ -452,11 +453,11 @@ namespace MemoryCardsAPI.Controllers
                     }
                 }
 
-                throw new AppException("Couldn't delete collection");
+                throw new AppException("Не получилось удалить коллекцию");
             }
             catch (AppException ex)
             {
-                return BadRequest(new { message = ex.Message });
+                return BadRequest(new {message = ex.Message});
             }
         }
     }

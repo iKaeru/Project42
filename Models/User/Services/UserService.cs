@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Net.Mail;
 using System.Threading;
 using System.Threading.Tasks;
 using Models.Errors;
@@ -137,6 +138,19 @@ namespace Models.User.Services
 
         #region private helper methods
 
+        public bool IsEmailValid(string emailaddress)
+        {
+            try
+            {
+                MailAddress m = new MailAddress(emailaddress);
+                return true;
+            }
+            catch (FormatException)
+            {
+                return false;
+            }
+        }
+        
         private void ValidateUser(UserRegistrationInfo userToValidate)
         {
             if (!FieldsAreFilled(userToValidate))
@@ -150,6 +164,8 @@ namespace Models.User.Services
             if (!LengthIsCorrect(userToValidate.EmailAdress, MinimumEmailLength, MaximumEmailLength))
                 throw new AppException($"Длина почты не правильная, должна быть от {MinimumEmailLength}" +
                                        $"и до {MaximumEmailLength}");
+            if (!IsEmailValid(userToValidate.EmailAdress))
+                throw new AppException($"Почтовый адрес указан в неправильном формате");
         }
 
         private void ValidateUser(UserPatchInfo userToValidate)
@@ -165,6 +181,8 @@ namespace Models.User.Services
             if (!LengthIsCorrect(userToValidate.EmailAdress, MinimumEmailLength, MaximumEmailLength))
                 throw new AppException($"Длина почты не правильная, должна быть от {MinimumEmailLength}" +
                                        $"и до {MaximumEmailLength}");
+            if (!IsEmailValid(userToValidate.EmailAdress))
+                throw new AppException($"Почтовый адрес указан в неправильном формате");
             if (!LengthIsCorrect(userToValidate.FirstName, MinimumFirstNameLength, MaximumFirstNameLength))
                 throw new AppException($"Длина имени не правильная, должна быть от {MinimumFirstNameLength}" +
                                        $"и до {MaximumFirstNameLength}");

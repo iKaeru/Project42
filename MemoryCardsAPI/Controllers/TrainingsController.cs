@@ -186,7 +186,7 @@ namespace MemoryCardsAPI.Controllers
                     return Ok();
                 }
 
-                throw new AppException("Couldn't delete training");
+                throw new AppException("Не получилось удалить тренировку");
             }
             catch (AppException ex)
             {
@@ -230,7 +230,7 @@ namespace MemoryCardsAPI.Controllers
                 }
                 catch (AppException ex)
                 {
-                    if (ex.Message == "Could not find created training for this card") cardsList.Add(card);
+                    if (ex.Message == "Не получилось найти тренировку для данной карты") cardsList.Add(card);
                     else throw ex;
                 }
             }
