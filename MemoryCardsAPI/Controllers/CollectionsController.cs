@@ -278,6 +278,7 @@ namespace MemoryCardsAPI.Controllers
             {
                 Guid.TryParse(HttpContext.User.Identity.Name, out var userId);
                 var collections = await collectionService.GetLearnedCollectionsAsync(userId);
+                if (collections == null) return Ok(0);
                 return Ok(collections.Count());
             }
             catch (AppException ex)

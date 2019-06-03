@@ -211,9 +211,7 @@ namespace Models.CardsCollection.Services
                 if (IsEmpty(collection.CardItems))
                     return false;
 
-                return collection.CardItems.Any(card =>
-                    CardLearned(card, MemorizationBoxes.NotLearned) ||
-                    CardLearned(card, MemorizationBoxes.PartlyLearned));
+                return collection.CardItems.Any(card => !CardLearned(card, MemorizationBoxes.FullyLearned));
             });
 
             return notLearnedList;
@@ -238,6 +236,9 @@ namespace Models.CardsCollection.Services
         private bool CardLearned(Guid cardId, MemorizationBoxes level)
         {
             var cardTrainings = trainingRepository.GetCardTrainingsAsync(cardId).Result;
+
+            if (cardTrainings.Count()==0) return false;
+
             var lastCardTrainingDate = cardTrainings.Max(t => t.CompletedAt);
             var lastСardTraining = cardTrainings.First(t => t.CompletedAt == lastCardTrainingDate);
 
