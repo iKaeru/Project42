@@ -61,19 +61,19 @@ namespace Models.CardsCollection.Services
         public async Task<bool> AddCardToCollectionAsync(Guid collectionId, Guid cardId, Guid userId)
         {
             if (collectionId == Guid.Empty)
-                throw new AppException(nameof(collectionId) + " is required");
+                throw new AppException($"Поле {nameof(collectionId)} не указано");
 
             if (cardId == Guid.Empty)
-                throw new AppException(nameof(cardId) + " is required");
+                throw new AppException($"Поле {nameof(cardId)} не указано");
 
             if (userId == Guid.Empty)
-                throw new AppException(nameof(userId) + " is required");
+                throw new AppException($"Поле {nameof(userId)} не указано");
 
             var desiredCollection = await repository.FindByIdAsync(collectionId, userId);
 
             if (desiredCollection.CardItems.Contains(cardId))
             {
-                throw new AppException("Collection doesn't contain this card");
+                throw new AppException("В коллекции нет даной карты");
             }
 
             desiredCollection.CardItems.Add(cardId);
@@ -95,7 +95,7 @@ namespace Models.CardsCollection.Services
             var collectionFromRepository = await repository.FindByIdAsync(collectionId, userId);
 
             if (collectionFromRepository == null)
-                throw new AppException("Collection not found");
+                throw new AppException("Коллекция не найдена");
 
             UpdateCollectionInfo(collection, collectionFromRepository);
             ValidateCollection(collectionFromRepository);
@@ -143,7 +143,7 @@ namespace Models.CardsCollection.Services
         public async Task<bool> IsNameExistAsync(string collectionName, Guid userId)
         {
             if (userId == Guid.Empty)
-                throw new AppException(nameof(userId) + " is required");
+                throw new AppException($"Поле {nameof(userId)} не указано");
 
             return await repository.FindNameAsync(collectionName, userId);
         }
@@ -151,10 +151,10 @@ namespace Models.CardsCollection.Services
         public async Task<bool> IsIdExistAsync(Guid collectionId, Guid userId)
         {
             if (userId == Guid.Empty)
-                throw new AppException(nameof(userId) + " is required");
+                throw new AppException($"Поле {nameof(userId)} не указано");
 
             if (collectionId == Guid.Empty)
-                throw new AppException(nameof(userId) + " is required");
+                throw new AppException($"Поле {nameof(userId)} не указано");
 
             return await repository.FindIdAsync(collectionId, userId);
         }
@@ -162,7 +162,7 @@ namespace Models.CardsCollection.Services
         public async Task<IEnumerable<CardsCollection>> GetAllCollectionsAsync(Guid userId)
         {
             if (userId == Guid.Empty)
-                throw new AppException(nameof(userId) + " is required");
+                throw new AppException($"Поле {nameof(userId)} не указано");
 
             return await repository.FindCollections(userId);
         }
@@ -170,10 +170,10 @@ namespace Models.CardsCollection.Services
         public async Task<IEnumerable<CardItem.CardItem>> GetAllLearnedCardsAsync(Guid collectionId, Guid userId)
         {
             if (userId == Guid.Empty)
-                throw new AppException(nameof(userId) + " is required");
+                throw new AppException($"Поле {nameof(userId)} не указано");
 
             if (collectionId == Guid.Empty)
-                throw new AppException(nameof(collectionId) + " is required");
+                throw new AppException($"Поле {nameof(collectionId)} не указано");
 
             var cardsInCollectionIdList = (await repository.FindByIdAsync(collectionId, userId)).CardItems;
             var cardsLearned = await trainingRepository.GetCardsIdFromBoxAsync(MemorizationBoxes.FullyLearned,
@@ -186,10 +186,10 @@ namespace Models.CardsCollection.Services
         public async Task<IEnumerable<CardItem.CardItem>> GetAllUnlearnedCardsAsync(Guid collectionId, Guid userId)
         {
             if (userId == Guid.Empty)
-                throw new AppException(nameof(userId) + " is required");
+                throw new AppException($"Поле {nameof(userId)} не указано");
 
             if (collectionId == Guid.Empty)
-                throw new AppException(nameof(collectionId) + " is required");
+                throw new AppException($"Поле {nameof(collectionId)} не указано");
 
             var cardsInCollectionIdList = (await repository.FindByIdAsync(collectionId, userId)).CardItems;
             var cardsUnlearned = await trainingRepository.GetCardsIdFromBoxAsync(MemorizationBoxes.NotLearned,
@@ -202,7 +202,7 @@ namespace Models.CardsCollection.Services
         public async Task<IEnumerable<CardsCollection>> GetNotLearnedCollectionsAsync(Guid userId)
         {
             if (userId == Guid.Empty)
-                throw new AppException(nameof(userId) + " is required");
+                throw new AppException($"Поле {nameof(userId)} не указано");
 
             var allCollections = await repository.FindCollections(userId);
 
@@ -220,7 +220,7 @@ namespace Models.CardsCollection.Services
         public async Task<IEnumerable<CardsCollection>> GetLearnedCollectionsAsync(Guid userId)
         {
             if (userId == Guid.Empty)
-                throw new AppException(nameof(userId) + " is required");
+                throw new AppException($"Поле {nameof(userId)} не указано");
 
             var allCollections = await repository.FindCollections(userId);
 
@@ -264,20 +264,21 @@ namespace Models.CardsCollection.Services
         private void FieldsAreFilled(Guid userId, string collectionName)
         {
             if (userId == Guid.Empty)
-                throw new AppException(nameof(userId) + " is required");
+                throw new AppException($"Поле {nameof(userId)} не указано");
 
             if (CheckStringFilled(collectionName))
-                throw new AppException(nameof(collectionName) + " is required");
+                throw new AppException($"Поле {nameof(collectionName)} не указано");
         }
 
         private void ValidateCollection(CardsCollection collectionToValidate)
         {
             if (!FieldsAreFilled(collectionToValidate))
-                throw new AppException("Not enough information");
+                throw new AppException("Недостаточно информации про пользователя");
             if (CheckStringFilled(collectionToValidate.Name))
-                throw new AppException(nameof(collectionToValidate.Name) + " is required");
+                throw new AppException(nameof(collectionToValidate.Name) + " не указано");
             if (!LengthIsCorrect(collectionToValidate.Name, MinimumNameLength, MaximumNameLength))
-                throw new AppException("Collection name length \"" + collectionToValidate.Name + "\" is incorrect");
+                throw new AppException($"Некорректная длина в \"имени\" коллекциии "+
+                                       $", должна быть от {MinimumNameLength} до {MaximumNameLength}");
         }
 
         private bool CheckStringFilled(string input)

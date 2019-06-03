@@ -13,24 +13,31 @@ namespace Models.User.Services
         private const int MaximumLoginLength = 32;
         private const int MinimumPassLength = 8;
         private const int MaximumPassLength = 120;
+        private const int MinimumEmailLength = 6;
+        private const int MaximumEmailLength = 250;
+        private const int MinimumFirstNameLength = 1;
+        private const int MaximumFirstNameLength = 300;
+        private const int MinimumLastNameLength = 1;
+        private const int MaximumLastNameLength = 300;
+
         private readonly IUsersRepository repository;
 
         public UserService(IUsersRepository repository)
         {
             this.repository = repository;
         }
-        
+
         public async Task ValidateUserAsync(User userToValidate)
         {
             var login = userToValidate.Login;
             if (IsFilled(login) && await repository.FindLoginAsync(login))
-                throw new AppException("Username \"" + login + "\" is already taken");
+                throw new AppException("Логин \"" + login + "\" уже занят");
 
             var email = userToValidate.EmailAdress;
             if (IsFilled(email) && await repository.FindMailAsync(email))
-                throw new AppException("Email \"" + email + "\" is already taken");
+                throw new AppException("Почтовый адрес \"" + email + "\" уже занят");
         }
-        
+
         public User CreateUser(UserRegistrationInfo userToCreate)
         {
             ValidateUser(userToCreate);
@@ -110,7 +117,7 @@ namespace Models.User.Services
             var userFromRepository = await repository.GetUserAsync(userToUpdate.Id);
 
             if (userFromRepository == null)
-                throw new AppException("User not found");
+                throw new AppException("Пользователь не найден");
 
             CheckInfoNotExist(userToUpdate, userFromRepository);
 
@@ -127,33 +134,45 @@ namespace Models.User.Services
 
             await repository.UpdateAsync(userFromRepository);
         }
-        
+
         #region private helper methods
 
         private void ValidateUser(UserRegistrationInfo userToValidate)
         {
             if (!FieldsAreFilled(userToValidate))
-                throw new AppException("Not enough information");
+                throw new AppException("Недостаточно информации про пользователя");
             if (!LengthIsCorrect(userToValidate.Login, MinimumLoginLength, MaximumLoginLength))
-                throw new AppException("Username length \"" + userToValidate.Login + "\" is incorrect");
+                throw new AppException($"Длина логина не правильная, должна быть от {MinimumLoginLength}" +
+                                       $"и до {MaximumLoginLength}");
             if (!LengthIsCorrect(userToValidate.Password, MinimumPassLength, MaximumPassLength))
-                throw new AppException("Password length \"" + userToValidate.Password+ "\" is incorrect");
+                throw new AppException($"Длина пароля не правильная, должна быть от {MinimumPassLength}" +
+                                       $"и до {MaximumPassLength}");
+            if (!LengthIsCorrect(userToValidate.EmailAdress, MinimumEmailLength, MaximumEmailLength))
+                throw new AppException($"Длина почты не правильная, должна быть от {MinimumEmailLength}" +
+                                       $"и до {MaximumEmailLength}");
         }
-        
+
         private void ValidateUser(UserPatchInfo userToValidate)
         {
             if (!FieldsAreFilled(userToValidate))
-                throw new AppException("Not enough information");
+                throw new AppException("Недостаточно информации про пользователя");
             if (!LengthIsCorrect(userToValidate.Login, MinimumLoginLength, MaximumLoginLength))
-                throw new AppException("Username length \"" + userToValidate.Login + "\" is incorrect");
+                throw new AppException($"Длина логина не правильная, должна быть от {MinimumLoginLength}" +
+                                       $"и до {MaximumLoginLength}");
             if (!LengthIsCorrect(userToValidate.Password, MinimumPassLength, MaximumPassLength))
-                throw new AppException("Password length \"" + userToValidate.Password+ "\" is incorrect");
-            if (!LengthIsCorrect(userToValidate.FirstName, 0, 20)) // todo
-                throw new AppException("Username length \"" + userToValidate.FirstName + "\" is incorrect");
-            if (!LengthIsCorrect(userToValidate.LastName, 0, 20)) // todo
-                throw new AppException("Username length \"" + userToValidate.LastName + "\" is incorrect");
+                throw new AppException($"Длина пароля не правильная, должна быть от {MinimumPassLength}" +
+                                       $"и до {MaximumPassLength}");
+            if (!LengthIsCorrect(userToValidate.EmailAdress, MinimumEmailLength, MaximumEmailLength))
+                throw new AppException($"Длина почты не правильная, должна быть от {MinimumEmailLength}" +
+                                       $"и до {MaximumEmailLength}");
+            if (!LengthIsCorrect(userToValidate.FirstName, MinimumFirstNameLength, MaximumFirstNameLength))
+                throw new AppException($"Длина имени не правильная, должна быть от {MinimumFirstNameLength}" +
+                                       $"и до {MaximumFirstNameLength}");
+            if (!LengthIsCorrect(userToValidate.LastName, MinimumLastNameLength, MaximumLastNameLength))
+                throw new AppException($"Длина имени не правильная, должна быть от {MinimumLastNameLength}" +
+                                       $"и до {MaximumLastNameLength}");
         }
-        
+
         private bool FieldsAreFilled(UserPatchInfo userToCheck)
         {
             var type = userToCheck.GetType();
@@ -191,20 +210,20 @@ namespace Models.User.Services
 
             return true;
         }
-        
+
         private bool IsFilled(string userInfo)
         {
             if (string.IsNullOrWhiteSpace(userInfo) || string.IsNullOrEmpty(userInfo))
-                throw new AppException(nameof(userInfo) + " is required");
+                throw new AppException($"Поля {nameof(userInfo)} не указано");
             return true;
         }
 
         private static void CreatePasswordHash(string password, out byte[] passwordHash, out byte[] passwordSalt)
         {
             if (password == null)
-                throw new ArgumentNullException("password");
+                throw new ArgumentNullException(nameof(password));
             if (string.IsNullOrWhiteSpace(password))
-                throw new ArgumentException("Value cannot be empty or whitespace only string.", "password");
+                throw new ArgumentException("Value cannot be empty or whitespace only string.", nameof(password));
 
             using (var hmac = new System.Security.Cryptography.HMACSHA512())
             {
@@ -244,13 +263,13 @@ namespace Models.User.Services
             if (newInfo.Login != repositoryInfo.Login)
             {
                 if (await repository.FindLoginAsync(newInfo.Login))
-                    throw new AppException("Username " + newInfo.Login + " is already taken");
+                    throw new AppException("Пользователь " + newInfo.Login + " уже занят");
             }
-            
+
             if (newInfo.EmailAdress != repositoryInfo.EmailAdress)
             {
                 if (await repository.FindMailAsync(newInfo.EmailAdress))
-                    throw new AppException("Email adress " + newInfo.EmailAdress + " is already taken");
+                    throw new AppException("Почтовый адрес " + newInfo.EmailAdress + " уже занят");
             }
         }
 
@@ -261,7 +280,7 @@ namespace Models.User.Services
             userFromRepository.Login = userToUpdate.Login;
             userFromRepository.EmailAdress = userToUpdate.EmailAdress;
         }
-        
-        #endregion 
+
+        #endregion
     }
 }
