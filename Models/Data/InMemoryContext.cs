@@ -12,5 +12,6 @@ namespace Models.Data
         public DbSet<CardItem.CardItem> Cards { get; set; }
         public DbSet<Models.CardsCollection.CardsCollection> Collections { get; set; }
         public DbSet<Models.Training.Training> Trainings { get; set; }
+        public DbSet<Models.Token.PasswordResetToken> PasswordResetTokens { get; set; }
     }
 }

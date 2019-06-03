@@ -90,7 +90,7 @@ namespace Models.User.Services
             return user;
         }
 
-        public async Task<User> GetById(Guid id)
+        public async Task<User> GetByIdAsync(Guid id)
         {
             if (id == Guid.Empty)
             {
@@ -134,6 +134,13 @@ namespace Models.User.Services
             }
 
             await repository.UpdateAsync(userFromRepository);
+        }
+
+        public async Task<User> GetUserByEmail(string email)
+        {
+            if (string.IsNullOrEmpty(email) || !IsEmailValid(email)) throw new AppException("Почта не прошла валидацию, сорян");
+
+            return await repository.GetUserByEmailAsync(email);
         }
 
         #region private helper methods
