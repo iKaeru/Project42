@@ -158,6 +158,7 @@ namespace MemoryCardsAPI.Controllers
             }
         }
 
+
         /// <summary>
         /// Shows all existing collections For User
         /// </summary>
@@ -167,6 +168,29 @@ namespace MemoryCardsAPI.Controllers
         [SwaggerResponse(200, Type = typeof(IEnumerable<CardsCollection>))]
         [Route("")]
         public async Task<ActionResult> ListCollections(CancellationToken cancellationToken)
+        {
+            try
+            {
+                Guid.TryParse(HttpContext.User.Identity.Name, out var uId);
+                var collections = await collectionService.GetAllCollectionsAsync(uId);
+                return Ok(collections);
+            }
+            catch (AppException ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
+        }
+
+
+        /// <summary>
+        /// Shows all existing collections For User with extra info
+        /// </summary>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        [HttpGet]
+        [SwaggerResponse(200, Type = typeof(IEnumerable<CardsCollection>))]
+        [Route("showAll")]
+        public async Task<ActionResult> ListCollectionsExtra(CancellationToken cancellationToken)
         {
             try
             {
@@ -202,8 +226,9 @@ namespace MemoryCardsAPI.Controllers
             }
         }
 
+
         /// <summary>
-        /// Shows all existing collections For User
+        /// Shows all existing collections count For User
         /// </summary>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>

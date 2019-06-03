@@ -4961,11 +4961,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "T:\\KonturProj\\project42\\Converters\\Converters.csproj",
+      "projectUniqueName": "T:\\KonturProj\\Project42\\Converters\\Converters.csproj",
       "projectName": "Converters",
-      "projectPath": "T:\\KonturProj\\project42\\Converters\\Converters.csproj",
+      "projectPath": "T:\\KonturProj\\Project42\\Converters\\Converters.csproj",
       "packagesPath": "C:\\Users\\Fedya\\.nuget\\packages\\",
-      "outputPath": "T:\\KonturProj\\project42\\Converters\\obj\\",
+      "outputPath": "T:\\KonturProj\\Project42\\Converters\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -4984,11 +4984,11 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "T:\\KonturProj\\project42\\Client.Models\\Client.Models.csproj": {
-              "projectPath": "T:\\KonturProj\\project42\\Client.Models\\Client.Models.csproj"
+            "T:\\KonturProj\\Project42\\Client.Models\\Client.Models.csproj": {
+              "projectPath": "T:\\KonturProj\\Project42\\Client.Models\\Client.Models.csproj"
             },
-            "T:\\KonturProj\\project42\\Models\\Models.csproj": {
-              "projectPath": "T:\\KonturProj\\project42\\Models\\Models.csproj"
+            "T:\\KonturProj\\Project42\\Models\\Models.csproj": {
+              "projectPath": "T:\\KonturProj\\Project42\\Models\\Models.csproj"
             }
           }
         }

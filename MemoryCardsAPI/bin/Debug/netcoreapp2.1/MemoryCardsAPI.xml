@@ -121,9 +121,16 @@
             <param name="cancellationToken"></param>
             <returns></returns>
         </member>
+        <member name="M:MemoryCardsAPI.Controllers.CollectionsController.ListCollectionsExtra(System.Threading.CancellationToken)">
+            <summary>
+            Shows all existing collections For User with extra info
+            </summary>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
         <member name="M:MemoryCardsAPI.Controllers.CollectionsController.AmountOfCollections(System.Threading.CancellationToken)">
             <summary>
-            Shows all existing collections For User
+            Shows all existing collections count For User
             </summary>
             <param name="cancellationToken"></param>
             <returns></returns>
