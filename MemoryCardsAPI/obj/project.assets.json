@@ -2,6 +2,18 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.1": {
+      "AspNet.Security.OAuth.GitHub/2.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Authentication.OAuth": "2.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/AspNet.Security.OAuth.GitHub.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/AspNet.Security.OAuth.GitHub.dll": {}
+        }
+      },
       "AutoMapper/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -3852,6 +3864,19 @@
     }
   },
   "libraries": {
+    "AspNet.Security.OAuth.GitHub/2.0.1": {
+      "sha512": "wNpArdopqIiV8D5mmVPLANIScHDrqGmKIio6Nu1tP1jTvZAZnVUAH9m12xvtZUnq+G59tO86pzAf1vrejT6GYQ==",
+      "type": "package",
+      "path": "aspnet.security.oauth.github/2.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "aspnet.security.oauth.github.2.0.1.nupkg.sha512",
+        "aspnet.security.oauth.github.nuspec",
+        "lib/netstandard2.0/AspNet.Security.OAuth.GitHub.dll",
+        "lib/netstandard2.0/AspNet.Security.OAuth.GitHub.xml"
+      ]
+    },
     "AutoMapper/8.0.0": {
       "sha512": "kcbje0Y71XkvzPn8k6OROZGOn2SKaWimon3Bu1WUTVoV5GTJVym+k+zQuKApyyFVRfk7bisumj/qUX4xIIXS+Q==",
       "type": "package",
@@ -11124,6 +11149,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
+      "AspNet.Security.OAuth.GitHub >= 2.0.1",
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 6.0.0",
       "Client.Models >= 1.0.0",
       "Converters >= 1.0.0",
@@ -11190,6 +11216,10 @@
     "frameworks": {
       "netcoreapp2.1": {
         "dependencies": {
+          "AspNet.Security.OAuth.GitHub": {
+            "target": "Package",
+            "version": "[2.0.1, )"
+          },
           "AutoMapper.Extensions.Microsoft.DependencyInjection": {
             "target": "Package",
             "version": "[6.0.0, )"

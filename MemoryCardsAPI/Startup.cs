@@ -118,7 +118,15 @@ namespace MemoryCardsAPI
                 {
                     options.AppId = Configuration["Authentication:Facebook:AppId"];
                     options.AppSecret = Configuration["Authentication:Facebook:AppId"];
-                });
+                })
+                .AddGitHub(options =>
+                {
+                    options.ClientId = Configuration["Authentication:GitHub:ClientId"];
+                    options.ClientSecret = Configuration["Authentication:GitHub:ClientSecret"];
+                })
+                .AddCookie(options => {
+                    options.LoginPath = "/v1/api/auth";
+                });;
         }
 
         public void Configure(IApplicationBuilder app)

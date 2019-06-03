@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8666427f-6cb7-4473-aeea-3b9208586060" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Project42/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project42/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MemoryCardsAPI/MemoryCardsAPI.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryCardsAPI/MemoryCardsAPI.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MemoryCardsAPI/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryCardsAPI/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryCardsAPI/obj/Debug/netcoreapp2.1/MemoryCardsAPI.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryCardsAPI/obj/Debug/netcoreapp2.1/MemoryCardsAPI.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryCardsAPI/obj/Debug/netcoreapp2.1/MemoryCardsAPI.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryCardsAPI/obj/Debug/netcoreapp2.1/MemoryCardsAPI.AssemblyInfoInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MemoryCardsAPI/obj/Debug/netcoreapp2.1/MemoryCardsAPI.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryCardsAPI/obj/Debug/netcoreapp2.1/MemoryCardsAPI.assets.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MemoryCardsAPI/obj/Debug/netcoreapp2.1/MemoryCardsAPI.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryCardsAPI/obj/Debug/netcoreapp2.1/MemoryCardsAPI.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MemoryCardsAPI/obj/MemoryCardsAPI.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryCardsAPI/obj/MemoryCardsAPI.csproj.nuget.cache" afterDir="false" />
@@ -153,28 +150,30 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MemoryCardsAPI/Startup.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="103">
-              <caret line="115" column="18" lean-forward="true" selection-start-line="115" selection-start-column="18" selection-end-line="115" selection-end-column="18" />
+            <state relative-caret-position="178">
+              <caret line="120" column="18" lean-forward="true" selection-start-line="120" selection-start-column="18" selection-end-line="120" selection-end-column="18" />
               <folding>
-                <marker date="1559591761488" expanded="false" signature="6:813" ph="..." />
-                <marker date="1559591761488" expanded="true" signature="839:7449" ph="{...}" />
-                <marker date="1559591761488" expanded="true" signature="866:7447" ph="{...}" />
-                <marker date="1559591761488" expanded="true" signature="925:988" ph="{...}" />
-                <marker date="1559591761488" expanded="true" signature="1110:5135" ph="{...}" />
-                <marker date="1559591761488" expanded="true" signature="1756:2442" ph="{...}" />
-                <marker date="1559591761488" expanded="true" signature="2208:2370" ph="/* swagger.OperationFilter&lt;AuthorizationHeaderParameterOperationFilter&gt;(); ... */" />
-                <marker date="1559591761488" expanded="true" signature="2870:3083" ph="{...}" />
-                <marker date="1559591761488" expanded="true" signature="3119:4473" ph="{...}" />
-                <marker date="1559591761488" expanded="true" signature="3209:4009" ph="{...}" />
-                <marker date="1559591761488" expanded="true" signature="3264:3987" ph="{...}" />
-                <marker date="1559591761488" expanded="true" signature="3703:3905" ph="{...}" />
-                <marker date="1559591761488" expanded="true" signature="4203:4454" ph="{...}" />
-                <marker date="1559591761488" expanded="true" signature="4526:4874" ph="{...}" />
-                <marker date="1559591761488" expanded="true" signature="4915:5123" ph="{...}" />
-                <marker date="1559591761488" expanded="true" signature="5191:6128" ph="{...}" />
-                <marker date="1559591761488" expanded="true" signature="5370:5487" ph="/* Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.), ... */" />
-                <marker date="1559591761488" expanded="true" signature="6201:6650" ph="{...}" />
-                <marker date="1559591761488" expanded="true" signature="6722:7441" ph="{...}" />
+                <marker date="1559592680513" expanded="false" signature="6:813" ph="..." />
+                <marker date="1559592680513" expanded="true" signature="839:7824" ph="{...}" />
+                <marker date="1559592680513" expanded="true" signature="866:7822" ph="{...}" />
+                <marker date="1559592680513" expanded="true" signature="925:988" ph="{...}" />
+                <marker date="1559592680513" expanded="true" signature="1110:5510" ph="{...}" />
+                <marker date="1559592680513" expanded="true" signature="1756:2442" ph="{...}" />
+                <marker date="1559592680513" expanded="true" signature="2208:2370" ph="/* swagger.OperationFilter&lt;AuthorizationHeaderParameterOperationFilter&gt;(); ... */" />
+                <marker date="1559592680513" expanded="true" signature="2870:3083" ph="{...}" />
+                <marker date="1559592680513" expanded="true" signature="3119:4473" ph="{...}" />
+                <marker date="1559592680513" expanded="true" signature="3209:4009" ph="{...}" />
+                <marker date="1559592680513" expanded="true" signature="3264:3987" ph="{...}" />
+                <marker date="1559592680513" expanded="true" signature="3703:3905" ph="{...}" />
+                <marker date="1559592680513" expanded="true" signature="4203:4454" ph="{...}" />
+                <marker date="1559592680513" expanded="true" signature="4526:4874" ph="{...}" />
+                <marker date="1559592680513" expanded="true" signature="4915:5123" ph="{...}" />
+                <marker date="1559592680513" expanded="true" signature="5162:5382" ph="{...}" />
+                <marker date="1559592680513" expanded="true" signature="5422:5497" ph="{...}" />
+                <marker date="1559592680513" expanded="true" signature="5566:6503" ph="{...}" />
+                <marker date="1559592680513" expanded="true" signature="5745:5862" ph="/* Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.), ... */" />
+                <marker date="1559592680513" expanded="true" signature="6576:7025" ph="{...}" />
+                <marker date="1559592680513" expanded="true" signature="7097:7816" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -655,12 +654,12 @@
       <workItem from="1558940610849" duration="17868000" />
       <workItem from="1559402705838" duration="8401000" />
       <workItem from="1559487224936" duration="9237000" />
-      <workItem from="1559576729116" duration="11384000" />
+      <workItem from="1559576729116" duration="12209000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="176829000" />
+    <option name="totallyTimeSpent" value="177654000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -687,12 +686,12 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info active="true" anchor="bottom" id="NuGet" order="7" visible="true" weight="0.32847896" />
+      <window_info anchor="bottom" id="NuGet" order="7" weight="0.32847896" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Database Changes" order="10" weight="0.32847896" />
       <window_info anchor="bottom" id="Unit Tests" order="11" />
-      <window_info anchor="bottom" id="Terminal" order="12" weight="0.32847896" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="12" visible="true" weight="0.32847896" />
       <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" />
       <window_info anchor="bottom" id="Build" order="14" weight="0.32847896" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -1768,28 +1767,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MemoryCardsAPI/Startup.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="115" column="18" lean-forward="true" selection-start-line="115" selection-start-column="18" selection-end-line="115" selection-end-column="18" />
+        <state relative-caret-position="178">
+          <caret line="120" column="18" lean-forward="true" selection-start-line="120" selection-start-column="18" selection-end-line="120" selection-end-column="18" />
           <folding>
-            <marker date="1559591761488" expanded="false" signature="6:813" ph="..." />
-            <marker date="1559591761488" expanded="true" signature="839:7449" ph="{...}" />
-            <marker date="1559591761488" expanded="true" signature="866:7447" ph="{...}" />
-            <marker date="1559591761488" expanded="true" signature="925:988" ph="{...}" />
-            <marker date="1559591761488" expanded="true" signature="1110:5135" ph="{...}" />
-            <marker date="1559591761488" expanded="true" signature="1756:2442" ph="{...}" />
-            <marker date="1559591761488" expanded="true" signature="2208:2370" ph="/* swagger.OperationFilter&lt;AuthorizationHeaderParameterOperationFilter&gt;(); ... */" />
-            <marker date="1559591761488" expanded="true" signature="2870:3083" ph="{...}" />
-            <marker date="1559591761488" expanded="true" signature="3119:4473" ph="{...}" />
-            <marker date="1559591761488" expanded="true" signature="3209:4009" ph="{...}" />
-            <marker date="1559591761488" expanded="true" signature="3264:3987" ph="{...}" />
-            <marker date="1559591761488" expanded="true" signature="3703:3905" ph="{...}" />
-            <marker date="1559591761488" expanded="true" signature="4203:4454" ph="{...}" />
-            <marker date="1559591761488" expanded="true" signature="4526:4874" ph="{...}" />
-            <marker date="1559591761488" expanded="true" signature="4915:5123" ph="{...}" />
-            <marker date="1559591761488" expanded="true" signature="5191:6128" ph="{...}" />
-            <marker date="1559591761488" expanded="true" signature="5370:5487" ph="/* Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.), ... */" />
-            <marker date="1559591761488" expanded="true" signature="6201:6650" ph="{...}" />
-            <marker date="1559591761488" expanded="true" signature="6722:7441" ph="{...}" />
+            <marker date="1559592680513" expanded="false" signature="6:813" ph="..." />
+            <marker date="1559592680513" expanded="true" signature="839:7824" ph="{...}" />
+            <marker date="1559592680513" expanded="true" signature="866:7822" ph="{...}" />
+            <marker date="1559592680513" expanded="true" signature="925:988" ph="{...}" />
+            <marker date="1559592680513" expanded="true" signature="1110:5510" ph="{...}" />
+            <marker date="1559592680513" expanded="true" signature="1756:2442" ph="{...}" />
+            <marker date="1559592680513" expanded="true" signature="2208:2370" ph="/* swagger.OperationFilter&lt;AuthorizationHeaderParameterOperationFilter&gt;(); ... */" />
+            <marker date="1559592680513" expanded="true" signature="2870:3083" ph="{...}" />
+            <marker date="1559592680513" expanded="true" signature="3119:4473" ph="{...}" />
+            <marker date="1559592680513" expanded="true" signature="3209:4009" ph="{...}" />
+            <marker date="1559592680513" expanded="true" signature="3264:3987" ph="{...}" />
+            <marker date="1559592680513" expanded="true" signature="3703:3905" ph="{...}" />
+            <marker date="1559592680513" expanded="true" signature="4203:4454" ph="{...}" />
+            <marker date="1559592680513" expanded="true" signature="4526:4874" ph="{...}" />
+            <marker date="1559592680513" expanded="true" signature="4915:5123" ph="{...}" />
+            <marker date="1559592680513" expanded="true" signature="5162:5382" ph="{...}" />
+            <marker date="1559592680513" expanded="true" signature="5422:5497" ph="{...}" />
+            <marker date="1559592680513" expanded="true" signature="5566:6503" ph="{...}" />
+            <marker date="1559592680513" expanded="true" signature="5745:5862" ph="/* Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.), ... */" />
+            <marker date="1559592680513" expanded="true" signature="6576:7025" ph="{...}" />
+            <marker date="1559592680513" expanded="true" signature="7097:7816" ph="{...}" />
           </folding>
         </state>
       </provider>
