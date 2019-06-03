@@ -77,6 +77,7 @@ namespace MemoryCardsAPI.Controllers
                 var card = await cardsService.GetCardByIdAsync(cardGuid, cancellationToken);
                 cardsService.CheckOwnership(card, uId);
                 var createdTraining = trainingService.CreateTraining(uId, cardGuid, TrainingConverter.ConvertLevels(training.MemorizationLevel));
+                await trainingService.AddToRepositoryAsync(createdTraining);
                 return Ok(createdTraining);
             }
             catch (AppException ex)

@@ -22,9 +22,9 @@ namespace Converters
                 case MemorizationLevels.Easy:
                     return Model.Training.MemorizationBoxes.FullyLearned;
                 case MemorizationLevels.Normal:
-                    return Model.Training.MemorizationBoxes.FullyLearned;
+                    return Model.Training.MemorizationBoxes.PartlyLearned;
                 case MemorizationLevels.Hard:
-                    return Model.Training.MemorizationBoxes.FullyLearned;
+                    return Model.Training.MemorizationBoxes.NotLearned;
             }
             throw new AppException("Don't know this memorizationLevel");
         }
