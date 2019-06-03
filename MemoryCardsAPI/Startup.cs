@@ -125,7 +125,7 @@ namespace MemoryCardsAPI
                     options.ClientSecret = Configuration["Authentication:GitHub:ClientSecret"];
                 })
                 .AddCookie(options => {
-                    options.LoginPath = "/v1/api/auth";
+                    options.LoginPath = "/v1/api/register";
                 });;
         }
 
