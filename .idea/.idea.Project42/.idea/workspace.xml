@@ -2,47 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8666427f-6cb7-4473-aeea-3b9208586060" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Project42/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project42/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project42/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project42/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client.Models/bin/Debug/netcoreapp2.1/Client.Models.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Client.Models/bin/Debug/netcoreapp2.1/Client.Models.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client.Models/bin/Debug/netcoreapp2.1/Client.Models.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Client.Models/bin/Debug/netcoreapp2.1/Client.Models.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client.Models/obj/Debug/netcoreapp2.1/Client.Models.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Client.Models/obj/Debug/netcoreapp2.1/Client.Models.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client.Models/obj/Debug/netcoreapp2.1/Client.Models.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Client.Models/obj/Debug/netcoreapp2.1/Client.Models.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client.Models/obj/Debug/netcoreapp2.1/Client.Models.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Client.Models/obj/Debug/netcoreapp2.1/Client.Models.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Converters/CardItemConverter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Converters/CardItemConverter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Converters/bin/Debug/netcoreapp2.1/Client.Models.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Converters/bin/Debug/netcoreapp2.1/Client.Models.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Converters/bin/Debug/netcoreapp2.1/Client.Models.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Converters/bin/Debug/netcoreapp2.1/Client.Models.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Converters/bin/Debug/netcoreapp2.1/Converters.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Converters/bin/Debug/netcoreapp2.1/Converters.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Converters/bin/Debug/netcoreapp2.1/Converters.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Converters/bin/Debug/netcoreapp2.1/Converters.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Converters/bin/Debug/netcoreapp2.1/Models.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Converters/bin/Debug/netcoreapp2.1/Models.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Converters/bin/Debug/netcoreapp2.1/Models.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Converters/bin/Debug/netcoreapp2.1/Models.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Converters/obj/Debug/netcoreapp2.1/Converters.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Converters/obj/Debug/netcoreapp2.1/Converters.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Converters/obj/Debug/netcoreapp2.1/Converters.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Converters/obj/Debug/netcoreapp2.1/Converters.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Converters/obj/Debug/netcoreapp2.1/Converters.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Converters/obj/Debug/netcoreapp2.1/Converters.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryCardsAPI/Controllers/CardsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryCardsAPI/Controllers/CardsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryCardsAPI/bin/Debug/netcoreapp2.1/Client.Models.dll" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryCardsAPI/bin/Debug/netcoreapp2.1/Client.Models.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryCardsAPI/bin/Debug/netcoreapp2.1/Client.Models.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryCardsAPI/bin/Debug/netcoreapp2.1/Client.Models.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryCardsAPI/bin/Debug/netcoreapp2.1/Converters.dll" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryCardsAPI/bin/Debug/netcoreapp2.1/Converters.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryCardsAPI/bin/Debug/netcoreapp2.1/Converters.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryCardsAPI/bin/Debug/netcoreapp2.1/Converters.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryCardsAPI/bin/Debug/netcoreapp2.1/MemoryCardsAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryCardsAPI/bin/Debug/netcoreapp2.1/MemoryCardsAPI.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryCardsAPI/bin/Debug/netcoreapp2.1/MemoryCardsAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryCardsAPI/bin/Debug/netcoreapp2.1/MemoryCardsAPI.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryCardsAPI/bin/Debug/netcoreapp2.1/MemoryCardsAPI.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryCardsAPI/bin/Debug/netcoreapp2.1/MemoryCardsAPI.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryCardsAPI/bin/Debug/netcoreapp2.1/Models.dll" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryCardsAPI/bin/Debug/netcoreapp2.1/Models.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryCardsAPI/bin/Debug/netcoreapp2.1/Models.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryCardsAPI/bin/Debug/netcoreapp2.1/Models.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MemoryCardsAPI/MemoryCardsAPI.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryCardsAPI/MemoryCardsAPI.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MemoryCardsAPI/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryCardsAPI/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MemoryCardsAPI/obj/Debug/netcoreapp2.1/MemoryCardsAPI.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryCardsAPI/obj/Debug/netcoreapp2.1/MemoryCardsAPI.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MemoryCardsAPI/obj/Debug/netcoreapp2.1/MemoryCardsAPI.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryCardsAPI/obj/Debug/netcoreapp2.1/MemoryCardsAPI.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MemoryCardsAPI/obj/Debug/netcoreapp2.1/MemoryCardsAPI.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryCardsAPI/obj/Debug/netcoreapp2.1/MemoryCardsAPI.assets.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MemoryCardsAPI/obj/Debug/netcoreapp2.1/MemoryCardsAPI.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryCardsAPI/obj/Debug/netcoreapp2.1/MemoryCardsAPI.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryCardsAPI/obj/Debug/netcoreapp2.1/MemoryCardsAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryCardsAPI/obj/Debug/netcoreapp2.1/MemoryCardsAPI.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryCardsAPI/obj/Debug/netcoreapp2.1/MemoryCardsAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryCardsAPI/obj/Debug/netcoreapp2.1/MemoryCardsAPI.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryCardsAPI/obj/Debug/netcoreapp2.1/MemoryCardsAPI.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryCardsAPI/obj/Debug/netcoreapp2.1/MemoryCardsAPI.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/CardItem/CardContent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/CardItem/CardContent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/CardItem/Repositories/InMemoryCardsRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/CardItem/Repositories/InMemoryCardsRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/CardItem/Services/CardService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/CardItem/Services/CardService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/bin/Debug/netcoreapp2.1/Client.Models.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Models/bin/Debug/netcoreapp2.1/Client.Models.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/bin/Debug/netcoreapp2.1/Client.Models.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Models/bin/Debug/netcoreapp2.1/Client.Models.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/bin/Debug/netcoreapp2.1/Models.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Models/bin/Debug/netcoreapp2.1/Models.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/bin/Debug/netcoreapp2.1/Models.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Models/bin/Debug/netcoreapp2.1/Models.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/obj/Debug/netcoreapp2.1/Models.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Models/obj/Debug/netcoreapp2.1/Models.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/obj/Debug/netcoreapp2.1/Models.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Models/obj/Debug/netcoreapp2.1/Models.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/obj/Debug/netcoreapp2.1/Models.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Models/obj/Debug/netcoreapp2.1/Models.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MemoryCardsAPI/obj/MemoryCardsAPI.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryCardsAPI/obj/MemoryCardsAPI.csproj.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MemoryCardsAPI/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryCardsAPI/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MemoryCardsAPI/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryCardsAPI/obj/project.packagespec.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -94,11 +63,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MemoryCardsAPI/Controllers/CollectionsController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="201">
-              <caret line="171" column="15" lean-forward="true" selection-start-line="171" selection-start-column="15" selection-end-line="171" selection-end-column="15" />
+            <state relative-caret-position="111">
+              <caret line="162" column="22" lean-forward="true" selection-start-line="162" selection-start-column="22" selection-end-line="162" selection-end-column="22" />
               <folding>
                 <marker date="1559584618842" expanded="false" signature="6:443" ph="..." />
                 <marker date="1559584618842" expanded="true" signature="481:17418" ph="{...}" />
@@ -176,6 +145,36 @@
                 <marker date="1559584618842" expanded="true" signature="16988:17183" ph="{...}" />
                 <marker date="1559584618842" expanded="true" signature="17084:17165" ph="{...}" />
                 <marker date="1559584618842" expanded="true" signature="17309:17400" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/MemoryCardsAPI/Startup.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="103">
+              <caret line="115" column="18" lean-forward="true" selection-start-line="115" selection-start-column="18" selection-end-line="115" selection-end-column="18" />
+              <folding>
+                <marker date="1559591761488" expanded="false" signature="6:813" ph="..." />
+                <marker date="1559591761488" expanded="true" signature="839:7449" ph="{...}" />
+                <marker date="1559591761488" expanded="true" signature="866:7447" ph="{...}" />
+                <marker date="1559591761488" expanded="true" signature="925:988" ph="{...}" />
+                <marker date="1559591761488" expanded="true" signature="1110:5135" ph="{...}" />
+                <marker date="1559591761488" expanded="true" signature="1756:2442" ph="{...}" />
+                <marker date="1559591761488" expanded="true" signature="2208:2370" ph="/* swagger.OperationFilter&lt;AuthorizationHeaderParameterOperationFilter&gt;(); ... */" />
+                <marker date="1559591761488" expanded="true" signature="2870:3083" ph="{...}" />
+                <marker date="1559591761488" expanded="true" signature="3119:4473" ph="{...}" />
+                <marker date="1559591761488" expanded="true" signature="3209:4009" ph="{...}" />
+                <marker date="1559591761488" expanded="true" signature="3264:3987" ph="{...}" />
+                <marker date="1559591761488" expanded="true" signature="3703:3905" ph="{...}" />
+                <marker date="1559591761488" expanded="true" signature="4203:4454" ph="{...}" />
+                <marker date="1559591761488" expanded="true" signature="4526:4874" ph="{...}" />
+                <marker date="1559591761488" expanded="true" signature="4915:5123" ph="{...}" />
+                <marker date="1559591761488" expanded="true" signature="5191:6128" ph="{...}" />
+                <marker date="1559591761488" expanded="true" signature="5370:5487" ph="/* Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.), ... */" />
+                <marker date="1559591761488" expanded="true" signature="6201:6650" ph="{...}" />
+                <marker date="1559591761488" expanded="true" signature="6722:7441" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -456,7 +455,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Models/User/UserPatchInfo.cs" />
         <option value="$PROJECT_DIR$/Models/Training/Training.cs" />
         <option value="$PROJECT_DIR$/Models/Training/MemorizationLevels.cs" />
         <option value="$PROJECT_DIR$/Models/CardItem/CardCreationInfo.cs" />
@@ -468,7 +466,6 @@
         <option value="$PROJECT_DIR$/Client.Models/Training/TrainingPatchInfo.cs" />
         <option value="$PROJECT_DIR$/Client.Models/CardItem/CardPatchInfo.cs" />
         <option value="$PROJECT_DIR$/Client.Models/CardItem/CardItemInfo.cs" />
-        <option value="$PROJECT_DIR$/MemoryCardsAPI/MemoryCardsAPI.csproj" />
         <option value="$PROJECT_DIR$/Client.Models/CardItem/CardItem.cs" />
         <option value="$PROJECT_DIR$/Client.Models/CardItem/CardContent.cs" />
         <option value="$PROJECT_DIR$/Client.Models/CardsCollection/CardsCollectionPatchInfo.cs" />
@@ -493,7 +490,6 @@
         <option value="$PROJECT_DIR$/Models/User/Services/IUserService.cs" />
         <option value="$PROJECT_DIR$/Models/CardsCollection/Services/ICollectionService.cs" />
         <option value="$PROJECT_DIR$/MemoryCardsAPI/appsettings.json" />
-        <option value="$PROJECT_DIR$/MemoryCardsAPI/Startup.cs" />
         <option value="$PROJECT_DIR$/Client.Models/Training/MemorizationLevels.cs" />
         <option value="$PROJECT_DIR$/Converters/TrainingConverter.cs" />
         <option value="$PROJECT_DIR$/Models/CardsCollection/Services/CollectionService.cs" />
@@ -507,6 +503,9 @@
         <option value="$PROJECT_DIR$/MemoryCardsAPI/Controllers/CardsController.cs" />
         <option value="$PROJECT_DIR$/Models/CardItem/Repositories/InMemoryCardsRepository.cs" />
         <option value="$PROJECT_DIR$/Models/CardItem/Services/CardService.cs" />
+        <option value="$PROJECT_DIR$/Models/Models.csproj" />
+        <option value="$PROJECT_DIR$/MemoryCardsAPI/MemoryCardsAPI.csproj" />
+        <option value="$PROJECT_DIR$/MemoryCardsAPI/Startup.cs" />
       </list>
     </option>
   </component>
@@ -585,76 +584,6 @@
               <item name="Project42" type="24d0babc:SolutionExplorerModelNode" />
               <item name="MemoryCardsAPI" type="24d0babc:SolutionExplorerModelNode" />
             </path>
-            <path>
-              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="Project42" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="MemoryCardsAPI" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Controllers" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="Project42" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Models" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="Project42" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Models" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="CardItem" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="Project42" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Models" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="CardItem" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Repositories" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="Project42" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Models" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="CardItem" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Services" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="Project42" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Models" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="CardsCollection" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="Project42" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Models" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="CardsCollection" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Services" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="Project42" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Models" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Training" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="Project42" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Models" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Training" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Services" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="Project42" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Models" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="User" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="Project42" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Models" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="User" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Services" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -726,12 +655,12 @@
       <workItem from="1558940610849" duration="17868000" />
       <workItem from="1559402705838" duration="8401000" />
       <workItem from="1559487224936" duration="9237000" />
-      <workItem from="1559576729116" duration="9640000" />
+      <workItem from="1559576729116" duration="11384000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="175085000" />
+    <option name="totallyTimeSpent" value="176829000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -746,19 +675,19 @@
     <frame x="0" y="23" width="1280" height="710" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28029078" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28029078" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32847896" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32847896" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39967638" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="NuGet" order="7" weight="0.32847896" />
+      <window_info active="true" anchor="bottom" id="NuGet" order="7" visible="true" weight="0.32847896" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Database Changes" order="10" weight="0.32847896" />
@@ -818,18 +747,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Models/Training/Services/ITrainingService.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="17" column="54" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="54" />
-          <folding>
-            <marker date="1558958169106" expanded="false" signature="6:149" ph="..." />
-            <marker date="1558958169106" expanded="true" signature="185:871" ph="{...}" />
-            <marker date="1558958169106" expanded="true" signature="225:869" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Models/CardItem/Repositories/ICardsRepository.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="244">
@@ -1102,9 +1019,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Models/Models.csproj">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/d53b4dac-4235-4be2-9174-8827056909df/console.sql">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1282,32 +1196,6 @@
             <marker date="1559487161414" expanded="true" signature="509:581" ph="/// Хэш пароля пользователя ... " />
             <marker date="1559487161414" expanded="true" signature="688:761" ph="/// Соль пароля пользователя ... " />
             <marker date="1559487161414" expanded="true" signature="868:946" ph="/// Дата регистрации пользователя ... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MemoryCardsAPI/Startup.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="43" column="12" lean-forward="true" selection-start-line="43" selection-start-column="12" selection-end-line="43" selection-end-column="12" />
-          <folding>
-            <marker date="1559495472434" expanded="false" signature="6:762" ph="..." />
-            <marker date="1559495472434" expanded="true" signature="788:6741" ph="{...}" />
-            <marker date="1559495472434" expanded="true" signature="815:6739" ph="{...}" />
-            <marker date="1559495472434" expanded="true" signature="874:937" ph="{...}" />
-            <marker date="1559495472434" expanded="true" signature="1059:4466" ph="{...}" />
-            <marker date="1559495472434" expanded="true" signature="1705:2423" ph="{...}" />
-            <marker date="1559495472434" expanded="true" signature="2173:2351" ph="/* swagger.OperationFilter&lt;AuthorizationHeaderParameterOperationFilter&gt;(); ... */" />
-            <marker date="1559495472434" expanded="true" signature="2851:3064" ph="{...}" />
-            <marker date="1559495472434" expanded="true" signature="3100:4454" ph="{...}" />
-            <marker date="1559495472434" expanded="true" signature="3190:3990" ph="{...}" />
-            <marker date="1559495472434" expanded="true" signature="3245:3968" ph="{...}" />
-            <marker date="1559495472434" expanded="true" signature="3684:3886" ph="{...}" />
-            <marker date="1559495472434" expanded="true" signature="4184:4435" ph="{...}" />
-            <marker date="1559495472434" expanded="true" signature="4522:5427" ph="{...}" />
-            <marker date="1559495472434" expanded="true" signature="4701:4818" ph="/* Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.), ... */" />
-            <marker date="1559495472434" expanded="true" signature="5500:5961" ph="{...}" />
-            <marker date="1559495472434" expanded="true" signature="6033:6733" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1781,8 +1669,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MemoryCardsAPI/Controllers/CollectionsController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="171" column="15" lean-forward="true" selection-start-line="171" selection-start-column="15" selection-end-line="171" selection-end-column="15" />
+        <state relative-caret-position="111">
+          <caret line="162" column="22" lean-forward="true" selection-start-line="162" selection-start-column="22" selection-end-line="162" selection-end-column="22" />
           <folding>
             <marker date="1559584618842" expanded="false" signature="6:443" ph="..." />
             <marker date="1559584618842" expanded="true" signature="481:17418" ph="{...}" />
@@ -1860,6 +1748,48 @@
             <marker date="1559584618842" expanded="true" signature="16988:17183" ph="{...}" />
             <marker date="1559584618842" expanded="true" signature="17084:17165" ph="{...}" />
             <marker date="1559584618842" expanded="true" signature="17309:17400" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Models/Models.csproj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MemoryCardsAPI/MemoryCardsAPI.csproj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="75" selection-start-line="7" selection-start-column="75" selection-end-line="7" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MemoryCardsAPI/Startup.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="103">
+          <caret line="115" column="18" lean-forward="true" selection-start-line="115" selection-start-column="18" selection-end-line="115" selection-end-column="18" />
+          <folding>
+            <marker date="1559591761488" expanded="false" signature="6:813" ph="..." />
+            <marker date="1559591761488" expanded="true" signature="839:7449" ph="{...}" />
+            <marker date="1559591761488" expanded="true" signature="866:7447" ph="{...}" />
+            <marker date="1559591761488" expanded="true" signature="925:988" ph="{...}" />
+            <marker date="1559591761488" expanded="true" signature="1110:5135" ph="{...}" />
+            <marker date="1559591761488" expanded="true" signature="1756:2442" ph="{...}" />
+            <marker date="1559591761488" expanded="true" signature="2208:2370" ph="/* swagger.OperationFilter&lt;AuthorizationHeaderParameterOperationFilter&gt;(); ... */" />
+            <marker date="1559591761488" expanded="true" signature="2870:3083" ph="{...}" />
+            <marker date="1559591761488" expanded="true" signature="3119:4473" ph="{...}" />
+            <marker date="1559591761488" expanded="true" signature="3209:4009" ph="{...}" />
+            <marker date="1559591761488" expanded="true" signature="3264:3987" ph="{...}" />
+            <marker date="1559591761488" expanded="true" signature="3703:3905" ph="{...}" />
+            <marker date="1559591761488" expanded="true" signature="4203:4454" ph="{...}" />
+            <marker date="1559591761488" expanded="true" signature="4526:4874" ph="{...}" />
+            <marker date="1559591761488" expanded="true" signature="4915:5123" ph="{...}" />
+            <marker date="1559591761488" expanded="true" signature="5191:6128" ph="{...}" />
+            <marker date="1559591761488" expanded="true" signature="5370:5487" ph="/* Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.), ... */" />
+            <marker date="1559591761488" expanded="true" signature="6201:6650" ph="{...}" />
+            <marker date="1559591761488" expanded="true" signature="6722:7441" ph="{...}" />
           </folding>
         </state>
       </provider>

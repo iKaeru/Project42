@@ -13,6 +13,7 @@ using System;
 using System.IO;
 using System.Reflection;
 using MemoryCardsAPI.Auth;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Models.CardItem.Repositories;
 using Models.CardItem.Services;
 using Models.CardsCollection.Repositories;
@@ -58,9 +59,9 @@ namespace MemoryCardsAPI
                 var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
                 var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
                 swagger.IncludeXmlComments(xmlPath);
-                
+
 //                swagger.OperationFilter<AuthorizationHeaderParameterOperationFilter>();
-                
+
                 // UseFullTypeNameInSchemaIds replacement for .NET Core
                 swagger.CustomSchemaIds(x => x.FullName);
             });
@@ -106,6 +107,18 @@ namespace MemoryCardsAPI
                         ValidateAudience = false
                     };
                 });
+
+            services.AddAuthentication(options =>
+                {
+                    options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+                    options.DefaultChallengeScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+                    options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+                })
+                .AddFacebook(options =>
+                {
+                    options.AppId = Configuration["Authentication:Facebook:AppId"];
+                    options.AppSecret = Configuration["Authentication:Facebook:AppId"];
+                });
         }
 
         public void Configure(IApplicationBuilder app)
@@ -120,8 +133,9 @@ namespace MemoryCardsAPI
 
             // global cors policy
             app.UseCors(x => x
-            .WithOrigins("http://localhost:5000", "http://localhost:3000", "http://84.201.143.41:5000", "http://84.201.143.41"
-            , "https://pr42.ru", "https://localhost:443", "https://pr42.ru:443")
+                .WithOrigins("http://localhost:5000", "http://localhost:3000", "http://84.201.143.41:5000",
+                    "http://84.201.143.41"
+                    , "https://pr42.ru", "https://localhost:443", "https://pr42.ru:443")
                 .AllowAnyMethod()
                 .AllowAnyHeader()
                 .AllowCredentials());
@@ -140,7 +154,7 @@ namespace MemoryCardsAPI
             services.AddSingleton<ICardsRepository, InMemoryCardsRepository>();
             services.AddSingleton<ICollectionsRepository, InMemoryCollectionsRepository>();
             services.AddSingleton<ITrainingRepository, InMemoryTrainingRepository>();
-            
+
             services.AddDbContext<InMemoryContext>(x => x.UseInMemoryDatabase("TestDb"));
         }
 
@@ -152,7 +166,8 @@ namespace MemoryCardsAPI
             services.AddSingleton<ITrainingRepository, PostgreTrainingRepository>();
 
             services.AddEntityFrameworkNpgsql()
-                .AddDbContext<PostgreContext>( opt => opt.UseNpgsql(Configuration.GetConnectionString("postgreConnection")))
+                .AddDbContext<PostgreContext>(opt =>
+                    opt.UseNpgsql(Configuration.GetConnectionString("postgreConnection")))
 //                .AddDbContext<PostgreContext>( opt => opt.UseNpgsql(Configuration.GetConnectionString("nastyaLocalConnection")))
                 .BuildServiceProvider();
         }

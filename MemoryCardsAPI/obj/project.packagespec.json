@@ -48,6 +48,18 @@
           "target": "Package",
           "version": "[2.2.0, )"
         },
+        "Microsoft.AspNetCore.Authentication": {
+          "target": "Package",
+          "version": "[2.2.0, )"
+        },
+        "Microsoft.AspNetCore.Authentication.Cookies": {
+          "target": "Package",
+          "version": "[2.2.0, )"
+        },
+        "Microsoft.AspNetCore.Authentication.Facebook": {
+          "target": "Package",
+          "version": "[2.2.0, )"
+        },
         "Microsoft.AspNetCore.Authentication.JwtBearer": {
           "target": "Package",
           "version": "[2.2.0, )"
