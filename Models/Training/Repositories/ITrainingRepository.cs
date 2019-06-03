@@ -8,7 +8,7 @@ namespace Models.Training.Repositories
     public interface ITrainingRepository
     {
         Task<Training> AddAsync(Training training);
-        Task<Training> GetCardTrainingAsync(Guid id);
+        Task<IEnumerable<Training>> GetCardTrainingsAsync(Guid id);
         Task<Training> GetCardTrainingByTrainIdAsync(Guid trainingId);
         List<Training> GetDateTrainingCards(DateTime date);
         List<Training> GetTrainingsFromBox(MemorizationBoxes box);

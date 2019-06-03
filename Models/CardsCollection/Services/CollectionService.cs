@@ -212,8 +212,8 @@ namespace Models.CardsCollection.Services
                     return false;
 
                 return collection.CardItems.Any(card =>
-                    CardLearnedAsync(card, MemorizationBoxes.NotLearned) ||
-                    CardLearnedAsync(card, MemorizationBoxes.PartlyLearned));
+                    CardLearned(card, MemorizationBoxes.NotLearned) ||
+                    CardLearned(card, MemorizationBoxes.PartlyLearned));
             });
 
             return notLearnedList;
@@ -231,19 +231,21 @@ namespace Models.CardsCollection.Services
                 if (IsEmpty(collection.CardItems))
                     return false;
 
-                return collection.CardItems.All(card => CardLearnedAsync(card, MemorizationBoxes.FullyLearned));
+                return collection.CardItems.All(card => CardLearned(card, MemorizationBoxes.FullyLearned));
             });
         }
 
-        private bool CardLearnedAsync(Guid cardId, MemorizationBoxes level)
+        private bool CardLearned(Guid cardId, MemorizationBoxes level)
         {
-            var cardTraining = trainingRepository.GetCardTrainingAsync(cardId).Result;
+            var cardTrainings = trainingRepository.GetCardTrainingsAsync(cardId).Result;
+            var lastCardTrainingDate = cardTrainings.Max(t => t.CompletedAt);
+            var lastСardTraining = cardTrainings.First(t => t.CompletedAt == lastCardTrainingDate);
 
-            if (cardTraining == null)
+            if (lastСardTraining == null)
                 return false;
 //                throw new AppException($"Не существует тренировки для карты с id {cardId}");
 
-            var box = cardTraining.Box;
+            var box = lastСardTraining.Box;
 
             if (box == level)
                 return true;
