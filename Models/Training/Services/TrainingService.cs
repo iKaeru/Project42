@@ -62,7 +62,7 @@ namespace Models.Training.Services
         public async Task<IEnumerable<Training>> GetTrainingsAsync(CardItem.CardItem card, Guid userId)
         {
             var found = await repository.GetCardTrainingsAsync(card.Id);
-            if (found == null)
+            if (found.Count()==0)
                 throw new AppException("Could not find created training for this card");
             if (found.Any(t => t.UserId != userId))
                 throw new AppException("Not allowed for this user");
