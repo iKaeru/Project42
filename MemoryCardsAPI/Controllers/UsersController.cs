@@ -165,6 +165,13 @@ namespace MemoryCardsAPI.Controllers
         {
             var user = UserConverter.ConvertPatchInfo(userToUpdate);
             var guidId = Guid.Parse(id);
+            Guid.TryParse(HttpContext.User.Identity.Name, out var userId);
+            
+            if (userId != guidId)
+            {
+                return BadRequest(new {message = "Запрещено для этого пользователя"});
+            }
+            
             user.Id = guidId;
             
             try
@@ -190,6 +197,13 @@ namespace MemoryCardsAPI.Controllers
             {
                 var guidId = Guid.Parse(id);
 
+                Guid.TryParse(HttpContext.User.Identity.Name, out var userId);
+            
+                if (userId != guidId)
+                {
+                    return BadRequest(new {message = "Запрещено для этого пользователя"});
+                }
+                
                 if (await userService.Delete(guidId))
                 {
                     return Ok();
