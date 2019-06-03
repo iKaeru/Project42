@@ -74,10 +74,16 @@ namespace MemoryCardsAPI.Controllers
             {
                 Guid.TryParse(HttpContext.User.Identity.Name, out var uId);
                 Guid.TryParse(training.СardId, out var cardGuid);
+                Console.WriteLine(1);
                 var card = await cardsService.GetCardByIdAsync(cardGuid, cancellationToken);
+                Console.WriteLine(2);
                 cardsService.CheckOwnership(card, uId);
-                var createdTraining = trainingService.CreateTraining(uId, cardGuid, TrainingConverter.ConvertLevels(training.MemorizationLevel));
+                Console.WriteLine(3);
+                var createdTraining = trainingService.CreateTraining(uId, cardGuid, 
+                    TrainingConverter.ConvertLevels(training.MemorizationLevel));
+                Console.WriteLine(4);
                 await trainingService.AddToRepositoryAsync(createdTraining);
+                Console.WriteLine(5);
                 return Ok(createdTraining);
             }
             catch (AppException ex)

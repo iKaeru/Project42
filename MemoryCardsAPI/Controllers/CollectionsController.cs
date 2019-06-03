@@ -158,7 +158,46 @@ namespace MemoryCardsAPI.Controllers
             }
         }
 
+        /// <summary>
+        /// Get Collection By Id With CArds Info
+        /// </summary>
+        /// <param name="id">Идентификатор коллекции</param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        [HttpGet]
+        [SwaggerResponse(200, Type = typeof(CardsCollection))]
+        [Route("{id}/cardsInfo")]
+        public async Task<ActionResult> ShowCollectionWithCards(string id, CancellationToken cancellationToken)
+        {
+            try
+            {
+                Guid.TryParse(HttpContext.User.Identity.Name, out var userId);
+                Guid.TryParse(id, out var collectionId);
 
+                if (!await collectionService.IsIdExistAsync(collectionId, userId))
+                {
+                    return BadRequest(new { message = "No collection with id \"" + collectionId + "\"" });
+                }
+
+                var cardCollection = await collectionService.FindCollectionByIdAsync(collectionId, userId);
+                
+                var collectionCards = cardCollection.CardItems.Select(cardId => cardService.GetCardByIdAsync(cardId, cancellationToken));
+
+                return Ok(new
+                {
+                    cardCollection.Name,
+                    cardCollection.Id,
+                    cardCollection.CreationDate,
+                    cardCollection.UserId,
+                    collectionCards
+                });                
+            }
+            catch (AppException ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
+        }
+        
         /// <summary>
         /// Shows all existing collections For User
         /// </summary>
@@ -201,7 +240,7 @@ namespace MemoryCardsAPI.Controllers
                 {
                     collectionName = c.Name,
                     collectionID = c.Id,
-                    collectionCards = c.CardItems.Select(g => cardService.GetCardByIdAsync(g, cancellationToken))
+                    collectionCards = c.CardItems.Select(id => cardService.GetCardByIdAsync(id, cancellationToken))
                 });
 
                 foreach (var task in resultWithTasks)
@@ -325,7 +364,8 @@ namespace MemoryCardsAPI.Controllers
             {
                 Guid.TryParse(HttpContext.User.Identity.Name, out var userId);
                 var collections = await collectionService.GetLearnedCollectionsAsync(userId);
-                if (collections == null) return Ok(0);
+                if (collections == null) 
+                    return Ok(0);
                 return Ok(collections.Count());
             }
             catch (AppException ex)

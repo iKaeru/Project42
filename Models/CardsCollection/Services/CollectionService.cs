@@ -237,18 +237,16 @@ namespace Models.CardsCollection.Services
         {
             var cardTrainings = trainingRepository.GetCardTrainingsAsync(cardId).Result;
 
-            if (cardTrainings.Count()==0) return false;
+            if (cardTrainings.Count() == 0) 
+                return false;
 
             var lastCardTrainingDate = cardTrainings.Max(t => t.CompletedAt);
             var lastСardTraining = cardTrainings.First(t => t.CompletedAt == lastCardTrainingDate);
 
             if (lastСardTraining == null)
                 return false;
-//                throw new AppException($"Не существует тренировки для карты с id {cardId}");
 
-            var box = lastСardTraining.Box;
-
-            if (box == level)
+            if (lastСardTraining.Box == level)
                 return true;
 
             return false;

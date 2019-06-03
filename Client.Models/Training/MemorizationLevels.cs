@@ -9,18 +9,18 @@ namespace Client.Models.Training
     public enum MemorizationLevels
     {
         /// <summary>
-        /// Легко
+        /// Не выученные карты
         /// </summary>
-        Easy = 0,
+        NotLearned = 0,
 
         /// <summary>
-        /// Нормально
+        /// Частично выученные карты
         /// </summary>
-        Normal = 1,
+        PartlyLearned = 1,
 
         /// <summary>
-        /// Сложно
+        /// Выученные карты
         /// </summary>
-        Hard = 2
+        FullyLearned = 2
     }
 }

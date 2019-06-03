@@ -114,6 +114,14 @@
             <param name="cancellationToken"></param>
             <returns></returns>
         </member>
+        <member name="M:MemoryCardsAPI.Controllers.CollectionsController.ShowCollectionWithCards(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Get Collection By Id With CArds Info
+            </summary>
+            <param name="id">Идентификатор коллекции</param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
         <member name="M:MemoryCardsAPI.Controllers.CollectionsController.ListCollections(System.Threading.CancellationToken)">
             <summary>
             Shows all existing collections For User
