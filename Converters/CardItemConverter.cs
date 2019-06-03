@@ -31,6 +31,27 @@ namespace Converters
             return modelCard;
         }
 
+        /// <summary>
+        /// Переводит информацию для создания карты из клиентской модели в серверную
+        /// </summary>
+        /// <param name="viewCard">Карта в клиентской модели</param>
+        /// <returns>Карта в серверной модели</returns>
+        public static Model.CardCreationInfo ConvertCreationInfo(View.CardCreationInfo viewCard)
+        {
+            if (viewCard == null)
+            {
+                throw new ArgumentNullException(nameof(viewCard));
+            }
+
+            var modelCard = new Model.CardCreationInfo()
+            {
+                Answer = ConvertCardContent(viewCard.Answer),
+                Question = ConvertCardContent(viewCard.Question)
+            };
+            
+            return modelCard;
+        }
+        
         private static Model.CardContent ConvertCardContent(View.CardContent viewCardContent)
         {
             if (viewCardContent == null)

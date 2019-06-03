@@ -43,13 +43,13 @@ namespace MemoryCardsAPI.Controllers
         [HttpPost]
         [SwaggerResponse(200, Type=typeof(CardItem))]
         [Route("")]
-        public async Task<ActionResult<CardItem>> CreateAsync([FromBody] CardCreationInfo cardCreationInfo,
+        public async Task<ActionResult<CardItem>> CreateAsync([FromBody] View.CardCreationInfo cardCreationInfo,
             CancellationToken cancellationToken)
         {
             try
             {
                 Guid.TryParse(HttpContext.User.Identity.Name, out var userId);
-                var card = cardsService.CreateCard(cardCreationInfo, userId);
+                var card = cardsService.CreateCard(CardItemConverter.ConvertCreationInfo(cardCreationInfo), userId);
                 await cardsService.AddCardAsync(card, cancellationToken);
                 return Ok(card);
             }

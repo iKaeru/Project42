@@ -24,6 +24,8 @@ namespace Models.CardItem.Repositories
             var id = Guid.NewGuid();
             var card = cardToCreate;
             card.Id = id;
+            card.Answer.Id = new Guid();
+            card.Question.Id = new Guid();
 
             await context.Cards.AddAsync(card);
             await context.SaveChangesAsync();

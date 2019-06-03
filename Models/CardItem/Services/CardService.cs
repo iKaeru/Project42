@@ -189,8 +189,8 @@ namespace Models.CardItem.Services
             var counter = 0;
             foreach (var property in type.GetProperties())
             {
-                if (string.IsNullOrWhiteSpace((string) property.GetValue(cardToCheck)) ||
-                    string.IsNullOrEmpty((string) property.GetValue(cardToCheck)))
+                if (string.IsNullOrWhiteSpace((string) property.GetValue(cardToCheck).ToString()) ||
+                    string.IsNullOrEmpty((string) property.GetValue(cardToCheck).ToString()))
                 {
                     counter++;
                 }

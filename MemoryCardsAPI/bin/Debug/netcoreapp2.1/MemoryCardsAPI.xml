@@ -9,7 +9,7 @@
             Cards
             </summary>
         </member>
-        <member name="M:MemoryCardsAPI.Controllers.CardsController.CreateAsync(Models.CardItem.CardCreationInfo,System.Threading.CancellationToken)">
+        <member name="M:MemoryCardsAPI.Controllers.CardsController.CreateAsync(Client.Models.CardItem.CardCreationInfo,System.Threading.CancellationToken)">
             <summary>
             Create Card
             </summary>
