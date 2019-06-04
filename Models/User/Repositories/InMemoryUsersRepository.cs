@@ -74,5 +74,10 @@ namespace Models.User.Repositories
             await context.SaveChangesAsync();
             return user.Entity;
         }
+
+        public Task<User> GetUserByEmailAsync(string email)
+        {
+            return context.Users.FirstOrDefaultAsync(u => u.EmailAdress == email);
+        }
     }
 }

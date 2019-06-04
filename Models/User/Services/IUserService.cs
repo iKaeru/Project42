@@ -11,8 +11,9 @@ namespace Models.User.Services
         User CreateUser(UserRegistrationInfo cardToCreate);
         Task<bool> AddUserAsync(User userToAdd, string password, CancellationToken cancellationToken);
         Task<User> AuthenticateAsync(string username, string password);
-        Task<User> GetById(Guid id);
+        Task<User> GetByIdAsync(Guid id);
         Task<bool> Delete(Guid id);
         Task UpdateAsync(UserPatchInfo userToUpdate, string password = null);
+        Task<User> GetUserByEmail(string email);
     }
 }
