@@ -3851,6 +3851,7 @@
           "Microsoft.EntityFrameworkCore.InMemory": "2.1.1",
           "Microsoft.EntityFrameworkCore.Tools": "2.1.1",
           "Microsoft.EntityFrameworkCore.Tools.DotNet": "2.1.0-preview1-final",
+          "Microsoft.Extensions.Configuration.Json": "2.1.1",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "2.1.1",
           "Npgsql.EntityFrameworkCore.PostgreSQL.Design": "2.0.0-preview1"
         },
@@ -3865,7 +3866,7 @@
   },
   "libraries": {
     "AspNet.Security.OAuth.GitHub/2.0.1": {
-      "sha512": "wNpArdopqIiV8D5mmVPLANIScHDrqGmKIio6Nu1tP1jTvZAZnVUAH9m12xvtZUnq+G59tO86pzAf1vrejT6GYQ==",
+      "sha512": "xSIgKkIJ9kLlH53zBMac/DVIU7yRrC+GrneepjWHDGYo2xCJBKwV3kCtqbJ6Zk7ME+qK/atlveKW07Gx88zhGQ==",
       "type": "package",
       "path": "aspnet.security.oauth.github/2.0.1",
       "files": [
@@ -3985,7 +3986,7 @@
       ]
     },
     "Microsoft.AspNetCore.Authentication.Cookies/2.2.0": {
-      "sha512": "UvV1L0jkRNF3SDidl5qb26XlBaOlctZxUqY80k/ghi4hFpN+MrCmediLDWfTW7x43hcnlbnr2wwNeN9Zfl2yrQ==",
+      "sha512": "Iar9VFlBHkZGdSG9ZUTmn6Q8Qg+6CtW5G/TyJI2F8B432TOH+nZlkU7O0W0byow6xsxqOYeTviSHz4cCJ3amfQ==",
       "type": "package",
       "path": "microsoft.aspnetcore.authentication.cookies/2.2.0",
       "files": [
@@ -4011,7 +4012,7 @@
       ]
     },
     "Microsoft.AspNetCore.Authentication.Facebook/2.2.0": {
-      "sha512": "dlmHNjEDLiY4xDNWdH7BJ/Lc/qVmi//vBStGkQrShe7We69zTDNOwjODyIiqf48VIdp7pX7e40j9znkQY7nqdg==",
+      "sha512": "SOc/wjoBntSWVZ6uG0R/TqQ0xmxu2H1PhkuYxINYpkUB7s3cQQuRDyZtJIdQonzpWVwBRj0ImwktiMaBF/7ihQ==",
       "type": "package",
       "path": "microsoft.aspnetcore.authentication.facebook/2.2.0",
       "files": [
@@ -4037,7 +4038,7 @@
       ]
     },
     "Microsoft.AspNetCore.Authentication.OAuth/2.2.0": {
-      "sha512": "B3VvcJMRHra/23LYQv36Pio1IFaQQ4x6J0w6/a/viPstdl5Ob4bfOV2CiftBgGS+iiZbnSArOEXT+q5YdoJw9Q==",
+      "sha512": "i33SSdJd0g3ENRnHczgzrOlru3ciPsyYHMgAh90sbURS8wuBx0Y4xXfRQcYfu1W0/uiHQO832KNb/ICINWqLzA==",
       "type": "package",
       "path": "microsoft.aspnetcore.authentication.oauth/2.2.0",
       "files": [

@@ -1,14 +1,16 @@
 ﻿using Models.Data;
 using System;
+using System.Linq;
 using System.Threading.Tasks;
+
 
 namespace Models.Token.Repositories
 {
     public class PostgreTokensRepository : ITokensRepository
     {
-        private InMemoryContext context;
+        private PostgreContext context;
 
-        public PostgreTokensRepository(InMemoryContext context)
+        public PostgreTokensRepository(PostgreContext context)
         {
             this.context = context;
         }
@@ -41,8 +43,8 @@ namespace Models.Token.Repositories
 
         public async Task<PasswordResetToken> GetPasswordResetTokenAsync(string tokenValue)
         {
-            var token = await context.PasswordResetTokens.FindAsync(tokenValue);
-            return token;
+            //return await context.PasswordResetTokens.FindAsync(tokenGuid);
+            return context.PasswordResetTokens.FirstOrDefault(p => p.token == tokenValue);
         }
     }
 }

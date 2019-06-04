@@ -45,8 +45,8 @@ namespace MemoryCardsAPI
             services.AddSingleton<ITrainingService, TrainingService>();
             services.AddSingleton<ITokenService, TokenService>();
 
-            SetUpInMemoryDataBase(services);
-//            SetUpPostgreDataBase(services);
+          //  SetUpInMemoryDataBase(services);
+            SetUpPostgreDataBase(services);
 
             services.AddCors();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
@@ -90,7 +90,7 @@ namespace MemoryCardsAPI
                             var userService = context.HttpContext.RequestServices.GetRequiredService<IUserService>();
                             // var userId = int.Parse(context.Principal.Identity.Name);
                             var userId = Guid.Parse(context.Principal.Identity.Name);
-                            var user = userService.GetById(userId).Result;
+                            var user = userService.GetByIdAsync(userId).Result;
                             if (user == null)
                             {
                                 // return unauthorized if user no longer exists
@@ -111,25 +111,25 @@ namespace MemoryCardsAPI
                     };
                 });
 
-            services.AddAuthentication(options =>
-                {
-                    options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-                    options.DefaultChallengeScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-                    options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-                })
-                .AddFacebook(options =>
-                {
-                    options.AppId = Configuration["Authentication:Facebook:AppId"];
-                    options.AppSecret = Configuration["Authentication:Facebook:AppId"];
-                })
-                .AddGitHub(options =>
-                {
-                    options.ClientId = Configuration["Authentication:GitHub:ClientId"];
-                    options.ClientSecret = Configuration["Authentication:GitHub:ClientSecret"];
-                })
-                .AddCookie(options => {
-                    options.LoginPath = "/v1/api/register";
-                });;
+        //    services.AddAuthentication(options =>
+        //        {
+        //            options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+        //            options.DefaultChallengeScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+        //            options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+        //        })
+        //        .AddFacebook(options =>
+        //        {
+        //            options.AppId = Configuration["Authentication:Facebook:AppId"];
+        //            options.AppSecret = Configuration["Authentication:Facebook:AppId"];
+        //        })
+        //        .AddGitHub(options =>
+        //        {
+        //            options.ClientId = Configuration["Authentication:GitHub:ClientId"];
+        //            options.ClientSecret = Configuration["Authentication:GitHub:ClientSecret"];
+        //        })
+        //        .AddCookie(options => {
+        //            options.LoginPath = "/v1/api/register";
+        //        });;
         }
 
         public void Configure(IApplicationBuilder app)
@@ -178,9 +178,10 @@ namespace MemoryCardsAPI
             services.AddSingleton<ITokensRepository, PostgreTokensRepository>();
 
             services.AddEntityFrameworkNpgsql()
-                .AddDbContext<PostgreContext>( opt => opt.UseNpgsql(Configuration.GetConnectionString("postgreConnection")))
-//                .AddDbContext<PostgreContext>( opt => opt.UseNpgsql(Configuration.GetConnectionString("nastyaLocalConnection")))
+                .AddDbContext<PostgreContext>()
+                // .AddDbContext<PostgreContext>( opt => opt.UseNpgsql(Configuration.GetConnectionString("localConnection")))
                 .BuildServiceProvider();
+                // .AddDbContext<PostgreContext>( opt => opt.UseNpgsql(Configuration.GetConnectionString("nastyaLocalConnection")))
         }
     }
 }
