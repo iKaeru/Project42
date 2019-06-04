@@ -63,9 +63,9 @@ namespace Models.Training.Services
         {
             var found = await repository.GetCardTrainingsAsync(card.Id);
             if (found.Count()==0)
-                throw new AppException("Could not find created training for this card");
+                throw new AppException("Не получилось найти тренировку для данной карты");
             if (found.Any(t => t.UserId != userId))
-                throw new AppException("Not allowed for this user");
+                throw new AppException("Не разрешено для этого юзера");
             return found;
         }
 
