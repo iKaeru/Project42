@@ -16,10 +16,10 @@ using Models.Errors;
 using Models.User;
 using Models.User.Services;
 using View = Client.Models.User;
-using Model = Models.User;
 using Microsoft.AspNetCore.Http;
-using Models.Training;
 using Swashbuckle.AspNetCore.Annotations;
+using Models.Token.Services;
+using Models.Token;
 
 namespace MemoryCardsAPI.Controllers
 {
@@ -29,13 +29,15 @@ namespace MemoryCardsAPI.Controllers
     public class UsersController : ControllerBase
     {
         private readonly IUserService userService;
+        private readonly ITokenService tokenService;
         private readonly IMapper mapper;
         private readonly AppSettings appSettings;
 
-        public UsersController(IUserService userService, IMapper mapper, IOptions<AppSettings> appSettings)
+        public UsersController(IUserService userService, ITokenService tokenService, IMapper mapper, IOptions<AppSettings> appSettings)
         {
             this.userService = userService;
             this.mapper = mapper;
+            this.tokenService = tokenService;
             this.appSettings = appSettings.Value;
         }
 
@@ -53,7 +55,7 @@ namespace MemoryCardsAPI.Controllers
             {
                 var user = await userService.AuthenticateAsync(userDto.Login, userDto.Password);
                 if (user == null)
-                    return BadRequest(new {message = "Username or password is incorrect"});
+                    return BadRequest(new {message = "Пользователь или пароль указан не верно"});
                 var token = TokenHmacSha256Generator(user.Id.ToString());
 
                 CookieOptions option = new CookieOptions();
@@ -135,10 +137,10 @@ namespace MemoryCardsAPI.Controllers
             try
             {
                 Guid.TryParse(HttpContext.User.Identity.Name, out var uId);
-                var user = await userService.GetById(uId);
+                var user = await userService.GetByIdAsync(uId);
 
                 if (user == null)
-                    return BadRequest(new {message = "User id is incorrect"});
+                    return BadRequest(new {message = "Идентификатор пользователя указан не верно"});
 
                 var userDto = mapper.Map<View.User>(user);
                 var resultUser = new View.UserRegistredInfo
@@ -165,6 +167,13 @@ namespace MemoryCardsAPI.Controllers
         {
             var user = UserConverter.ConvertPatchInfo(userToUpdate);
             var guidId = Guid.Parse(id);
+            Guid.TryParse(HttpContext.User.Identity.Name, out var userId);
+            
+            if (userId != guidId)
+            {
+                return BadRequest(new {message = "Запрещено для этого пользователя"});
+            }
+            
             user.Id = guidId;
             
             try
@@ -190,18 +199,80 @@ namespace MemoryCardsAPI.Controllers
             {
                 var guidId = Guid.Parse(id);
 
+                Guid.TryParse(HttpContext.User.Identity.Name, out var userId);
+            
+                if (userId != guidId)
+                {
+                    return BadRequest(new {message = "Запрещено для этого пользователя"});
+                }
+                
                 if (await userService.Delete(guidId))
                 {
                     return Ok();
                 }
 
-                throw new AppException("Couldn't delete user");
+                throw new AppException("Не получилось удалить пользователя");
             }
             catch (AppException ex)
             {
                 return BadRequest(new {message = ex.Message});
             }
         }
+
+        [AllowAnonymous]
+        [HttpPost("ask-pass-reset")]
+        public async Task<IActionResult> AskPasswordReset([FromBody]string email)
+        {
+            try
+            {
+                var user = await userService.GetUserByEmail(email);
+
+                if (user == null) return Ok("Письмо выслано на " + email); //мера безопасности
+
+                var token = new PasswordResetToken(user.Id);
+                await tokenService.AddPasswordResetTokenAsync(token);
+                await new MailingService().SendEmailAsync(email,
+                    "Восстановление пароля",
+                    "Для восстановления пароля перейдите по ссылке: https://pr42.ru/re-regist?" + token.token + " (ссылка действительна 3 часа)");
+                return Ok("Письмо выслано на " + email);
+            }
+            catch (AppException ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
+        }
+
+        [AllowAnonymous]
+        [HttpPost("re-regist")]
+        public async Task<IActionResult> ResetPassword([FromQuery]string tokenValue, [FromBody]string newPassword)
+        {
+            try
+            {
+                var token = await tokenService.GetPasswordResetTokenAsync(tokenValue);
+                var userToUpdate = await userService.GetByIdAsync(token.userId);
+                var userPatchInfo = new UserPatchInfo
+                {
+                    EmailAdress = userToUpdate.EmailAdress,
+                    FirstName = userToUpdate.FirstName==null ? "none" : userToUpdate.FirstName,
+                    Id = userToUpdate.Id,
+                    LastName = userToUpdate.LastName==null ? "none" : userToUpdate.LastName,
+                    Login = userToUpdate.Login,
+                    Password = newPassword
+                };
+                await userService.UpdateAsync(userPatchInfo, newPassword);
+
+                await new MailingService().SendEmailAsync(userToUpdate.EmailAdress,
+                    "Изменение пароля",
+                    "Пароль для сайта https://pr42.ru был успешно изменён! Логин : " + userToUpdate.Login);
+
+                return Ok();
+            }
+            catch (AppException ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
+        }
+
 
         private string TokenHmacSha256Generator(string id)
         {

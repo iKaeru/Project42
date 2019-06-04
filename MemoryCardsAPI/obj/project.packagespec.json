@@ -36,6 +36,10 @@
   "frameworks": {
     "netcoreapp2.1": {
       "dependencies": {
+        "AspNet.Security.OAuth.GitHub": {
+          "target": "Package",
+          "version": "[2.0.1, )"
+        },
         "AutoMapper.Extensions.Microsoft.DependencyInjection": {
           "target": "Package",
           "version": "[6.0.0, )"
@@ -45,6 +49,18 @@
           "version": "[2.1.5.1, )"
         },
         "Microsoft.AspNetCore": {
+          "target": "Package",
+          "version": "[2.2.0, )"
+        },
+        "Microsoft.AspNetCore.Authentication": {
+          "target": "Package",
+          "version": "[2.2.0, )"
+        },
+        "Microsoft.AspNetCore.Authentication.Cookies": {
+          "target": "Package",
+          "version": "[2.2.0, )"
+        },
+        "Microsoft.AspNetCore.Authentication.Facebook": {
           "target": "Package",
           "version": "[2.2.0, )"
         },

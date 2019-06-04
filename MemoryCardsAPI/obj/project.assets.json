@@ -2,6 +2,18 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.1": {
+      "AspNet.Security.OAuth.GitHub/2.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Authentication.OAuth": "2.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/AspNet.Security.OAuth.GitHub.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/AspNet.Security.OAuth.GitHub.dll": {}
+        }
+      },
       "AutoMapper/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -120,6 +132,18 @@
           "lib/netstandard2.0/Microsoft.AspNetCore.Authentication.Abstractions.dll": {}
         }
       },
+      "Microsoft.AspNetCore.Authentication.Cookies/2.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Authentication": "2.2.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Authentication.Cookies.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Authentication.Cookies.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Authentication.Core/2.2.0": {
         "type": "package",
         "dependencies": {
@@ -134,6 +158,18 @@
           "lib/netstandard2.0/Microsoft.AspNetCore.Authentication.Core.dll": {}
         }
       },
+      "Microsoft.AspNetCore.Authentication.Facebook/2.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Authentication.OAuth": "2.2.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Authentication.Facebook.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Authentication.Facebook.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Authentication.JwtBearer/2.2.0": {
         "type": "package",
         "dependencies": {
@@ -145,6 +181,19 @@
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Authentication.OAuth/2.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Authentication": "2.2.0",
+          "Newtonsoft.Json": "11.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Authentication.OAuth.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Authentication.OAuth.dll": {}
         }
       },
       "Microsoft.AspNetCore.Authorization/2.2.0": {
@@ -3802,6 +3851,7 @@
           "Microsoft.EntityFrameworkCore.InMemory": "2.1.1",
           "Microsoft.EntityFrameworkCore.Tools": "2.1.1",
           "Microsoft.EntityFrameworkCore.Tools.DotNet": "2.1.0-preview1-final",
+          "Microsoft.Extensions.Configuration.Json": "2.1.1",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "2.1.1",
           "Npgsql.EntityFrameworkCore.PostgreSQL.Design": "2.0.0-preview1"
         },
@@ -3815,6 +3865,19 @@
     }
   },
   "libraries": {
+    "AspNet.Security.OAuth.GitHub/2.0.1": {
+      "sha512": "xSIgKkIJ9kLlH53zBMac/DVIU7yRrC+GrneepjWHDGYo2xCJBKwV3kCtqbJ6Zk7ME+qK/atlveKW07Gx88zhGQ==",
+      "type": "package",
+      "path": "aspnet.security.oauth.github/2.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "aspnet.security.oauth.github.2.0.1.nupkg.sha512",
+        "aspnet.security.oauth.github.nuspec",
+        "lib/netstandard2.0/AspNet.Security.OAuth.GitHub.dll",
+        "lib/netstandard2.0/AspNet.Security.OAuth.GitHub.xml"
+      ]
+    },
     "AutoMapper/8.0.0": {
       "sha512": "px8ZMtIq84dxciB29V+ZYOtsRLZP4JlflDDMW13LyeRdwsnIInzlcSHSxpWmVD6U3bbOl2FeLlgomnVtm0jvXw==",
       "type": "package",
@@ -3922,6 +3985,19 @@
         "microsoft.aspnetcore.authentication.abstractions.nuspec"
       ]
     },
+    "Microsoft.AspNetCore.Authentication.Cookies/2.2.0": {
+      "sha512": "Iar9VFlBHkZGdSG9ZUTmn6Q8Qg+6CtW5G/TyJI2F8B432TOH+nZlkU7O0W0byow6xsxqOYeTviSHz4cCJ3amfQ==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.authentication.cookies/2.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Authentication.Cookies.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Authentication.Cookies.xml",
+        "microsoft.aspnetcore.authentication.cookies.2.2.0.nupkg.sha512",
+        "microsoft.aspnetcore.authentication.cookies.nuspec"
+      ]
+    },
     "Microsoft.AspNetCore.Authentication.Core/2.2.0": {
       "sha512": "XlVJzJ5wPOYW+Y0J6Q/LVTEyfS4ssLXmt60T0SPP+D8abVhBTl+cgw2gDHlyKYIkcJg7btMVh383NDkMVqD/fg==",
       "type": "package",
@@ -3935,6 +4011,19 @@
         "microsoft.aspnetcore.authentication.core.nuspec"
       ]
     },
+    "Microsoft.AspNetCore.Authentication.Facebook/2.2.0": {
+      "sha512": "SOc/wjoBntSWVZ6uG0R/TqQ0xmxu2H1PhkuYxINYpkUB7s3cQQuRDyZtJIdQonzpWVwBRj0ImwktiMaBF/7ihQ==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.authentication.facebook/2.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Authentication.Facebook.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Authentication.Facebook.xml",
+        "microsoft.aspnetcore.authentication.facebook.2.2.0.nupkg.sha512",
+        "microsoft.aspnetcore.authentication.facebook.nuspec"
+      ]
+    },
     "Microsoft.AspNetCore.Authentication.JwtBearer/2.2.0": {
       "sha512": "FnyoLdiIo8KDobVcDuUYYFSbQYp1OR8vSMIOcW6M5+dtF9TC6XvCCS8Ook+DSbqUj6HPxwOIKa5BeIZm1/EpMw==",
       "type": "package",
@@ -3946,6 +4035,19 @@
         "lib/netstandard2.0/Microsoft.AspNetCore.Authentication.JwtBearer.xml",
         "microsoft.aspnetcore.authentication.jwtbearer.2.2.0.nupkg.sha512",
         "microsoft.aspnetcore.authentication.jwtbearer.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Authentication.OAuth/2.2.0": {
+      "sha512": "i33SSdJd0g3ENRnHczgzrOlru3ciPsyYHMgAh90sbURS8wuBx0Y4xXfRQcYfu1W0/uiHQO832KNb/ICINWqLzA==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.authentication.oauth/2.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Authentication.OAuth.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Authentication.OAuth.xml",
+        "microsoft.aspnetcore.authentication.oauth.2.2.0.nupkg.sha512",
+        "microsoft.aspnetcore.authentication.oauth.nuspec"
       ]
     },
     "Microsoft.AspNetCore.Authorization/2.2.0": {
@@ -10974,11 +11076,15 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
+      "AspNet.Security.OAuth.GitHub >= 2.0.1",
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 6.0.0",
       "Client.Models >= 1.0.0",
       "Converters >= 1.0.0",
       "MailKit >= 2.1.5.1",
       "Microsoft.AspNetCore >= 2.2.0",
+      "Microsoft.AspNetCore.Authentication >= 2.2.0",
+      "Microsoft.AspNetCore.Authentication.Cookies >= 2.2.0",
+      "Microsoft.AspNetCore.Authentication.Facebook >= 2.2.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 2.2.0",
       "Microsoft.AspNetCore.Mvc >= 2.2.0",
       "Microsoft.NETCore.App >= 2.1.0",
@@ -10995,11 +11101,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "T:\\KonturProj\\Project42\\MemoryCardsAPI\\MemoryCardsAPI.csproj",
+      "projectUniqueName": "T:\\KonturProj\\project42\\MemoryCardsAPI\\MemoryCardsAPI.csproj",
       "projectName": "MemoryCardsAPI",
-      "projectPath": "T:\\KonturProj\\Project42\\MemoryCardsAPI\\MemoryCardsAPI.csproj",
+      "projectPath": "T:\\KonturProj\\project42\\MemoryCardsAPI\\MemoryCardsAPI.csproj",
       "packagesPath": "C:\\Users\\Fedya\\.nuget\\packages\\",
-      "outputPath": "T:\\KonturProj\\Project42\\MemoryCardsAPI\\obj\\",
+      "outputPath": "T:\\KonturProj\\project42\\MemoryCardsAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -11018,14 +11124,14 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "T:\\KonturProj\\Project42\\Client.Models\\Client.Models.csproj": {
-              "projectPath": "T:\\KonturProj\\Project42\\Client.Models\\Client.Models.csproj"
+            "T:\\KonturProj\\project42\\Client.Models\\Client.Models.csproj": {
+              "projectPath": "T:\\KonturProj\\project42\\Client.Models\\Client.Models.csproj"
             },
-            "T:\\KonturProj\\Project42\\Converters\\Converters.csproj": {
-              "projectPath": "T:\\KonturProj\\Project42\\Converters\\Converters.csproj"
+            "T:\\KonturProj\\project42\\Converters\\Converters.csproj": {
+              "projectPath": "T:\\KonturProj\\project42\\Converters\\Converters.csproj"
             },
-            "T:\\KonturProj\\Project42\\Models\\Models.csproj": {
-              "projectPath": "T:\\KonturProj\\Project42\\Models\\Models.csproj"
+            "T:\\KonturProj\\project42\\Models\\Models.csproj": {
+              "projectPath": "T:\\KonturProj\\project42\\Models\\Models.csproj"
             }
           }
         }
@@ -11039,6 +11145,10 @@
     "frameworks": {
       "netcoreapp2.1": {
         "dependencies": {
+          "AspNet.Security.OAuth.GitHub": {
+            "target": "Package",
+            "version": "[2.0.1, )"
+          },
           "AutoMapper.Extensions.Microsoft.DependencyInjection": {
             "target": "Package",
             "version": "[6.0.0, )"
@@ -11048,6 +11158,18 @@
             "version": "[2.1.5.1, )"
           },
           "Microsoft.AspNetCore": {
+            "target": "Package",
+            "version": "[2.2.0, )"
+          },
+          "Microsoft.AspNetCore.Authentication": {
+            "target": "Package",
+            "version": "[2.2.0, )"
+          },
+          "Microsoft.AspNetCore.Authentication.Cookies": {
+            "target": "Package",
+            "version": "[2.2.0, )"
+          },
+          "Microsoft.AspNetCore.Authentication.Facebook": {
             "target": "Package",
             "version": "[2.2.0, )"
           },

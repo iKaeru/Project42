@@ -10,9 +10,11 @@ namespace Models.CardItem.Services
     public class CardService : ICardService
     {
         private readonly ICardsRepository repository;
-        private const int MinimumTextLength = 4;
+        private const int MinimumTextLength = 1;
         private const int MaximumTextLength = 500;
-
+        private const int MinimumCodeLength = 1;
+        private const int MaximumCodeLength = 500;
+        
         public CardService(ICardsRepository repository)
         {
             this.repository = repository;
@@ -20,15 +22,14 @@ namespace Models.CardItem.Services
 
         public CardItem CreateCard(CardCreationInfo cardToCreate, Guid userId)
         {
-            if (!ValidateCard(cardToCreate))
-                return null;
+            ValidateCard(cardToCreate);
 
             var card = new CardItem
             {
                 Question = cardToCreate.Question,
                 Answer = cardToCreate.Answer,
                 CreatedAt = DateTime.Now,
-                UserId = userId
+                UserId = userId,
             };
 
             return card;
@@ -37,15 +38,16 @@ namespace Models.CardItem.Services
         public async Task AddCardAsync(CardItem cardToAddToRepo, CancellationToken cancellationToken)
         {
             if (!IsCardValid(cardToAddToRepo))
-                throw new AppException(nameof(cardToAddToRepo) + " is incorrect");
+                throw new AppException(nameof(cardToAddToRepo) + " не указана информация");
 
             try
             {
                 await repository.CreateAsync(cardToAddToRepo, cancellationToken);
             }
-            catch
+            catch (Exception ex)
             {
-                throw new AppException("Couldn't add card");
+                while (ex.InnerException != null) ex = ex.InnerException;
+                throw new AppException("Невозможно добавить карту" + ex.Message);
             }
         }
 
@@ -53,7 +55,7 @@ namespace Models.CardItem.Services
         {
             if (userId == Guid.Empty)
             {
-                throw new AppException($"Incorrect value for {nameof(userId)}");
+                throw new AppException($"Поле {nameof(userId)} не указано");
             }
 
             return await repository.GetAllUserCards(userId, cancellationToken);
@@ -63,7 +65,7 @@ namespace Models.CardItem.Services
         {
             if (userId == Guid.Empty)
             {
-                throw new AppException($"Incorrect value for {nameof(userId)}");
+                throw new AppException($"Поле {nameof(userId)} не указано");
             }
 
             return await repository.GetAllUserCardsId(userId, cancellationToken);
@@ -73,7 +75,7 @@ namespace Models.CardItem.Services
         {
             if (id == Guid.Empty)
             {
-                throw new AppException($"{nameof(id)} is Empty");
+                throw new AppException($"Поле {nameof(id)} не указано");
             }
 
             return await repository.GetAsync(id, cancellationToken);
@@ -84,12 +86,12 @@ namespace Models.CardItem.Services
             var cardFromRepository = await repository.GetAsync(cardToUpdate.Id, cancellationToken);
 
             if (cardFromRepository == null)
-                throw new AppException("Card not found");
+                throw new AppException("Карта не найдена");
 
             UpdateCardInfo(cardToUpdate, cardFromRepository);
 
             if (!IsCardValid(cardFromRepository))
-                throw new AppException("Bad card info");
+                throw new AppException("Не правильно указана информация");
 
             await repository.PatchAsync(cardFromRepository, cancellationToken);
         }
@@ -97,13 +99,13 @@ namespace Models.CardItem.Services
         public async void CheckOwnership(CardItem card, Guid userId)
         {
             if (card == null)
-                throw new AppException("Card not found");
+                throw new AppException("Карта не найдена");
 
             if (!IsCardValid(card) || userId == Guid.Empty)
-                throw new AppException("Bad info");
+                throw new AppException("Не правильно указана информация");
             var cardInRepo = await repository.GetAsync(card.Id, CancellationToken.None);
             if (cardInRepo.UserId != userId)
-                throw new AppException("No access");
+                throw new AppException("Нет доступа");
         }
 
         public async Task<bool> Delete(Guid id)
@@ -147,18 +149,21 @@ namespace Models.CardItem.Services
         private bool ValidateCard(CardCreationInfo cardToValidate)
         {
             if (!FieldsAreFilled(cardToValidate.Question))
-                return false;
+                throw new AppException($"Не заполнены поля в \"Вопросе\" карты");
             if (!FieldsAreFilled(cardToValidate.Answer))
-                return false;
+                throw new AppException($"Не заполнены поля в \"Вопросе\" карты");
             if (!LengthIsCorrect(cardToValidate.Question.Text))
-                return false;
+                throw new AppException($"Некорректная длина в \"Вопросе\" карты в поле \"Текст\"" +
+                                       $", должна быть от {MinimumTextLength} до {MaximumTextLength}");
             if (!LengthIsCorrect(cardToValidate.Question.Code))
-                return false;
+                throw new AppException($"Некорректная длина в \"Вопросе\" карты в поле \"Код\"" +
+                                       $", должна быть от {MinimumCodeLength} до {MaximumCodeLength}");
             if (!LengthIsCorrect(cardToValidate.Answer.Text))
-                return false;
+                throw new AppException($"Некорректная длина в \"Ответе\" карты в поле \"Текст\"" +
+                                       $", должна быть от {MinimumTextLength} до {MaximumTextLength}");
             if (!LengthIsCorrect(cardToValidate.Answer.Code))
-                return false;
-
+                throw new AppException($"Некорректная длина в \"Ответе\" карты в поле \"Код\"" +
+                                       $", должна быть от {MinimumCodeLength} до {MaximumCodeLength}");
             return true;
         }
 
@@ -184,8 +189,8 @@ namespace Models.CardItem.Services
             var counter = 0;
             foreach (var property in type.GetProperties())
             {
-                if (string.IsNullOrWhiteSpace((string) property.GetValue(cardToCheck)) ||
-                    string.IsNullOrEmpty((string) property.GetValue(cardToCheck)))
+                if (string.IsNullOrWhiteSpace((string) property.GetValue(cardToCheck).ToString()) ||
+                    string.IsNullOrEmpty((string) property.GetValue(cardToCheck).ToString()))
                 {
                     counter++;
                 }

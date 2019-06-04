@@ -19,7 +19,7 @@ namespace Models.Training.Services
             this.repository = repository;
         }
 
-        public Training CreateTraining(Guid userId, Guid cardId)
+        public Training CreateTraining(Guid userId, Guid cardId, MemorizationBoxes box)
         {
             if (userId == Guid.Empty || cardId == Guid.Empty)
                 throw new AppException("ID is empty");
@@ -28,7 +28,7 @@ namespace Models.Training.Services
             {
                 CardId = cardId,
                 UserId = userId,
-                Box = MemorizationBoxes.NotLearned,
+                Box = box,
                 CompletedAt = DateTime.Now
                 
             };
@@ -59,12 +59,12 @@ namespace Models.Training.Services
             return training;
         }
 
-        public async Task<Training> GetTrainingAsync(CardItem.CardItem card, Guid userId)
+        public async Task<IEnumerable<Training>> GetTrainingsAsync(CardItem.CardItem card, Guid userId)
         {
-            var found = await repository.GetCardTrainingAsync(card.Id);
-            if (found == null)
+            var found = await repository.GetCardTrainingsAsync(card.Id);
+            if (found.Count()==0)
                 throw new AppException("Could not find created training for this card");
-            if (found.UserId != userId)
+            if (found.Any(t => t.UserId != userId))
                 throw new AppException("Not allowed for this user");
             return found;
         }
@@ -134,6 +134,7 @@ namespace Models.Training.Services
             if (training.CardId == null)
                 throw new AppException(nameof(training) + "card id is not filled");
         }
+
         #endregion
     }
 }

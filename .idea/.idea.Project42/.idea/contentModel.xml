@@ -6,6 +6,7 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="CardItem" t="Include">
           <e p="CardContent.cs" t="Include" />
+          <e p="CardCreationInfo.cs" t="Include" />
           <e p="CardItem.cs" t="Include" />
           <e p="CardItemInfo.cs" t="Include" />
           <e p="CardPatchInfo.cs" t="Include" />

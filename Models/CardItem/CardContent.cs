@@ -13,9 +13,17 @@ namespace Models.CardItem
     public class CardContent
     {
         /// <summary>
+        /// Идентификатор информации о карте
+        /// </summary>
+        [Key, Column("Id")]
+        [DataMember(IsRequired = true)]
+        public Guid Id { get; set; }
+
+        
+        /// <summary>
         /// Текст на карте
         /// </summary>
-        [Key, Column("Text")]
+        [Column("Text")]
         [DataMember(IsRequired = true)]
         public string Text { get; set; }
         

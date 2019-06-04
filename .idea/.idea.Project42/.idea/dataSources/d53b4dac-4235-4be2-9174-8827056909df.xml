@@ -2,13 +2,13 @@
 <dataSource name="cards@localhost">
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.14">
     <root id="1">
-      <ServerVersion>11.2</ServerVersion>
+      <ServerVersion>11.3</ServerVersion>
     </root>
     <database id="2" parent="1" name="cards">
       <ObjectId>16393</ObjectId>
       <StateNumber>580</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>664</IntrospectionStateNumber>
+      <IntrospectionStateNumber>673</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </database>
@@ -101,7 +101,7 @@
       <Comment>standard public schema</Comment>
       <StateNumber>360</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>665</IntrospectionStateNumber>
+      <IntrospectionStateNumber>674</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Converters;
@@ -47,9 +48,38 @@ namespace MemoryCardsAPI.Controllers
             {
                 Guid.TryParse(HttpContext.User.Identity.Name, out var uId);
                 Guid.TryParse(id, out var cardGuid);
-                var training = trainingService.CreateTraining(uId, cardGuid);
+                var training = trainingService.CreateTraining(uId, cardGuid, MemorizationBoxes.NotLearned);
                 await trainingService.AddToRepositoryAsync(training);
                 return Ok(training);
+            }
+            catch (AppException ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
+        }
+
+        /// <summary>
+        /// Make new training with card
+        /// </summary>
+        /// <param name="training">Информация для cоздания тренировки</param>
+        /// <param name="cancellationToken"></param>
+        /// <returns code="200"></returns>
+        [HttpPost]
+        [SwaggerResponse(200, Type = typeof(Training))]
+        [Route("train")]
+        public async Task<IActionResult> MakeTrainingForCard([FromBody]View.Training.TrainingPatchInfo training,
+            CancellationToken cancellationToken)
+        {
+            try
+            {
+                Guid.TryParse(HttpContext.User.Identity.Name, out var uId);
+                Guid.TryParse(training.СardId, out var cardGuid);
+                var card = await cardsService.GetCardByIdAsync(cardGuid, cancellationToken);
+                cardsService.CheckOwnership(card, uId);
+                var createdTraining = trainingService.CreateTraining(uId, cardGuid, 
+                    TrainingConverter.ConvertLevels(training.MemorizationLevel));
+                await trainingService.AddToRepositoryAsync(createdTraining);
+                return Ok(createdTraining);
             }
             catch (AppException ex)
             {
@@ -91,7 +121,7 @@ namespace MemoryCardsAPI.Controllers
         [HttpGet]
         [SwaggerResponse(200, Type=typeof(Training))]
         [Route("card/{id}")]
-        public async Task<IActionResult> GetCardTraining(string id, CancellationToken cancellationToken)
+        public async Task<IActionResult> GetCardTrainings(string id, CancellationToken cancellationToken)
         {
             try
             {
@@ -100,7 +130,7 @@ namespace MemoryCardsAPI.Controllers
                 var card = await cardsService.GetCardByIdAsync(cardGuid, cancellationToken);
                 cardsService.CheckOwnership(card, uId);
 
-                var training = await trainingService.GetTrainingAsync(card, uId);
+                var training = await trainingService.GetTrainingsAsync(card, uId);
                 return Ok(training);
             }
             catch (AppException ex)
@@ -112,13 +142,14 @@ namespace MemoryCardsAPI.Controllers
         /// <summary>
         /// Update Card Training By Card Id
         /// </summary>
+        /// <param name="trainingId"> ID тренировке, которуб нужно обновить </param>
         /// <param name="training">Информация для обновления тренировки</param>
         /// <param name="cancellationToken"></param>
         /// <returns code="200"></returns>
         [HttpPut]
         [SwaggerResponse(200, Type=typeof(Training))]
-        [Route("train")]
-        public async Task<IActionResult> TrainWithCard([FromBody]View.Training.TrainingPatchInfo training, 
+        [Route("{trainingId}")]
+        public async Task<IActionResult> TrainWithCard(Guid trainingId, [FromBody]View.Training.TrainingPatchInfo training, 
             CancellationToken cancellationToken)
         {
             try
@@ -127,7 +158,7 @@ namespace MemoryCardsAPI.Controllers
                 Guid.TryParse(training.СardId, out var cardGuid);
                 var card = await cardsService.GetCardByIdAsync(cardGuid, cancellationToken);
                 cardsService.CheckOwnership(card, uId);
-                var completeTraining = await trainingService.GetTrainingAsync(card, uId);
+                var completeTraining = await trainingService.GetTrainingByIdAsync(trainingId, uId);
                 completeTraining = trainingService.UpdateTraining(completeTraining, 
                     TrainingConverter.ConvertLevels(training.MemorizationLevel));
                 return Ok(completeTraining);
@@ -155,7 +186,7 @@ namespace MemoryCardsAPI.Controllers
                     return Ok();
                 }
 
-                throw new AppException("Couldn't delete training");
+                throw new AppException("Не получилось удалить тренировку");
             }
             catch (AppException ex)
             {
@@ -175,15 +206,36 @@ namespace MemoryCardsAPI.Controllers
         {
             try
             {
-                Guid.TryParse(HttpContext.User.Identity.Name, out var userId);
-                var cardsId = await trainingService.GetDateTrainingAsync(DateTime.Now.Date, userId);
-                var cardsList = await cardsService.GetAllCardsFromList(cardsId);
+                List<CardItem> cardsList = await GetListOfCardsThatRequireTraining(cancellationToken);
                 return Ok(cardsList);
             }
             catch (AppException ex)
             {
                 return BadRequest(new { message = ex.Message });
             }
+        }
+
+        private async Task<List<CardItem>> GetListOfCardsThatRequireTraining(CancellationToken cancellationToken)
+        {
+            Guid.TryParse(HttpContext.User.Identity.Name, out var userId);
+            var cardGuids = await trainingService.GetDateTrainingAsync(DateTime.Now.Date, userId);
+            var cards = await cardsService.GetAllCardsFromList(cardGuids);
+            var cardsList = cards.ToList();
+            var allCards = await cardsService.GetAllUserCards(userId, cancellationToken);
+            foreach (var card in allCards)
+            {
+                try
+                {
+                    await trainingService.GetTrainingsAsync(card, userId);
+                }
+                catch (AppException ex)
+                {
+                    if (ex.Message == "Не получилось найти тренировку для данной карты") cardsList.Add(card);
+                    else throw ex;
+                }
+            }
+
+            return cardsList;
         }
 
         /// <summary>
@@ -226,8 +278,7 @@ namespace MemoryCardsAPI.Controllers
         {
             try
             {
-                Guid.TryParse(HttpContext.User.Identity.Name, out var uId);
-                var cardList = await trainingService.GetDateTrainingAsync(DateTime.Now.Date, uId);
+                var cardList = await GetListOfCardsThatRequireTraining(cancellationToken);
                 return Ok(cardList.Count);
             }
             catch (AppException ex)

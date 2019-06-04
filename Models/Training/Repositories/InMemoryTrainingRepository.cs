@@ -29,9 +29,9 @@ namespace Models.Training.Repositories
             return training;
         }
 
-        public async Task<Training> GetCardTrainingAsync(Guid id)
+        public async Task<IEnumerable<Training>> GetCardTrainingsAsync(Guid id)
         {
-            return await context.Trainings.FirstOrDefaultAsync(x => x.CardId == id);            
+            return await Task.Run(() => context.Trainings.Where(x => x.CardId == id));            
         }
 
         public async Task<Training> GetCardTrainingByTrainIdAsync(Guid trainingId)

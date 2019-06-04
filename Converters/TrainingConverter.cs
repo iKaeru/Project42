@@ -19,12 +19,12 @@ namespace Converters
         {
             switch (viewLevels)
             {
-                case MemorizationLevels.Easy:
+                case MemorizationLevels.FullyLearned:
                     return Model.Training.MemorizationBoxes.FullyLearned;
-                case MemorizationLevels.Normal:
-                    return Model.Training.MemorizationBoxes.FullyLearned;
-                case MemorizationLevels.Hard:
-                    return Model.Training.MemorizationBoxes.FullyLearned;
+                case MemorizationLevels.PartlyLearned:
+                    return Model.Training.MemorizationBoxes.PartlyLearned;
+                case MemorizationLevels.NotLearned:
+                    return Model.Training.MemorizationBoxes.NotLearned;
             }
             throw new AppException("Don't know this memorizationLevel");
         }

@@ -28,8 +28,6 @@ namespace MemoryCardsAPI.Helpers
 
                 await client.DisconnectAsync(true);
             }
-
-            Console.WriteLine("Sent email to {0}", subject);
         }
     }
 }

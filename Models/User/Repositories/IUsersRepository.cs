@@ -60,5 +60,6 @@ namespace Models.User.Repositories
 
         Task<bool> FindLoginAsync(string login);
         Task<bool> FindMailAsync(string mailAddress);
+        Task<User> GetUserByEmailAsync(string email);
     }
 }

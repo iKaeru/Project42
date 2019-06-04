@@ -9,7 +9,7 @@
             Cards
             </summary>
         </member>
-        <member name="M:MemoryCardsAPI.Controllers.CardsController.CreateAsync(Models.CardItem.CardCreationInfo,System.Threading.CancellationToken)">
+        <member name="M:MemoryCardsAPI.Controllers.CardsController.CreateAsync(Client.Models.CardItem.CardCreationInfo,System.Threading.CancellationToken)">
             <summary>
             Create Card
             </summary>
@@ -114,6 +114,14 @@
             <param name="cancellationToken"></param>
             <returns></returns>
         </member>
+        <member name="M:MemoryCardsAPI.Controllers.CollectionsController.ShowCollectionWithCards(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Get Collection By Id With CArds Info
+            </summary>
+            <param name="id">Идентификатор коллекции</param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
         <member name="M:MemoryCardsAPI.Controllers.CollectionsController.ListCollections(System.Threading.CancellationToken)">
             <summary>
             Shows all existing collections For User
@@ -121,9 +129,16 @@
             <param name="cancellationToken"></param>
             <returns></returns>
         </member>
+        <member name="M:MemoryCardsAPI.Controllers.CollectionsController.ListCollectionsExtra(System.Threading.CancellationToken)">
+            <summary>
+            Shows all existing collections For User with extra info
+            </summary>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
         <member name="M:MemoryCardsAPI.Controllers.CollectionsController.AmountOfCollections(System.Threading.CancellationToken)">
             <summary>
-            Shows all existing collections For User
+            Shows all existing collections count For User
             </summary>
             <param name="cancellationToken"></param>
             <returns></returns>
@@ -188,6 +203,14 @@
             <param name="cancellationToken"></param>
             <returns code="200"></returns>
         </member>
+        <member name="M:MemoryCardsAPI.Controllers.TrainingsController.MakeTrainingForCard(Client.Models.Training.TrainingPatchInfo,System.Threading.CancellationToken)">
+            <summary>
+            Make new training with card
+            </summary>
+            <param name="training">Информация для cоздания тренировки</param>
+            <param name="cancellationToken"></param>
+            <returns code="200"></returns>
+        </member>
         <member name="M:MemoryCardsAPI.Controllers.TrainingsController.GetCardTrainingById(System.String,System.Threading.CancellationToken)">
             <summary>
             Get Card Training By Id
@@ -196,7 +219,7 @@
             <param name="cancellationToken"></param>
             <returns code="200"></returns>
         </member>
-        <member name="M:MemoryCardsAPI.Controllers.TrainingsController.GetCardTraining(System.String,System.Threading.CancellationToken)">
+        <member name="M:MemoryCardsAPI.Controllers.TrainingsController.GetCardTrainings(System.String,System.Threading.CancellationToken)">
             <summary>
             Get Card Training By Card Id
             </summary>
@@ -204,10 +227,11 @@
             <param name="cancellationToken"></param>
             <returns code="200"></returns>
         </member>
-        <member name="M:MemoryCardsAPI.Controllers.TrainingsController.TrainWithCard(Client.Models.Training.TrainingPatchInfo,System.Threading.CancellationToken)">
+        <member name="M:MemoryCardsAPI.Controllers.TrainingsController.TrainWithCard(System.Guid,Client.Models.Training.TrainingPatchInfo,System.Threading.CancellationToken)">
             <summary>
             Update Card Training By Card Id
             </summary>
+            <param name="trainingId"> ID тренировке, которуб нужно обновить </param>
             <param name="training">Информация для обновления тренировки</param>
             <param name="cancellationToken"></param>
             <returns code="200"></returns>

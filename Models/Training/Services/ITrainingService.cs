@@ -9,10 +9,10 @@ namespace Models.Training.Services
 {
     public interface ITrainingService
     {
-        Training CreateTraining(Guid userId, Guid cardId);
+        Training CreateTraining(Guid userId, Guid cardId, MemorizationBoxes box);
         Training UpdateTraining(Training training, MemorizationBoxes box);
         Task<Training> AddToRepositoryAsync(Training training);
-        Task<Training> GetTrainingAsync(CardItem.CardItem card, Guid userId);
+        Task<IEnumerable<Training>> GetTrainingsAsync(CardItem.CardItem card, Guid userId);
         Task<Training> GetTrainingByIdAsync(Guid trainId, Guid userId);
         Task<List<Guid>> GetDateTrainingAsync(DateTime date, Guid userId);
         Task<IEnumerable<Guid>> GetCardsIdFromBoxAsync(MemorizationBoxes box, Guid userId);
